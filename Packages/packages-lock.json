@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.ivyyy.ivyyypackage": {
-      "version": "file:IvyyyPackage",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.unity.collab-proxy": {
       "version": "1.17.2",
       "depth": 0,
@@ -83,7 +77,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-      "version": "1.4.3",
+      "version": "1.4.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
