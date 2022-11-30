@@ -61,3 +61,9 @@ crashlytics-build.properties
 ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
 UserSettings/Layouts/default-2021.dwlt
 ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
+
+#IvyyyPackage
+!Packages
+!Packages/IvyyyPackage/*
+!Packages/IvyyyPackage/Editor/*
+!Packages/IvyyyPackage/Runtime/*
