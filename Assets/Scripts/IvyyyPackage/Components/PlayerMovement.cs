@@ -47,6 +47,8 @@ namespace Ivyyy
 
 			if (Input.GetKey(KeyCode.S))
 				trajectoryOffset.y -= acceleration;
+
+			m_Rigidbody.velocity = Vector3.zero;
 		}
 
 		float GetAxisMovementOffset (float rawOffset, float currentAxisVelocity)
@@ -89,7 +91,7 @@ namespace Ivyyy
 				if (trajectory.Length > deltaMaxSpeed)
 					trajectory.Length = deltaMaxSpeed;
 
-				Debug.Log ("Player speed: " + (trajectory.Length / fixedDeltaTime));
+				//Debug.Log ("Player speed: " + (trajectory.Length / fixedDeltaTime));
 
 				//m_Rigidbody.velocity = new Vector3 (0f, 0f);
 				m_Rigidbody.MovePosition (transform.position + trajectory.P2);
