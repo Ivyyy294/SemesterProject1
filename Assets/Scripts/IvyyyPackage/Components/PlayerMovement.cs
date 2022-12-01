@@ -96,6 +96,33 @@ namespace Ivyyy
 				//m_Rigidbody.velocity = new Vector3 (0f, 0f);
 				m_Rigidbody.MovePosition (transform.position + trajectory.P2);
 			}
+
+			//if (trajectory.P2.y > 0f)
+			//	transform.localScale = new Vector3 (1, 1, 1);
+			//else if (trajectory.P2.y < 0f)
+			//	transform.localScale = new Vector3 (1, -1, 1);
+		}
+
+		private void OnCollisionEnter(Collision collision)
+		{
+			//Line tmp = new Line(transform.position, collision.gameObject.transform.position);
+
+			//// X-Axis
+			//if (tmp.Angle <= 45f || tmp.Angle >= 315f
+			//	|| (tmp.Angle >= 135f && tmp.Angle <= 225))
+			//{
+			//	trajectory.P2 = new Vector3(0f, trajectory.P2.y);
+			//}
+
+			////Y-Axis
+			//if (tmp.Angle >= 45f && tmp.Angle <= 90f
+			//	|| tmp.Angle >= 225f && tmp.Angle <= 315f)
+			//{
+			//	trajectory.P2 = new Vector3(trajectory.P2.x, 0f);
+			//}
+
+			trajectory.Length = 0f;
+			m_Rigidbody.velocity = Vector3.zero;
 		}
 	}
 }
