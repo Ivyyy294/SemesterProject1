@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.InputSystem;
 
 public class GrabObject2D: MonoBehaviour
 {
@@ -14,7 +15,15 @@ public class GrabObject2D: MonoBehaviour
 	private GameObject grabbedObject;
 	private int layerMask;
 	private Vector3 dir;
+	private PlayerInputActions playerInputActions;
 	// Start is called before the first frame update
+	private void Awake()
+	{
+		playerInputActions = new PlayerInputActions();
+		playerInputActions.Player.Enable();
+		playerInputActions.Player.Grab.performed += CastRay;
+	}
+
 	void Start()
 	{
 		dir = Vector3.right;
@@ -25,17 +34,10 @@ public class GrabObject2D: MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.D))
-			dir = Vector3.right;
-		if (Input.GetKeyDown (KeyCode.A))
-			dir = Vector3.left;
-		if (Input.GetKeyDown (KeyCode.W))
-			dir = Vector3.up;
-		if (Input.GetKeyDown (KeyCode.S))
-			dir = Vector3.down;
+		Vector2 input = playerInputActions.Player.Movement.ReadValue <Vector2>();
 
-		if (Input.GetKeyDown (interactKey))
-			CastRay();
+		if (input != Vector2.zero)
+			dir = playerInputActions.Player.Movement.ReadValue <Vector2>();
 	}
 
 	private void LateUpdate()
@@ -73,6 +75,7 @@ public class GrabObject2D: MonoBehaviour
 			{
 				grabbedObject.transform.SetParent (null);
 				grabbedObject.transform.position = dropIndicator.transform.position;
+				grabbedObject.transform.localScale = new Vector3 (1f, 1f);
 				grabbedObject = null;
 				dropIndicator.SetActive (false);
 			}
@@ -90,21 +93,25 @@ public class GrabObject2D: MonoBehaviour
 				dropIndicator.SetActive (true);
 				grabbedObject.transform.position = transform.position;
 				grabbedObject.transform.SetParent (transform);
+				grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f);
 			}
 		}
 	}
 
-	void CastRay ()
+	public void CastRay (InputAction.CallbackContext context)
 	{
-		if (grabbedObject != null)
-			DropObject();
-		else
+		if (context.performed)
 		{
-			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance);
-			Debug.DrawRay (transform.position, dir, Color.green, 1f);
+			if (grabbedObject != null)
+				DropObject();
+			else
+			{
+				RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance);
+				Debug.DrawRay (transform.position, dir, Color.green, 1f);
 
-			if (hitInfo.collider != null && hitInfo.collider.gameObject.layer == layerMask)
-				GrabObject (hitInfo.collider.gameObject);
+				if (hitInfo.collider != null && hitInfo.collider.gameObject.layer == layerMask)
+					GrabObject (hitInfo.collider.gameObject);
+			}
 		}
 	}
 }
