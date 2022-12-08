@@ -6,6 +6,37 @@ namespace Ivyyy
 {
     public class Utils
     {
+		public static Texture2D FillTexture2D (Texture2D texture, Color color)
+		{
+			var fillColorArray = texture.GetPixels ();
+
+			for (int i = 0; i < fillColorArray.Length; ++ i)
+				fillColorArray[i] = color;
+
+			texture.SetPixels (fillColorArray);
+
+			return texture;
+
+			/*
+			 for (int x = 0; x < texture.width; ++x)
+			{
+				for (int y = 0; y < texture.width; ++y)
+					texture.SetPixel (x, y, color);
+			}
+
+			return texture;
+			*/
+		}
+		public static Vector2 WorldToGuiPoint2D (Vector2 worldPos)
+		{
+			return WorldToGuiPoint2D (worldPos, Camera.main);
+		}
+		public static Vector2 WorldToGuiPoint2D (Vector2 worldPos, Camera cam)
+		{
+			Vector2 guiPos = cam.WorldToScreenPoint (worldPos);
+			return guiPos;
+		}
+
 		public static Vector3 GetMouseWorldPosition()
 		{
 			Vector3 vec = Input.mousePosition;
