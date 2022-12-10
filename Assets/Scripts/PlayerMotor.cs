@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMotor : Ivyyy.PlayerMovement2D
 {
 	private PlayerInputActions playerInputActions;
+	public Animator animator;
 
 	private void Awake()
 	{
@@ -15,6 +16,10 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 
 	private void Update()
 	{
-		Move (playerInputActions.Player.Movement.ReadValue <Vector2>());
+		Vector2 input = playerInputActions.Player.Movement.ReadValue <Vector2>();
+		Move (input);
+		animator.SetFloat ("Horizontal", input.x);
+		animator.SetFloat ("Vertical", input.y);
+		animator.SetFloat ("Speed", input.sqrMagnitude);
 	}
 }

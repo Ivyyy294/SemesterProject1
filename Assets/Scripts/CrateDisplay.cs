@@ -7,6 +7,17 @@ public class CrateDisplay : MonoBehaviour
 {
 	public Crate crate;
 
+	public bool damaged = false;
+	private double lifeTime = 0.0;
+
+	public void CheckDurability ()
+	{
+		lifeTime += Time.deltaTime;
+
+		if (crate.durability > 0 && crate.durability <= lifeTime)
+			damaged = true;
+	}
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +27,8 @@ public class CrateDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (!crate.damaged)
-			crate.CheckDurability();
+		if (!damaged)
+			CheckDurability();
 
 		ChangeSprite();
     }
@@ -30,7 +41,7 @@ public class CrateDisplay : MonoBehaviour
 			Debug.Log ("SpriteRenderer missing!");
 		else
 		{
-			if (crate.damaged)
+			if (damaged)
 				r.sprite = crate.SpriteDamaged;
 			else
 				r.sprite = crate.SpriteOk;

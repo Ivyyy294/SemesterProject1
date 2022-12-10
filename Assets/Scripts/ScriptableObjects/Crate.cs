@@ -14,15 +14,4 @@ public class Crate : ScriptableObject
 
 	//Durability
 	public uint durability;
-	public bool damaged = false;
-
-	private double lifeTime = 0.0;
-
-	public void CheckDurability ()
-	{
-		lifeTime += Time.deltaTime;
-
-		if (durability > 0 && durability <= lifeTime)
-			damaged = true;
-	}
 }
