@@ -20,19 +20,19 @@ public class DropIndicator : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (!collision.gameObject.CompareTag ("Player"))
-		{
+		//if (!collision.gameObject.CompareTag ("Player"))
+		//{
 			Debug.Log (collision.gameObject.tag);
 			++collisionCounter;
 
 			renderer.color = blockedColor;
-		}
+		//}
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		if (!collision.gameObject.CompareTag ("Player"))
-			--collisionCounter;
+		//if (!collision.gameObject.CompareTag ("Player"))
+		--collisionCounter;
 
 		if (IsDropAreaClear())
 			renderer.color = clearColor;
