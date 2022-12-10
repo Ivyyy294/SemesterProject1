@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Crate
+  - Merchant
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Background
   - Objects
   - Player
-  - 
+  - GrabbedObj
   - 
   - 
   - 
@@ -44,4 +45,7 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 1777074599
+    locked: 0
+  - name: UI
+    uniqueID: 3285620551
     locked: 0

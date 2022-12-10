@@ -67,6 +67,7 @@ public class GrabObject2D: MonoBehaviour
 
 	void DropObject ()
 	{
+		Debug.Log ("DropObject");
 		if (grabbedObject != null)
 		{
 			DropIndicator tmp = dropIndicator.GetComponent <DropIndicator>();
@@ -102,15 +103,38 @@ public class GrabObject2D: MonoBehaviour
 	{
 		if (context.performed)
 		{
-			if (grabbedObject != null)
-				DropObject();
-			else
-			{
-				RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance);
-				Debug.DrawRay (transform.position, dir, Color.green, 1f);
+			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance);
+			Debug.DrawRay (transform.position, dir, Color.green, 1f);
 
-				if (hitInfo.collider != null && hitInfo.collider.gameObject.layer == layerMask)
+			if (hitInfo.collider != null)
+			{
+				if (hitInfo.collider.CompareTag ("Crate"))
 					GrabObject (hitInfo.collider.gameObject);
+				else if (hitInfo.collider.CompareTag ("Merchant"))
+					InteractMerchant (hitInfo.collider.gameObject);
+				else if (grabbedObject != null)
+				DropObject();
+			}
+			else if (grabbedObject != null)
+				DropObject();
+		}
+	}
+
+	private void InteractMerchant(GameObject gameObject)
+	{
+		Debug.Log ("InteractMerchant");
+
+		if (gameObject != null)
+		{
+			MerchantDisplay tmp = gameObject.GetComponent<MerchantDisplay>();
+
+			if (tmp != null && grabbedObject != null)
+			{
+				if (tmp.Interact (grabbedObject))
+				{
+					Destroy (grabbedObject);
+					dropIndicator.SetActive (false);
+				}
 			}
 		}
 	}
