@@ -6,14 +6,14 @@ public class DropIndicator : MonoBehaviour
 {
 	[SerializeField] Color blockedColor;
 	private Color clearColor;
-	private SpriteRenderer renderer;
+	private SpriteRenderer spriteRenderer;
 	uint collisionCounter;
 
 	private void Start()
 	{
 		collisionCounter = 0;
-		renderer = GetComponent<SpriteRenderer>();
-		clearColor = renderer.color;
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		clearColor = spriteRenderer.color;
 	}
 
 	public bool IsDropAreaClear() { return collisionCounter == 0; }
@@ -25,7 +25,7 @@ public class DropIndicator : MonoBehaviour
 			Debug.Log (collision.gameObject.tag);
 			++collisionCounter;
 
-			renderer.color = blockedColor;
+			spriteRenderer.color = blockedColor;
 		//}
 	}
 
@@ -35,6 +35,6 @@ public class DropIndicator : MonoBehaviour
 		--collisionCounter;
 
 		if (IsDropAreaClear())
-			renderer.color = clearColor;
+			spriteRenderer.color = clearColor;
 	}
 }

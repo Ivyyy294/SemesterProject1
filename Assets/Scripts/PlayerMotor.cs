@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMotor : Ivyyy.PlayerMovement2D
 {
-	private PlayerInputActions playerInputActions;
 	public Animator animator;
+	public uint playerId = 0;
+	private PlayerInputActions playerInputActions;
 
 	private void Awake()
 	{

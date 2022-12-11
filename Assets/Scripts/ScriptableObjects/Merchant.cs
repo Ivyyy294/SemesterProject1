@@ -13,15 +13,18 @@ public class RequestItem
 [CreateAssetMenu (fileName ="New Merchant", menuName = "Merchant")]
 public class Merchant : ScriptableObject
 {
+	[Header ("General")]
 	public new string name;
 	public Sprite sprite;
-	public List <RequestItem> goodsToRequest;
+
+	[Header ("Goods")]
+	public List <RequestItem> requestList;
 	public uint requestFrequency;
 
 	public Crate GetNewRequest ()
 	{
-		if (goodsToRequest.Count > 0)
-			return goodsToRequest[0].crate;
+		if (requestList.Count > 0)
+			return requestList[0].crate;
 
 		return null;
 	}

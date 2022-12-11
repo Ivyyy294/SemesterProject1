@@ -6,6 +6,7 @@ using UnityEngine;
 public class Crate : ScriptableObject
 {
 	//Generall
+	[Header ("General")]
 	public new string name;
 	public uint ID = 0;
 	public uint value = 1;
@@ -13,5 +14,8 @@ public class Crate : ScriptableObject
 	public Sprite SpriteDamaged;
 
 	//Durability
+	[Header ("Durability")]
+	public bool needsCooling;
+	public bool fragile;
 	public uint durability;
 }

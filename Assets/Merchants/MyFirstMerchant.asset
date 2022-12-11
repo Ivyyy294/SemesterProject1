@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: My First Merchant
   sprite: {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
-  goodsToRequest:
+  requestList:
   - crate: {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
-    requestChance: 100
+    requestChance: 0
   requestFrequency: 7

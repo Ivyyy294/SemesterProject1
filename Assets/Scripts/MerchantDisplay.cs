@@ -10,7 +10,7 @@ public class MerchantDisplay : MonoBehaviour
 	[SerializeField] GameObject requestIndicator;
 	
 	//Private Values
-	SpriteRenderer renderer;
+	SpriteRenderer spriteRenderer;
 	double lifeTime = 0.0;
 	Crate currentRequest = null;
 
@@ -23,6 +23,7 @@ public class MerchantDisplay : MonoBehaviour
 
 			if (tmp != null && tmp.ID == currentRequest.ID)
 			{
+				GameStatus.Me.AddSilverCoins (0, tmp.value);
 				ChangeRequest (null);
 				return true;
 			}
@@ -34,18 +35,21 @@ public class MerchantDisplay : MonoBehaviour
 	//Private Functions
 	private void Start()
 	{
-		renderer = GetComponent <SpriteRenderer>();
-		renderer.sprite = merchant.sprite;
+		spriteRenderer = GetComponent <SpriteRenderer>();
+		spriteRenderer.sprite = merchant.sprite;
 	}
 
 	private void Update()
 	{
-		lifeTime += Time.deltaTime;
-
-		if (lifeTime >= merchant.requestFrequency)
+		if (currentRequest == null)
 		{
-			ChangeRequest (merchant.GetNewRequest());
-			lifeTime = 0.0;
+			if (lifeTime >= merchant.requestFrequency)
+			{
+				ChangeRequest (merchant.GetNewRequest());
+				lifeTime = 0.0;
+			}
+			else
+				lifeTime += Time.deltaTime;
 		}
 	}
 
