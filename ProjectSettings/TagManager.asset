@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Crate
   - Merchant
+  - Ship
   layers:
   - Default
   - TransparentFX
