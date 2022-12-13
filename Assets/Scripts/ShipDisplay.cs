@@ -6,6 +6,7 @@ public class ShipDisplay : MonoBehaviour
 {
 	//Editor values
 	[SerializeField] List <Transform> warePos;
+	[SerializeField] Ware wareToSell;
 
     // Start is called before the first frame update
     void OnEnable ()
@@ -19,6 +20,9 @@ public class ShipDisplay : MonoBehaviour
 				obj.SetActive (true);
 				obj.transform.position = i.position;
 				obj.transform.SetParent (transform);
+
+				WareDisplay wareDisplay = obj.GetComponent<WareDisplay>();
+				wareDisplay.Init (wareToSell);
 			}
 		}
     }

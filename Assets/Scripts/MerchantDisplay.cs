@@ -19,13 +19,23 @@ public class MerchantDisplay : MonoBehaviour
 	{
 		if (obj != null && currentRequest != null)
 		{
-			Ware tmp = GetCrateFromGameObject (obj);
+			WareDisplay wareDisplay = obj.GetComponent<WareDisplay>();
 
-			if (tmp != null && tmp.ID == currentRequest.ID)
+			if (wareDisplay.damaged)
 			{
-				GameStatus.Me.AddSilverCoins (0, tmp.value);
-				ChangeRequest (null);
+				GameStatus.Me.AddReputation (0, -1f);
 				return true;
+			}
+			else
+			{
+				Ware tmp = wareDisplay.GetWare();
+
+				if (tmp != null && tmp.ID == currentRequest.ID)
+				{
+					GameStatus.Me.AddSilverCoins (0, tmp.value);
+					ChangeRequest (null);
+					return true;
+				}
 			}
 		}
 

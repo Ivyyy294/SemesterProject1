@@ -5,10 +5,21 @@ using UnityEngine;
 [RequireComponent (typeof (BoxCollider2D))]
 public class WareDisplay : MonoBehaviour
 {
+	//Public Values
 	public Ware ware;
-
 	public bool damaged = false;
+
+	//Private Values
 	private double lifeTime = 0.0;
+
+	//Public Functions
+	public Ware GetWare() { return ware;}
+
+	public void Init (Ware w)
+	{
+		ware = w;
+		Init();
+	}
 
 	public void CheckDurability ()
 	{
@@ -18,33 +29,48 @@ public class WareDisplay : MonoBehaviour
 			damaged = true;
 	}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-		ChangeSprite ();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		if (!damaged)
-			CheckDurability();
-
+	//Private Functions
+	void Init ()
+	{
 		ChangeSprite();
-    }
+		lifeTime = 0.0f;
+	}
+
+	// Start is called before the first frame update
+	void Start()
+	{
+		Init();
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		if (ware != null)
+		{
+			if (!damaged)
+				CheckDurability();
+
+			ChangeSprite();
+		}
+		else
+			Debug.Log ("Ware not set!");
+	}
 
 	void ChangeSprite()
 	{
-		SpriteRenderer r = GetComponent<SpriteRenderer>();
-
-		if (r == null)
-			Debug.Log ("SpriteRenderer missing!");
-		else
+		if (ware != null)
 		{
-			if (damaged)
-				r.sprite = ware.SpriteDamaged;
+			SpriteRenderer r = GetComponent<SpriteRenderer>();
+
+			if (r == null)
+				Debug.Log ("SpriteRenderer missing!");
 			else
-				r.sprite = ware.SpriteOk;
+			{
+				if (damaged)
+					r.sprite = ware.SpriteDamaged;
+				else
+					r.sprite = ware.SpriteOk;
+			}
 		}
 	}
 }

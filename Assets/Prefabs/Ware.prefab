@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8966585106285815452}
   m_Layer: 0
   m_Name: Ware
-  m_TagString: Crate
+  m_TagString: Ware
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081855203a9c1a14f9d945de40dcd137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ware: {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
+  ware: {fileID: 0}
   damaged: 0
 --- !u!61 &8966585106285815452
 BoxCollider2D:

@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Crate
   - Merchant
   - Ship
+  - Store
+  - Ware
   layers:
   - Default
   - TransparentFX

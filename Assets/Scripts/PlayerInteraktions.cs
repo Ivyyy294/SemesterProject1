@@ -4,19 +4,22 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
 
-public class GrabObject2D: MonoBehaviour
+public class PlayerInteraktions: MonoBehaviour
 {
+	//Editor Values
 	[SerializeField] KeyCode interactKey;
 	[SerializeField] float rayDistance;
 	[SerializeField] float rayOffset;
 	[SerializeField] GameObject dropIndicator;
 	[SerializeField] float snapGridSize;
 
+	//Private Values
 	private GameObject grabbedObject;
 	private int layerMask;
 	private Vector3 dir;
 	private PlayerInputActions playerInputActions;
-	// Start is called before the first frame update
+
+	//Private Functions
 	private void Awake()
 	{
 		playerInputActions = new PlayerInputActions();
@@ -106,15 +109,40 @@ public class GrabObject2D: MonoBehaviour
 
 			if (hitInfo.collider != null)
 			{
-				if (hitInfo.collider.CompareTag ("Crate"))
-					GrabObject (hitInfo.collider.gameObject);
+				if (hitInfo.collider.CompareTag ("Ware"))
+					InteractWare(hitInfo.collider.gameObject);
 				else if (hitInfo.collider.CompareTag ("Merchant"))
 					InteractMerchant (hitInfo.collider.gameObject);
+				else if (hitInfo.collider.CompareTag ("Store"))
+					InteractStore (hitInfo.collider.gameObject);
 				else if (grabbedObject != null)
-				DropObject();
+					DropObject();
 			}
 			else if (grabbedObject != null)
 				DropObject();
+		}
+	}
+
+	private void InteractWare (GameObject obj)
+	{
+		Debug.Log ("InteractWare");
+
+		//Player is only able to pick up Wares, when they dont carry an item
+		if (grabbedObject == null)
+			GrabObject (obj);
+	}
+
+	private void InteractStore (GameObject obj)
+	{
+		Debug.Log ("InteractStore");
+
+		//Player is only able to buy, when they dont carry an item
+		if (grabbedObject == null)
+		{
+			StoreSlot storeSlot = obj.GetComponent<StoreSlot>();
+
+			if (storeSlot != null)
+				GrabObject (storeSlot.BuyWare());
 		}
 	}
 
@@ -132,7 +160,6 @@ public class GrabObject2D: MonoBehaviour
 				{
 					grabbedObject.SetActive (false);
 					ResetGrabbedObject();
-					dropIndicator.SetActive (false);
 				}
 			}
 		}
@@ -140,6 +167,7 @@ public class GrabObject2D: MonoBehaviour
 
 	private void ResetGrabbedObject()
 	{ 
+		dropIndicator.SetActive (false);
 		grabbedObject.transform.localScale = new Vector3 (1f, 1f);
 		grabbedObject.transform.SetParent (WarePool.Me.transform);
 		grabbedObject.layer = 0;
