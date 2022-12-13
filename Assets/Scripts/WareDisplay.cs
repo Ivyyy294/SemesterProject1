@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof (BoxCollider2D))]
-public class CrateDisplay : MonoBehaviour
+public class WareDisplay : MonoBehaviour
 {
-	public Crate crate;
+	public Ware ware;
 
 	public bool damaged = false;
 	private double lifeTime = 0.0;
@@ -14,7 +14,7 @@ public class CrateDisplay : MonoBehaviour
 	{
 		lifeTime += Time.deltaTime;
 
-		if (crate.durability > 0 && crate.durability <= lifeTime)
+		if (ware.durability > 0 && ware.durability <= lifeTime)
 			damaged = true;
 	}
 
@@ -42,9 +42,9 @@ public class CrateDisplay : MonoBehaviour
 		else
 		{
 			if (damaged)
-				r.sprite = crate.SpriteDamaged;
+				r.sprite = ware.SpriteDamaged;
 			else
-				r.sprite = crate.SpriteOk;
+				r.sprite = ware.SpriteOk;
 		}
 	}
 }

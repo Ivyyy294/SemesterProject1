@@ -12,14 +12,14 @@ public class MerchantDisplay : MonoBehaviour
 	//Private Values
 	SpriteRenderer spriteRenderer;
 	double lifeTime = 0.0;
-	Crate currentRequest = null;
+	Ware currentRequest = null;
 
 	//Public Functions
 	public bool Interact (GameObject obj)
 	{
 		if (obj != null && currentRequest != null)
 		{
-			Crate tmp = GetCrateFromGameObject (obj);
+			Ware tmp = GetCrateFromGameObject (obj);
 
 			if (tmp != null && tmp.ID == currentRequest.ID)
 			{
@@ -53,13 +53,13 @@ public class MerchantDisplay : MonoBehaviour
 		}
 	}
 
-	private void ChangeRequest (Crate obj)
+	private void ChangeRequest (Ware obj)
 	{
 		currentRequest = obj;
 		DisplayRequest (obj);
 	}
 
-	private void DisplayRequest (Crate obj)
+	private void DisplayRequest (Ware obj)
 	{
 		SpriteRenderer r = requestIndicator.GetComponent<SpriteRenderer>();
 		
@@ -72,14 +72,14 @@ public class MerchantDisplay : MonoBehaviour
 		}
 	}
 
-	private Crate GetCrateFromGameObject (GameObject obj)
+	private Ware GetCrateFromGameObject (GameObject obj)
 	{
 		if (obj != null)
 		{
-			CrateDisplay tmp = obj.GetComponent<CrateDisplay>();
+			WareDisplay tmp = obj.GetComponent<WareDisplay>();
 
 			if (tmp != null)
-				return tmp.crate;
+				return tmp.ware;
 		}
 
 		return null;

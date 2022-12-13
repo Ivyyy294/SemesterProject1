@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (fileName ="New Crate", menuName = "Crate")]
-public class Crate : ScriptableObject
+[CreateAssetMenu (fileName ="New Ware", menuName = "Ware")]
+public class Ware : ScriptableObject
 {
 	//Generall
 	[Header ("General")]

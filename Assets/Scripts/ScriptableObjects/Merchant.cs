@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public class RequestItem
 {
-	public Crate crate;
+	public Ware ware;
 	public float requestChance;
 }
 
@@ -21,10 +21,10 @@ public class Merchant : ScriptableObject
 	public List <RequestItem> requestList;
 	public uint requestFrequency;
 
-	public Crate GetNewRequest ()
+	public Ware GetNewRequest ()
 	{
 		if (requestList.Count > 0)
-			return requestList[0].crate;
+			return requestList[0].ware;
 
 		return null;
 	}
