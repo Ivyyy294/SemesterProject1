@@ -10,10 +10,10 @@ namespace Ivyyy
 		[SerializeField] protected float spawnCoolDown = 1f;
 		[SerializeField] protected Vector3 spawnPosition;
 
-		protected override void Start()
+		protected override void Awake()
 		{
 			timer = spawnCoolDown;
-			base.Start();
+			base.Awake();
 		}
 		protected virtual Vector3 GetSpawnPosition()	{ return spawnPosition;}
 		protected virtual bool CheckSpawnCondition() { return timer >= spawnCoolDown;}
@@ -36,7 +36,7 @@ namespace Ivyyy
 		[SerializeField] protected GameObject objectToPool;
 		[SerializeField] protected uint anz = 1;
 
-		protected virtual void Start()
+		protected virtual void Awake()
 		{
 			Spawn();
 		}
@@ -46,7 +46,7 @@ namespace Ivyyy
 			pooledObjects = new List <GameObject>();
 			GameObject tmp;
 
-			for (uint i = 0; i < anz; ++i)
+			while (pooledObjects.Count < anz)
 			{
 				tmp = Instantiate (objectToPool, gameObject.transform);
 				tmp.SetActive (false);
@@ -54,7 +54,7 @@ namespace Ivyyy
 			}
 		}
 
-		protected void ActivateObject (Vector3 pos)
+		public void ActivateObject (Vector3 pos)
 		{
 			GameObject tmp = GetPooledObject();
 
@@ -63,6 +63,8 @@ namespace Ivyyy
 				tmp.transform.position = pos;
 				tmp.SetActive (true);
 			}
+			else
+				Debug.Log ("No free object in pool!");
 		}
 
 		public GameObject GetPooledObject()

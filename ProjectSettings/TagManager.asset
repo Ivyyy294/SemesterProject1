@@ -14,10 +14,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Background
-  - Objects
-  - Player
-  - GrabbedObj
+  - Team1
+  - Team2
+  - NoCollision
+  - 
   - 
   - 
   - 

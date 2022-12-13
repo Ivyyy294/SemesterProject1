@@ -74,11 +74,8 @@ public class GrabObject2D: MonoBehaviour
 
 			if (tmp != null && tmp.IsDropAreaClear())
 			{
-				grabbedObject.transform.SetParent (null);
 				grabbedObject.transform.position = dropIndicator.transform.position;
-				grabbedObject.transform.localScale = new Vector3 (1f, 1f);
-				grabbedObject = null;
-				dropIndicator.SetActive (false);
+				ResetGrabbedObject ();
 			}
 		}
 	}
@@ -95,6 +92,7 @@ public class GrabObject2D: MonoBehaviour
 				grabbedObject.transform.position = transform.position;
 				grabbedObject.transform.SetParent (transform);
 				grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f);
+				grabbedObject.layer = 8;
 			}
 		}
 	}
@@ -132,10 +130,19 @@ public class GrabObject2D: MonoBehaviour
 			{
 				if (tmp.Interact (grabbedObject))
 				{
-					Destroy (grabbedObject);
+					grabbedObject.SetActive (false);
+					ResetGrabbedObject();
 					dropIndicator.SetActive (false);
 				}
 			}
 		}
+	}
+
+	private void ResetGrabbedObject()
+	{ 
+		grabbedObject.transform.localScale = new Vector3 (1f, 1f);
+		grabbedObject.transform.SetParent (WarePool.Me.transform);
+		grabbedObject.layer = 0;
+		grabbedObject = null;
 	}
 }

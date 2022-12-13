@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3714752570590167899}
   - component: {fileID: 3714752570590167898}
   - component: {fileID: 3714752570590167897}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: dropIndicator
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 3714752570770300287}
   - component: {fileID: 3714752570770300280}
   - component: {fileID: 6703997733596930556}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -293,3 +293,5 @@ MonoBehaviour:
   maxSpeed: 8
   acceleration: 1
   deacceleration: 1
+  animator: {fileID: 0}
+  playerId: 0
