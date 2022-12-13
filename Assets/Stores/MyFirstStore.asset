@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3340473f5e6695542b54303b7114e79d, type: 3}
   m_Name: MyFirstStore
   m_EditorClassIdentifier: 
-  name: 
+  name: My First Store
+  sprite: {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   waresToSell:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
+  - {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}

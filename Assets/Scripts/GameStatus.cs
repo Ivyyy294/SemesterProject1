@@ -37,26 +37,28 @@ public class GameStatus : MonoBehaviour
 
 	public void AddReputation (uint playerId, float val)
 	{
-		foreach (Team i in teams)
-		{
-			if (i.playerIds.Contains (playerId))
-			{
-				i.Reputation += val;
-				return;
-			}
-		}
+		Team t = GetTeamForPlayer (playerId);
+
+		if (t != null)
+			t.Reputation += val;
 	}
 
 	public void AddSilverCoins (uint playerId, float val)
 	{
-		foreach (Team i in teams)
-		{
-			if (i.playerIds.Contains (playerId))
-			{
-				i.SilverCoins += val;
-				return;
-			}
-		}
+		Team t = GetTeamForPlayer (playerId);
+
+		if (t != null)
+			t.SilverCoins += val;
+	}
+
+	public float GetPlayerMoney (uint playerId)
+	{
+		Team t = GetTeamForPlayer (playerId);
+
+		if (t != null)
+			return t.SilverCoins;
+
+		return 0f;
 	}
 
 	//Private Functions
@@ -112,5 +114,16 @@ public class GameStatus : MonoBehaviour
 			GUILayout.Label ("Silver: " + teams[0].SilverCoins.ToString());
 			GUILayout.EndArea();
 		}
+	}
+
+	Team GetTeamForPlayer (uint playerId)
+	{
+		foreach (Team i in teams)
+		{
+			if (i.playerIds.Contains (playerId))
+				return i;
+		}
+
+		return null;
 	}
 }

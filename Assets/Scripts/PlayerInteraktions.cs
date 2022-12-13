@@ -142,7 +142,7 @@ public class PlayerInteraktions: MonoBehaviour
 			StoreSlot storeSlot = obj.GetComponent<StoreSlot>();
 
 			if (storeSlot != null)
-				GrabObject (storeSlot.BuyWare());
+				GrabObject (storeSlot.BuyWare(0));
 		}
 	}
 
