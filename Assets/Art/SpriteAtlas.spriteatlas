@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sprite Atlas
+  m_Name: SpriteAtlas
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -23,7 +23,7 @@ SpriteAtlas:
     platformSettings:
     - serializedVersion: 3
       m_BuildTarget: DefaultTexturePlatform
-      m_MaxTextureSize: 2048
+      m_MaxTextureSize: 4096
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
       m_TextureCompression: 0
@@ -35,7 +35,7 @@ SpriteAtlas:
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
-      padding: 2
+      padding: 4
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
@@ -44,13 +44,16 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
-    - {fileID: 2800000, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
+    - {fileID: 102900000, guid: e076180fa57c3634d9e86024f0e4cdb6, type: 3}
+    - {fileID: 102900000, guid: ae63129c1205d0545ab1e6a5a645654c, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 45e37740bebcfc546b72387144e25755, type: 3}
+  - {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  - {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
   - {fileID: -486083769, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 1191643106, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: -1855751293, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
@@ -286,6 +289,8 @@ SpriteAtlas:
   - {fileID: -1545861496, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 1627177051, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: -337318029, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
+  - {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
+  - {fileID: 21300000, guid: c1712a299cfb8164a97bc46b73f0b0c4, type: 3}
   - {fileID: -1846860355, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: 746696381, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: -1457007098, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
@@ -412,7 +417,70 @@ SpriteAtlas:
   - {fileID: 1084525083, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: -856777697, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: 1393071987, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
+  - {fileID: 21300000, guid: c2fd6a1b5de719c4993bd42421129270, type: 3}
+  - {fileID: -495197386, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1721061459, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 2131365961, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 847900429, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1144302188, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1555403964, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 993717509, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1065695718, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -472836137, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -425030763, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -67121024, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -229974657, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 987339399, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 704593931, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 846946224, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1578971163, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1551017920, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -100456148, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1881652149, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -234764442, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1040676332, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1920723227, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1638207338, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1139654231, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1907999349, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1551565661, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 831799858, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -71672343, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1563704017, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1071755331, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1663526354, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -578503342, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 202259054, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 2022894649, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 29583956, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1551167513, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 581931203, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1779491540, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -53403139, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1282144456, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 625726930, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -193354496, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1628917061, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1900310419, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 626329060, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -40156628, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -460752951, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1765617285, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -757608009, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1978774833, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1735558629, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 1424309892, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1447099731, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -373897615, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: -1384553020, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
+  - {fileID: 21300000, guid: 1e8abd3ca85aff44eaba4867567811f0, type: 3}
+  - {fileID: 21300000, guid: dad016ccebdb11c4aad1019de5113491, type: 3}
+  - {fileID: 21300000, guid: de030a3ecc2dd2c489c12257ff1d0adf, type: 3}
+  - {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   m_PackedSpriteNamesToIndex:
+  - PlayerUp
+  - CrateDmg
+  - MyFirstMerchant
   - ground_tiles (1)_21
   - ground_tiles (1)_180
   - ground_tiles (1)_225
@@ -648,6 +716,8 @@ SpriteAtlas:
   - ground_tiles (1)_163
   - ground_tiles (1)_183
   - ground_tiles (1)_226
+  - CrateOk
+  - PlayerSide
   - Cliff_tileset_4
   - Cliff_tileset_124
   - Cliff_tileset_125
@@ -774,6 +844,66 @@ SpriteAtlas:
   - Cliff_tileset_7
   - Cliff_tileset_6
   - Cliff_tileset_5
+  - PlayerIdl
+  - object- layer_49
+  - object- layer_48
+  - object- layer_50
+  - object- layer_51
+  - object- layer_29
+  - object- layer_52
+  - object- layer_28
+  - object- layer_53
+  - object- layer_43
+  - object- layer_54
+  - object- layer_42
+  - object- layer_41
+  - object- layer_25
+  - object- layer_40
+  - object- layer_24
+  - object- layer_47
+  - object- layer_27
+  - object- layer_46
+  - object- layer_26
+  - object- layer_45
+  - object- layer_21
+  - object- layer_44
+  - object- layer_20
+  - object- layer_23
+  - object- layer_22
+  - object- layer_14
+  - object- layer_15
+  - object- layer_16
+  - object- layer_17
+  - object- layer_10
+  - object- layer_11
+  - object- layer_12
+  - object- layer_13
+  - object- layer_38
+  - object- layer_39
+  - object- layer_18
+  - object- layer_19
+  - object- layer_32
+  - object- layer_33
+  - object- layer_30
+  - object- layer_31
+  - object- layer_36
+  - object- layer_37
+  - object- layer_34
+  - object- layer_35
+  - object- layer_9
+  - object- layer_8
+  - object- layer_5
+  - object- layer_4
+  - object- layer_7
+  - object- layer_6
+  - object- layer_1
+  - object- layer_0
+  - object- layer_3
+  - object- layer_2
+  - CrateDummy
+  - PlayerLeft
+  - PlayerDown
+  - storeplaceholder
   m_RenderDataMap: {}
-  m_Tag: Sprite Atlas
+  m_Tag: SpriteAtlas
   m_IsVariant: 0
