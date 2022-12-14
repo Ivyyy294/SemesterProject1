@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class StoreSlot : MonoBehaviour
 {
+	//Editor Values
+	[SerializeField] SpriteRenderer iconRenderer;
+
 	//private Values
 	private Ware ware;
 	private GameStatus gameStatus;
 
 	//Public Functions
-	public void SetWare (Ware w) {ware = w;}
+	public void SetWare (Ware w)
+	{
+		ware = w;
+
+		if (iconRenderer != null)
+			iconRenderer.sprite = ware.SpriteOk;
+		else
+			Debug.Log ("iconRenderer missing!");
+	}
 
 	public GameObject BuyWare (uint playerId)
 	{
