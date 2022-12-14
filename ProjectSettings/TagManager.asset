@@ -8,6 +8,8 @@ TagManager:
   - Ship
   - Store
   - Ware
+  - Crate
+  - Cooling
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Team1
   - Team2
   - NoCollision
-  - 
+  - StorageArea
   - 
   - 
   - 

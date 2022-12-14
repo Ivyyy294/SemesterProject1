@@ -8,6 +8,7 @@ public class WareDisplay : MonoBehaviour
 	//Public Values
 	public Ware ware;
 	public bool damaged = false;
+	public bool isCooled = false;
 
 	//Private Values
 	private double lifeTime = 0.0;
@@ -23,10 +24,14 @@ public class WareDisplay : MonoBehaviour
 
 	public void CheckDurability ()
 	{
-		lifeTime += Time.deltaTime;
+		//Lifetime expires when not cooled
+		if (!isCooled)
+		{
+			lifeTime += Time.deltaTime;
 
-		if (ware.durability > 0 && ware.durability <= lifeTime)
-			damaged = true;
+			if (ware.durability > 0 && ware.durability <= lifeTime)
+				damaged = true;
+		}
 	}
 
 	//Private Functions
@@ -72,5 +77,17 @@ public class WareDisplay : MonoBehaviour
 					r.sprite = ware.SpriteOk;
 			}
 		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag ("Cooling"))
+			isCooled = true;
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.CompareTag ("Cooling"))
+			isCooled = false;
 	}
 }

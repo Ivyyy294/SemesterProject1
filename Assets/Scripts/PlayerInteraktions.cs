@@ -15,6 +15,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	//Private Values
 	private GameObject grabbedObject;
+	private Vector3 oScale;
 	private int layerMask;
 	private Vector3 dir;
 	private PlayerInputActions playerInputActions;
@@ -94,6 +95,7 @@ public class PlayerInteraktions: MonoBehaviour
 				dropIndicator.SetActive (true);
 				grabbedObject.transform.position = transform.position;
 				grabbedObject.transform.SetParent (transform);
+				oScale = grabbedObject.transform.localScale;
 				grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f);
 				grabbedObject.layer = 8;
 			}
@@ -104,7 +106,8 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (context.performed)
 		{
-			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance);
+			int layerMask = 1 << 0;
+			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance, layerMask);
 			Debug.DrawRay (transform.position, dir, Color.green, 1f);
 
 			if (hitInfo.collider != null)
@@ -168,7 +171,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private void ResetGrabbedObject()
 	{ 
 		dropIndicator.SetActive (false);
-		grabbedObject.transform.localScale = new Vector3 (1f, 1f);
+		grabbedObject.transform.localScale = oScale;
 		grabbedObject.transform.SetParent (WarePool.Me.transform);
 		grabbedObject.layer = 0;
 		grabbedObject = null;

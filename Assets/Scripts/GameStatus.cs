@@ -106,9 +106,10 @@ public class GameStatus : MonoBehaviour
 		if (teams.Count > 0)
 		{
 			GUI.skin.label.fontStyle = FontStyle.Bold;
+			GUI.skin.label.fontSize = 24;
 			GUI.skin.label.normal.textColor = Color.black;
 
-			GUILayout.BeginArea(new Rect (10, 10, 150, 100));
+			GUILayout.BeginArea(new Rect (10, 0, 250, 100));
 			GUILayout.Label ("Day: " + currentDay.ToString() + " Time: " + currentHour + ":" + currentMinute);
 			GUILayout.Label ("Reputation: " + teams[0].Reputation.ToString());
 			GUILayout.Label ("Silver: " + teams[0].SilverCoins.ToString());
