@@ -7,20 +7,24 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 {
 	public Animator animator;
 	public uint playerId = 0;
-	private PlayerInputActions playerInputActions;
-
-	private void Awake()
-	{
-		playerInputActions = new PlayerInputActions();
-		playerInputActions.Player.Enable();
-	}
+	private PlayerInput input;
+	private InputAction moveAction;
 
 	private void Update()
 	{
-		Vector2 input = playerInputActions.Player.Movement.ReadValue <Vector2>();
-		Move (input);
-		animator.SetFloat ("Horizontal", input.x);
-		animator.SetFloat ("Vertical", input.y);
-		animator.SetFloat ("Speed", input.sqrMagnitude);
+		if (input == null)
+			InitInput();
+
+		Vector2 movementVec = moveAction.ReadValue <Vector2>();
+		Move (movementVec);
+		animator.SetFloat ("Horizontal", movementVec.x);
+		animator.SetFloat ("Vertical", movementVec.y);
+		animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+	}
+
+	private void InitInput()
+	{
+		input = GetComponent <PlayerInput>();
+		moveAction = input.actions["Movement"];
 	}
 }

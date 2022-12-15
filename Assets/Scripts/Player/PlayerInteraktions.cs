@@ -18,14 +18,37 @@ public class PlayerInteraktions: MonoBehaviour
 	private Vector3 oScale;
 	private int layerMask;
 	private Vector3 dir;
-	private PlayerInputActions playerInputActions;
+	private PlayerInput input;
+	private InputAction moveAction;
 
-	//Private Functions
-	private void Awake()
+	//Public Functions
+	public void CastRay (InputAction.CallbackContext context)
 	{
-		playerInputActions = new PlayerInputActions();
-		playerInputActions.Player.Enable();
-		playerInputActions.Player.Grab.performed += CastRay;
+		if (context.performed)
+		{
+			int layerMask = 1 << 0;
+			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance, layerMask);
+			Debug.DrawRay (transform.position, dir, Color.green, 1f);
+
+			if (grabbedObject != null)
+			{
+				if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
+					InteractMerchant (hitInfo.collider.gameObject);
+				else
+					DropObject();
+			}
+			else if (hitInfo.collider != null)
+			{
+				if (hitInfo.collider.CompareTag ("Ware"))
+					InteractWare(hitInfo.collider.gameObject);
+				else if (hitInfo.collider.CompareTag ("Merchant"))
+					InteractMerchant (hitInfo.collider.gameObject);
+				else if (hitInfo.collider.CompareTag ("Store"))
+					InteractStore (hitInfo.collider.gameObject);
+				else if (grabbedObject != null)
+					DropObject();
+			}
+		}
 	}
 
 	void Start()
@@ -38,15 +61,24 @@ public class PlayerInteraktions: MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		Vector2 input = playerInputActions.Player.Movement.ReadValue <Vector2>();
+		if (input == null)
+			InitInput();
 
-		if (input != Vector2.zero)
-			dir = playerInputActions.Player.Movement.ReadValue <Vector2>();
+		Vector2 movementVec = moveAction.ReadValue <Vector2>();
+
+		if (movementVec != Vector2.zero)
+			dir = movementVec;
 	}
 
 	private void LateUpdate()
 	{
 		MoveIndicatorPos();
+	}
+
+	private void InitInput()
+	{
+		input = GetComponent <PlayerInput>();
+		moveAction = input.actions["Movement"];
 	}
 
 	float GetSnapOffset (float val)
@@ -98,35 +130,6 @@ public class PlayerInteraktions: MonoBehaviour
 				oScale = grabbedObject.transform.localScale;
 				grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f);
 				grabbedObject.layer = 8;
-			}
-		}
-	}
-
-	public void CastRay (InputAction.CallbackContext context)
-	{
-		if (context.performed)
-		{
-			int layerMask = 1 << 0;
-			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance, layerMask);
-			Debug.DrawRay (transform.position, dir, Color.green, 1f);
-
-			if (grabbedObject != null)
-			{
-				if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
-					InteractMerchant (hitInfo.collider.gameObject);
-				else
-					DropObject();
-			}
-			else if (hitInfo.collider != null)
-			{
-				if (hitInfo.collider.CompareTag ("Ware"))
-					InteractWare(hitInfo.collider.gameObject);
-				else if (hitInfo.collider.CompareTag ("Merchant"))
-					InteractMerchant (hitInfo.collider.gameObject);
-				else if (hitInfo.collider.CompareTag ("Store"))
-					InteractStore (hitInfo.collider.gameObject);
-				else if (grabbedObject != null)
-					DropObject();
 			}
 		}
 	}
