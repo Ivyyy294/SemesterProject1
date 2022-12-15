@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerManager : MonoBehaviour
 {
 	[SerializeField]
-	private List <Transform> spawnPoints;
+	private Transform[] spawnPoints = new Transform[2];
 	//bool waitingForPlayers = true;
 
 	public void OnPlayerJoined (PlayerInput playerInput)
@@ -16,7 +16,10 @@ public class PlayerManager : MonoBehaviour
 
 		GameStatus.Me.AddPlayerToTeam ( (uint)playerId, teamId);
 
-		playerInput.gameObject.layer = 6 + teamId;
+		GameObject player = playerInput.gameObject;
+		player.layer = 6 + teamId;
+		player.transform.position = spawnPoints[teamId].position;
+		player.transform.SetParent (transform);
 
 		//waitingForPlayers = false;
 	}
