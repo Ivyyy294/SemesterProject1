@@ -15,7 +15,7 @@ public class MerchantDisplay : MonoBehaviour
 	Ware currentRequest = null;
 
 	//Public Functions
-	public bool Interact (GameObject obj)
+	public bool Interact (GameObject obj, uint playerId)
 	{
 		if (obj != null && currentRequest != null)
 		{
@@ -23,7 +23,7 @@ public class MerchantDisplay : MonoBehaviour
 
 			if (wareDisplay.damaged)
 			{
-				GameStatus.Me.AddReputation (0, -1f);
+				GameStatus.Me.AddReputation (playerId, -1f);
 				return true;
 			}
 			else
@@ -32,7 +32,7 @@ public class MerchantDisplay : MonoBehaviour
 
 				if (tmp != null && tmp.ID == currentRequest.ID)
 				{
-					GameStatus.Me.AddSilverCoins (0, tmp.value);
+					GameStatus.Me.AddSilverCoins (playerId, tmp.value);
 					ChangeRequest (null);
 					return true;
 				}

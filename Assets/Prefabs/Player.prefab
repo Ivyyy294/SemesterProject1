@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3464195701759405140}
   - component: {fileID: 2939929450331982193}
-  - component: {fileID: 2115383951645256396}
   - component: {fileID: 4950334534790558254}
   m_Layer: 0
   m_Name: PlayerCamera
@@ -77,14 +76,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2115383951645256396
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2200496001846676000}
-  m_Enabled: 1
 --- !u!114 &4950334534790558254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +230,8 @@ GameObject:
   - component: {fileID: 3714752570770300280}
   - component: {fileID: 6703997733596930556}
   - component: {fileID: 7274491451088530308}
+  - component: {fileID: 5169122760660503152}
+  - component: {fileID: -4499873762850254881}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -394,8 +387,7 @@ MonoBehaviour:
   maxSpeed: 8
   acceleration: 1
   deacceleration: 1
-  animator: {fileID: 0}
-  playerId: 0
+  animator: {fileID: 5169122760660503152}
 --- !u!114 &7274491451088530308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,3 +438,35 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 2939929450331982193}
+--- !u!95 &5169122760660503152
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714752570770300281}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de8a0b03e4a70674a8983d80fa31a73b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4499873762850254881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714752570770300281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60cea38a366ba534a9d668cc32251937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

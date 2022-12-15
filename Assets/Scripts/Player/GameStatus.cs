@@ -2,8 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Team
+public class GameDateTime
 {
+	public int day = 0;
+	public string hour;
+	public string minute;
+}
+
+public class Team
+{
+	public int Id;
 	public float Reputation {set;get;}
 	public float SilverCoins {set;get;}
 	public List <uint> playerIds = new List<uint>();
@@ -17,10 +25,8 @@ public class GameStatus : MonoBehaviour
 
 	//Private Values
 	List <Team> teams;
-	int currentDay = 0;
-	string currentHour;
-	string currentMinute;
 	float lifeTime = 0.0f;
+	GameDateTime currentDateTime = new GameDateTime();
 
 	//Public Functions
 	public void AddPlayerToTeam (uint playerId, int teamId)
@@ -30,6 +36,7 @@ public class GameStatus : MonoBehaviour
 		else
 		{
 			Team t = new Team();
+			t.Id = teamId;
 			t.playerIds.Add (playerId);
 			teams.Add (t);
 		}
@@ -61,6 +68,19 @@ public class GameStatus : MonoBehaviour
 		return 0f;
 	}
 
+	public Team GetTeamForPlayer (uint playerId)
+	{
+		foreach (Team i in teams)
+		{
+			if (i.playerIds.Contains (playerId))
+				return i;
+		}
+
+		return null;
+	}
+
+	public GameDateTime GetCurrentDateTime () { return currentDateTime;}
+
 	//Private Functions
 
     // Start is called before the first frame update
@@ -80,18 +100,18 @@ public class GameStatus : MonoBehaviour
 	void CalculateDayTime ()
 	{
 		int rawDay = Mathf.FloorToInt (lifeTime / dayLenght);
-		currentDay = 1 + rawDay;
+		currentDateTime.day = 1 + rawDay;
 
 		float rawTime = lifeTime - dayLenght * rawDay;
 		float rawHour = 24 * rawTime / dayLenght;
 
-		currentHour = Mathf.FloorToInt (rawHour).ToString();
+		currentDateTime.hour = Mathf.FloorToInt (rawHour).ToString();
 
 		float rawMinute = rawHour % 1f * 60f;
-		currentMinute = Mathf.FloorToInt (rawMinute).ToString();
+		currentDateTime.minute = Mathf.FloorToInt (rawMinute).ToString();
 
 		if (rawMinute < 10f)
-			currentMinute = "0" + currentMinute;
+			currentDateTime.minute = "0" + currentDateTime.minute;
 	}
 
 	// Update is called once per frame
@@ -101,7 +121,7 @@ public class GameStatus : MonoBehaviour
 		CalculateDayTime();
     }
 
-	void OnGUI()
+	/* void OnGUI()
 	{
 		if (teams.Count > 0)
 		{
@@ -109,22 +129,17 @@ public class GameStatus : MonoBehaviour
 			GUI.skin.label.fontSize = 24;
 			GUI.skin.label.normal.textColor = Color.black;
 
-			GUILayout.BeginArea(new Rect (10, 0, 250, 100));
+			GUILayout.BeginArea(new Rect (10, 0, 500, 500));
 			GUILayout.Label ("Day: " + currentDay.ToString() + " Time: " + currentHour + ":" + currentMinute);
-			GUILayout.Label ("Reputation: " + teams[0].Reputation.ToString());
-			GUILayout.Label ("Silver: " + teams[0].SilverCoins.ToString());
+
+			foreach (Team i in teams)
+			{
+				GUILayout.Label ("Team " + i.Id.ToString());
+				GUILayout.Label ("Reputation: " + i.Reputation.ToString());
+				GUILayout.Label ("Silver: " + i.SilverCoins.ToString());
+			}
+
 			GUILayout.EndArea();
 		}
-	}
-
-	Team GetTeamForPlayer (uint playerId)
-	{
-		foreach (Team i in teams)
-		{
-			if (i.playerIds.Contains (playerId))
-				return i;
-		}
-
-		return null;
-	}
+	} */
 }

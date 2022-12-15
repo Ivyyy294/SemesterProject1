@@ -20,6 +20,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private Vector3 dir;
 	private PlayerInput input;
 	private InputAction moveAction;
+	private uint playerId;
 
 	//Public Functions
 	public void CastRay (InputAction.CallbackContext context)
@@ -79,6 +80,7 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		input = GetComponent <PlayerInput>();
 		moveAction = input.actions["Movement"];
+		playerId = (uint) input.playerIndex;
 	}
 
 	float GetSnapOffset (float val)
@@ -153,7 +155,7 @@ public class PlayerInteraktions: MonoBehaviour
 			StoreSlot storeSlot = obj.GetComponent<StoreSlot>();
 
 			if (storeSlot != null)
-				GrabObject (storeSlot.BuyWare(0));
+				GrabObject (storeSlot.BuyWare(playerId));
 		}
 	}
 
@@ -167,7 +169,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 			if (tmp != null && grabbedObject != null)
 			{
-				if (tmp.Interact (grabbedObject))
+				if (tmp.Interact (grabbedObject, playerId))
 				{
 					grabbedObject.SetActive (false);
 					ResetGrabbedObject();

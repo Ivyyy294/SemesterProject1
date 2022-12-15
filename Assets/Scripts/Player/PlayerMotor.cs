@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerMotor : Ivyyy.PlayerMovement2D
 {
 	public Animator animator;
-	public uint playerId = 0;
 	private PlayerInput input;
 	private InputAction moveAction;
 
