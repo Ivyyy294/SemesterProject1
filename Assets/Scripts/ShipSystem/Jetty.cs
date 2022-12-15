@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class ShipHandler : MonoBehaviour
+public class Jetty : MonoBehaviour
 {
 	//Editor Values
 	[SerializeField] bool shipDocked;
@@ -18,16 +19,33 @@ public class ShipHandler : MonoBehaviour
 	private float journeyLength;
 	private float startTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        journeyLength = Vector3.Distance (spawnPoint.position, destinationPoint.position);
-		SpawnShip ();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+	//Public Functions
+	public void SpawnShip(Ship obj)
+	{
+		ship.SetActive (true);
+		ship.transform.position = spawnPoint.position;
+		
+		ShipDisplay shipDisplay = ship.GetComponent<ShipDisplay>();
+
+		if (shipDisplay != null)
+			shipDisplay.Init (obj);
+
+		startTime = Time.time;
+	}
+
+	public bool IsShipActive () { return ship != null && ship.activeInHierarchy;}
+
+	//Private Functions
+	// Start is called before the first frame update
+	void Start()
+	{
+		journeyLength = Vector3.Distance (spawnPoint.position, destinationPoint.position);
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
 		if (ship.activeInHierarchy)
 		{
 			if (!shipDocked)
@@ -35,13 +53,6 @@ public class ShipHandler : MonoBehaviour
 
 			harbourBarrier.SetActive (!shipDocked);
 		}
-    }
-
-	private void SpawnShip()
-	{
-		ship.SetActive (true);
-		ship.transform.position = spawnPoint.position;
-		startTime = Time.time;
 	}
 
 	private void MoveShip()

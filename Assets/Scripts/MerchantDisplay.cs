@@ -42,6 +42,18 @@ public class MerchantDisplay : MonoBehaviour
 		return false;
 	}
 
+	public void ActivateRequestIfReady()
+	{
+		Debug.Log ("ActivateRequestIfReady");
+
+		if (currentRequest == null
+			&& lifeTime >= merchant.requestFrequency)
+		{
+			ChangeRequest (merchant.GetNewRequest());
+			lifeTime = 0.0;
+		}
+	}
+
 	//Private Functions
 	private void Start()
 	{
@@ -53,17 +65,6 @@ public class MerchantDisplay : MonoBehaviour
 	{
 		if (currentRequest == null && lifeTime < merchant.requestFrequency)
 			lifeTime += Time.deltaTime;
-	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (collision.CompareTag ("Player")
-			&& currentRequest == null
-			&& lifeTime >= merchant.requestFrequency)
-		{
-			ChangeRequest (merchant.GetNewRequest());
-			lifeTime = 0.0;
-		}
 	}
 
 	private void ChangeRequest (Ware obj)

@@ -6,30 +6,30 @@ public class ShipDisplay : MonoBehaviour
 {
 	//Editor values
 	[SerializeField] List <Transform> warePos;
-	[SerializeField] Ware wareToSell;
 
-    // Start is called before the first frame update
-    void OnEnable ()
-    {
-		foreach (Transform i in warePos)
+	//Public Functions
+	public void Init (Ship ship)
+	{
+		InitWares(ship);
+	}
+
+	//Private Functions
+
+	void InitWares (Ship ship)
+	{
+		for (int i = 0; i < ship.wares.Count && i < warePos.Count; ++i)
 		{
 			GameObject obj = WarePool.Me.GetPooledObject();
 
 			if (obj != null)
 			{
 				obj.SetActive (true);
-				obj.transform.position = i.position;
+				obj.transform.position = warePos[i].position;
 				obj.transform.SetParent (transform);
 
 				WareDisplay wareDisplay = obj.GetComponent<WareDisplay>();
-				wareDisplay.Init (wareToSell);
+				wareDisplay.Init (ship.wares[i]);
 			}
 		}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	}
 }

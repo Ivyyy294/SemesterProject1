@@ -19,4 +19,4 @@ MonoBehaviour:
   SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   needsCooling: 0
   fragile: 0
-  durability: 30
+  durability: 45

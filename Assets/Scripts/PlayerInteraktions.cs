@@ -110,7 +110,14 @@ public class PlayerInteraktions: MonoBehaviour
 			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance, layerMask);
 			Debug.DrawRay (transform.position, dir, Color.green, 1f);
 
-			if (hitInfo.collider != null)
+			if (grabbedObject != null)
+			{
+				if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
+					InteractMerchant (hitInfo.collider.gameObject);
+				else
+					DropObject();
+			}
+			else if (hitInfo.collider != null)
 			{
 				if (hitInfo.collider.CompareTag ("Ware"))
 					InteractWare(hitInfo.collider.gameObject);
@@ -121,8 +128,6 @@ public class PlayerInteraktions: MonoBehaviour
 				else if (grabbedObject != null)
 					DropObject();
 			}
-			else if (grabbedObject != null)
-				DropObject();
 		}
 	}
 

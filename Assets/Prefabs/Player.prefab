@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3714752570590167899}
   - component: {fileID: 3714752570590167898}
   - component: {fileID: 3714752570590167897}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: dropIndicator
   m_TagString: Player
   m_Icon: {fileID: 0}
