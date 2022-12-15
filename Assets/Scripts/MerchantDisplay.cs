@@ -51,15 +51,18 @@ public class MerchantDisplay : MonoBehaviour
 
 	private void Update()
 	{
-		if (currentRequest == null)
+		if (currentRequest == null && lifeTime < merchant.requestFrequency)
+			lifeTime += Time.deltaTime;
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag ("Player")
+			&& currentRequest == null
+			&& lifeTime >= merchant.requestFrequency)
 		{
-			if (lifeTime >= merchant.requestFrequency)
-			{
-				ChangeRequest (merchant.GetNewRequest());
-				lifeTime = 0.0;
-			}
-			else
-				lifeTime += Time.deltaTime;
+			ChangeRequest (merchant.GetNewRequest());
+			lifeTime = 0.0;
 		}
 	}
 
