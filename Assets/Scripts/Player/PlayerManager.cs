@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
 {
 	[SerializeField]
 	private List <Transform> spawnPoints;
-
+	//bool waitingForPlayers = true;
 
 	public void OnPlayerJoined (PlayerInput playerInput)
 	{
@@ -18,21 +18,17 @@ public class PlayerManager : MonoBehaviour
 
 		playerInput.gameObject.layer = 6 + teamId;
 
-		//if (index < spawnPoints.Count)
-		//	pTrans.position = spawnPoints[index].position;
-
-		//PlayerConfig tmp = playerInput.transform.GetComponent <PlayerConfig>();
-
-		//if (tmp != null)
-		//	playerConfig.Add (tmp);
+		//waitingForPlayers = false;
 	}
 
-	//private void SetLayerId(Transform trans, int layerId)
+	//private void OnGUI()
 	//{
-	//	foreach (Transform i in trans.GetComponentsInChildren<Transform>())
+	//	if (waitingForPlayers)
 	//	{
-	//		if (i.gameObject != null)
-	//			i.gameObject.layer = layerId;
+	//		GUILayout.BeginArea(new Rect (Screen.width / 2, Screen.height / 2, 500, 500));
+	//		GUILayout.Label ("Waiting for players!");
+
+	//		GUILayout.EndArea();
 	//	}
 	//}
 }
