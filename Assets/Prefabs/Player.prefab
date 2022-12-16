@@ -384,9 +384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ff7ca015718fb49aaf402bc84d587c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 15
-  acceleration: 1
-  deacceleration: 1
+  maxSpeed: 28.5
+  acceleration: 5
+  deacceleration: 5
   animator: {fileID: 5169122760660503152}
 --- !u!114 &7274491451088530308
 MonoBehaviour:

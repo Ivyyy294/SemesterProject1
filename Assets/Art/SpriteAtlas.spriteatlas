@@ -290,6 +290,7 @@ SpriteAtlas:
   - {fileID: -1545861496, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 1627177051, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: -337318029, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
+  - {fileID: 21300000, guid: 84085eb4fc1b6f3448b5a6f25fa5468f, type: 3}
   - {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
   - {fileID: 21300000, guid: c1712a299cfb8164a97bc46b73f0b0c4, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
@@ -480,6 +481,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: de030a3ecc2dd2c489c12257ff1d0adf, type: 3}
   - {fileID: 21300000, guid: b0ef625ef6c2fee48a79d4dcfb678032, type: 3}
   - {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
+  - {fileID: 21300000, guid: c9f1105f37fdb3c41a8864716df5cd6f, type: 3}
   - {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   m_PackedSpriteNamesToIndex:
   - PlayerUp
@@ -721,6 +723,7 @@ SpriteAtlas:
   - ground_tiles (1)_163
   - ground_tiles (1)_183
   - ground_tiles (1)_226
+  - Timber1
   - CrateOk
   - PlayerSide
   - Armour
@@ -911,6 +914,7 @@ SpriteAtlas:
   - PlayerDown
   - CraftsmanStore
   - crates_study_x2
+  - IronOre1
   - storeplaceholder
   m_RenderDataMap: {}
   m_Tag: SpriteAtlas

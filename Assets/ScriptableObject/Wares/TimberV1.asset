@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Timber1
   ID: 1
   value: 1
-  SpriteOk: {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
+  SpriteOk: {fileID: 21300000, guid: 84085eb4fc1b6f3448b5a6f25fa5468f, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   needsCooling: 0
   fragile: 0
