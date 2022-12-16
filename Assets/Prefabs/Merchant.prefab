@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795383833461947583}
   - component: {fileID: 4338701110978472996}
+  - component: {fileID: 8868844686045484573}
   m_Layer: 10
   m_Name: RequestTrigger
   m_TagString: Untagged
@@ -48,6 +49,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!114 &8868844686045484573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701649901396588738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39515be5f7d05774d80941841a22c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callBack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7688834356740991475}
+        m_TargetAssemblyTypeName: MerchantDisplay, Assembly-CSharp
+        m_MethodName: ActivateRequestIfReady
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7688834356356821563
 GameObject:
   m_ObjectHideFlags: 0
