@@ -15,7 +15,7 @@ public class Ware : ScriptableObject
 
 	//Durability
 	[Header ("Durability")]
-	public bool needsCooling;
-	public bool fragile;
+	//public bool needsCooling;
+	//public bool fragile;
 	public uint durability;
 }
