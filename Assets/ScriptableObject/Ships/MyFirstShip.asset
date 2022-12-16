@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   wares:
-  - {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
-  - {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
+  - {fileID: 11400000, guid: 1230b04dd223bd2418b785631cb92e14, type: 2}
+  - {fileID: 11400000, guid: 053e7078ae57dbd4c8481b393b23a9bb, type: 2}

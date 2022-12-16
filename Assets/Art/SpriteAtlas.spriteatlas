@@ -53,6 +53,7 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 45e37740bebcfc546b72387144e25755, type: 3}
   - {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  - {fileID: 21300000, guid: 30962ec29612c7e44b61b51b8c6d484a, type: 3}
   - {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
   - {fileID: -486083769, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 1191643106, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
@@ -291,6 +292,7 @@ SpriteAtlas:
   - {fileID: -337318029, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
   - {fileID: 21300000, guid: c1712a299cfb8164a97bc46b73f0b0c4, type: 3}
+  - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   - {fileID: -1846860355, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: 746696381, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: -1457007098, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
@@ -476,10 +478,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1e8abd3ca85aff44eaba4867567811f0, type: 3}
   - {fileID: 21300000, guid: dad016ccebdb11c4aad1019de5113491, type: 3}
   - {fileID: 21300000, guid: de030a3ecc2dd2c489c12257ff1d0adf, type: 3}
+  - {fileID: 21300000, guid: b0ef625ef6c2fee48a79d4dcfb678032, type: 3}
+  - {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
   - {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   m_PackedSpriteNamesToIndex:
   - PlayerUp
   - CrateDmg
+  - thor-hammer
   - MyFirstMerchant
   - ground_tiles (1)_21
   - ground_tiles (1)_180
@@ -718,6 +723,7 @@ SpriteAtlas:
   - ground_tiles (1)_226
   - CrateOk
   - PlayerSide
+  - Armour
   - Cliff_tileset_4
   - Cliff_tileset_124
   - Cliff_tileset_125
@@ -903,6 +909,8 @@ SpriteAtlas:
   - CrateDummy
   - PlayerLeft
   - PlayerDown
+  - CraftsmanStore
+  - crates_study_x2
   - storeplaceholder
   m_RenderDataMap: {}
   m_Tag: SpriteAtlas
