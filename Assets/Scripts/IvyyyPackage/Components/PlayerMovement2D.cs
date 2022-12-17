@@ -10,21 +10,20 @@ namespace Ivyyy
 	[RequireComponent(typeof(Rigidbody2D))]
 	public class PlayerMovement2D : MonoBehaviour
 	{
-		protected Rigidbody2D m_Rigidbody;
-
-		//Offset that is going to be added to trajectory during FixedUpdate
-		protected Vector3 trajectoryOffset;
-
-		//Current Movement trajectory
-		protected Line trajectory = new Line();
-
+		//Private Values
+		Rigidbody2D m_Rigidbody;
+		Vector2 inputVector;
+		float timeAcceleration = 0f;
+		float timeDeacceleration = 0f;
+		Vector3 Velocity;
+		float currentSpeed;
 
 		[Header ("Acceleration")]
 		[SerializeField] float maxSpeed = 0f;
-		[SerializeField] float acceleration = 0f;
+		[SerializeField] AnimationCurve accelerationCurve;
 		[Space]
 		[Header ("Deacceleration")]
-		[SerializeField] float deacceleration = 0.1f;
+		[SerializeField] AnimationCurve deaccelerationCurve;
 
 		//Start is called before the first frame update
 		void Start()
@@ -33,57 +32,73 @@ namespace Ivyyy
 			Assert.IsTrue (m_Rigidbody != null, "Missing Rigidbody!");
 		}
 
-		float GetAxisMovementOffset (float rawOffset, float currentAxisVelocity)
-		{
-			float val = 0f;
-			float fixedDeltaTime = Time.fixedDeltaTime;
+		//float GetAxisMovementOffset (float rawOffset, float currentAxisVelocity)
+		//{
+		//	float val = 0f;
+		//	float fixedDeltaTime = Time.fixedDeltaTime;
 
-			if (rawOffset != 0f)
-				val = rawOffset * fixedDeltaTime;
-			//Deacceleration
-			else if (currentAxisVelocity != 0f)
-			{
-				float deltaDeacceleration = deacceleration * fixedDeltaTime;
-				float tmpDeacceleration = Mathf.Min (Mathf.Abs (currentAxisVelocity), deltaDeacceleration);
+		//	if (rawOffset != 0f)
+		//		val = rawOffset * fixedDeltaTime;
+		//	//Deacceleration
+		//	else if (currentAxisVelocity != 0f)
+		//	{
+		//		float deltaDeacceleration = deacceleration * fixedDeltaTime;
+		//		float tmpDeacceleration = Mathf.Min (Mathf.Abs (currentAxisVelocity), deltaDeacceleration);
 
-				if (currentAxisVelocity > 0f)
-					val -= tmpDeacceleration;
-				else if (currentAxisVelocity < 0f)
-					val += tmpDeacceleration;
-			}
+		//		if (currentAxisVelocity > 0f)
+		//			val -= tmpDeacceleration;
+		//		else if (currentAxisVelocity < 0f)
+		//			val += tmpDeacceleration;
+		//	}
 
-			return val;
-		}
+		//	return val;
+		//}
 
 		protected virtual void FixedUpdate()
 		{
 			float fixedDeltaTime = Time.fixedDeltaTime;
+			float tmpSpeed = maxSpeed * fixedDeltaTime;
 
-			trajectoryOffset.x = GetAxisMovementOffset (trajectoryOffset.x, trajectory.P2.x);
-			trajectoryOffset.y = GetAxisMovementOffset (trajectoryOffset.y, trajectory.P2.y);
-			
-			trajectory.P2 += trajectoryOffset;
+			if (timeAcceleration > 0f)
+			{
+				tmpSpeed *= accelerationCurve.Evaluate (timeAcceleration);
+				currentSpeed = tmpSpeed;
+			}
+			else if (timeDeacceleration > 0f)
+				tmpSpeed = currentSpeed * deaccelerationCurve.Evaluate (timeDeacceleration);
+
+			Velocity = inputVector * tmpSpeed;
 
 			//Apply movement
-			if (trajectory.Length > 0f && m_Rigidbody != null)
+			if (Velocity != Vector3.zero && m_Rigidbody != null)
 			{
-				float deltaMaxSpeed = maxSpeed * fixedDeltaTime;
-
-				if (trajectory.Length > deltaMaxSpeed)
-					trajectory.Length = deltaMaxSpeed;
-				m_Rigidbody.MovePosition (transform.position + trajectory.P2);
+				Debug.Log ("Velocity " + tmpSpeed / fixedDeltaTime);
+				m_Rigidbody.MovePosition (transform.position + Velocity);
 			}
 		}
 
-		private void OnCollisionEnter(Collision collision)
-		{
-			trajectory.Length = 0f;
-			m_Rigidbody.velocity = Vector3.zero;
-		}
+		//private void OnCollisionEnter(Collision collision)
+		//{
+		//	trajectory.Length = 0f;
+		//	m_Rigidbody.velocity = Vector3.zero;
+		//}
 
-		public void Move(Vector2 inputVector)
+		public void Move(Vector2 input)
 		{
-			trajectoryOffset = inputVector * acceleration;
+			if (input != Vector2.zero)
+			{
+				timeAcceleration += Time.deltaTime;
+				timeDeacceleration = 0f;
+				inputVector = input;
+			}
+			else
+			{
+				timeAcceleration = 0f;
+
+				if (timeDeacceleration < 1f)
+					timeDeacceleration += Time.deltaTime;
+			}
+
 		}
 	}
 }

@@ -68,7 +68,7 @@ public class PlayerInteraktions: MonoBehaviour
 		Vector2 movementVec = moveAction.ReadValue <Vector2>();
 
 		if (movementVec != Vector2.zero)
-			dir = movementVec;
+			dir = movementVec.normalized;
 	}
 
 	private void LateUpdate()
