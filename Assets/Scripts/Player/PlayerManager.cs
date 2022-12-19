@@ -17,11 +17,22 @@ public class PlayerManager : MonoBehaviour
 		GameStatus.Me.AddPlayerToTeam ( (uint)playerId, teamId);
 
 		GameObject player = playerInput.gameObject;
-		player.layer = 6 + teamId;
+		SetLayerID (player, 6 + teamId);
+
 		player.transform.position = spawnPoints[teamId].position;
 		player.transform.SetParent (transform);
 
 		//waitingForPlayers = false;
+	}
+
+	private void SetLayerID (GameObject obj, int layerId)
+	{
+		obj.layer = layerId;
+
+		foreach (Transform t in obj.GetComponentInChildren <Transform>())
+		{
+			t.gameObject.layer = layerId;
+		}
 	}
 
 	//private void OnGUI()

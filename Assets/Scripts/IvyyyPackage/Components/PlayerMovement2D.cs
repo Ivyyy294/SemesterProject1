@@ -71,10 +71,7 @@ namespace Ivyyy
 
 			//Apply movement
 			if (Velocity != Vector3.zero && m_Rigidbody != null)
-			{
-				Debug.Log ("Velocity " + tmpSpeed / fixedDeltaTime);
 				m_Rigidbody.MovePosition (transform.position + Velocity);
-			}
 		}
 
 		//private void OnCollisionEnter(Collision collision)

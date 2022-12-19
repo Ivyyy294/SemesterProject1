@@ -200,7 +200,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!114 &3714752570590167897
 MonoBehaviour:
@@ -226,12 +226,12 @@ GameObject:
   - component: {fileID: 3714752570770300275}
   - component: {fileID: 3714752570770300284}
   - component: {fileID: 3714752570770300285}
-  - component: {fileID: 3714752570770300287}
   - component: {fileID: 3714752570770300280}
   - component: {fileID: 6703997733596930556}
   - component: {fileID: 7274491451088530308}
   - component: {fileID: 5169122760660503152}
   - component: {fileID: -4499873762850254881}
+  - component: {fileID: -1456124083200480684}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -329,32 +329,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &3714752570770300287
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714752570770300281}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &3714752570770300280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,10 +342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactKey: 101
-  rayDistance: 5
-  rayOffset: 0.55
+  rayDistance: 2
   dropIndicator: {fileID: 3714752570590167877}
-  snapGridSize: 0.5
 --- !u!114 &6703997733596930556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +470,7 @@ MonoBehaviour:
     m_ActionId: f07e9f19-b0d2-4dc9-b5b9-56fe1e2b06eb
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 2939929450331982193}
@@ -534,3 +506,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cea38a366ba534a9d668cc32251937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &-1456124083200480684
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714752570770300281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

@@ -9,11 +9,10 @@ public class PlayerInteraktions: MonoBehaviour
 	//Editor Values
 	[SerializeField] KeyCode interactKey;
 	[SerializeField] float rayDistance;
-	[SerializeField] float rayOffset;
 	[SerializeField] GameObject dropIndicator;
-	[SerializeField] float snapGridSize;
 
 	//Private Values
+	private Grid snapGrid;
 	private GameObject grabbedObject;
 	private Vector3 oScale;
 	private int layerMask;
@@ -28,8 +27,8 @@ public class PlayerInteraktions: MonoBehaviour
 		if (context.performed)
 		{
 			int layerMask = 1 << 0;
-			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position + dir * rayOffset, dir, rayDistance, layerMask);
-			Debug.DrawRay (transform.position, dir, Color.green, 1f);
+			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, dir, rayDistance, layerMask);
+			Debug.DrawRay (transform.position, dir * rayDistance, Color.green, 1f);
 
 			if (grabbedObject != null)
 			{
@@ -57,6 +56,11 @@ public class PlayerInteraktions: MonoBehaviour
 		dir = Vector3.right;
 		layerMask = LayerMask.NameToLayer ("Objects");
 		dropIndicator.SetActive (false);
+
+		snapGrid = GameStatus.Me.gameObject.GetComponentInChildren <Grid>();
+
+		if (snapGrid == null)
+			Debug.Log ("SnapGrid not found!");
 	}
 
 	// Update is called once per frame
@@ -83,23 +87,50 @@ public class PlayerInteraktions: MonoBehaviour
 		playerId = (uint) input.playerIndex;
 	}
 
-	float GetSnapOffset (float val)
-	{
-		float prefix = val < 0f ? -1f : 1;
-		float newVal = Mathf.Abs (val);
-		newVal = snapGridSize - newVal % snapGridSize;
-		newVal *= prefix;
-		return newVal;
-	}
-
 	void MoveIndicatorPos ()
 	{
-		if (dropIndicator != null)
+		if (dropIndicator != null && snapGrid != null)
 		{
-			float x = GetSnapOffset (transform.position.x);
-			float y = GetSnapOffset (transform.position.y);
-			Vector2 newPos = new Vector3 (x, y) + dir;
-			dropIndicator.transform.localPosition = newPos;
+			Vector3Int cp = snapGrid.LocalToCell (transform.position + dir);
+			//Vector3 newPos = snapGrid.GetCellCenterWorld (cp);
+			Vector3 newPos = snapGrid.GetCellCenterLocal (cp);
+			Line test = new Line (transform.position, newPos);
+			
+			float gridSize = snapGrid.cellSize.x * 0.5f;
+			Vector3 topLeft = new Vector3 (-gridSize, gridSize);
+			Vector3 topRight = new Vector3 (gridSize, gridSize);
+			Vector3 bottomLeft = new Vector3 (-gridSize, - gridSize);
+			Vector3 bottomRight = new Vector3 (gridSize, - gridSize);
+
+			double angle =  test.Angle;
+
+			Debug.Log (angle);
+
+			if (angle > -180f && angle < -135f)
+				newPos += topLeft; //Top Left
+			else if (angle > -90f && angle < -45f)
+				newPos += bottomLeft; //Bottom Left
+			else if (angle > -45f && angle < 0f)
+				newPos += topRight; //Top Right
+			else if (angle < 45f)
+				newPos += bottomRight; //Bottom Right
+			else if (angle < 90f)
+				newPos += topLeft; //Top Left
+			else if (angle < 135f)
+				newPos += topRight; //Top Right
+			else if (angle < 180f)
+				newPos +=bottomLeft; //Bottom left
+			else if (angle < 225f)
+				newPos += topLeft; //Top Left
+			else if (angle < 270f)
+				newPos += bottomRight; //Bottom Right
+			else if (angle < 315f)
+				newPos += bottomLeft; //Bottom left
+			else if (angle < 360f)
+				newPos += topRight; //Top Right
+			//Vector3 newPos = new Vector3 (r.xMin, r.yMax); 
+
+			dropIndicator.transform.position = newPos; //snapGrid.GetCellCenterWorld (cp) + snapGrid.cellSize;
 		}
 	}
 
