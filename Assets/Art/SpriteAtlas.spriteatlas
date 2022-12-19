@@ -292,6 +292,53 @@ SpriteAtlas:
   - {fileID: -337318029, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 21300000, guid: 84085eb4fc1b6f3448b5a6f25fa5468f, type: 3}
   - {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
+  - {fileID: 605213620, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 845738716, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1631085359, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 903572399, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1636197012, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1941895437, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1681563499, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1160637373, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -14447945, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 680713632, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 521145419, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1794466940, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -876854867, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 82980720, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 664437430, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1708421281, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 602736720, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 2093043775, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1449908036, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 350700353, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -394338606, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 710668957, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 593925462, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -8286192, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 192348463, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1329457416, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1141660738, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 498746393, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 930210257, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1850816542, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1520501636, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 962283734, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1282832970, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1971237693, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1552552714, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -377492560, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1778861565, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1843761624, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 245608988, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1928927678, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1601370990, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 1283381860, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -1055470649, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 59026055, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -2123919346, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 2036294407, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: -222454320, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
   - {fileID: 21300000, guid: c1712a299cfb8164a97bc46b73f0b0c4, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   - {fileID: -1846860355, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
@@ -725,6 +772,53 @@ SpriteAtlas:
   - ground_tiles (1)_226
   - Timber1
   - CrateOk
+  - TilesetV1.2_9
+  - TilesetV1.2_8
+  - TilesetV1.2_3
+  - TilesetV1.2_2
+  - TilesetV1.2_1
+  - TilesetV1.2_0
+  - TilesetV1.2_7
+  - TilesetV1.2_6
+  - TilesetV1.2_5
+  - TilesetV1.2_4
+  - TilesetV1.2_38
+  - TilesetV1.2_39
+  - TilesetV1.2_29
+  - TilesetV1.2_28
+  - TilesetV1.2_30
+  - TilesetV1.2_31
+  - TilesetV1.2_32
+  - TilesetV1.2_33
+  - TilesetV1.2_23
+  - TilesetV1.2_34
+  - TilesetV1.2_22
+  - TilesetV1.2_18
+  - TilesetV1.2_35
+  - TilesetV1.2_21
+  - TilesetV1.2_19
+  - TilesetV1.2_45
+  - TilesetV1.2_36
+  - TilesetV1.2_20
+  - TilesetV1.2_16
+  - TilesetV1.2_44
+  - TilesetV1.2_37
+  - TilesetV1.2_27
+  - TilesetV1.2_17
+  - TilesetV1.2_26
+  - TilesetV1.2_14
+  - TilesetV1.2_46
+  - TilesetV1.2_25
+  - TilesetV1.2_15
+  - TilesetV1.2_41
+  - TilesetV1.2_24
+  - TilesetV1.2_12
+  - TilesetV1.2_40
+  - TilesetV1.2_13
+  - TilesetV1.2_43
+  - TilesetV1.2_10
+  - TilesetV1.2_42
+  - TilesetV1.2_11
   - PlayerSide
   - Armour
   - Cliff_tileset_4
