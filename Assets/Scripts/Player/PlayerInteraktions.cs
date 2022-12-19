@@ -91,44 +91,8 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (dropIndicator != null && snapGrid != null)
 		{
-			Vector3Int cp = snapGrid.LocalToCell (transform.position + dir);
-			//Vector3 newPos = snapGrid.GetCellCenterWorld (cp);
-			Vector3 newPos = snapGrid.GetCellCenterLocal (cp);
-			Line test = new Line (transform.position, newPos);
-			
-			float gridSize = snapGrid.cellSize.x * 0.5f;
-			Vector3 topLeft = new Vector3 (-gridSize, gridSize);
-			Vector3 topRight = new Vector3 (gridSize, gridSize);
-			Vector3 bottomLeft = new Vector3 (-gridSize, - gridSize);
-			Vector3 bottomRight = new Vector3 (gridSize, - gridSize);
-
-			double angle =  test.Angle;
-
-			Debug.Log (angle);
-
-			if (angle > -180f && angle < -135f)
-				newPos += topLeft; //Top Left
-			else if (angle > -90f && angle < -45f)
-				newPos += bottomLeft; //Bottom Left
-			else if (angle > -45f && angle < 0f)
-				newPos += topRight; //Top Right
-			else if (angle < 45f)
-				newPos += bottomRight; //Bottom Right
-			else if (angle < 90f)
-				newPos += topLeft; //Top Left
-			else if (angle < 135f)
-				newPos += topRight; //Top Right
-			else if (angle < 180f)
-				newPos +=bottomLeft; //Bottom left
-			else if (angle < 225f)
-				newPos += topLeft; //Top Left
-			else if (angle < 270f)
-				newPos += bottomRight; //Bottom Right
-			else if (angle < 315f)
-				newPos += bottomLeft; //Bottom left
-			else if (angle < 360f)
-				newPos += topRight; //Top Right
-			//Vector3 newPos = new Vector3 (r.xMin, r.yMax); 
+			Vector3Int cp = snapGrid.WorldToCell (transform.position + dir);
+			Vector3 newPos = snapGrid.GetCellCenterWorld (cp);
 
 			dropIndicator.transform.position = newPos; //snapGrid.GetCellCenterWorld (cp) + snapGrid.cellSize;
 		}
