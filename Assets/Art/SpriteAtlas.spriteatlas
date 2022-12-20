@@ -339,6 +339,7 @@ SpriteAtlas:
   - {fileID: -2123919346, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
   - {fileID: 2036294407, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
   - {fileID: -222454320, guid: 8486995761d01b64e95b70675a5373ea, type: 3}
+  - {fileID: 21300000, guid: 3fceb1a808ca34b4ea229b0f44825594, type: 3}
   - {fileID: 21300000, guid: c1712a299cfb8164a97bc46b73f0b0c4, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   - {fileID: -1846860355, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
@@ -819,6 +820,7 @@ SpriteAtlas:
   - TilesetV1.2_10
   - TilesetV1.2_42
   - TilesetV1.2_11
+  - Cover art
   - PlayerSide
   - Armour
   - Cliff_tileset_4
