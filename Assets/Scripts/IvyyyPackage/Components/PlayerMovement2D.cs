@@ -19,14 +19,14 @@ namespace Ivyyy
 		float currentSpeed;
 
 		[Header ("Acceleration")]
-		[SerializeField] float maxSpeed = 0f;
+		[SerializeField] protected float maxSpeed = 0f;
 		[SerializeField] AnimationCurve accelerationCurve;
 		[Space]
 		[Header ("Deacceleration")]
 		[SerializeField] AnimationCurve deaccelerationCurve;
 
 		//Start is called before the first frame update
-		void Start()
+		virtual protected void Start()
 		{
 			m_Rigidbody = gameObject.GetComponent <Rigidbody2D>();
 			Assert.IsTrue (m_Rigidbody != null, "Missing Rigidbody!");

@@ -51,6 +51,11 @@ public class PlayerInteraktions: MonoBehaviour
 		}
 	}
 
+	public bool CarriesWare() { return grabbedObject != null;}
+
+	public Ware GetCarriedWare () 	{ return Ware.GetFromGameObject (grabbedObject);}
+
+	//Private Functions
 	void Start()
 	{
 		dir = Vector3.right;

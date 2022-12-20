@@ -423,7 +423,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  maxSpeedMediumWare: 9
+  maxSpeedHeavyWare: 6
   animator: {fileID: 5169122760660503152}
+  interactionScript: {fileID: 3714752570770300280}
 --- !u!114 &7274491451088530308
 MonoBehaviour:
   m_ObjectHideFlags: 0
