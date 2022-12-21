@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraktions: MonoBehaviour
 {
+
 	//Editor Values
 	[SerializeField] KeyCode interactKey;
 	[SerializeField] float rayDistance;
@@ -17,38 +18,16 @@ public class PlayerInteraktions: MonoBehaviour
 	private Vector3 oScale;
 	private int layerMask;
 	private Vector3 dir;
-	private PlayerInput input;
-	private InputAction moveAction;
 	private uint playerId;
+	private InputAction moveAction;
+	private InputAction grabAction;
 
-	//Public Functions
-	public void CastRay (InputAction.CallbackContext context)
+	
+	public void InitInput(PlayerConfiguration pc)
 	{
-		if (context.performed)
-		{
-			int layerMask = 1 << 0;
-			RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, dir, rayDistance, layerMask);
-			Debug.DrawRay (transform.position, dir * rayDistance, Color.green, 1f);
-
-			if (grabbedObject != null)
-			{
-				if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
-					InteractMerchant (hitInfo.collider.gameObject);
-				else
-					DropObject();
-			}
-			else if (hitInfo.collider != null)
-			{
-				if (hitInfo.collider.CompareTag ("Ware"))
-					InteractWare(hitInfo.collider.gameObject);
-				else if (hitInfo.collider.CompareTag ("Merchant"))
-					InteractMerchant (hitInfo.collider.gameObject);
-				else if (hitInfo.collider.CompareTag ("Store"))
-					InteractStore (hitInfo.collider.gameObject);
-				else if (grabbedObject != null)
-					DropObject();
-			}
-		}
+		moveAction = pc.Input.actions["Movement"];
+		grabAction = pc.Input.actions["Grab"];
+		playerId = (uint) pc.PlayerIndex;
 	}
 
 	public bool CarriesWare() { return grabbedObject != null;}
@@ -71,25 +50,47 @@ public class PlayerInteraktions: MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (input == null)
-			InitInput();
+		if (moveAction != null)
+		{
+			Vector2 movementVec = moveAction.ReadValue <Vector2>();
 
-		Vector2 movementVec = moveAction.ReadValue <Vector2>();
+			if (movementVec != Vector2.zero)
+				dir = movementVec.normalized;
+		}
+		
+		if (grabAction != null && grabAction.WasPressedThisFrame())
+			CastRay ();
+	}
 
-		if (movementVec != Vector2.zero)
-			dir = movementVec.normalized;
+	void CastRay ()
+	{
+		int layerMask = 1 << 0;
+		RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, dir, rayDistance, layerMask);
+		Debug.DrawRay (transform.position, dir * rayDistance, Color.green, 1f);
+
+		if (grabbedObject != null)
+		{
+			if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
+				InteractMerchant (hitInfo.collider.gameObject);
+			else
+				DropObject();
+		}
+		else if (hitInfo.collider != null)
+		{
+			if (hitInfo.collider.CompareTag ("Ware"))
+				InteractWare(hitInfo.collider.gameObject);
+			else if (hitInfo.collider.CompareTag ("Merchant"))
+				InteractMerchant (hitInfo.collider.gameObject);
+			else if (hitInfo.collider.CompareTag ("Store"))
+				InteractStore (hitInfo.collider.gameObject);
+			else if (grabbedObject != null)
+				DropObject();
+		}
 	}
 
 	private void LateUpdate()
 	{
 		MoveIndicatorPos();
-	}
-
-	private void InitInput()
-	{
-		input = GetComponent <PlayerInput>();
-		moveAction = input.actions["Movement"];
-		playerId = (uint) input.playerIndex;
 	}
 
 	void MoveIndicatorPos ()

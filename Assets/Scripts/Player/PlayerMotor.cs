@@ -16,8 +16,18 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 
 	//Private Values
 	private float maxSpeedDefault;
-	private PlayerInput input;
+	private PlayerConfiguration playerConfiguration;
+	//private PlayerInput input;
 	private InputAction moveAction;
+
+	//Public Functions
+	public void InitPlayer (PlayerConfiguration pc)
+	{
+		playerConfiguration = pc;
+		moveAction = playerConfiguration.Input.actions["Movement"];
+
+		interactionScript.InitInput (pc);
+	}
 
 	protected override void Start()
 	{
@@ -27,27 +37,26 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 
 	private void Update()
 	{
-		//Init moveAction on first call
-		if (input == null)
-			InitInput();
+		if (moveAction != null)
+		{
+			SetCurrentPlayerSpeed();
 
-		SetCurrentPlayerSpeed();
+			//Call Move from PlayerMovement2D
+			Vector2 movementVec = moveAction.ReadValue <Vector2>();
+			Move (movementVec);
 
-		//Call Move from PlayerMovement2D
-		Vector2 movementVec = moveAction.ReadValue <Vector2>();
-		Move (movementVec);
-
-		//Update Animator Values
-		animator.SetFloat ("Horizontal", movementVec.x);
-		animator.SetFloat ("Vertical", movementVec.y);
-		animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+			//Update Animator Values
+			animator.SetFloat ("Horizontal", movementVec.x);
+			animator.SetFloat ("Vertical", movementVec.y);
+			animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+		}
 	}
 
-	private void InitInput()
-	{
-		input = GetComponent <PlayerInput>();
-		moveAction = input.actions["Movement"];
-	}
+	//private void InitInput()
+	//{
+	//	input = GetComponent <PlayerInput>();
+	//	moveAction = input.actions["Movement"];
+	//}
 
 	private void SetCurrentPlayerSpeed ()
 	{

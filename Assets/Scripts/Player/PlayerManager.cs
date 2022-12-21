@@ -5,39 +5,30 @@ using UnityEngine.InputSystem;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
-public class PlayerConfiguration
-{
-	public PlayerInput Input { get; set;}
-	public int PlayerIndex {get; set;}
-	public int TeamIndex {get; set;}
-	public bool IsReady { get; set; }
-	public Vector3 SpawnPoint {get; set;}
-
-	public PlayerConfiguration (PlayerInput pi)
-	{
-		PlayerIndex = pi.playerIndex;
-		Input = pi;
-	}
-}
-
+[RequireComponent (typeof (PlayerInputManager))]
 public class PlayerManager : MonoBehaviour
 {
 	//Public Values
 	public static PlayerManager Me { get; private set;}
 
-	//Editor Values
-	[SerializeField] int MaxPlayers = 2;
-
 	//Private Values
-	private List <PlayerConfiguration> playerConfigs;
+	private int MaxPlayers;
+	private List <PlayerConfigurationDisplay> playerConfigs;
 
 	//Public Functions
+	public List <PlayerConfigurationDisplay> GetPlayerConfigs()
+	{
+		return playerConfigs;
+	}
+
 	public void OnPlayerJoined (PlayerInput playerInput)
 	{
-		if (!playerConfigs.Any (p => p.PlayerIndex == playerInput.playerIndex))
+		if (!playerConfigs.Any (p => p.playerConfiguration.PlayerIndex == playerInput.playerIndex))
 		{
 			playerInput.transform.SetParent (transform);
-			playerConfigs.Add (new PlayerConfiguration (playerInput));
+			PlayerConfigurationDisplay pc = playerInput.gameObject.GetComponent <PlayerConfigurationDisplay>();
+			pc.playerConfiguration = new PlayerConfiguration (playerInput);
+			playerConfigs.Add (pc);
 		}
 
 
@@ -55,16 +46,16 @@ public class PlayerManager : MonoBehaviour
 
 	public void SetPlayerTeam (int index, int team)
 	{
-		PlayerConfiguration c = playerConfigs[index];
+		PlayerConfiguration c = playerConfigs[index].playerConfiguration;
 		c.TeamIndex = team;
 		SetLayerID (c.Input.gameObject, 6 + team);
 	}
 
 	public void ReadyPlayer (int index)
 	{
-		playerConfigs[index].IsReady = true;
+		playerConfigs[index].playerConfiguration.IsReady = true;
 
-		if (playerConfigs.Count == MaxPlayers && playerConfigs.All(p => p.IsReady == true))
+		if (playerConfigs.Count == MaxPlayers && playerConfigs.All(p => p.playerConfiguration.IsReady == true))
 		{
 			SceneManager.LoadScene ("Town Test");
 		}
@@ -79,7 +70,8 @@ public class PlayerManager : MonoBehaviour
 		{
 			Me = this;
 			DontDestroyOnLoad (Me);
-				playerConfigs = new List<PlayerConfiguration>();
+			playerConfigs = new List<PlayerConfigurationDisplay>();
+			MaxPlayers = GetComponent <PlayerInputManager>().maxPlayerCount;
 		}
 	}
 

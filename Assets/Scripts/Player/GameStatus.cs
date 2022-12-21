@@ -21,6 +21,12 @@ public class GameStatus : MonoBehaviour
 {
 	//Public Values
 	static public GameStatus Me {get; private set; }
+
+	[Header ("Player Settings")]
+	[SerializeField] GameObject playerPrefab;
+	[SerializeField] Transform[] spawnPoints = new Transform[2];
+
+	[Header ("Game Settings")]
 	[SerializeField] float dayLenght = 60f;
 
 	//Private Values
@@ -89,9 +95,7 @@ public class GameStatus : MonoBehaviour
         if (Me == null)
 		{
 			Me = this;
-			DontDestroyOnLoad (Me);
-			teams = new List<Team>();
-			AddPlayerToTeam (0,0);
+			Init();
 		}
 		else
 			Debug.Log ("Trying to create a new Singelton instance!");
@@ -121,6 +125,21 @@ public class GameStatus : MonoBehaviour
 		CalculateDayTime();
     }
 
+	private void Init()
+	{
+		teams = new List<Team>();
+
+		var playerConfigs = PlayerManager.Me.GetPlayerConfigs().ToArray();
+
+		foreach (PlayerConfigurationDisplay i in playerConfigs)
+		{
+			PlayerConfiguration pc = i.playerConfiguration;
+			Transform pos = spawnPoints[pc.TeamIndex];
+			AddPlayerToTeam ( (uint) pc.PlayerIndex, pc.TeamIndex);
+			i.SpawnPlayer (pos.position);
+			//i.Input.camera = 
+		}
+	}
 	/* void OnGUI()
 	{
 		if (teams.Count > 0)
