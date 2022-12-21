@@ -13,7 +13,7 @@ public class SpawnPlayerSetupMenu : MonoBehaviour
 
 	public void Show()
 	{
-		var rootMenu = GameObject.Find ("MainLayout");	
+		var rootMenu = GameObject.Find ("PlayerJoinLayout");
 
 		if (rootMenu != null)
 		{

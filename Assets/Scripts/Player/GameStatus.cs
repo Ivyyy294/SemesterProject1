@@ -23,7 +23,6 @@ public class GameStatus : MonoBehaviour
 	static public GameStatus Me {get; private set; }
 
 	[Header ("Player Settings")]
-	[SerializeField] GameObject playerPrefab;
 	[SerializeField] Transform[] spawnPoints = new Transform[2];
 
 	[Header ("Game Settings")]
