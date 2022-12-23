@@ -333,7 +333,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   speedProfileMediumWare:
-    maxSpeed: 9
+    maxSpeed: 10
     accelerationCurve:
       serializedVersion: 2
       m_Curve:
@@ -401,7 +401,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   speedProfileHeavyWare:
-    maxSpeed: 6
+    maxSpeed: 8
     accelerationCurve:
       serializedVersion: 2
       m_Curve:
@@ -468,8 +468,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  maxSpeedMediumWare: 9
-  maxSpeedHeavyWare: 6
   animator: {fileID: 5169122760660503152}
   interactionScript: {fileID: 3714752570770300280}
 --- !u!95 &5169122760660503152

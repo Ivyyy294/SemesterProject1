@@ -241,7 +241,7 @@ MonoBehaviour:
   - state: 0
     mapPrefab: {fileID: 7295891994126042035, guid: f69144d0ee22d3245b30fd3a90e8b4fd, type: 3}
   - state: 1
-    mapPrefab: {fileID: 5299013562066240560, guid: ecf4bdebe390c6949ad4bdbcda1aa6a1, type: 3}
+    mapPrefab: {fileID: 5299013562066240560, guid: 02fb11dbdcc46344fbc38969325cab81, type: 3}
 --- !u!1 &1552594295
 GameObject:
   m_ObjectHideFlags: 0
