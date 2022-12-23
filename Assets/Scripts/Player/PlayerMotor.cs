@@ -7,15 +7,15 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 {
 	//Editor Values
 	[Header ("Additional Settings")]
-	[SerializeField] float maxSpeedMediumWare;
-	[SerializeField] float maxSpeedHeavyWare;
+	[SerializeField] SpeedProfile speedProfileMediumWare;
+	[SerializeField] SpeedProfile speedProfileHeavyWare;
 
 	[Header ("Lara Values")]
 	[SerializeField] Animator animator;
 	[SerializeField] PlayerInteraktions interactionScript;
 
 	//Private Values
-	private float maxSpeedDefault;
+	private SpeedProfile speedProfileLightWare;
 	private PlayerConfiguration playerConfiguration;
 	//private PlayerInput input;
 	private InputAction moveAction;
@@ -32,7 +32,7 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 	protected override void Start()
 	{
 		base.Start();
-		maxSpeedDefault = maxSpeed;
+		speedProfileLightWare = speedProfile;
 	}
 
 	private void Update()
@@ -69,20 +69,20 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 				switch (ware.weight)
 				{
 					case Ware.WeightCategory.Light:
-						maxSpeed = maxSpeedDefault;
+						currentSpeedProfile = speedProfileLightWare;
 						break;
 					case Ware.WeightCategory.Medium:
-						maxSpeed = maxSpeedMediumWare;
+						currentSpeedProfile = speedProfileMediumWare;
 						break;
 					case Ware.WeightCategory.Heavy:
-						maxSpeed = maxSpeedHeavyWare;
+						currentSpeedProfile = speedProfileHeavyWare;
 						break;
 				}
 			}
 			else
-				maxSpeed = maxSpeedDefault;
+				currentSpeedProfile = speedProfileLightWare;
 		}
 		else
-			maxSpeed = maxSpeedDefault;
+			currentSpeedProfile = speedProfileLightWare;
 	}
 }

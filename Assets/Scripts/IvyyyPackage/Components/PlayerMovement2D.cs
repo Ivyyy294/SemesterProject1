@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 
+[System.Serializable]
+public class SpeedProfile
+{
+	public float maxSpeed;
+	public AnimationCurve accelerationCurve;
+	public AnimationCurve deaccelerationCurve;
+}
+
 namespace Ivyyy
 {
 	// PlayerScript requires the GameObject to have a Rigidbody component
@@ -17,19 +25,19 @@ namespace Ivyyy
 		float timeDeacceleration = 0f;
 		Vector3 Velocity;
 		float currentSpeed;
+		
+		//Protected Values
+		protected SpeedProfile currentSpeedProfile;
 
-		[Header ("Acceleration")]
-		[SerializeField] protected float maxSpeed = 0f;
-		[SerializeField] AnimationCurve accelerationCurve;
-		[Space]
-		[Header ("Deacceleration")]
-		[SerializeField] AnimationCurve deaccelerationCurve;
+		[Header ("Base Speed Profile")]
+		public SpeedProfile speedProfile;
 
 		//Start is called before the first frame update
 		virtual protected void Start()
 		{
 			m_Rigidbody = gameObject.GetComponent <Rigidbody2D>();
 			Assert.IsTrue (m_Rigidbody != null, "Missing Rigidbody!");
+			currentSpeedProfile = speedProfile;
 		}
 
 		//float GetAxisMovementOffset (float rawOffset, float currentAxisVelocity)
@@ -57,15 +65,15 @@ namespace Ivyyy
 		protected virtual void FixedUpdate()
 		{
 			float fixedDeltaTime = Time.fixedDeltaTime;
-			float tmpSpeed = maxSpeed * fixedDeltaTime;
+			float tmpSpeed = currentSpeedProfile.maxSpeed * fixedDeltaTime;
 
 			if (timeAcceleration > 0f)
 			{
-				tmpSpeed *= accelerationCurve.Evaluate (timeAcceleration);
+				tmpSpeed *= currentSpeedProfile.accelerationCurve.Evaluate (timeAcceleration);
 				currentSpeed = tmpSpeed;
 			}
 			else if (timeDeacceleration > 0f)
-				tmpSpeed = currentSpeed * deaccelerationCurve.Evaluate (timeDeacceleration);
+				tmpSpeed = currentSpeed * currentSpeedProfile.deaccelerationCurve.Evaluate (timeDeacceleration);
 
 			Velocity = inputVector * tmpSpeed;
 
