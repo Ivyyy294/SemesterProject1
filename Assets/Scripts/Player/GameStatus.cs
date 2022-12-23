@@ -86,6 +86,23 @@ public class GameStatus : MonoBehaviour
 
 	public GameDateTime GetCurrentDateTime () { return currentDateTime;}
 
+	public void Init()
+	{
+		teams = new List<Team>();
+		lifeTime = 0f;
+
+		var playerConfigs = PlayerManager.Me.GetPlayerConfigs().ToArray();
+
+		foreach (PlayerConfigurationDisplay i in playerConfigs)
+		{
+			PlayerConfiguration pc = i.playerConfiguration;
+			Transform pos = spawnPoints[pc.TeamIndex];
+			AddPlayerToTeam ( (uint) pc.PlayerIndex, pc.TeamIndex);
+			i.SpawnPlayer (pos.position);
+		}
+	}
+
+
 	//Private Functions
 
     // Start is called before the first frame update
@@ -124,21 +141,6 @@ public class GameStatus : MonoBehaviour
 		CalculateDayTime();
     }
 
-	private void Init()
-	{
-		teams = new List<Team>();
-
-		var playerConfigs = PlayerManager.Me.GetPlayerConfigs().ToArray();
-
-		foreach (PlayerConfigurationDisplay i in playerConfigs)
-		{
-			PlayerConfiguration pc = i.playerConfiguration;
-			Transform pos = spawnPoints[pc.TeamIndex];
-			AddPlayerToTeam ( (uint) pc.PlayerIndex, pc.TeamIndex);
-			i.SpawnPlayer (pos.position);
-			//i.Input.camera = 
-		}
-	}
 	/* void OnGUI()
 	{
 		if (teams.Count > 0)

@@ -5,29 +5,15 @@ using UnityEngine.InputSystem;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
-enum GameState
-{
-	Lobby,
-	Game
-}
-
 [RequireComponent (typeof (PlayerInputManager))]
 public class PlayerManager : MonoBehaviour
 {
-	//EditorValues
-	[SerializeField] GameObject mapPrefab;
-	[SerializeField] GameObject playerLobbyPrefab;
-
 	//Public Values
 	public static PlayerManager Me { get; private set;}
 
 	//Private Values
-	GameObject mapInstance;
-	GameObject lobbyInstance;
-
 	private int MaxPlayers;
 	private List <PlayerConfigurationDisplay> playerConfigs;
-	GameState currentState = GameState.Lobby;
 
 	//Public Functions
 	public List <PlayerConfigurationDisplay> GetPlayerConfigs()
@@ -56,11 +42,15 @@ public class PlayerManager : MonoBehaviour
 	public void ReadyPlayer (int index)
 	{
 		playerConfigs[index].playerConfiguration.IsReady = true;
-
-		if (playerConfigs.Count == MaxPlayers && playerConfigs.All(p => p.playerConfiguration.IsReady == true))
-			currentState = GameState.Game;
 	}
 
+	public bool AllPlayersReady ()
+	{		
+		if (playerConfigs.Count == MaxPlayers && playerConfigs.All(p => p.playerConfiguration.IsReady == true))
+			return true;
+
+		return false;
+	}
 	//Private Functions
 	private void Awake()
 	{
@@ -72,24 +62,6 @@ public class PlayerManager : MonoBehaviour
 			DontDestroyOnLoad (Me);
 			playerConfigs = new List<PlayerConfigurationDisplay>();
 			MaxPlayers = GetComponent <PlayerInputManager>().maxPlayerCount;
-		}
-	}
-
-	private void Update()
-	{
-		if (currentState == GameState.Lobby && lobbyInstance == null)
-		{
-			lobbyInstance = Instantiate (playerLobbyPrefab, transform);
-
-			if (mapInstance != null)
-				Destroy (mapInstance);
-		}
-		else if (currentState == GameState.Game && mapInstance == null)
-		{
-			mapInstance = Instantiate (mapPrefab, transform);
-
-			if (lobbyInstance != null)
-				Destroy (lobbyInstance);
 		}
 	}
 
