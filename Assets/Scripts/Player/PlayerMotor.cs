@@ -10,6 +10,11 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 	[SerializeField] SpeedProfile speedProfileMediumWare;
 	[SerializeField] SpeedProfile speedProfileHeavyWare;
 
+	[Header ("Collision Penalty")]
+	[Range (0f, 1f)]
+	[SerializeField] float collisionAccelerationPenalty = 1f;
+	[SerializeField] float collisionPenaltyThreshold = 0f;
+
 	[Header ("Lara Values")]
 	[SerializeField] Animator animator;
 	[SerializeField] PlayerInteraktions interactionScript;
@@ -19,6 +24,8 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 	private PlayerConfiguration playerConfiguration;
 	//private PlayerInput input;
 	private InputAction moveAction;
+	private bool collisionTimerRunning = false;
+	private float collisionTimer;
 
 	//Public Functions
 	public void InitPlayer (PlayerConfiguration pc)
@@ -37,6 +44,22 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 
 	private void Update()
 	{
+		if (collisionTimerRunning && collisionAccelerationPenalty > 0f)
+		{
+			if (collisionTimer >= collisionPenaltyThreshold)
+			{
+				Debug.Log ("CollisionAccelerationPenalty");
+				timeAcceleration *= 1 - collisionAccelerationPenalty;
+				collisionTimerRunning = false;
+			}
+			else
+				collisionTimer += Time.deltaTime;
+		}
+		else
+		{
+			collisionTimer = 0f;
+		}
+
 		if (moveAction != null)
 		{
 			SetCurrentPlayerSpeed();
@@ -51,12 +74,6 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 			animator.SetFloat ("Speed", movementVec.sqrMagnitude);
 		}
 	}
-
-	//private void InitInput()
-	//{
-	//	input = GetComponent <PlayerInput>();
-	//	moveAction = input.actions["Movement"];
-	//}
 
 	private void SetCurrentPlayerSpeed ()
 	{
@@ -84,5 +101,17 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 		}
 		else
 			currentSpeedProfile = speedProfileLightWare;
+	}
+
+	//Resets the acceleration when a player bumbs into another player
+	void OnCollisionEnter2D (Collision2D collision)
+	{
+		collisionTimerRunning = true;
+	}
+
+	//Resets the acceleration when a player bumbs into another player
+	void OnCollisionExit2D (Collision2D collision)
+	{
+		collisionTimerRunning = false;
 	}
 }

@@ -468,6 +468,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+  collisionAccelerationPenalty: 1
+  collisionPenaltyThreshold: 0.2
   animator: {fileID: 5169122760660503152}
   interactionScript: {fileID: 3714752570770300280}
 --- !u!95 &5169122760660503152

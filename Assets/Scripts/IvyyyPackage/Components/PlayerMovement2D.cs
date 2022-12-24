@@ -18,17 +18,16 @@ namespace Ivyyy
 	[RequireComponent(typeof(Rigidbody2D))]
 	public class PlayerMovement2D : MonoBehaviour
 	{
-		//Private Values
-		Rigidbody2D m_Rigidbody;
-		Vector2 inputVector;
-		float timeAcceleration = 0f;
-		float timeDeacceleration = 0f;
-		Vector3 Velocity;
-		float currentSpeed;
-		
 		//Protected Values
+		protected Rigidbody2D m_Rigidbody;
+		protected Vector2 inputVector;
+		protected float timeAcceleration = 0f;
+		protected float timeDeacceleration = 0f;
+		protected Vector3 Velocity;
+		protected float currentSpeed;
 		protected SpeedProfile currentSpeedProfile;
-
+		
+		//Editor Values
 		[Header ("Base Speed Profile")]
 		public SpeedProfile speedProfile;
 
@@ -39,28 +38,6 @@ namespace Ivyyy
 			Assert.IsTrue (m_Rigidbody != null, "Missing Rigidbody!");
 			currentSpeedProfile = speedProfile;
 		}
-
-		//float GetAxisMovementOffset (float rawOffset, float currentAxisVelocity)
-		//{
-		//	float val = 0f;
-		//	float fixedDeltaTime = Time.fixedDeltaTime;
-
-		//	if (rawOffset != 0f)
-		//		val = rawOffset * fixedDeltaTime;
-		//	//Deacceleration
-		//	else if (currentAxisVelocity != 0f)
-		//	{
-		//		float deltaDeacceleration = deacceleration * fixedDeltaTime;
-		//		float tmpDeacceleration = Mathf.Min (Mathf.Abs (currentAxisVelocity), deltaDeacceleration);
-
-		//		if (currentAxisVelocity > 0f)
-		//			val -= tmpDeacceleration;
-		//		else if (currentAxisVelocity < 0f)
-		//			val += tmpDeacceleration;
-		//	}
-
-		//	return val;
-		//}
 
 		protected virtual void FixedUpdate()
 		{
@@ -80,13 +57,9 @@ namespace Ivyyy
 			//Apply movement
 			if (Velocity != Vector3.zero && m_Rigidbody != null)
 				m_Rigidbody.MovePosition (transform.position + Velocity);
-		}
 
-		//private void OnCollisionEnter(Collision collision)
-		//{
-		//	trajectory.Length = 0f;
-		//	m_Rigidbody.velocity = Vector3.zero;
-		//}
+			m_Rigidbody.velocity = Vector3.zero;
+		}
 
 		public void Move(Vector2 input)
 		{
