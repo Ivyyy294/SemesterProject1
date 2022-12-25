@@ -39,6 +39,8 @@ public class WareDisplay : MonoBehaviour
 	{
 		ChangeSprite();
 		lifeTime = 0.0f;
+		BoxCollider2D collider = GetComponent<BoxCollider2D>();
+		collider.size = ware.GetSizeInWorld();
 	}
 
 	// Start is called before the first frame update

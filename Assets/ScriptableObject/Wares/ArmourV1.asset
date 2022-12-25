@@ -17,6 +17,6 @@ MonoBehaviour:
   value: 1
   SpriteOk: {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
-  needsCooling: 0
-  fragile: 0
+  weight: 0
+  size: {x: 2, y: 2}
   durability: 0

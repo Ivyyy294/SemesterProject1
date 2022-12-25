@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu (fileName ="New Ware", menuName = "Ware")]
@@ -20,12 +18,18 @@ public class Ware : ScriptableObject
 	public Sprite SpriteOk;
 	public Sprite SpriteDamaged;
 	public WeightCategory weight;
-
+	public Vector2Int size = new Vector2Int (2, 2);
 	//Durability
 	[Header ("Durability")]
 	//public bool needsCooling;
 	//public bool fragile;
 	public uint durability;
+
+	public Vector2 GetSizeInWorld ()
+	{
+		Vector2 wSize = new Vector2(size.x * 0.5f, size.y * 0.5f);
+		return wSize;
+	}
 
 	public static Ware GetFromGameObject (GameObject obj)
 	{

@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class DropIndicator : MonoBehaviour
 {
+	//Editor Values
 	[SerializeField] Color blockedColor;
+
+	//Private Values
 	private Color clearColor;
 	private SpriteRenderer spriteRenderer;
 	uint collisionCounter;
 
+	//Public Values
+	public bool IsDropAreaClear() { return collisionCounter == 0; }
+
+	//Private Values
 	private void Start()
 	{
 		collisionCounter = 0;
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		clearColor = spriteRenderer.color;
 	}
-
-	public bool IsDropAreaClear() { return collisionCounter == 0; }
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{

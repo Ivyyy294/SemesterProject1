@@ -133,6 +133,12 @@ public class PlayerInteraktions: MonoBehaviour
 				oScale = grabbedObject.transform.localScale;
 				grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f);
 				grabbedObject.layer = 8;
+
+				//Setting Size of Drop indicator to Ware Size
+				WareDisplay ware = grabbedObject.GetComponent <WareDisplay>();
+
+				if (ware != null)
+					dropIndicator.transform.localScale = ware.ware.GetSizeInWorld();
 			}
 		}
 	}
