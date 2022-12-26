@@ -20,3 +20,5 @@ MonoBehaviour:
   weight: 0
   size: {x: 4, y: 2}
   durability: 45
+  durabilityExtended: 90
+  storingAreaIds: 0000000001000000

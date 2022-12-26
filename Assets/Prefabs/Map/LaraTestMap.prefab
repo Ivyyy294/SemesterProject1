@@ -17439,6 +17439,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3923108689880186466}
     m_Modifications:
+    - target: {fileID: -8416257694033616574, guid: ee376f69dd2f32144b827f5c7f940a61, type: 3}
+      propertyPath: areaId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355437917605186892, guid: ee376f69dd2f32144b827f5c7f940a61, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7355437917605186893, guid: ee376f69dd2f32144b827f5c7f940a61, type: 3}
       propertyPath: m_Name
       value: CoolingArea (1)
@@ -17449,11 +17457,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7355437917605186894, guid: ee376f69dd2f32144b827f5c7f940a61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9963503
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 7355437917605186894, guid: ee376f69dd2f32144b827f5c7f940a61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.5669456
+      value: 3.93
       objectReference: {fileID: 0}
     - target: {fileID: 7355437917605186894, guid: ee376f69dd2f32144b827f5c7f940a61, type: 3}
       propertyPath: m_LocalPosition.z

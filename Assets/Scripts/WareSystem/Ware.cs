@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu (fileName ="New Ware", menuName = "Ware")]
 public class Ware : ScriptableObject
@@ -19,11 +20,13 @@ public class Ware : ScriptableObject
 	public Sprite SpriteDamaged;
 	public WeightCategory weight;
 	public Vector2Int size = new Vector2Int (2, 2);
+
 	//Durability
 	[Header ("Durability")]
-	//public bool needsCooling;
-	//public bool fragile;
 	public uint durability;
+	[Space]
+	public uint durabilityExtended;
+	public List <StoringAreaId> storingAreaIds;
 
 	public Vector2 GetSizeInWorld ()
 	{

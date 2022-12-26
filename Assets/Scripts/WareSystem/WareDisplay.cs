@@ -8,10 +8,12 @@ public class WareDisplay : MonoBehaviour
 	//Public Values
 	public Ware ware;
 	public bool damaged = false;
-	public bool isCooled = false;
+	public bool isStoresCorrectly = false;
 
 	//Private Values
-	private double lifeTime = 0.0;
+	private double baseTimer = 0.0;
+	private double extendetTimer = 0.0;
+	private Dictionary <StoringAreaId, bool> storingAreas;
 
 	//Public Functions
 	public Ware GetWare() { return ware;}
@@ -24,23 +26,36 @@ public class WareDisplay : MonoBehaviour
 
 	public void CheckDurability ()
 	{
-		//Lifetime expires when not cooled
-		if (!isCooled)
-		{
-			lifeTime += Time.deltaTime;
+		float timeOffset = Time.deltaTime;
 
-			if (ware.durability > 0 && ware.durability <= lifeTime)
-				damaged = true;
+		if (isStoresCorrectly)
+		{
+			extendetTimer += timeOffset;
+			baseTimer = ware.durability * (extendetTimer / ware.durabilityExtended);
 		}
+		else
+		{
+			baseTimer += timeOffset;
+			extendetTimer = ware.durabilityExtended * (baseTimer / ware.durability);
+		}
+
+		Debug.Log ("Base: " + baseTimer + " Extended: " + extendetTimer);
+		damaged = baseTimer >= ware.durability || (ware.durabilityExtended > 0f && extendetTimer >= ware.durabilityExtended);
 	}
 
 	//Private Functions
 	void Init ()
 	{
 		ChangeSprite();
-		lifeTime = 0.0f;
+		baseTimer = 0.0f;
+		extendetTimer = baseTimer;
 		BoxCollider2D collider = GetComponent<BoxCollider2D>();
 		collider.size = ware.GetSizeInWorld();
+
+		storingAreas = new Dictionary<StoringAreaId, bool>();
+
+		foreach (StoringAreaId i in ware.storingAreaIds)
+			storingAreas.Add (i, false);
 	}
 
 	// Start is called before the first frame update
@@ -81,15 +96,30 @@ public class WareDisplay : MonoBehaviour
 		}
 	}
 
+	private void SetStoringArea (GameObject obj, bool status)
+	{
+		StoringArea area = obj.GetComponent <StoringArea>();
+
+		if (area != null && storingAreas.ContainsKey (area.areaId))
+			storingAreas [area.areaId] = status;
+
+		bool tmp = true;
+
+		foreach (var i in storingAreas)
+			tmp &= i.Value;
+
+		isStoresCorrectly = tmp;
+	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag ("Cooling"))
-			isCooled = true;
+		if (collision.CompareTag ("StoringArea"))
+			SetStoringArea (collision.gameObject, true);
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		if (collision.CompareTag ("Cooling"))
-			isCooled = false;
+		if (collision.CompareTag ("StoringArea"))
+			SetStoringArea (collision.gameObject, false);
 	}
 }
