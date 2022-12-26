@@ -40,7 +40,8 @@ public class WareDisplay : MonoBehaviour
 		}
 
 		Debug.Log ("Base: " + baseTimer + " Extended: " + extendetTimer);
-		damaged = baseTimer >= ware.durability || (ware.durabilityExtended > 0f && extendetTimer >= ware.durabilityExtended);
+		damaged = (ware.durability > 0f && baseTimer >= ware.durability)
+			|| (ware.durabilityExtended > 0f && extendetTimer >= ware.durabilityExtended);
 	}
 
 	//Private Functions
