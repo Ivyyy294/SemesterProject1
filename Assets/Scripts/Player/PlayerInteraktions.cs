@@ -203,14 +203,20 @@ public class PlayerInteraktions: MonoBehaviour
 
 	private void RotateIndicator ()
 	{
-		Vector3 euler = rotationOffset;
+		Vector2 size = grabbedObject.ware.GetSizeInWorld();
 
-		if (indicatorRotated)
-			euler *= -1f;
+		//Rotation only possible when object is not symetrical
+		if (size.x != size.y)
+		{
+			Vector3 euler = rotationOffset;
 
-		dropIndicator.transform.Rotate (euler, Space.Self);
-		grabbedObject.transform.Rotate (euler, Space.Self);
+			if (indicatorRotated)
+				euler *= -1f;
 
-		indicatorRotated = !indicatorRotated;
+			dropIndicator.transform.Rotate (euler, Space.Self);
+			grabbedObject.transform.Rotate (euler, Space.Self);
+			indicatorRotated = !indicatorRotated;
+		}
+
 	}
 }
