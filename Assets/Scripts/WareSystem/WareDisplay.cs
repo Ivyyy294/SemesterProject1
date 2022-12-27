@@ -44,15 +44,23 @@ public class WareDisplay : MonoBehaviour
 
 		damaged = (ware.durability > 0f && baseTimer >= ware.durability) //Base durability expired
 			|| (ware.durabilityExtended > 0f && extendetTimer >= ware.durabilityExtended)  //Extended durability expired
-			|| (ware.fragility != Ware.Fragility.None && fragilityDmg >= (uint) ware.fragility); //Fragility limit exceeded
+			|| (ware.fragility != Ware.Fragility.None && fragilityDmg >= ware.fragilityHp); //Fragility limit exceeded
 	}
 
 	public void PlaceOnGround (Vector3 pos)
+
 	{
 		transform.position = pos;
 		transform.SetParent (WarePool.Me.transform);
 		gameObject.layer = 0;
 		collisionBufferTimer = 0f;
+	}
+
+	public void AddFragilityDmg ()
+	{
+		//Play Sound
+		fragilityDmg++;
+
 	}
 
 	//Private Functions
@@ -146,7 +154,7 @@ public class WareDisplay : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collisionBufferTimer >= collisionBuffer)
-			fragilityDmg++;
+		if (ware.fragility == Ware.Fragility.Very && collisionBufferTimer >= collisionBuffer)
+			AddFragilityDmg();
 	}
 }

@@ -107,7 +107,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (grabbedObject != null)
-			grabbedObject.fragilityDmg++;
+			grabbedObject.AddFragilityDmg();
 	}
 
 	void MoveIndicatorPos ()

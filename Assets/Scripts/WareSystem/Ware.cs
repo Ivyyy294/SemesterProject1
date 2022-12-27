@@ -14,9 +14,8 @@ public class Ware : ScriptableObject
 	public enum Fragility
 	{
 		None,
+		Normal,
 		Very,
-		Medium,
-		Light
 	}
 
 	//Generall
@@ -37,6 +36,9 @@ public class Ware : ScriptableObject
 	public List <StoringAreaId> storingAreaIds;
 	[Space]
 	public Fragility fragility = Fragility.None;
+	[Range (1, 4)]
+	public uint fragilityHp = 4;
+
 	//Public Functions
 	public Vector2 GetSizeInWorld ()
 	{
