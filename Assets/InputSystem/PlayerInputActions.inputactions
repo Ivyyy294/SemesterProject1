@@ -22,6 +22,15 @@
                     "processors": "StickDeadzone",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Rotate",
+                    "type": "Button",
+                    "id": "4b560c16-b282-45df-8fa4-28956441b123",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -31,7 +40,7 @@
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "Gamepad;Gamepad2",
                     "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -49,11 +58,22 @@
                 },
                 {
                     "name": "",
-                    "id": "3025dd9e-045f-44a5-8f6e-f795aa6e8942",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "ecf3a178-a26b-4353-a001-354e5525456d",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad2",
+                    "groups": "Gamepad;Gamepad2",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a8dc0ad0-2f23-404e-bf7b-0fa5715eec1b",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Gamepad2",
                     "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -176,6 +196,39 @@
                     "processors": "StickDeadzone",
                     "groups": "Gamepad2",
                     "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9d8ba0b-5bce-4dbf-ba11-9e7756c59085",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4629d47e-c6f6-4edd-adf7-19e8fd2a3de2",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Gamepad2",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9037ef40-abe2-44ce-bd8c-823853cb0666",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Gamepad2",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

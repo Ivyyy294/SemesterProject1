@@ -65,6 +65,7 @@ public class WareDisplay : MonoBehaviour
 		fragilityDmg = 0;
 		collisionBufferTimer = 0f;
 		isStoresCorrectly = false;
+		transform.rotation = new Quaternion();
 
 		BoxCollider2D collider = GetComponent<BoxCollider2D>();
 		collider.size = ware.GetSizeInWorld();

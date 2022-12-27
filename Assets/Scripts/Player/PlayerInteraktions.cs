@@ -8,9 +8,9 @@ public class PlayerInteraktions: MonoBehaviour
 {
 
 	//Editor Values
-	[SerializeField] KeyCode interactKey;
 	[SerializeField] float rayDistance;
 	[SerializeField] GameObject dropIndicator;
+	[SerializeField] Vector3 rotationOffset;
 
 	//Private Values
 	private Grid snapGrid;
@@ -21,12 +21,15 @@ public class PlayerInteraktions: MonoBehaviour
 	private uint playerId;
 	private InputAction moveAction;
 	private InputAction grabAction;
-
+	private InputAction rotateAction;
+	private bool indicatorRotated = false;
 	
+	//Public Functions
 	public void InitInput(PlayerConfiguration pc)
 	{
 		moveAction = pc.Input.actions["Movement"];
 		grabAction = pc.Input.actions["Grab"];
+		rotateAction = pc.Input.actions ["Rotate"];
 		playerId = (uint) pc.PlayerIndex;
 	}
 
@@ -62,6 +65,9 @@ public class PlayerInteraktions: MonoBehaviour
 			CastRay ();
 
 		bool indicatorActive = grabbedObject != null;
+
+		if (indicatorActive && rotateAction != null && rotateAction.WasPerformedThisFrame ())
+			RotateIndicator();
 
 		if (indicatorActive != dropIndicator.activeInHierarchy)
 			dropIndicator.SetActive (indicatorActive);
@@ -108,7 +114,9 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (dropIndicator != null && snapGrid != null)
 		{
-			Vector3Int cp = snapGrid.WorldToCell (transform.position + dir);
+			float offset = 1 + snapGrid.cellSize.x; //indicatorRotated ? dropIndicator.transform.lossyScale.x : dropIndicator.transform.lossyScale.y;
+
+			Vector3Int cp = snapGrid.WorldToCell (transform.position + dir * offset);
 			Vector3 newPos = snapGrid.GetCellCenterWorld (cp);
 
 			dropIndicator.transform.position = newPos; //snapGrid.GetCellCenterWorld (cp) + snapGrid.cellSize;
@@ -191,5 +199,18 @@ public class PlayerInteraktions: MonoBehaviour
 		grabbedObject.transform.localScale = oScale;
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
+	}
+
+	private void RotateIndicator ()
+	{
+		Vector3 euler = rotationOffset;
+
+		if (indicatorRotated)
+			euler *= -1f;
+
+		dropIndicator.transform.Rotate (euler, Space.Self);
+		grabbedObject.transform.Rotate (euler, Space.Self);
+
+		indicatorRotated = !indicatorRotated;
 	}
 }

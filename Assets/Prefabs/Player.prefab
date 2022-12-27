@@ -249,9 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c765609e805ec47b2c8a312717ca4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactKey: 101
   rayDistance: 2
   dropIndicator: {fileID: 3714752570590167877}
+  rotationOffset: {x: 0, y: 0, z: 90}
 --- !u!114 &6703997733596930556
 MonoBehaviour:
   m_ObjectHideFlags: 0
