@@ -14,7 +14,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	//Private Values
 	private Grid snapGrid;
-	private GameObject grabbedObject;
+	private WareDisplay grabbedObject;
 	private Vector3 oScale;
 	private int layerMask;
 	private Vector3 dir;
@@ -32,7 +32,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	public bool CarriesWare() { return grabbedObject != null;}
 
-	public Ware GetCarriedWare () 	{ return Ware.GetFromGameObject (grabbedObject);}
+	public Ware GetCarriedWare () 	{ return Ware.GetFromGameObject (grabbedObject.gameObject);}
 
 	//Private Functions
 	void Start()
@@ -60,6 +60,11 @@ public class PlayerInteraktions: MonoBehaviour
 		
 		if (grabAction != null && grabAction.WasPressedThisFrame())
 			CastRay ();
+
+		bool indicatorActive = grabbedObject != null;
+
+		if (indicatorActive != dropIndicator.activeInHierarchy)
+			dropIndicator.SetActive (indicatorActive);
 	}
 
 	void CastRay ()
@@ -93,6 +98,12 @@ public class PlayerInteraktions: MonoBehaviour
 		MoveIndicatorPos();
 	}
 
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (grabbedObject != null)
+			grabbedObject.fragilityDmg++;
+	}
+
 	void MoveIndicatorPos ()
 	{
 		if (dropIndicator != null && snapGrid != null)
@@ -112,10 +123,7 @@ public class PlayerInteraktions: MonoBehaviour
 			DropIndicator tmp = dropIndicator.GetComponent <DropIndicator>();
 
 			if (tmp != null && tmp.IsDropAreaClear())
-			{
-				grabbedObject.transform.position = dropIndicator.transform.position;
-				ResetGrabbedObject ();
-			}
+				ResetGrabbedObject (dropIndicator.transform.position);
 		}
 	}
 
@@ -123,30 +131,25 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (obj != null)
 		{
-			grabbedObject = obj;
+			grabbedObject = obj.GetComponent <WareDisplay>();
 
-			if (dropIndicator != null)
+			if (grabbedObject != null && dropIndicator != null)
 			{
 				dropIndicator.SetActive (true);
 				grabbedObject.transform.position = transform.position;
 				grabbedObject.transform.SetParent (transform);
 				oScale = grabbedObject.transform.localScale;
 				grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f);
-				grabbedObject.layer = 8;
+				grabbedObject.gameObject.layer = 8;
 
 				//Setting Size of Drop indicator to Ware Size
-				WareDisplay ware = grabbedObject.GetComponent <WareDisplay>();
-
-				if (ware != null)
-					dropIndicator.transform.localScale = ware.ware.GetSizeInWorld();
+				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
 			}
 		}
 	}
 
 	private void InteractWare (GameObject obj)
 	{
-		Debug.Log ("InteractWare");
-
 		//Player is only able to pick up Wares, when they dont carry an item
 		if (grabbedObject == null)
 			GrabObject (obj);
@@ -154,8 +157,6 @@ public class PlayerInteraktions: MonoBehaviour
 
 	private void InteractStore (GameObject obj)
 	{
-		Debug.Log ("InteractStore");
-
 		//Player is only able to buy, when they dont carry an item
 		if (grabbedObject == null)
 		{
@@ -176,21 +177,19 @@ public class PlayerInteraktions: MonoBehaviour
 
 			if (tmp != null && grabbedObject != null)
 			{
-				if (tmp.Interact (grabbedObject, playerId))
+				if (tmp.Interact (grabbedObject.gameObject, playerId))
 				{
-					grabbedObject.SetActive (false);
-					ResetGrabbedObject();
+					grabbedObject.gameObject.SetActive (false);
+					grabbedObject = null;
 				}
 			}
 		}
 	}
 
-	private void ResetGrabbedObject()
+	private void ResetGrabbedObject (Vector3 pos)
 	{ 
-		dropIndicator.SetActive (false);
 		grabbedObject.transform.localScale = oScale;
-		grabbedObject.transform.SetParent (WarePool.Me.transform);
-		grabbedObject.layer = 0;
+		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
 	}
 }

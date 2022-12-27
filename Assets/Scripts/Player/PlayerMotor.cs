@@ -48,7 +48,6 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 		{
 			if (collisionTimer >= collisionPenaltyThreshold)
 			{
-				Debug.Log ("CollisionAccelerationPenalty");
 				timeAcceleration *= 1 - collisionAccelerationPenalty;
 				collisionTimerRunning = false;
 			}

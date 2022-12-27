@@ -19,6 +19,7 @@ MonoBehaviour:
   SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   weight: 0
   size: {x: 4, y: 2}
-  durability: 45
-  durabilityExtended: 90
+  durability: 0
+  durabilityExtended: 0
   storingAreaIds: 0000000001000000
+  fragility: 1

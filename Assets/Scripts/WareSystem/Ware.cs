@@ -11,6 +11,14 @@ public class Ware : ScriptableObject
 		Heavy
 	}
 
+	public enum Fragility
+	{
+		None,
+		Very,
+		Medium,
+		Light
+	}
+
 	//Generall
 	[Header ("General")]
 	public new string name;
@@ -27,7 +35,9 @@ public class Ware : ScriptableObject
 	[Space]
 	public uint durabilityExtended;
 	public List <StoringAreaId> storingAreaIds;
-
+	[Space]
+	public Fragility fragility = Fragility.None;
+	//Public Functions
 	public Vector2 GetSizeInWorld ()
 	{
 		Vector2 wSize = new Vector2(size.x * 0.5f, size.y * 0.5f);

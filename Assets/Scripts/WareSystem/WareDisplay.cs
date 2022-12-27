@@ -7,17 +7,20 @@ public class WareDisplay : MonoBehaviour
 {
 	//Public Values
 	public Ware ware;
+
+	[Header ("Lara Values")]
 	public bool damaged = false;
 	public bool isStoresCorrectly = false;
+	public uint fragilityDmg;
+	[SerializeField] float collisionBuffer = 0.1f;
 
 	//Private Values
 	private double baseTimer = 0.0;
 	private double extendetTimer = 0.0;
+	private float collisionBufferTimer = 0f;
 	private Dictionary <StoringAreaId, bool> storingAreas;
 
 	//Public Functions
-	public Ware GetWare() { return ware;}
-
 	public void Init (Ware w)
 	{
 		ware = w;
@@ -39,9 +42,17 @@ public class WareDisplay : MonoBehaviour
 			extendetTimer = ware.durabilityExtended * (baseTimer / ware.durability);
 		}
 
-		Debug.Log ("Base: " + baseTimer + " Extended: " + extendetTimer);
-		damaged = (ware.durability > 0f && baseTimer >= ware.durability)
-			|| (ware.durabilityExtended > 0f && extendetTimer >= ware.durabilityExtended);
+		damaged = (ware.durability > 0f && baseTimer >= ware.durability) //Base durability expired
+			|| (ware.durabilityExtended > 0f && extendetTimer >= ware.durabilityExtended)  //Extended durability expired
+			|| (ware.fragility != Ware.Fragility.None && fragilityDmg >= (uint) ware.fragility); //Fragility limit exceeded
+	}
+
+	public void PlaceOnGround (Vector3 pos)
+	{
+		transform.position = pos;
+		transform.SetParent (WarePool.Me.transform);
+		gameObject.layer = 0;
+		collisionBufferTimer = 0f;
 	}
 
 	//Private Functions
@@ -50,6 +61,11 @@ public class WareDisplay : MonoBehaviour
 		ChangeSprite();
 		baseTimer = 0.0f;
 		extendetTimer = baseTimer;
+		damaged = false;
+		fragilityDmg = 0;
+		collisionBufferTimer = 0f;
+		isStoresCorrectly = false;
+
 		BoxCollider2D collider = GetComponent<BoxCollider2D>();
 		collider.size = ware.GetSizeInWorld();
 
@@ -68,6 +84,9 @@ public class WareDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (collisionBufferTimer < collisionBuffer)
+			collisionBufferTimer += Time.deltaTime;
+
 		if (ware != null)
 		{
 			if (!damaged)
@@ -122,5 +141,11 @@ public class WareDisplay : MonoBehaviour
 	{
 		if (collision.CompareTag ("StoringArea"))
 			SetStoringArea (collision.gameObject, false);
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collisionBufferTimer >= collisionBuffer)
+			fragilityDmg++;
 	}
 }
