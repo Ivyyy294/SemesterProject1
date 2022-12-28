@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3340473f5e6695542b54303b7114e79d, type: 3}
-  m_Name: CraftsmanStore
+  m_Name: HunterStore
   m_EditorClassIdentifier: 
-  name: CraftsmanStore
+  name: HunterStore
   sprite: {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   waresToSell:
-  - {fileID: 11400000, guid: 5e2182f8a742edc4e885d85f0c1ba66e, type: 2}
-  - {fileID: 11400000, guid: dcc6220612c26694c85d48f0b1c3ec8a, type: 2}
+  - {fileID: 11400000, guid: 2323c985774e36447b7d261c8989603b, type: 2}
+  - {fileID: 11400000, guid: a76c6f12b6eeeb442bdf6819fb756b53, type: 2}

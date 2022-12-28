@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836f4b255595ad848bb9bebcf0bd6472, type: 3}
-  m_Name: ShipCrafts
+  m_Name: ShipBaker
   m_EditorClassIdentifier: 
-  name: Ship Craftsmerchant
+  name: Ship Bakermerchant
   sprite: {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
   requestList:
-  - ware: {fileID: 11400000, guid: dcc6220612c26694c85d48f0b1c3ec8a, type: 2}
+  - ware: {fileID: 11400000, guid: 9f57fe8833cbaee44beb8f3b7ab5a8c4, type: 2}
     requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 5e2182f8a742edc4e885d85f0c1ba66e, type: 2}
+  - ware: {fileID: 11400000, guid: 578d4676b3b07094eabb2c371995ff6d, type: 2}
     requestChance: 0.5
   requestFrequency: 15

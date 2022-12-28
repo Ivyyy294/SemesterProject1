@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Craftsman
   m_EditorClassIdentifier: 
   name: Craftsman
-  sprite: {fileID: 21300000, guid: 30962ec29612c7e44b61b51b8c6d484a, type: 3}
+  sprite: {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
   requestList:
-  - ware: {fileID: 11400000, guid: 053e7078ae57dbd4c8481b393b23a9bb, type: 2}
+  - ware: {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
     requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 1230b04dd223bd2418b785631cb92e14, type: 2}
+  - ware: {fileID: 11400000, guid: 843cb1d946dab2d4f8a6881cdb450dc2, type: 2}
     requestChance: 0.5
   requestFrequency: 15
