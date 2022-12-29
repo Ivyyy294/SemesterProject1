@@ -21,22 +21,21 @@ public class MerchantDisplay : MonoBehaviour
 		{
 			WareDisplay wareDisplay = obj.GetComponent<WareDisplay>();
 
-			if (wareDisplay.damaged)
+			if (wareDisplay != null && wareDisplay.ware.ID == currentRequest.ID)
 			{
-				GameStatus.Me.AddReputation (playerId, -1f);
-				return true;
-			}
-			else
-			{
-				Ware tmp = wareDisplay.GetWare();
-
-				if (tmp != null && tmp.ID == currentRequest.ID)
+				if (wareDisplay.damaged)
 				{
-					GameStatus.Me.AddSilverCoins (playerId, tmp.value);
+					GameStatus.Me.AddReputation (playerId, -1f);
+					return true;
+				}
+				else
+				{
+					GameStatus.Me.AddSilverCoins (playerId, wareDisplay.ware.value);
 					ChangeRequest (null);
 					return true;
 				}
 			}
+
 		}
 
 		return false;

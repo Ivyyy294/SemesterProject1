@@ -21,6 +21,11 @@ public class GameStatus : MonoBehaviour
 {
 	//Public Values
 	static public GameStatus Me {get; private set; }
+
+	[Header ("Player Settings")]
+	[SerializeField] Transform[] spawnPoints = new Transform[2];
+
+	[Header ("Game Settings")]
 	[SerializeField] float dayLenght = 60f;
 
 	//Private Values
@@ -81,6 +86,23 @@ public class GameStatus : MonoBehaviour
 
 	public GameDateTime GetCurrentDateTime () { return currentDateTime;}
 
+	public void Init()
+	{
+		teams = new List<Team>();
+		lifeTime = 0f;
+
+		var playerConfigs = PlayerManager.Me.GetPlayerConfigs().ToArray();
+
+		foreach (PlayerConfigurationDisplay i in playerConfigs)
+		{
+			PlayerConfiguration pc = i.playerConfiguration;
+			Transform pos = spawnPoints[pc.TeamIndex];
+			AddPlayerToTeam ( (uint) pc.PlayerIndex, pc.TeamIndex);
+			i.SpawnPlayer (pos.position);
+		}
+	}
+
+
 	//Private Functions
 
     // Start is called before the first frame update
@@ -89,9 +111,7 @@ public class GameStatus : MonoBehaviour
         if (Me == null)
 		{
 			Me = this;
-			DontDestroyOnLoad (Me);
-			teams = new List<Team>();
-			AddPlayerToTeam (0,0);
+			Init();
 		}
 		else
 			Debug.Log ("Trying to create a new Singelton instance!");

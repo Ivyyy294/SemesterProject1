@@ -9,7 +9,7 @@ TagManager:
   - Store
   - Ware
   - Crate
-  - Cooling
+  - StoringArea
   layers:
   - Default
   - TransparentFX

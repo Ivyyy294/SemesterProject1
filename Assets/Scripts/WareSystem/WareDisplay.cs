@@ -7,15 +7,20 @@ public class WareDisplay : MonoBehaviour
 {
 	//Public Values
 	public Ware ware;
+
+	[Header ("Lara Values")]
 	public bool damaged = false;
-	public bool isCooled = false;
+	public bool isStoresCorrectly = false;
+	public uint fragilityDmg;
+	[SerializeField] float collisionBuffer = 0.1f;
 
 	//Private Values
-	private double lifeTime = 0.0;
+	private double baseTimer = 0.0;
+	private double extendetTimer = 0.0;
+	private float collisionBufferTimer = 0f;
+	private Dictionary <StoringAreaId, bool> storingAreas;
 
 	//Public Functions
-	public Ware GetWare() { return ware;}
-
 	public void Init (Ware w)
 	{
 		ware = w;
@@ -24,21 +29,59 @@ public class WareDisplay : MonoBehaviour
 
 	public void CheckDurability ()
 	{
-		//Lifetime expires when not cooled
-		if (!isCooled)
-		{
-			lifeTime += Time.deltaTime;
+		float timeOffset = Time.deltaTime;
 
-			if (ware.durability > 0 && ware.durability <= lifeTime)
-				damaged = true;
+		if (isStoresCorrectly)
+		{
+			extendetTimer += timeOffset;
+			baseTimer = ware.durability * (extendetTimer / ware.durabilityExtended);
 		}
+		else
+		{
+			baseTimer += timeOffset;
+			extendetTimer = ware.durabilityExtended * (baseTimer / ware.durability);
+		}
+
+		damaged = (ware.durability > 0f && baseTimer >= ware.durability) //Base durability expired
+			|| (ware.durabilityExtended > 0f && extendetTimer >= ware.durabilityExtended)  //Extended durability expired
+			|| (ware.fragility != Ware.Fragility.None && fragilityDmg >= ware.fragilityHp); //Fragility limit exceeded
+	}
+
+	public void PlaceOnGround (Vector3 pos)
+
+	{
+		transform.position = pos;
+		transform.SetParent (WarePool.Me.transform);
+		gameObject.layer = 0;
+		collisionBufferTimer = 0f;
+	}
+
+	public void AddFragilityDmg ()
+	{
+		//Play Sound
+		fragilityDmg++;
+
 	}
 
 	//Private Functions
 	void Init ()
 	{
 		ChangeSprite();
-		lifeTime = 0.0f;
+		baseTimer = 0.0f;
+		extendetTimer = baseTimer;
+		damaged = false;
+		fragilityDmg = 0;
+		collisionBufferTimer = 0f;
+		isStoresCorrectly = false;
+		transform.rotation = new Quaternion();
+
+		BoxCollider2D collider = GetComponent<BoxCollider2D>();
+		collider.size = ware.GetSizeInWorld();
+
+		storingAreas = new Dictionary<StoringAreaId, bool>();
+
+		foreach (StoringAreaId i in ware.storingAreaIds)
+			storingAreas.Add (i, false);
 	}
 
 	// Start is called before the first frame update
@@ -50,6 +93,9 @@ public class WareDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (collisionBufferTimer < collisionBuffer)
+			collisionBufferTimer += Time.deltaTime;
+
 		if (ware != null)
 		{
 			if (!damaged)
@@ -79,15 +125,36 @@ public class WareDisplay : MonoBehaviour
 		}
 	}
 
+	private void SetStoringArea (GameObject obj, bool status)
+	{
+		StoringArea area = obj.GetComponent <StoringArea>();
+
+		if (area != null && storingAreas.ContainsKey (area.areaId))
+			storingAreas [area.areaId] = status;
+
+		bool tmp = true;
+
+		foreach (var i in storingAreas)
+			tmp &= i.Value;
+
+		isStoresCorrectly = tmp;
+	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag ("Cooling"))
-			isCooled = true;
+		if (collision.CompareTag ("StoringArea"))
+			SetStoringArea (collision.gameObject, true);
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		if (collision.CompareTag ("Cooling"))
-			isCooled = false;
+		if (collision.CompareTag ("StoringArea"))
+			SetStoringArea (collision.gameObject, false);
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (ware.fragility == Ware.Fragility.Very && collisionBufferTimer >= collisionBuffer)
+			AddFragilityDmg();
 	}
 }

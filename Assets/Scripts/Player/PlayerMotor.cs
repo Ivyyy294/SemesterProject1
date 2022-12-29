@@ -5,25 +5,112 @@ using UnityEngine.InputSystem;
 
 public class PlayerMotor : Ivyyy.PlayerMovement2D
 {
-	public Animator animator;
-	private PlayerInput input;
+	//Editor Values
+	[Header ("Additional Settings")]
+	[SerializeField] SpeedProfile speedProfileMediumWare;
+	[SerializeField] SpeedProfile speedProfileHeavyWare;
+
+	[Header ("Collision Penalty")]
+	[Range (0f, 1f)]
+	[SerializeField] float collisionAccelerationPenalty = 1f;
+	[SerializeField] float collisionPenaltyThreshold = 0f;
+
+	[Header ("Lara Values")]
+	[SerializeField] Animator animator;
+	[SerializeField] PlayerInteraktions interactionScript;
+
+	//Private Values
+	private SpeedProfile speedProfileLightWare;
+	private PlayerConfiguration playerConfiguration;
+	//private PlayerInput input;
 	private InputAction moveAction;
+	private bool collisionTimerRunning = false;
+	private float collisionTimer;
+
+	//Public Functions
+	public void InitPlayer (PlayerConfiguration pc)
+	{
+		playerConfiguration = pc;
+		moveAction = playerConfiguration.Input.actions["Movement"];
+
+		interactionScript.InitInput (pc);
+	}
+
+	protected override void Start()
+	{
+		base.Start();
+		speedProfileLightWare = speedProfile;
+	}
 
 	private void Update()
 	{
-		if (input == null)
-			InitInput();
+		if (collisionTimerRunning && collisionAccelerationPenalty > 0f)
+		{
+			if (collisionTimer >= collisionPenaltyThreshold)
+			{
+				timeAcceleration *= 1 - collisionAccelerationPenalty;
+				collisionTimerRunning = false;
+			}
+			else
+				collisionTimer += Time.deltaTime;
+		}
+		else
+		{
+			collisionTimer = 0f;
+		}
 
-		Vector2 movementVec = moveAction.ReadValue <Vector2>();
-		Move (movementVec);
-		animator.SetFloat ("Horizontal", movementVec.x);
-		animator.SetFloat ("Vertical", movementVec.y);
-		animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+		if (moveAction != null)
+		{
+			SetCurrentPlayerSpeed();
+
+			//Call Move from PlayerMovement2D
+			Vector2 movementVec = moveAction.ReadValue <Vector2>();
+			Move (movementVec);
+
+			//Update Animator Values
+			animator.SetFloat ("Horizontal", movementVec.x);
+			animator.SetFloat ("Vertical", movementVec.y);
+			animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+		}
 	}
 
-	private void InitInput()
+	private void SetCurrentPlayerSpeed ()
 	{
-		input = GetComponent <PlayerInput>();
-		moveAction = input.actions["Movement"];
+		if (interactionScript != null && interactionScript.CarriesWare())
+		{
+			Ware ware = interactionScript.GetCarriedWare();
+
+			if (ware != null)
+			{
+				switch (ware.weight)
+				{
+					case Ware.WeightCategory.Light:
+						currentSpeedProfile = speedProfileLightWare;
+						break;
+					case Ware.WeightCategory.Medium:
+						currentSpeedProfile = speedProfileMediumWare;
+						break;
+					case Ware.WeightCategory.Heavy:
+						currentSpeedProfile = speedProfileHeavyWare;
+						break;
+				}
+			}
+			else
+				currentSpeedProfile = speedProfileLightWare;
+		}
+		else
+			currentSpeedProfile = speedProfileLightWare;
+	}
+
+	//Resets the acceleration when a player bumbs into another player
+	void OnCollisionEnter2D (Collision2D collision)
+	{
+		collisionTimerRunning = true;
+	}
+
+	//Resets the acceleration when a player bumbs into another player
+	void OnCollisionExit2D (Collision2D collision)
+	{
+		collisionTimerRunning = false;
 	}
 }
