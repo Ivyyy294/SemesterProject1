@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e110af72146cc7341bc0e2bd414298c4, type: 3}
   m_Name: ShipJamWine
   m_EditorClassIdentifier: 
-  name: Processed Goods Ship
+  name: Jam Wine Ship
   wares:
   - {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}
   - {fileID: 11400000, guid: ea28f68a04a4f3e4bafa06a02bf8cdba, type: 2}

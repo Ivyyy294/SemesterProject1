@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e110af72146cc7341bc0e2bd414298c4, type: 3}
   m_Name: ShipIronWheat
   m_EditorClassIdentifier: 
-  name: Stock Ship
+  name: Iron Wheat Ship
   wares:
   - {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
   - {fileID: 11400000, guid: 757158f9109de7040bf683ee43e5b69e, type: 2}
