@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: ArmourLarge
   ID: 106
-  value: 1
+  value: 5
   SpriteOk: {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   weight: 2
