@@ -15,10 +15,10 @@ MonoBehaviour:
   name: Bread
   ID: 7
   value: 1
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  SpriteOk: {fileID: 21300000, guid: d808a7bd613c36f4c92cadcaccbd2497, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 547adee4d23bb9142809ee0aef719f3f, type: 3}
   weight: 0
-  size: {x: 1, y: 2}
+  size: {x: 2, y: 1}
   durability: 150
   durabilityExtended: 480
   storingAreaIds: 010000000000000003000000
