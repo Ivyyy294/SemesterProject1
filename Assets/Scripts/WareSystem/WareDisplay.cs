@@ -19,6 +19,8 @@ public class WareDisplay : MonoBehaviour
 	private double extendetTimer = 0.0;
 	private float collisionBufferTimer = 0f;
 	private Dictionary <StoringAreaId, bool> storingAreas;
+	SpriteRenderer spriteRenderer;
+
 
 	//Public Functions
 	public void Init (Ware w)
@@ -60,7 +62,6 @@ public class WareDisplay : MonoBehaviour
 	{
 		//Play Sound
 		fragilityDmg++;
-
 	}
 
 	//Private Functions
@@ -87,6 +88,7 @@ public class WareDisplay : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		spriteRenderer = GetComponent<SpriteRenderer>();
 		Init();
 	}
 
@@ -111,16 +113,27 @@ public class WareDisplay : MonoBehaviour
 	{
 		if (ware != null)
 		{
-			SpriteRenderer r = GetComponent<SpriteRenderer>();
-
-			if (r == null)
+			if (spriteRenderer == null)
 				Debug.Log ("SpriteRenderer missing!");
 			else
 			{
-				if (damaged)
-					r.sprite = ware.SpriteDamaged;
+				//Use the vertival sprites if available and the ware is rotated
+				if (transform.rotation.z != 0f 
+					&& ware.SpriteVerticalDamaged != null
+					&& ware.SpriteVerticalOk != null)
+				{
+					if (damaged)
+						spriteRenderer.sprite = ware.SpriteVerticalDamaged;
+					else
+						spriteRenderer.sprite = ware.SpriteVerticalOk;
+				}
 				else
-					r.sprite = ware.SpriteOk;
+				{
+					if (damaged)
+						spriteRenderer.sprite = ware.SpriteDamaged;
+					else
+						spriteRenderer.sprite = ware.SpriteOk;
+				}
 			}
 		}
 	}

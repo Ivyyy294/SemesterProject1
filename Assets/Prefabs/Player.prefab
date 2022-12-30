@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayDistance: 2
   dropIndicator: {fileID: 3714752570590167877}
-  rotationOffset: {x: 0, y: 0, z: 90}
+  rotationOffset: {x: 0, y: 0, z: -90}
 --- !u!114 &6703997733596930556
 MonoBehaviour:
   m_ObjectHideFlags: 0
