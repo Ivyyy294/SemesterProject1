@@ -15,10 +15,12 @@ MonoBehaviour:
   name: WineLarge
   ID: 116
   value: 3
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   weight: 2
   size: {x: 2, y: 2}
+  SpriteOk: {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 169c30c6772b6c943bca12d37d9ea8e5, type: 3}
+  SpriteVerticalOk: {fileID: 0}
+  SpriteVerticalDamaged: {fileID: 0}
   durability: 1200
   durabilityExtended: 2400
   storingAreaIds: 
