@@ -27,7 +27,6 @@ public class DropIndicator : MonoBehaviour
 	{
 		if (!collision.isTrigger)
 		{
-			Debug.Log (collision.gameObject.tag);
 			++collisionCounter;
 
 			spriteRenderer.color = blockedColor;

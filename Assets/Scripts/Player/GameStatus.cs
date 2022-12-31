@@ -15,6 +15,12 @@ public class Team
 	public float Reputation {set;get;}
 	public float SilverCoins {set;get;}
 	public List <uint> playerIds = new List<uint>();
+
+	public Team()
+	{
+		Reputation = 50f;
+		SilverCoins = 0f;
+	}
 }
 
 public class GameStatus : MonoBehaviour

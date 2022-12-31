@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e110af72146cc7341bc0e2bd414298c4, type: 3}
-  m_Name: MyFirstShip
+  m_Script: {fileID: 11500000, guid: 6d6e2f01188e8dd4bad8b1c26fed2c00, type: 3}
+  m_Name: SpawnShipIronWheat
   m_EditorClassIdentifier: 
-  name: 
-  wares:
-  - {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
-  - {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
+  ship: {fileID: 11400000, guid: 7d3978c1932eee043a37d9f16f1a09cb, type: 2}
+  weight: 0.5

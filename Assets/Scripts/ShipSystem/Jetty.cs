@@ -23,6 +23,8 @@ public class Jetty : MonoBehaviour
 	//Public Functions
 	public void SpawnShip(Ship obj)
 	{
+		Debug.Log ("Ship spawned!");
+
 		ship.SetActive (true);
 		ship.transform.position = spawnPoint.position;
 		

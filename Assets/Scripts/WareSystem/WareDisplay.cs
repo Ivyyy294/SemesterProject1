@@ -19,8 +19,6 @@ public class WareDisplay : MonoBehaviour
 	private double extendetTimer = 0.0;
 	private float collisionBufferTimer = 0f;
 	private Dictionary <StoringAreaId, bool> storingAreas;
-	SpriteRenderer spriteRenderer;
-
 
 	//Public Functions
 	public void Init (Ware w)
@@ -88,7 +86,6 @@ public class WareDisplay : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		spriteRenderer = GetComponent<SpriteRenderer>();
 		Init();
 	}
 
@@ -113,6 +110,8 @@ public class WareDisplay : MonoBehaviour
 	{
 		if (ware != null)
 		{
+			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
 			if (spriteRenderer == null)
 				Debug.Log ("SpriteRenderer missing!");
 			else
