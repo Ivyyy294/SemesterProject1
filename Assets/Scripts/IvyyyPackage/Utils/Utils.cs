@@ -6,6 +6,13 @@ namespace Ivyyy
 {
     public class Utils
     {
+		public static float RoundF (float val, uint dp)
+		{
+			float tmp = Mathf.Pow (10, dp);
+			return Mathf.Round(val * tmp) / tmp;
+		}
+
+
 		public static Texture2D FillTexture2D (Texture2D texture, Color color)
 		{
 			var fillColorArray = texture.GetPixels ();

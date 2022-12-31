@@ -8,27 +8,30 @@ public class SpawnProfile
 	public uint day;
 	public float tMin;
 	public float tMax;
+	public AnimationCurve spawnChanceCurve;
 }
 
-class JettyContainer
+public class JettyContainer
 {
 	public Jetty jetty;
-	public float timer;
-	public float SpawnTime;
+	public float timerSpawn;
+	public float timerDocked;
+	public float spawnTime;
 }
 
 public class Harbour : MonoBehaviour
 {
 	//Editor Values
-	[SerializeField] List <Ship> ships;
 	[SerializeField] List <ShipSpawn> shipSpawn;
 	[SerializeField] List <Jetty> jetties;
 	[SerializeField] List <SpawnProfile> spawnProfiles = new List <SpawnProfile>();
+	[SerializeField] float shipStayTime;
 
 	//Private Values
 	private float[] Weights;
-	private JettyContainer[] jettyContainers;
 	private SpawnProfile sProfile;
+	private Ivyyy.WeightedRandom random = new Ivyyy.WeightedRandom();
+	private List <JettyContainer> jettyContainers = new List <JettyContainer>();
 	bool initDone = false;
 
 	//Private Functions
@@ -45,12 +48,43 @@ public class Harbour : MonoBehaviour
 		if (!initDone)
 		{
 			ResetSpawnWeights();
-			InitJettyContainers();
+
+			foreach (Jetty i in jetties)
+			{
+				JettyContainer c = new JettyContainer();
+				c.jetty = i;
+				c.spawnTime = GetNewSpawnTime();
+				jettyContainers.Add (c);
+			}
 
 			initDone = true;
 		}
 
-		SpawnShipSimple();
+		//Jetty timer update
+		foreach (JettyContainer i in jettyContainers)
+		{
+			if (i.jetty.IsShipDocked())
+			{
+				i.timerDocked += Time.fixedDeltaTime;
+
+				if (i.timerDocked >= shipStayTime)
+				{
+					i.jetty.CastOffShip();
+					i.timerDocked = 0f;
+				}
+			}
+			else if (!i.jetty.IsShipActive())
+			{
+				i.timerSpawn += Time.fixedDeltaTime;
+
+				if (i.timerSpawn >= i.spawnTime)
+				{
+					SpawnShip (i.jetty);
+					i.spawnTime = GetNewSpawnTime();
+					i.timerSpawn = 0f;
+				}
+			}
+		}
 	}
 
 	void SetCurrentSpawnProfile()
@@ -62,57 +96,11 @@ public class Harbour : MonoBehaviour
 			if (currentDay >= spawnProfiles[i].day)
 			{
 				sProfile = spawnProfiles[i];
+				random.SetWeight (sProfile.spawnChanceCurve);
 				break;
 			}
 		}
-
 	}
-
-	void SpawnShipSimple ()
-	{
-		foreach (JettyContainer i in jettyContainers)
-		{
-			if (i != null && !i.jetty.IsShipActive())
-			{
-				if (i.timer >= i.SpawnTime)
-				{
-					SpawnShip (i.jetty);
-					i.timer = 0f;
-					i.SpawnTime = Random.Range (sProfile.tMin, sProfile.tMax);
-				}
-				else
-					i.timer += Time.deltaTime;
-			}
-		}
-	}
-
-	//void SpawnShipWithMagic()
-	//{
-		//for (int i = 0; i < jetties.Count; ++i)
-		//{
-		//	if (!jetties[i].IsShipActive())
-		//	{
-		//		float var = Random.value;
-
-		//		float magic = Mathf.Pow (((timerJetties[i] - sProfile.tMin) / (sProfile.tMax - sProfile.tMin)), 5f);
-			
-		//		if (magic > var)
-		//		{
-		//			Debug.Log ("Var: " + var + " Magic: " + magic + " Timer: " + timerJetties[i]);
-		//			SpawnShip (jetties[i]);
-		//			timerJetties[i] = 0f;
-		//			cooldownTimer = 0f;
-		//			break;
-		//		}
-		//	}
-		//}
-
-		//for (int i = 0; i < jetties.Count; ++i)
-		//{
-		//	if (!jetties[i].IsShipActive())
-		//		timerJetties[i] += Time.fixedDeltaTime;
-		//}
-	//}
 
 	void SpawnShip (Jetty jetty)
 	{
@@ -146,20 +134,12 @@ public class Harbour : MonoBehaviour
 			Weights[i] = Weights[i] / totalWeight;
 	}
 
-	void InitJettyContainers ()
+	float GetNewSpawnTime ()
 	{
-		if (jettyContainers == null)
-		{
-			jettyContainers = new JettyContainer [jetties.Count];
-
-			for (int i = 0; i < jetties.Count; ++i)
-			{
-				jettyContainers[i] = new JettyContainer();
-				JettyContainer tmp = jettyContainers[i];
-				tmp.jetty = jetties[i];
-				tmp.timer = 0f;
-				tmp.SpawnTime = Random.Range (sProfile.tMin, sProfile.tMax);
-			}
-		}
+		float offset = sProfile.tMax - sProfile.tMin;
+		float val = sProfile.tMin + offset * random.Value(); 
+		Debug.Log ("New Spawn TIme: " + val);
+		return val;
 	}
 }
+

@@ -17601,6 +17601,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3923108689880186466}
     m_Modifications:
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: shipStayTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: ships.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -17615,6 +17619,10 @@ PrefabInstance:
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: shipSpawn.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: shipSpawnCheckPerSec
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: jetties.Array.data[0]
@@ -17633,36 +17641,48 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e5852f21136fc6843a91261696848188, type: 2}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
-      propertyPath: spawnProfiles.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
-      propertyPath: spawnProfiles.Array.data[0].day
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
-      propertyPath: spawnProfiles.Array.data[1].day
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: spawnProfiles.Array.data[0].tMax
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: spawnProfiles.Array.data[0].tMin
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
-      propertyPath: spawnProfiles.Array.data[1].tMax
-      value: 300
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
-      propertyPath: spawnProfiles.Array.data[1].tMin
-      value: 90
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[1].time
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
-      propertyPath: spawnProfiles.Array.data[0].tMinGab
-      value: 5
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
+      propertyPath: spawnProfiles.Array.data[0].spawnChanceCurve.m_Curve.Array.data[1].outWeight
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697586, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: m_Name
