@@ -19,6 +19,7 @@ public class Jetty : MonoBehaviour
 	private float startTime;
 	private float startTimeCastOff;
 	bool shipCastOff;
+	ShipDisplay shipDisplay;
 
 	//Public Values	
 	public bool ShipDocked {get; private set;}
@@ -31,8 +32,7 @@ public class Jetty : MonoBehaviour
 		if (!shipCastOff)
 		{
 			shipCastOff = true;
-			ShipDocked = false;
-			startTimeCastOff = Time.time;
+			startTimeCastOff = 0f;
 		}
 	}
 
@@ -43,13 +43,10 @@ public class Jetty : MonoBehaviour
 		ship.SetActive (true);
 		ship.transform.position = spawnPoint.position;
 		
-		ShipDisplay shipDisplay = ship.GetComponent<ShipDisplay>();
-
 		if (shipDisplay != null)
 			shipDisplay.Init (obj);
 
 		startTime = Time.time;
-		ShipDocked = false;
 		shipCastOff = false;
 		timerInactice = 0f;
 		timerShipDocked = 0f;
@@ -62,6 +59,8 @@ public class Jetty : MonoBehaviour
 	void Start()
 	{
 		journeyLength = Vector3.Distance (spawnPoint.position, destinationPoint.position);
+		shipDisplay = ship.GetComponent<ShipDisplay>();
+
 	}
 
 	// Update is called once per frame
@@ -69,6 +68,8 @@ public class Jetty : MonoBehaviour
 	{
 		if (ship.activeInHierarchy)
 		{
+			ShipDocked = ship.transform.position == destinationPoint.position;
+
 			if (shipCastOff)
 				MoveShipCastOff();
 			else if (ShipDocked)
@@ -92,22 +93,28 @@ public class Jetty : MonoBehaviour
 
 		// Set our position as a fraction of the distance between the markers.
 		ship.transform.position = Vector3.Lerp(spawnPoint.position, destinationPoint.position, fractionOfJourney);
-
-		ShipDocked = ship.transform.position == destinationPoint.position;
 	}
 
 	private void MoveShipCastOff()
 	{
-		// Distance moved equals elapsed time times speed..
-		float distCovered = (Time.time - startTimeCastOff) * speed;
+		//Wait for player to leave the ship
+		if (!shipDisplay.IsPlayerOnShip() && startTimeCastOff == 0f)
+			startTimeCastOff = Time.time;
 
-		// Fraction of journey completed equals current distance divided by total distance.
-		float fractionOfJourney = distCovered / journeyLength;
+		//Start moving once startTimeCastOff is init
+		if (startTimeCastOff > 0f)
+		{
+			// Distance moved equals elapsed time times speed..
+			float distCovered = (Time.time - startTimeCastOff) * speed;
 
-		// Set our position as a fraction of the distance between the markers.
-		ship.transform.position = Vector3.Lerp(destinationPoint.position, spawnPoint.position, fractionOfJourney);
+			// Fraction of journey completed equals current distance divided by total distance.
+			float fractionOfJourney = distCovered / journeyLength;
 
-		if (ship.transform.position == spawnPoint.position)
-			ship.SetActive (false);
+			// Set our position as a fraction of the distance between the markers.
+			ship.transform.position = Vector3.Lerp(destinationPoint.position, spawnPoint.position, fractionOfJourney);
+
+			if (ship.transform.position == spawnPoint.position)
+				shipDisplay.DeactivateSafe();
+		}
 	}
 }

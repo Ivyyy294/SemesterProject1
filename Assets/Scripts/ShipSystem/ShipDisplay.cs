@@ -7,10 +7,28 @@ public class ShipDisplay : MonoBehaviour
 	//Editor values
 	[SerializeField] List <Transform> warePos;
 
+	//Private Values
+	uint counterPlayersOnShip;
+
 	//Public Functions
+	public bool IsPlayerOnShip()
+	{
+		return counterPlayersOnShip > 0;
+	}
+
 	public void Init (Ship ship)
 	{
+		counterPlayersOnShip = 0;
 		InitWares(ship);
+	}
+
+	public void DeactivateSafe()
+	{
+		//Return all left wares to pool
+		foreach (WareDisplay i in GetComponentsInChildren <WareDisplay>())
+			i.ReturnToPoolDeactivated();
+
+		gameObject.SetActive (false);
 	}
 
 	//Private Functions
@@ -29,6 +47,29 @@ public class ShipDisplay : MonoBehaviour
 
 				WareDisplay wareDisplay = obj.GetComponent<WareDisplay>();
 				wareDisplay.Init (ship.wares[i]);
+			}
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag ("Player"))
+			++counterPlayersOnShip;
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.CompareTag ("Player"))
+			--counterPlayersOnShip;
+	}
+
+	private void OnTriggerStay2D(Collider2D collision)
+	{
+		if (collision.CompareTag ("Ware"))
+		{
+			if (!collision.transform.parent.CompareTag ("Player"))
+			{
+				collision.transform.SetParent (transform);
 			}
 		}
 	}
