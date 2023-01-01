@@ -14,13 +14,12 @@ public class SpawnProfile
 public class Harbour : MonoBehaviour
 {
 	//Editor Values
-	[SerializeField] List <ShipSpawn> shipSpawn;
+	[SerializeField] Ivyyy.WeightedSpawnManager <Ship> shipSpawnManager = new Ivyyy.WeightedSpawnManager <Ship>();
 	[SerializeField] List <Jetty> jetties;
 	[SerializeField] List <SpawnProfile> spawnProfiles = new List <SpawnProfile>();
 	[SerializeField] float shipStayTime;
 
 	//Private Values
-	private float[] Weights;
 	private float[] spawnTimings;
 	private SpawnProfile sProfile;
 	private Ivyyy.WeightedRandom random = new Ivyyy.WeightedRandom();
@@ -39,7 +38,8 @@ public class Harbour : MonoBehaviour
 
 		if (!initDone)
 		{
-			ResetSpawnWeights();
+			shipSpawnManager.Init();
+
 			spawnTimings = new float [jetties.Count];
 
 			for (int i = 0; i < jetties.Count; ++i)
@@ -80,34 +80,7 @@ public class Harbour : MonoBehaviour
 
 	void SpawnShip (Jetty jetty)
 	{
-		float val = Random.value;
-
-		for (int i = 0; i < Weights.Length; ++i)
-		{
-			if (val < Weights[i])
-			{
-				jetty.SpawnShip (shipSpawn[i].ship);
-				return;
-			}
-
-			val -= Weights[i];
-		}
-	}
-
-	void ResetSpawnWeights ()
-	{
-		Weights = new float [shipSpawn.Count];
-
-		float totalWeight = 0f;
-
-		for (int i = 0; i < shipSpawn.Count; ++i)
-		{
-			Weights[i] = shipSpawn[i].GetWeight();
-			totalWeight += Weights[i];
-		}
-
-		for (int i = 0; i < Weights.Length; ++i)
-			Weights[i] = Weights[i] / totalWeight;
+		jetty.SpawnShip (shipSpawnManager.GetObjectToSpawn());
 	}
 
 	float GetNewSpawnTime ()
