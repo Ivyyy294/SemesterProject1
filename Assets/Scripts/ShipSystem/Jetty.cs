@@ -18,9 +18,12 @@ public class Jetty : MonoBehaviour
 	private float journeyLength;
 	private float startTime;
 	private float startTimeCastOff;
-	bool shipDocked;
 	bool shipCastOff;
 
+	//Public Values	
+	public bool ShipDocked {get; private set;}
+	public float timerShipDocked {get; private set;}
+	public float timerInactice { get; private set;}
 
 	//Public Functions
 	public void CastOffShip ()
@@ -28,7 +31,7 @@ public class Jetty : MonoBehaviour
 		if (!shipCastOff)
 		{
 			shipCastOff = true;
-			shipDocked = false;
+			ShipDocked = false;
 			startTimeCastOff = Time.time;
 		}
 	}
@@ -46,13 +49,13 @@ public class Jetty : MonoBehaviour
 			shipDisplay.Init (obj);
 
 		startTime = Time.time;
-
+		ShipDocked = false;
 		shipCastOff = false;
+		timerInactice = 0f;
+		timerShipDocked = 0f;
 	}
 
 	public bool IsShipActive () { return ship != null && ship.activeInHierarchy;}
-	public bool IsShipDocked () { return IsShipActive() && shipDocked;}
-	public bool IsShipCastOff () { return shipCastOff;}
 
 	//Private Functions
 	// Start is called before the first frame update
@@ -66,13 +69,17 @@ public class Jetty : MonoBehaviour
 	{
 		if (ship.activeInHierarchy)
 		{
-			if (!shipDocked && !shipCastOff)
-				MoveShip();
-			else if (shipCastOff)
+			if (shipCastOff)
 				MoveShipCastOff();
+			else if (ShipDocked)
+				timerShipDocked += Time.deltaTime;
+			else if (!ShipDocked)
+				MoveShip();
 
-			harbourBarrier.SetActive (!shipDocked);
+			harbourBarrier.SetActive (!ShipDocked);
 		}
+		else
+			timerInactice += Time.deltaTime;
 	}
 
 	private void MoveShip()
@@ -86,7 +93,7 @@ public class Jetty : MonoBehaviour
 		// Set our position as a fraction of the distance between the markers.
 		ship.transform.position = Vector3.Lerp(spawnPoint.position, destinationPoint.position, fractionOfJourney);
 
-		shipDocked = ship.transform.position == destinationPoint.position;
+		ShipDocked = ship.transform.position == destinationPoint.position;
 	}
 
 	private void MoveShipCastOff()
