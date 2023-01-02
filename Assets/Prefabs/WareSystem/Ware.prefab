@@ -101,6 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ware: {fileID: 0}
   damaged: 0
+  isStoresCorrectly: 0
+  fragilityDmg: 0
+  collisionBuffer: 0.1
 --- !u!61 &8966585106285815452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,4 +150,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7

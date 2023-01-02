@@ -10,26 +10,28 @@ public class Jetty : MonoBehaviour
 
 	[Header ("ShipSettings")]
 	[SerializeField] GameObject ship;
-	[SerializeField] Transform spawnPoint;
-	[SerializeField] Transform destinationPoint;
-	[SerializeField] float speed = 1.0f;
+	[SerializeField] Ivyyy.Pathfinding2D shipPathfinding;
+	[SerializeField] float shipDockTime;
 
 	//Private Values
-	private float journeyLength;
-	private float startTime;
-	private float startTimeCastOff;
-	bool shipDocked;
-	bool shipCastOff;
+	ShipDisplay shipDisplay;
 
+	//Public Values	
+	public bool ShipDocked {get; private set;}
+	public float timerShipDocked {get; private set;}
+	public float timerInactice { get; private set;}
 
 	//Public Functions
 	public void CastOffShip ()
 	{
-		if (!shipCastOff)
+		if (!shipDisplay.IsPlayerOnShip())
 		{
-			shipCastOff = true;
-			shipDocked = false;
-			startTimeCastOff = Time.time;
+			ShipDocked = false;
+
+			string name = "CastOff";
+
+			if (shipPathfinding != null && shipPathfinding.CurrentPath () != name)
+				shipPathfinding.StartPath (name);
 		}
 	}
 
@@ -37,28 +39,27 @@ public class Jetty : MonoBehaviour
 	{
 		Debug.Log ("Ship spawned!");
 
-		ship.SetActive (true);
-		ship.transform.position = spawnPoint.position;
-		
-		ShipDisplay shipDisplay = ship.GetComponent<ShipDisplay>();
+		string name = "Arriving";
 
+		if (shipPathfinding != null && shipPathfinding.CurrentPath () != name)
+			shipPathfinding.StartPath (name);
+
+		ship.SetActive (true);
+		
 		if (shipDisplay != null)
 			shipDisplay.Init (obj);
 
-		startTime = Time.time;
-
-		shipCastOff = false;
+		timerInactice = 0f;
+		timerShipDocked = 0f;
 	}
 
 	public bool IsShipActive () { return ship != null && ship.activeInHierarchy;}
-	public bool IsShipDocked () { return IsShipActive() && shipDocked;}
-	public bool IsShipCastOff () { return shipCastOff;}
 
 	//Private Functions
 	// Start is called before the first frame update
 	void Start()
 	{
-		journeyLength = Vector3.Distance (spawnPoint.position, destinationPoint.position);
+		shipDisplay = ship.GetComponent<ShipDisplay>();
 	}
 
 	// Update is called once per frame
@@ -66,41 +67,30 @@ public class Jetty : MonoBehaviour
 	{
 		if (ship.activeInHierarchy)
 		{
-			if (!shipDocked && !shipCastOff)
-				MoveShip();
-			else if (shipCastOff)
-				MoveShipCastOff();
+			string currentPath = shipPathfinding.CurrentPath();
 
-			harbourBarrier.SetActive (!shipDocked);
+			if (currentPath.Equals ("Arriving"))
+			{
+				if (shipPathfinding.CurrentPathDone())
+					ShipDocked = true;
+			}
+			else if (currentPath.Equals ("CastOff"))
+			{
+				if (shipPathfinding.CurrentPathDone())
+					shipDisplay.DeactivateSafe();
+			}
+
+			if (ShipDocked)
+			{
+				if (timerShipDocked > shipDockTime && !currentPath.Equals ("CastOff"))
+					CastOffShip();
+
+				timerShipDocked += Time.deltaTime;
+			}
+
+			harbourBarrier.SetActive (!ShipDocked);
 		}
-	}
-
-	private void MoveShip()
-	{
-		// Distance moved equals elapsed time times speed..
-		float distCovered = (Time.time - startTime) * speed;
-
-		// Fraction of journey completed equals current distance divided by total distance.
-		float fractionOfJourney = distCovered / journeyLength;
-
-		// Set our position as a fraction of the distance between the markers.
-		ship.transform.position = Vector3.Lerp(spawnPoint.position, destinationPoint.position, fractionOfJourney);
-
-		shipDocked = ship.transform.position == destinationPoint.position;
-	}
-
-	private void MoveShipCastOff()
-	{
-		// Distance moved equals elapsed time times speed..
-		float distCovered = (Time.time - startTimeCastOff) * speed;
-
-		// Fraction of journey completed equals current distance divided by total distance.
-		float fractionOfJourney = distCovered / journeyLength;
-
-		// Set our position as a fraction of the distance between the markers.
-		ship.transform.position = Vector3.Lerp(destinationPoint.position, spawnPoint.position, fractionOfJourney);
-
-		if (ship.transform.position == spawnPoint.position)
-			ship.SetActive (false);
+		else
+			timerInactice += Time.deltaTime;
 	}
 }

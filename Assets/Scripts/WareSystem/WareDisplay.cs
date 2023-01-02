@@ -21,6 +21,18 @@ public class WareDisplay : MonoBehaviour
 	private Dictionary <StoringAreaId, bool> storingAreas;
 
 	//Public Functions
+	public void ReturnToPool ()
+	{
+		Debug.Log ("Ware released back to pool");
+		transform.SetParent (WarePool.Me.transform);
+	}
+
+	public void ReturnToPoolDeactivated ()
+	{
+		ReturnToPool();
+		gameObject.SetActive (false);
+	}
+
 	public void Init (Ware w)
 	{
 		ware = w;
