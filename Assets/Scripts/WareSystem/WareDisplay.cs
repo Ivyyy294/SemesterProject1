@@ -13,6 +13,7 @@ public class WareDisplay : MonoBehaviour
 	public bool isStoresCorrectly = false;
 	public uint fragilityDmg;
 	[SerializeField] float collisionBuffer = 0.1f;
+	[SerializeField] SpriteRenderer spriteRenderer;
 
 	//Private Values
 	private double baseTimer = 0.0;
@@ -89,6 +90,10 @@ public class WareDisplay : MonoBehaviour
 		BoxCollider2D collider = GetComponent<BoxCollider2D>();
 		collider.size = ware.GetSizeInWorld();
 
+		//Adjusting renderer position to ware size
+		if (spriteRenderer != null)
+			spriteRenderer.gameObject.transform.localPosition = new Vector2 (0f, -collider.size.y / 2);
+
 		storingAreas = new Dictionary<StoringAreaId, bool>();
 
 		foreach (StoringAreaId i in ware.storingAreaIds)
@@ -122,7 +127,7 @@ public class WareDisplay : MonoBehaviour
 	{
 		if (ware != null)
 		{
-			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+			//SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
 			if (spriteRenderer == null)
 				Debug.Log ("SpriteRenderer missing!");

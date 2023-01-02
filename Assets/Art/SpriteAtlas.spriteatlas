@@ -1124,6 +1124,11 @@ SpriteAtlas:
   - {fileID: -373897615, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
   - {fileID: -1384553020, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
   - {fileID: 21300000, guid: 1e8abd3ca85aff44eaba4867567811f0, type: 3}
+  - {fileID: 162416643, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  - {fileID: 2040780706, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  - {fileID: 862589261, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  - {fileID: -1284184352, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  - {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
   - {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}
   - {fileID: -1744617577, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
   - {fileID: -1281023972, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
@@ -2325,6 +2330,11 @@ SpriteAtlas:
   - object- layer_3
   - object- layer_2
   - CrateDummy
+  - pl 1 green_up
+  - pl 1 green_10
+  - pl 1 green_left
+  - pl 1 green_right
+  - pl 1 green_idl
   - Wine
   - Ship details_2
   - Ship details_0
