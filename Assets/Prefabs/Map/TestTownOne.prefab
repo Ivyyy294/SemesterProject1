@@ -139241,15 +139241,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1280082775145688257, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: safetyDistance
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1754998832691582993, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754998832691582998, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754998832691582998, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2104412848698685003, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -139261,7 +139265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584734360303505536, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584734360303505536, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7584734360588999747, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -139329,7 +139337,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584734361149755523, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584734361149755523, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7584734361297627269, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -140125,7 +140137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754998832691582998, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7584734360303505536, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -140133,7 +140145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584734360303505536, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7584734360588999747, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -140201,7 +140213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584734361149755523, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7584734361297627269, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -140423,7 +140435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584734360949743524, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7584734361149755523, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -140459,17 +140471,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
---- !u!114 &4552234697833261184 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7584734360949743522, guid: c04d84460666dc14b87e07754d25fce2, type: 3}
-  m_PrefabInstance: {fileID: 6228103222181295906}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7358beb0d38b7ce4cae0b960845a6d97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7853691493093118351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140479,11 +140480,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: shipStayTime
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: jetties.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: jetties.Array.data[0]
@@ -140492,18 +140493,18 @@ PrefabInstance:
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: jetties.Array.data[1]
       value: 
-      objectReference: {fileID: 4552234697833261184}
+      objectReference: {fileID: 3213104736741367819}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: jetties.Array.data[2]
       value: 
       objectReference: {fileID: 3213104736741367819}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: spawnProfiles.Array.data[0].tMax
-      value: 60
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: spawnProfiles.Array.data[0].tMin
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5068739255166697584, guid: 78c9c4c1e69845144afa76a6e9e4298f, type: 3}
       propertyPath: shipSpawnManager.spawnObjects.Array.size
