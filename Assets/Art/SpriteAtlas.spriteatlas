@@ -1125,6 +1125,9 @@ SpriteAtlas:
   - {fileID: -1384553020, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
   - {fileID: 21300000, guid: 1e8abd3ca85aff44eaba4867567811f0, type: 3}
   - {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}
+  - {fileID: -1744617577, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
+  - {fileID: -1281023972, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
+  - {fileID: 207379507, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
   - {fileID: 1570811048, guid: 185e90cc03d73644188bf71c13610655, type: 3}
   - {fileID: -626045755, guid: 185e90cc03d73644188bf71c13610655, type: 3}
   - {fileID: 1610675110, guid: 185e90cc03d73644188bf71c13610655, type: 3}
@@ -1164,6 +1167,7 @@ SpriteAtlas:
   - {fileID: -1429762831, guid: 185e90cc03d73644188bf71c13610655, type: 3}
   - {fileID: -571528615, guid: 185e90cc03d73644188bf71c13610655, type: 3}
   - {fileID: 21300000, guid: dad016ccebdb11c4aad1019de5113491, type: 3}
+  - {fileID: 21300000, guid: 80a87c2d9a6478a4ebea04499c49e132, type: 3}
   - {fileID: 21300000, guid: d808a7bd613c36f4c92cadcaccbd2497, type: 3}
   - {fileID: 21300000, guid: adf66a0eb92c70b4289496bba5b6aea7, type: 3}
   - {fileID: 21300000, guid: de030a3ecc2dd2c489c12257ff1d0adf, type: 3}
@@ -2322,6 +2326,9 @@ SpriteAtlas:
   - object- layer_2
   - CrateDummy
   - Wine
+  - Ship details_2
+  - Ship details_0
+  - Ship details_1
   - coblestone line tileset copy_30
   - coblestone line tileset copy_31
   - coblestone line tileset copy_32
@@ -2361,6 +2368,7 @@ SpriteAtlas:
   - coblestone line tileset copy_18
   - coblestone line tileset copy_19
   - PlayerLeft
+  - Ship rigth
   - Bread1
   - resin
   - PlayerDown

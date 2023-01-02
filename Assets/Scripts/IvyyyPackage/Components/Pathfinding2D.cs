@@ -17,6 +17,7 @@ namespace Ivyyy
 		[SerializeField] List <Path2D> paths;
 		[SerializeField] GameObject objectToMove;
 		[SerializeField] float speed;
+		[SerializeField] List <int> layerMask;
 		[SerializeField] float safetyDistance = 1f;
 		
 		//Private Values
@@ -58,21 +59,18 @@ namespace Ivyyy
 			StartPath ("test");
 		}
 
-		private Vector2 GetSizeOfObject ()
+		private Vector2 GetSizeOfObject()
 		{
-			Vector2 size = new Vector2 (1f, 1f);
+			Vector2 size = new Vector2(1f, 1f);
 			Renderer renderer = objectToMove.GetComponent<Renderer>();
 
 			if (renderer == null)
-				renderer = objectToMove.GetComponentInChildren<Renderer>();
+				renderer = objectToMove.GetComponentInChildren <Renderer>();
 
 			if (renderer != null)
-			{
-				float min = Mathf.Min (renderer.bounds.size.x, renderer.bounds.size.y);
-				size = new Vector2 (min, min);
-			}
+				size = renderer.bounds.size;
 
-			return size * 0.75f;
+			return size;
 		}
 
 		private bool IsPathBlocked()
@@ -81,14 +79,15 @@ namespace Ivyyy
 			Vector3 p2 = activePath.wayPoints[currentWayPoint].position;
 			
 			Vector3 dir = (p2 - p1).normalized;
-
-			//int layerMask = 1 << 9;
 			Vector2 size = GetSizeOfObject();
-			//float angle = Vector3.Angle (p1, p2);
-			
-			//Debug.DrawRay (objectToMove.transform.position, dir * safetyDistance, Color.red, 0.1f);
 
-			RaycastHit2D[] hitInfo = Physics2D.BoxCastAll (objectToMove.transform.position, size, 0f, dir, safetyDistance/*, layerMask*/);
+			int _layerMask = 0;
+
+			foreach (int i in layerMask)
+				_layerMask |= 1 << i;
+
+			RaycastHit2D[] hitInfo =  _layerMask == 0 ? Physics2D.BoxCastAll (objectToMove.transform.position, size, 0f, dir, safetyDistance)
+				: Physics2D.BoxCastAll (objectToMove.transform.position, size, 0f, dir, safetyDistance, _layerMask);
 
 			foreach (RaycastHit2D i in hitInfo)
 			{
@@ -167,7 +166,7 @@ namespace Ivyyy
 
 					Gizmos.color = Color.red;
 					Vector3 pos = objectToMove.transform.position + dir * safetyDistance;
-					Gizmos.DrawCube (pos, GetSizeOfObject());
+					Gizmos.DrawWireCube (pos, GetSizeOfObject());
 				}
 				// Draws a blue line from this transform to the target
 			}

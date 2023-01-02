@@ -57,7 +57,8 @@ MonoBehaviour:
     - {fileID: 7584734361149755523}
   objectToMove: {fileID: 1754998832691582993}
   speed: 1
-  safetyDistance: 4
+  layerMask: 0b000000
+  safetyDistance: 1
 --- !u!1 &7584734360303505537
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +284,10 @@ PrefabInstance:
     - target: {fileID: 8555756264565544023, guid: 4d5cfe92132753f42926d68d12d18b22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650551495491139815, guid: 4d5cfe92132753f42926d68d12d18b22, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d5cfe92132753f42926d68d12d18b22, type: 3}
