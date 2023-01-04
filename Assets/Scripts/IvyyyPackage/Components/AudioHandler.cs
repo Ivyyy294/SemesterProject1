@@ -4,34 +4,43 @@ using UnityEngine;
 
 namespace Ivyyy
 {
+	//[System.Serializable]
+	//public class AudioClipList
+	//{
+	//	public string name;
+	//	public List <AudioClip> audioClips;
+	//}
+
 	[RequireComponent(typeof(AudioSource))]
 	public class AudioHandler : MonoBehaviour
 	{
 		public static AudioHandler Me;
 
 		[SerializeField] private AudioSource source;
-		[SerializeField] private List <string> soundIds;
-		[SerializeField] private List <AudioClip> sounds;
-		private Dictionary <string, AudioClip> audioList = new Dictionary<string, AudioClip>();
 
 		private void Start()
 		{
-			Me = this;
-
-			audioList.Clear();
-
-			source = GetComponent <AudioSource>();
-
-			for (int i = 0; i < soundIds.Count && i < sounds.Count; ++i)
-				audioList.Add (soundIds[i], sounds[i]);
+			if (Me == null)
+			{
+				source = GetComponent <AudioSource>();
+				Me = this;
+			}
+			else
+				Debug.Log ("Trying to create a new AudioHandler instance!");
 		}
 
-		public void PlayOneShot (string name, float volume = 1f)
+		public void PlayOneShot (AudioClip clip, float volume = 1f)
 		{
-			if (source != null)
+			if (source != null && clip != null)
+				source.PlayOneShot (clip, volume);
+		}
+
+		public void PlayOneShotFromList (List <AudioClip> list, float volume = 1f)
+		{
+			if (source != null && list.Count > 0)
 			{
-				if (audioList.ContainsKey (name) && audioList[name] != null)
-					source.PlayOneShot (audioList[name], volume);
+				int i = Random.Range (0, list.Count);
+				source.PlayOneShot (list[i], volume);
 			}
 		}
 	}

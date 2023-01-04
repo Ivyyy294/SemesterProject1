@@ -45,6 +45,12 @@ public class Ware : ScriptableObject
 	[Range (1, 4)]
 	public uint fragilityHp = 4;
 
+	[Header ("Sound")]
+	public List <AudioClip> audiosWalk;
+	public List <AudioClip> audiosPlaceDown;
+	public List <AudioClip> audiosPickUp;
+	public List <AudioClip> audiosBump;
+
 	//Public Functions
 	public Vector2 GetSizeInWorld ()
 	{

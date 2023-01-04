@@ -20,6 +20,7 @@ public class WareDisplay : MonoBehaviour
 	private double extendetTimer = 0.0;
 	private float collisionBufferTimer = 0f;
 	private Dictionary <StoringAreaId, bool> storingAreas;
+	Ivyyy.AudioHandler audioHandler;
 
 	//Public Functions
 	public void ReturnToPool ()
@@ -60,6 +61,15 @@ public class WareDisplay : MonoBehaviour
 			|| (ware.fragility != Ware.Fragility.None && fragilityDmg >= ware.fragilityHp); //Fragility limit exceeded
 	}
 
+	public void PickUp (Transform parent)
+	{
+		transform.position = parent.position;
+		transform.SetParent (parent);
+		transform.localScale = new Vector3 (0.5f, 0.5f);
+		gameObject.layer = 8;
+		audioHandler.PlayOneShotFromList (ware.audiosPickUp);
+	}
+
 	public void PlaceOnGround (Vector3 pos)
 
 	{
@@ -67,11 +77,12 @@ public class WareDisplay : MonoBehaviour
 		transform.SetParent (WarePool.Me.transform);
 		gameObject.layer = 0;
 		collisionBufferTimer = 0f;
+
+		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
 	}
 
 	public void AddFragilityDmg ()
 	{
-		//Play Sound
 		fragilityDmg++;
 	}
 
@@ -103,6 +114,7 @@ public class WareDisplay : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		audioHandler = Ivyyy.AudioHandler.Me;
 		Init();
 	}
 

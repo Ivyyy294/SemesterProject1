@@ -144,11 +144,8 @@ public class PlayerInteraktions: MonoBehaviour
 			if (grabbedObject != null && dropIndicator != null)
 			{
 				dropIndicator.SetActive (true);
-				grabbedObject.transform.position = transform.position;
-				grabbedObject.transform.SetParent (transform);
 				oScale = grabbedObject.transform.localScale;
-				grabbedObject.transform.localScale = new Vector3 (0.5f, 0.5f);
-				grabbedObject.gameObject.layer = 8;
+				grabbedObject.PickUp (transform);
 
 				//Setting Size of Drop indicator to Ware Size
 				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
