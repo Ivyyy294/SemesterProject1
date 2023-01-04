@@ -72,7 +72,10 @@ public class Jetty : MonoBehaviour
 			if (currentPath.Equals ("Arriving"))
 			{
 				if (shipPathfinding.CurrentPathDone())
+				{
 					ShipDocked = true;
+					//Play sound
+				}
 			}
 			else if (currentPath.Equals ("CastOff"))
 			{
@@ -89,6 +92,7 @@ public class Jetty : MonoBehaviour
 			}
 
 			harbourBarrier.SetActive (!ShipDocked);
+			shipDisplay.boardingRamp.SetActive (ShipDocked);
 		}
 		else
 			timerInactice += Time.deltaTime;

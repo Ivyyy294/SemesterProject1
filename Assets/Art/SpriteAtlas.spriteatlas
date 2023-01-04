@@ -1143,6 +1143,7 @@ SpriteAtlas:
   - {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
   - {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}
   - {fileID: -1744617577, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
+  - {fileID: 1047395784, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
   - {fileID: -1281023972, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
   - {fileID: 207379507, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
   - {fileID: 1780139597, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
@@ -2424,6 +2425,7 @@ SpriteAtlas:
   - pl 1 green_idl
   - Wine
   - Ship details_2
+  - Ship details_3
   - Ship details_0
   - Ship details_1
   - flat market stone tileset + grass_1

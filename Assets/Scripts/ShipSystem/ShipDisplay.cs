@@ -7,6 +7,9 @@ public class ShipDisplay : MonoBehaviour
 	//Editor values
 	[SerializeField] List <Transform> warePos;
 
+	//LaraValues
+	public GameObject boardingRamp;
+
 	//Private Values
 	uint counterPlayersOnShip;
 
