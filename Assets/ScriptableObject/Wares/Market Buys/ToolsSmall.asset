@@ -15,12 +15,24 @@ MonoBehaviour:
   name: ToolsSmall
   ID: 10
   value: 2
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   weight: 1
   size: {x: 1, y: 4}
+  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  SpriteVerticalOk: {fileID: 0}
+  SpriteVerticalDamaged: {fileID: 0}
   durability: 300
   durabilityExtended: 0
   storingAreaIds: 03000000
   fragility: 0
   fragilityHp: 4
+  audiosWalk: []
+  audiosPlaceDown:
+  - {fileID: 8300000, guid: b0dd8e9ea4c042547a65ec54e9f43d25, type: 3}
+  - {fileID: 8300000, guid: 8f6fe4eb1c441a149abfcd097cdc91bf, type: 3}
+  audiosPickUp:
+  - {fileID: 8300000, guid: 662ca94f7afbde34bb1a36a2f20df528, type: 3}
+  - {fileID: 8300000, guid: ef3806d34dc48554a801352600aea474, type: 3}
+  audiosBump:
+  - {fileID: 8300000, guid: fa52970f32005d6488e06dd8272eda99, type: 3}
+  - {fileID: 8300000, guid: ce3931172936ea2478f809e70c07855a, type: 3}

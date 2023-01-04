@@ -15,12 +15,33 @@ MonoBehaviour:
   name: Fish OilSmall
   ID: 8
   value: 1
-  SpriteOk: {fileID: 21300000, guid: a6f7f84fbe6087041991ffa5a65c597c, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 1405b0d819142f64297e6f5af5985ada, type: 3}
   weight: 0
   size: {x: 1, y: 1}
+  SpriteOk: {fileID: 21300000, guid: a6f7f84fbe6087041991ffa5a65c597c, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 1405b0d819142f64297e6f5af5985ada, type: 3}
+  SpriteVerticalOk: {fileID: 0}
+  SpriteVerticalDamaged: {fileID: 0}
   durability: 600
   durabilityExtended: 1800
   storingAreaIds: 00000000
   fragility: 2
   fragilityHp: 4
+  audiosWalk: []
+  audiosPlaceDown:
+  - {fileID: 8300000, guid: 427937644b9f30545a83bca31a89de25, type: 3}
+  - {fileID: 8300000, guid: 036d78487221b0e4eb08084d07a3199c, type: 3}
+  - {fileID: 8300000, guid: 6587f5e9a17681b4cb40a1a8f6969700, type: 3}
+  - {fileID: 8300000, guid: 708e435a3b038f846a18f3007cc84e94, type: 3}
+  audiosPickUp:
+  - {fileID: 8300000, guid: b3739b856a3a21446b6ae291740a8853, type: 3}
+  - {fileID: 8300000, guid: 6995cc4881f4f124b9013fcb54cb0e1d, type: 3}
+  - {fileID: 8300000, guid: 1cf85b210275a234fb3ae4f140b00fae, type: 3}
+  - {fileID: 8300000, guid: ae6b0eeaf208b744e88890c1c9f8385c, type: 3}
+  - {fileID: 8300000, guid: c3f0f4ea2cd24f7459b0ac830bdde653, type: 3}
+  - {fileID: 8300000, guid: c631a6188b49608489d5922c07586eaf, type: 3}
+  audiosBump:
+  - {fileID: 8300000, guid: cca4668c89df54b438fdbf47af772cf0, type: 3}
+  - {fileID: 8300000, guid: 433c9e0c6b43b0b4d84d6bacb93cff94, type: 3}
+  - {fileID: 8300000, guid: 737d52b6a2371394294dca48b53d241a, type: 3}
+  - {fileID: 8300000, guid: d8ea002735bb2db41a3ed18d75cf1c36, type: 3}
+  - {fileID: 8300000, guid: 46a64125d3af87644901db7d72a3d002, type: 3}

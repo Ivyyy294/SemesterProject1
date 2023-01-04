@@ -15,12 +15,29 @@ MonoBehaviour:
   name: ArmourLarge
   ID: 106
   value: 5
-  SpriteOk: {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   weight: 2
   size: {x: 2, y: 2}
+  SpriteOk: {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  SpriteVerticalOk: {fileID: 0}
+  SpriteVerticalDamaged: {fileID: 0}
   durability: 240
   durabilityExtended: 0
   storingAreaIds: 03000000
   fragility: 0
   fragilityHp: 1
+  audiosWalk: []
+  audiosPlaceDown:
+  - {fileID: 8300000, guid: 2e1bb12cce20fe749b55abe625fe3f83, type: 3}
+  - {fileID: 8300000, guid: 4cdbe88ec1224ab4f99d005b81119028, type: 3}
+  - {fileID: 8300000, guid: 99e6449c181af724787a92453e0e7c80, type: 3}
+  - {fileID: 8300000, guid: 7684b868c402166458cc8d21871f9291, type: 3}
+  audiosPickUp:
+  - {fileID: 8300000, guid: 187e52b397791284ab736cb79e82ed3f, type: 3}
+  - {fileID: 8300000, guid: 1b0a39e9bf01b3f4eae8a95c7f9d09cc, type: 3}
+  - {fileID: 8300000, guid: f55aa8f628d5c2b46a159ac6dc6b72d2, type: 3}
+  audiosBump:
+  - {fileID: 8300000, guid: b7c217c7eea98f84794e76d995aff36f, type: 3}
+  - {fileID: 8300000, guid: df3b928a6a80eeb4086fb3937ff030e7, type: 3}
+  - {fileID: 8300000, guid: ad69a5d9ad439d04eab327a4d31daa89, type: 3}
+  - {fileID: 8300000, guid: e1e9bb3a63623bb4bb79c719a9ae6f54, type: 3}

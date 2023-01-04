@@ -15,12 +15,31 @@ MonoBehaviour:
   name: Spices
   ID: 12
   value: 4
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   weight: 1
   size: {x: 2, y: 2}
+  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  SpriteVerticalOk: {fileID: 0}
+  SpriteVerticalDamaged: {fileID: 0}
   durability: 300
   durabilityExtended: 7200
   storingAreaIds: 01000000
   fragility: 0
   fragilityHp: 4
+  audiosWalk: []
+  audiosPlaceDown:
+  - {fileID: 8300000, guid: 5aa88b4705a461c45b273a5d5c588412, type: 3}
+  - {fileID: 8300000, guid: d976b0536262b8044bc9fd57c7c9bc99, type: 3}
+  - {fileID: 8300000, guid: 13792c7bb47d81a48938ac85c7dd6a72, type: 3}
+  - {fileID: 8300000, guid: c87e54623f4293f4e80027eb0b0d3596, type: 3}
+  - {fileID: 8300000, guid: 3e2843ca46f245f47a11f2968b350168, type: 3}
+  - {fileID: 8300000, guid: 15e1f16e21449ec4eb33ae1861633a53, type: 3}
+  audiosPickUp:
+  - {fileID: 8300000, guid: b79c100fc14c538478e115db7d73a07f, type: 3}
+  - {fileID: 8300000, guid: 6d3ff6ac80f47da429ebafaa6ee6f591, type: 3}
+  - {fileID: 8300000, guid: eb2930890a8d4a949bcd973398ee02c5, type: 3}
+  - {fileID: 8300000, guid: 375fdf9835082b94c9ac37a6bf4b0155, type: 3}
+  - {fileID: 8300000, guid: 445a2a16eff36764e917e03c65346674, type: 3}
+  - {fileID: 8300000, guid: 117eef10ebd01fb429e949494b1a9064, type: 3}
+  - {fileID: 8300000, guid: 7efe8cd658927d14e963827285f91ce6, type: 3}
+  audiosBump: []

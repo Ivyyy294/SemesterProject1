@@ -15,12 +15,31 @@ MonoBehaviour:
   name: Honey
   ID: 3
   value: 1
-  SpriteOk: {fileID: 21300000, guid: 4e65696b54706294897c2c7672d4c4cb, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 0172837208b81c54b8db50114e31f676, type: 3}
   weight: 0
   size: {x: 1, y: 1}
+  SpriteOk: {fileID: 21300000, guid: 4e65696b54706294897c2c7672d4c4cb, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 0172837208b81c54b8db50114e31f676, type: 3}
+  SpriteVerticalOk: {fileID: 0}
+  SpriteVerticalDamaged: {fileID: 0}
   durability: 240
   durabilityExtended: 0
   storingAreaIds: 01000000
   fragility: 2
   fragilityHp: 4
+  audiosWalk: []
+  audiosPlaceDown:
+  - {fileID: 8300000, guid: 08b6b057ac4d6d243b1cf6cc690a6de7, type: 3}
+  - {fileID: 8300000, guid: b08a8e6897e73b443bb0448ca82d5293, type: 3}
+  - {fileID: 8300000, guid: 1db8813fd94470940be78a865b7800d0, type: 3}
+  - {fileID: 8300000, guid: 2ba175982bf36384580505337ea6c5db, type: 3}
+  - {fileID: 8300000, guid: 28e6e2ce809ce9c46a26b0131e01a640, type: 3}
+  - {fileID: 8300000, guid: c5678a9e479f921469d3de859a77afff, type: 3}
+  audiosPickUp:
+  - {fileID: 8300000, guid: 09577e7dfdc628240be84f28b5e226ae, type: 3}
+  - {fileID: 8300000, guid: 484e65ca2e3d0f84c81a4fb87d619306, type: 3}
+  - {fileID: 8300000, guid: db6924e2f6b55a3438b07fe558c6e757, type: 3}
+  audiosBump:
+  - {fileID: 8300000, guid: 947d743905cb42546b69cd96071d672f, type: 3}
+  - {fileID: 8300000, guid: ecf3e6d32529d1f4db5673e7b4606ee7, type: 3}
+  - {fileID: 8300000, guid: ab1670239cf360045879dca457c3e7c4, type: 3}
+  - {fileID: 8300000, guid: 4f1c2800dc7b070418a2df0dfc0907e6, type: 3}

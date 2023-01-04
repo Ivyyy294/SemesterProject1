@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11fe6db42050574b84ace2e5ed80650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  store: {fileID: 11400000, guid: 77989d103fee06c469d60af7b2c0d997, type: 2}
+  store: {fileID: 11400000, guid: 5eef61de69641b34e943c2ec8ba8684a, type: 2}
   slotLeft: {fileID: 7629219626181374885}
   slotRight: {fileID: 4717839004739924781}
 --- !u!1001 &5541040796772323653
