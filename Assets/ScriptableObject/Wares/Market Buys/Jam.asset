@@ -17,8 +17,8 @@ MonoBehaviour:
   value: 1
   weight: 0
   size: {x: 1, y: 1}
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  SpriteOk: {fileID: 21300000, guid: 388f1b7db7be5a646948bf13481be41a, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: f40f2380ced9fc841a52e9d98ff14a95, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
   durability: 360

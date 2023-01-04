@@ -15,12 +15,18 @@ MonoBehaviour:
   name: Bread
   ID: 7
   value: 1
-  SpriteOk: {fileID: 21300000, guid: d808a7bd613c36f4c92cadcaccbd2497, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 547adee4d23bb9142809ee0aef719f3f, type: 3}
   weight: 0
   size: {x: 2, y: 1}
+  SpriteOk: {fileID: 21300000, guid: d808a7bd613c36f4c92cadcaccbd2497, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 547adee4d23bb9142809ee0aef719f3f, type: 3}
+  SpriteVerticalOk: {fileID: 21300000, guid: 69c7f413fb822684e9100534f220209a, type: 3}
+  SpriteVerticalDamaged: {fileID: 21300000, guid: 7f1a3eb4ba6574949a2a99cc10ac20ac, type: 3}
   durability: 150
   durabilityExtended: 480
   storingAreaIds: 010000000000000003000000
   fragility: 1
   fragilityHp: 4
+  audiosWalk: []
+  audiosPlaceDown: []
+  audiosPickUp: []
+  audiosBump: []
