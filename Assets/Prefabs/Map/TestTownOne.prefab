@@ -138561,10 +138561,10 @@ PrefabInstance:
     - target: {fileID: 8966585106285815455, guid: 673993c366c60b54caffd7739bedb220, type: 3}
       propertyPath: ware
       value: 
-      objectReference: {fileID: 11400000, guid: 3df6c93ee20f79e49a3a8534b917ea0a, type: 2}
+      objectReference: {fileID: 11400000, guid: 5e2182f8a742edc4e885d85f0c1ba66e, type: 2}
     - target: {fileID: 8966585106285815456, guid: 673993c366c60b54caffd7739bedb220, type: 3}
       propertyPath: m_Name
-      value: Honey
+      value: Armour
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673993c366c60b54caffd7739bedb220, type: 3}
