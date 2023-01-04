@@ -84,6 +84,7 @@ public class WareDisplay : MonoBehaviour
 	public void AddFragilityDmg ()
 	{
 		fragilityDmg++;
+		audioHandler.PlayOneShotFromList (ware.audiosBump);
 	}
 
 	//Private Functions
