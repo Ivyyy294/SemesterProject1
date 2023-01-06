@@ -171,7 +171,6 @@ GameObject:
   - component: {fileID: 6703997733596930556}
   - component: {fileID: 5169122760660503152}
   - component: {fileID: -4499873762850254881}
-  - component: {fileID: -1456124083200480684}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -193,6 +192,7 @@ Transform:
   m_Children:
   - {fileID: 3714752570590167876}
   - {fileID: 7219480236882327213}
+  - {fileID: 6835894972312994454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -285,6 +285,7 @@ MonoBehaviour:
   dropIndicator: {fileID: 3714752570590167877}
   rotationOffset: {x: 0, y: 0, z: -90}
   warePos: {fileID: 7219480236882327213}
+  center: {fileID: 6835894972312994454}
 --- !u!114 &6703997733596930556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,13 +540,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 0}
   player: {fileID: 0}
---- !u!58 &-1456124083200480684
+--- !u!1 &6434896014469732018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6835894972312994454}
+  - component: {fileID: 2961141183930438718}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6835894972312994454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434896014469732018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3714752570770300275}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2961141183930438718
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714752570770300281}
+  m_GameObject: {fileID: 6434896014469732018}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}

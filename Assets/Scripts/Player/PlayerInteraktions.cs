@@ -12,6 +12,7 @@ public class PlayerInteraktions: MonoBehaviour
 	[SerializeField] GameObject dropIndicator;
 	[SerializeField] Vector3 rotationOffset;
 	[SerializeField] Transform warePos;
+	[SerializeField] Transform center;
 
 	//Private Values
 	private Grid snapGrid;
@@ -77,32 +78,40 @@ public class PlayerInteraktions: MonoBehaviour
 	void CastRay ()
 	{
 		int layerMask = 1 << 0;
-		RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, dir, rayDistance, layerMask);
 		Debug.DrawRay (transform.position, dir * rayDistance, Color.green, 1f);
+		
+		foreach (RaycastHit2D hitInfo in Physics2D.RaycastAll (transform.position, dir, rayDistance, layerMask))
+		{
+			//Preventing interaction with child objects
+			if (!hitInfo.collider.transform.IsChildOf (transform))
+			{
+				if (grabbedObject != null)
+				{
+					if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
+						InteractMerchant (hitInfo.collider.gameObject);
+					else
+						DropObject();
+				}
+				else if (hitInfo.collider != null)
+				{
+					if (hitInfo.collider.CompareTag ("Ware"))
+						InteractWare(hitInfo.collider.gameObject);
+					else if (hitInfo.collider.CompareTag ("Merchant"))
+						InteractMerchant (hitInfo.collider.gameObject);
+					else if (hitInfo.collider.CompareTag ("Store"))
+						InteractStore (hitInfo.collider.gameObject);
+					else if (grabbedObject != null)
+						DropObject();
+				}
+			}
+		}
 
-		if (grabbedObject != null)
-		{
-			if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
-				InteractMerchant (hitInfo.collider.gameObject);
-			else
-				DropObject();
-		}
-		else if (hitInfo.collider != null)
-		{
-			if (hitInfo.collider.CompareTag ("Ware"))
-				InteractWare(hitInfo.collider.gameObject);
-			else if (hitInfo.collider.CompareTag ("Merchant"))
-				InteractMerchant (hitInfo.collider.gameObject);
-			else if (hitInfo.collider.CompareTag ("Store"))
-				InteractStore (hitInfo.collider.gameObject);
-			else if (grabbedObject != null)
-				DropObject();
-		}
 	}
 
 	private void LateUpdate()
 	{
-		MoveIndicatorPos();
+		if (dropIndicator != null && dropIndicator.activeInHierarchy)
+			MoveIndicatorPos();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -113,12 +122,22 @@ public class PlayerInteraktions: MonoBehaviour
 
 	void MoveIndicatorPos ()
 	{
-		if (dropIndicator != null && snapGrid != null)
+		if (snapGrid != null && dropIndicator.activeInHierarchy)
 		{
-			float offset = 1 + snapGrid.cellSize.x; //indicatorRotated ? dropIndicator.transform.lossyScale.x : dropIndicator.transform.lossyScale.y;
+			//Getting center of player cell
+			Vector3 newPos = center.transform.position;
+			
+			//Getting Ware size
+			Vector3 offset = grabbedObject.ware.GetSizeInWorld() * 0.5f;
+			offset += snapGrid.cellSize;
 
-			Vector3Int cp = snapGrid.WorldToCell (transform.position + dir * offset);
-			Vector3 newPos = snapGrid.GetCellCenterWorld (cp);
+			if (indicatorRotated)
+				offset = new Vector3 (offset.y, offset.x);
+
+			//Scaling with direction Vector
+			offset.Scale (dir);
+
+			newPos = GetCellCenterPos (newPos + offset);
 
 			dropIndicator.transform.position = newPos; //snapGrid.GetCellCenterWorld (cp) + snapGrid.cellSize;
 		}
@@ -216,5 +235,11 @@ public class PlayerInteraktions: MonoBehaviour
 			indicatorRotated = !indicatorRotated;
 		}
 
+	}
+
+	Vector3 GetCellCenterPos (Vector3 pos)
+	{
+		Vector3Int cp = snapGrid.WorldToCell (pos);
+		return snapGrid.GetCellCenterWorld (cp);
 	}
 }
