@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Baker
   m_EditorClassIdentifier: 
   name: Baker
-  sprite: {fileID: -598439132, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
+  sprite: {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
   requestList:
   - ware: {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
     requestChance: 0.5
