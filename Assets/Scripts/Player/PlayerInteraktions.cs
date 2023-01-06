@@ -146,8 +146,7 @@ public class PlayerInteraktions: MonoBehaviour
 			{
 				dropIndicator.SetActive (true);
 				oScale = grabbedObject.transform.localScale;
-				grabbedObject.PickUp (transform);
-				grabbedObject.transform.localPosition = warePos.localPosition;
+				grabbedObject.PickUp (warePos.transform);
 
 				//Setting Size of Drop indicator to Ware Size
 				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
