@@ -224,6 +224,7 @@ SpriteAtlas:
   - {fileID: -1662886238, guid: 02cd4520d2012634f92d43e347b81663, type: 3}
   - {fileID: 21300000, guid: 45e37740bebcfc546b72387144e25755, type: 3}
   - {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  - {fileID: -1205802516, guid: 2cd36570017bce74fad28f0ca8b3b309, type: 3}
   - {fileID: 101886055, guid: 8a3cb8701a89dc7468a64be92264fb6b, type: 3}
   - {fileID: 930750708, guid: 8a3cb8701a89dc7468a64be92264fb6b, type: 3}
   - {fileID: -164589214, guid: 8a3cb8701a89dc7468a64be92264fb6b, type: 3}
@@ -1843,7 +1844,6 @@ SpriteAtlas:
   - {fileID: 1790858208, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: -907162669, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: 1694508001, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
-  - {fileID: -1608502799, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: 869299425, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: -1209206049, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: 856176792, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
@@ -2154,6 +2154,7 @@ SpriteAtlas:
   - TX Tileset Stone Ground_21
   - PlayerUp
   - CrateDmg
+  - market stand Craftsman_0
   - 1 coblestone tileset_9
   - 1 coblestone tileset_8
   - 1 coblestone tileset_5
@@ -3773,7 +3774,6 @@ SpriteAtlas:
   - flat market stone tileset + grass_81
   - flat market stone tileset + grass_24
   - flat market stone tileset + grass_56
-  - flat market stone tileset + grass_96
   - flat market stone tileset + grass_80
   - flat market stone tileset + grass_27
   - flat market stone tileset + grass_57
