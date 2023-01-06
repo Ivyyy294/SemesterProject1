@@ -11,9 +11,28 @@ public class DropIndicator : MonoBehaviour
 	private Color clearColor;
 	private SpriteRenderer spriteRenderer;
 	uint collisionCounter;
+	bool raycastCheckOk;
 
 	//Public Values
-	public bool IsDropAreaClear() { return collisionCounter == 0; }
+	public bool IsDropAreaClear() { return collisionCounter == 0 && raycastCheckOk; }
+
+	public void RaycastCheck (Vector3 target)
+	{
+		raycastCheckOk = true;
+
+		Vector3 dir = (target - transform.position).normalized;
+		float dist = Vector3.Distance (target, transform.position);
+		int layerMask = 1 << 0;
+		
+		foreach (RaycastHit2D hitInfo in Physics2D.RaycastAll (transform.position, dir, dist, layerMask))
+		{
+			if (!hitInfo.collider.CompareTag ("Player"))
+			{
+				raycastCheckOk = false;
+				break;
+			}
+		}
+	}
 
 	//Private Values
 	private void Start()
@@ -23,24 +42,23 @@ public class DropIndicator : MonoBehaviour
 		clearColor = spriteRenderer.color;
 	}
 
+	private void Update()
+	{
+		if (IsDropAreaClear())
+			spriteRenderer.color = clearColor;
+		else
+			spriteRenderer.color = blockedColor;
+	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (!collision.isTrigger)
-		{
 			++collisionCounter;
-
-			spriteRenderer.color = blockedColor;
-		}
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		if (!collision.isTrigger)
-		{
 			--collisionCounter;
-
-			if (IsDropAreaClear())
-				spriteRenderer.color = clearColor;
-		}
 	}
 }

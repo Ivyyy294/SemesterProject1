@@ -78,34 +78,28 @@ public class PlayerInteraktions: MonoBehaviour
 	void CastRay ()
 	{
 		int layerMask = 1 << 0;
-		Debug.DrawRay (transform.position, dir * rayDistance, Color.green, 1f);
+		Debug.DrawRay (center.transform.position, dir * rayDistance, Color.green, 1f);
 		
-		foreach (RaycastHit2D hitInfo in Physics2D.RaycastAll (transform.position, dir, rayDistance, layerMask))
+		RaycastHit2D hitInfo = Physics2D.Raycast (center.transform.position, dir, rayDistance, layerMask);
+		
+		if (grabbedObject != null)
 		{
-			//Preventing interaction with child objects
-			if (!hitInfo.collider.transform.IsChildOf (transform))
-			{
-				if (grabbedObject != null)
-				{
-					if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
-						InteractMerchant (hitInfo.collider.gameObject);
-					else
-						DropObject();
-				}
-				else if (hitInfo.collider != null)
-				{
-					if (hitInfo.collider.CompareTag ("Ware"))
-						InteractWare(hitInfo.collider.gameObject);
-					else if (hitInfo.collider.CompareTag ("Merchant"))
-						InteractMerchant (hitInfo.collider.gameObject);
-					else if (hitInfo.collider.CompareTag ("Store"))
-						InteractStore (hitInfo.collider.gameObject);
-					else if (grabbedObject != null)
-						DropObject();
-				}
-			}
+			if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
+				InteractMerchant (hitInfo.collider.gameObject);
+			else
+				DropObject();
 		}
-
+		else if (hitInfo.collider != null)
+		{
+			if (hitInfo.collider.CompareTag ("Ware"))
+				InteractWare(hitInfo.collider.gameObject);
+			else if (hitInfo.collider.CompareTag ("Merchant"))
+				InteractMerchant (hitInfo.collider.gameObject);
+			else if (hitInfo.collider.CompareTag ("Store"))
+				InteractStore (hitInfo.collider.gameObject);
+			else if (grabbedObject != null)
+				DropObject();
+		}
 	}
 
 	private void LateUpdate()
@@ -139,7 +133,9 @@ public class PlayerInteraktions: MonoBehaviour
 
 			newPos = GetCellCenterPos (newPos + offset);
 
-			dropIndicator.transform.position = newPos; //snapGrid.GetCellCenterWorld (cp) + snapGrid.cellSize;
+			dropIndicator.transform.position = newPos;
+
+			dropIndicator.GetComponent<DropIndicator>().RaycastCheck(center.position);
 		}
 	}
 
