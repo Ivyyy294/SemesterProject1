@@ -61,7 +61,7 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: Horizontal
     m_Type: 1
-    m_DefaultFloat: 1
+    m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
@@ -73,7 +73,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: Speed
     m_Type: 1
-    m_DefaultFloat: 2
+    m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
@@ -111,7 +111,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2bcac08c1382d6b429f72f1803e84c14, type: 2}
+  m_Motion: {fileID: 7400000, guid: bc6870f0efb3ea348b5bebe8603443fb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
