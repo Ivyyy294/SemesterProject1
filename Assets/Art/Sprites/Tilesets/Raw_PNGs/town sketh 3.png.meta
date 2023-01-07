@@ -3237,7 +3237,7 @@ TextureImporter:
     nameFileIdTable:
       town sketh 3_31: 1030672115
       town sketh 3_130: 1056463234
-      town sketh 3_118: 1021077215
+      town sketh 3_40: -1731020850
       town sketh 3_1: -390413735
       town sketh 3_99: -1766196635
       town sketh 3_82: -824924267
@@ -3268,11 +3268,11 @@ TextureImporter:
       town sketh 3_45: -281368451
       town sketh 3_18: 33815200
       town sketh 3_10: 1861684852
-      town sketh 3_32: 337146759
-      town sketh 3_38: 756918200
-      town sketh 3_6: -812737762
       town sketh 3_69: 1392203057
       town sketh 3_94: -145859885
+      town sketh 3_38: 756918200
+      town sketh 3_32: 337146759
+      town sketh 3_6: -812737762
       town sketh 3_36: 958907396
       town sketh 3_137: -1665564389
       town sketh 3_15: -1479780057
@@ -3302,8 +3302,8 @@ TextureImporter:
       town sketh 3_124: 196733183
       town sketh 3_106: -749443941
       town sketh 3_108: -892261929
-      town sketh 3_65: -643696814
       town sketh 3_113: 1489253777
+      town sketh 3_65: -643696814
       town sketh 3_17: 97117913
       town sketh 3_39: 348525581
       town sketh 3_52: 958862632
@@ -3378,10 +3378,10 @@ TextureImporter:
       town sketh 3_134: -455979130
       town sketh 3_62: 2142551349
       town sketh 3_72: 1184067873
+      town sketh 3_118: 1021077215
       town sketh 3_88: -2026407881
-      town sketh 3_91: -479451631
       town sketh 3_22: -1429026987
-      town sketh 3_40: -1731020850
+      town sketh 3_91: -479451631
       town sketh 3_136: 1968119526
   spritePackingTag: 
   pSDRemoveMatte: 0
