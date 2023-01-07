@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idl
+  m_Name: PlayerT2_Walk_Left
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+      value: {fileID: -332569580, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+    - {fileID: -332569580, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

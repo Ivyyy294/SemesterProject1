@@ -17,6 +17,10 @@ public class PlayerConfiguration
 
 public class PlayerConfigurationDisplay : MonoBehaviour
 {
+	[SerializeField] RuntimeAnimatorController animatorControllerT1;
+	[SerializeField] RuntimeAnimatorController animatorControllerT2;
+
+	[Header ("Lara Values")]
 	[SerializeField] SpawnPlayerSetupMenu menuScript;
 	[SerializeField] GameObject player;
 	[SerializeField] GameObject playerUi;
@@ -29,6 +33,13 @@ public class PlayerConfigurationDisplay : MonoBehaviour
 		playerUi.SetActive (true);
 		player.GetComponent<PlayerMotor>().InitPlayer (playerConfiguration);
 		player.transform.position = pos;
+		
+		Animator animator = player.GetComponent<Animator>();
+
+		if (playerConfiguration.TeamIndex == 0)
+			animator.runtimeAnimatorController = animatorControllerT1;
+		else
+			animator.runtimeAnimatorController = animatorControllerT2;
 	}
 
     // Start is called before the first frame update

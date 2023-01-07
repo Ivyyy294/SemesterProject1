@@ -117,6 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271352dc571d9514a90fb63d4d867be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorControllerT1: {fileID: 9100000, guid: de8a0b03e4a70674a8983d80fa31a73b, type: 2}
+  animatorControllerT2: {fileID: 9100000, guid: 6a29f27d9f76f6540aecd1a611899d0a, type: 2}
   menuScript: {fileID: 4333947291928274467}
   player: {fileID: 1309899375115981931}
   playerUi: {fileID: 3606396465744972234}
@@ -281,6 +283,10 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5169122760660503152, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6a29f27d9f76f6540aecd1a611899d0a, type: 2}
     m_RemovedComponents:
     - {fileID: -4499873762850254881, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
