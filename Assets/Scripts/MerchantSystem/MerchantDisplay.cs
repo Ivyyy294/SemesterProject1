@@ -10,6 +10,7 @@ public class MerchantDisplay : MonoBehaviour
 	[SerializeField] List <AudioClip> audioSmallSale = new List<AudioClip>();
 	[SerializeField] List <AudioClip> audioMediumSale = new List<AudioClip>();
 	[SerializeField] List <AudioClip> audioLargeSale = new List<AudioClip>();
+	[SerializeField] float maxRequestTime;
 
 	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
@@ -26,26 +27,30 @@ public class MerchantDisplay : MonoBehaviour
 		{
 			WareDisplay wareDisplay = obj.GetComponent<WareDisplay>();
 
-			if (wareDisplay != null && wareDisplay.ware.ID == currentRequest.ID)
+			if (wareDisplay != null)
 			{
 				if (wareDisplay.damaged)
 				{
-					GameStatus.Me.AddReputation (playerId, -1f);
+					GameStatus.Me.LossReputation (playerId);
 					return true;
 				}
 				else
 				{
 					uint wareValue = wareDisplay.ware.value;
 
-					if (wareValue <= 2)
-						Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioSmallSale);
-					else if (wareValue <= 4)
-						Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioMediumSale);
-					else
-						Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioLargeSale);
-					
+					PlaySaleAudio (wareValue);
+
 					GameStatus.Me.AddSilverCoins (playerId, wareValue);
-					ChangeRequest (null);
+
+					//Reputation Gain / Loss
+					if (wareDisplay.ware.ID == currentRequest.ID)
+					{
+						GameStatus.Me.AddReputation (playerId, maxRequestTime);
+						ChangeRequest (null);
+					}
+					else
+						GameStatus.Me.LossReputation (playerId);
+
 					return true;
 				}
 			}
@@ -63,7 +68,6 @@ public class MerchantDisplay : MonoBehaviour
 			&& lifeTime >= merchant.requestFrequency)
 		{
 			ChangeRequest (merchant.GetNewRequest());
-			lifeTime = 0.0;
 		}
 	}
 
@@ -78,12 +82,15 @@ public class MerchantDisplay : MonoBehaviour
 	{
 		if (currentRequest == null && lifeTime < merchant.requestFrequency)
 			lifeTime += Time.deltaTime;
+		else if (currentRequest != null && lifeTime >= maxRequestTime)
+			ChangeRequest (null);
 	}
 
 	private void ChangeRequest (Ware obj)
 	{
 		currentRequest = obj;
 		DisplayRequest (obj);
+		lifeTime = 0f;
 	}
 
 	private void DisplayRequest (Ware obj)
@@ -110,5 +117,16 @@ public class MerchantDisplay : MonoBehaviour
 		}
 
 		return null;
+	}
+
+	private void PlaySaleAudio (uint wareValue)
+	{
+		if (wareValue <= 2)
+			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioSmallSale);
+		else if (wareValue <= 4)
+			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioMediumSale);
+		else
+			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioLargeSale);
+		
 	}
 }

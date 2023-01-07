@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7714399272299184425, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1009346745
+      value: 1777074599
       objectReference: {fileID: 0}
     - target: {fileID: 9134267367995335685, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_fontSize
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7714399272299184425, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7714399272299184425, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_SortingLayerID

@@ -35,7 +35,7 @@ public class PlayerUi : MonoBehaviour
 
 	private string GetReputation (Team t)
 	{
-		return new string ("Reputation: " + t.Reputation.ToString());
+		return new string ("Reputation: " + ((int)t.Reputation).ToString());
 	}
 
 	private string GetSilver (Team t)

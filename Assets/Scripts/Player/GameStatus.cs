@@ -11,15 +11,54 @@ public class GameDateTime
 
 public class Team
 {
+	//Public
 	public int Id;
-	public float Reputation {set;get;}
+	public float Reputation {private set;get;}
 	public float SilverCoins {set;get;}
 	public List <uint> playerIds = new List<uint>();
-
+	
 	public Team()
 	{
 		Reputation = 50f;
 		SilverCoins = 0f;
+
+		timeSincePassiveReputationLoss = GameStatus.Me.passiveReputationLossInterval;
+	}
+
+	public void ReputationGain (float requestTime)
+	{
+		Reputation += (1 + (2 - Reputation/50)) * ((requestTime - timeSinceRequest) / 100);
+		timeSinceRequest = 0f;
+	}
+
+	public void ReputationLoss()
+	{
+		Reputation -= 1;
+		//Reputation -= 1 + Reputation / 50;
+	}
+
+
+	public void Update()
+	{
+		if (timeSinceRequest >= GameStatus.Me.passiveReputationLossThreshold)
+			PassiveReputationLoss();
+
+		timeSinceRequest += Time.deltaTime;
+	}
+
+	//Private
+	private float timeSinceRequest = 0f;
+	private float timeSincePassiveReputationLoss;
+
+	private void PassiveReputationLoss ()
+	{
+		if (timeSincePassiveReputationLoss >= GameStatus.Me.passiveReputationLossInterval)
+		{
+			ReputationLoss();
+			timeSincePassiveReputationLoss = 0;
+		}
+		else
+			timeSincePassiveReputationLoss += Time.deltaTime;
 	}
 }
 
@@ -33,6 +72,8 @@ public class GameStatus : MonoBehaviour
 
 	[Header ("Game Settings")]
 	[SerializeField] float dayLenght = 60f;
+	public float passiveReputationLossThreshold;
+	public float passiveReputationLossInterval;
 
 	//Private Values
 	List <Team> teams;
@@ -53,12 +94,20 @@ public class GameStatus : MonoBehaviour
 		}
 	}
 
-	public void AddReputation (uint playerId, float val)
+	public void AddReputation (uint playerId, float requestTime)
 	{
 		Team t = GetTeamForPlayer (playerId);
 
 		if (t != null)
-			t.Reputation += val;
+			t.ReputationGain (requestTime);
+	}
+
+	public void LossReputation (uint playerId)
+	{
+		Team t = GetTeamForPlayer (playerId);
+
+		if (t != null)
+			t.ReputationLoss ();
 	}
 
 	public void AddSilverCoins (uint playerId, float val)
@@ -145,6 +194,9 @@ public class GameStatus : MonoBehaviour
     {
 		lifeTime += Time.deltaTime;
 		CalculateDayTime();
+
+		foreach (Team i in teams)
+			i.Update();
     }
 
 	/* void OnGUI()

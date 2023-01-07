@@ -222,6 +222,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6c41c82efa2482d469270d0e616c454d, type: 3}
   - {fileID: 8300000, guid: c1d3f782a9fca6249a01afd1a758ea36, type: 3}
   - {fileID: 8300000, guid: 446a01d519b307040820c9263b7dffa1, type: 3}
+  maxRequestTime: 300
   requestIndicator: {fileID: 7688834356356821563}
 --- !u!212 &7688834356740991472
 SpriteRenderer:
