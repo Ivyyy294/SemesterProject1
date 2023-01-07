@@ -14,7 +14,9 @@ public class Team
 	//Public
 	public int Id;
 	public float Reputation {private set;get;}
-	public float SilverCoins {set;get;}
+	public float SilverCoins {private set;get;}
+	public float SilverCoinsEarned {private set; get;}
+
 	public List <uint> playerIds = new List<uint>();
 	
 	public Team()
@@ -37,6 +39,13 @@ public class Team
 		//Reputation -= 1 + Reputation / 50;
 	}
 
+	public void AddSilverCoins (float val)
+	{
+		if (val > 0f)
+			SilverCoinsEarned += val;
+
+		SilverCoins += val;
+	}
 
 	public void Update()
 	{
@@ -44,11 +53,24 @@ public class Team
 			PassiveReputationLoss();
 
 		timeSinceRequest += Time.deltaTime;
+
+		if (GameStatus.Me.GetCurrentDateTime().day % GameStatus.Me.cityTaxInterval == 0)
+		{
+			if (!taxCollected)
+			{
+				CityTax();
+				taxCollected = true;
+			}
+		}
+		else
+			taxCollected = false;
 	}
 
 	//Private
 	private float timeSinceRequest = 0f;
 	private float timeSincePassiveReputationLoss;
+	private uint numberOfTaxes;
+	private bool taxCollected = false;
 
 	private void PassiveReputationLoss ()
 	{
@@ -59,6 +81,18 @@ public class Team
 		}
 		else
 			timeSincePassiveReputationLoss += Time.deltaTime;
+	}
+
+	private void CityTax ()
+	{
+		float tax = 5 + (2f * numberOfTaxes) + (SilverCoins * 0.1f);
+
+		if (SilverCoinsEarned > 0f)
+			tax += ((Mathf.Pow (SilverCoinsEarned, 1.4f) / numberOfTaxes) * 0.1f);
+
+		SilverCoins -= tax;
+
+		++numberOfTaxes;
 	}
 }
 
@@ -74,6 +108,7 @@ public class GameStatus : MonoBehaviour
 	[SerializeField] float dayLenght = 60f;
 	public float passiveReputationLossThreshold;
 	public float passiveReputationLossInterval;
+	public int cityTaxInterval;
 
 	//Private Values
 	List <Team> teams;
@@ -115,7 +150,7 @@ public class GameStatus : MonoBehaviour
 		Team t = GetTeamForPlayer (playerId);
 
 		if (t != null)
-			t.SilverCoins += val;
+			t.AddSilverCoins (val);
 	}
 
 	public float GetPlayerMoney (uint playerId)

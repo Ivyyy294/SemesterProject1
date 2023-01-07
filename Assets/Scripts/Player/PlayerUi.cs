@@ -40,6 +40,6 @@ public class PlayerUi : MonoBehaviour
 
 	private string GetSilver (Team t)
 	{
-		return new string ("Silver: " + t.SilverCoins.ToString());
+		return new string ("Silver: " + ((int)t.SilverCoins).ToString());
 	}
 }

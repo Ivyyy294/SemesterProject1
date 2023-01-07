@@ -132,9 +132,9 @@ MonoBehaviour:
   - {fileID: 2472667551380574320}
   - {fileID: 2472667552009161912}
   dayLenght: 60
-  requestTimeLimit: 300
   passiveReputationLossThreshold: 60
   passiveReputationLossInterval: 30
+  cityTaxInterval: 14
 --- !u!81 &2472667551685640615
 AudioListener:
   m_ObjectHideFlags: 0
