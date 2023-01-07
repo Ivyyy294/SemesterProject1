@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 2667773560024818401}
   - component: {fileID: 2667773560024818403}
   - component: {fileID: 2667773560024818400}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: StoreSlot
   m_TagString: Store
   m_Icon: {fileID: 0}

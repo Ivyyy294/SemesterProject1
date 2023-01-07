@@ -77,7 +77,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	void CastRay ()
 	{
-		int layerMask = 1 << 0;
+		int layerMask = 1 << LayerMask.NameToLayer ("Interactables");;
 		Debug.DrawRay (center.transform.position, dir * rayDistance, Color.green, 1f);
 		
 		RaycastHit2D hitInfo = Physics2D.Raycast (center.transform.position, dir, rayDistance, layerMask);

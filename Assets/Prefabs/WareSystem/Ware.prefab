@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2424778094220908335}
   - component: {fileID: 4564046723531441461}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8966585106285815455}
   - component: {fileID: 8966585106285815452}
   - component: {fileID: -7363901638343971952}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ware
   m_TagString: Ware
   m_Icon: {fileID: 0}

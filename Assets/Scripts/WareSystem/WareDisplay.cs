@@ -66,7 +66,7 @@ public class WareDisplay : MonoBehaviour
 		transform.position = parent.position;
 		transform.SetParent (parent);
 		transform.localScale = new Vector3 (0.5f, 0.5f);
-		gameObject.layer = 8;
+		gameObject.layer = LayerMask.NameToLayer ("NoCollision");
 		audioHandler.PlayOneShotFromList (ware.audiosPickUp);
 	}
 
@@ -75,7 +75,7 @@ public class WareDisplay : MonoBehaviour
 	{
 		transform.position = pos;
 		transform.SetParent (WarePool.Me.transform);
-		gameObject.layer = 0;
+		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		collisionBufferTimer = 0f;
 
 		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
