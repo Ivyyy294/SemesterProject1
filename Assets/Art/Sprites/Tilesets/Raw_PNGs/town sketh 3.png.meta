@@ -1,0 +1,3391 @@
+fileFormatVersion: 2
+guid: 7f0ff2fd5f0dfb3479cce6f7d8f9a838
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: town sketh 3_0
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 7580
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14784a177ebb8d4692a6aa46a7ca058
+      internalID: -169235539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_1
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 7324
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90959cc9d4b52e4c9762bb6f92f375e
+      internalID: -390413735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_2
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 7324
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e50533c48f0ee5469882034d59776c5
+      internalID: 966516694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_3
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 7324
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655440810a43e504681ae70fc696409c
+      internalID: -323061876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_4
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 7068
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a590c1b3cbd5f4cbcc4ad26c91129d
+      internalID: 761141508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_5
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 7068
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c493ab12612c13549bf850eda5e1dd0f
+      internalID: 1572238693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_6
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 7068
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9262207419f9044b9eb270952e7b7c
+      internalID: -812737762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_7
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 6812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf4a60ce8a13274cabd9e068532e6c6
+      internalID: 634479896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_8
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 6812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b921fc390d0b94dbebc0b3e91e84f9
+      internalID: 1664222135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_9
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 6812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b22ef00137a0a54fa167783b8f8cb73
+      internalID: 463093623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_10
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 6812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525b90380f443dc43917261328d1408a
+      internalID: 1861684852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_11
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 6812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4670e3185d78749b6a744fa73113e8
+      internalID: 408139569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_12
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8438fce4e21071340b7d3adeaecd4ec6
+      internalID: 1481003148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_13
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 6812
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c115530cb32cf949bd43fb8d92ea892
+      internalID: -575123520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_14
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d40b4702ff3884b9b41081d1741a6f
+      internalID: -1093441501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_15
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6b7929ca8e87f439581bd0a79afca0
+      internalID: -1479780057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_16
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f748365a945d7cf4cbabe8b3f0c50c22
+      internalID: -1014355335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_17
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d5a7a3d37132c4a8e8b13a52b947bf
+      internalID: 97117913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_18
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6744491c6a8d6f04c8c424a64ca7c704
+      internalID: 33815200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_19
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7e58ee7531e314498292f879c7038a
+      internalID: -640529351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_20
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0efa33967320e46a1ef528a25954e3
+      internalID: 6470804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_21
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 6556
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b330877a53d13a149a2a9dd8f9297300
+      internalID: -222842256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_22
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75752c3c4da7e8c4dbd1640d3e9d1234
+      internalID: -1429026987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_23
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7a753c43bf33a4381221be360586f0
+      internalID: 1538537951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_24
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea346beccff04b438eea9716bf56d2c
+      internalID: -77362080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_25
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848bc5d46e69bee49ab7ab083bdb3d5b
+      internalID: 345412832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_26
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9b5ae24743d26479aee30e6d20fd7e
+      internalID: 673844212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_27
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfd006a84814964cb702581bfdeb260
+      internalID: -1060671451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_28
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d639d6f1d5ce330459fac8e442ff1ef6
+      internalID: -1039729095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_29
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 6300
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded5cd082c6eb574a9a2c2f5f2667d10
+      internalID: 1621421182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_30
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b64839a3b6f8984b8098ce162e5ea25
+      internalID: -1471951694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_31
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c2c77e2bd583a4095b2da21875f16a
+      internalID: 1030672115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_32
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea16dd3a6c6d42429c48d4f69b7713e
+      internalID: 337146759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_33
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fc417c9ca91a44dab6e13cac253646
+      internalID: 1587246903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_34
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0722e45345e2b7f4b9c6cf82dc316af3
+      internalID: 1246747278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_35
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8884b3e31bce8e40b75220587487e68
+      internalID: 762227924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_36
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279b612eec54a6349a64a079d77499b7
+      internalID: 958907396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_37
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 6044
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1c7662dca064b4497dd6c4156aa23f
+      internalID: -1223639629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_38
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3744bf7a18ef7404d98e8797f5132935
+      internalID: 756918200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_39
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96c01dc65096cd4daf8b35dbfe0e415
+      internalID: 348525581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_40
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e6df10731f76045afd5408883fffc8
+      internalID: -1731020850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_41
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157f2037654978549879193e215d3c84
+      internalID: 1766898844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_42
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab82792764aa9064ebe86dda0dfb164b
+      internalID: -1324842110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_43
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273a1f36c9cfb5b4bbf9abf6e9b6a4f6
+      internalID: 1182898623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_44
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8439fd45bb1579c4ea5a928a33e895a5
+      internalID: -147671114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_45
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc27f9a06e18a3244baaae5d05dfac0f
+      internalID: -281368451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_46
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 5788
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4359e9e97c4a146ad5f8e4aaa99173
+      internalID: -851565817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_47
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2c5812ca359634290442f8835e6dad
+      internalID: -551292866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_48
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd222d18179bc84e9f476db025e7071
+      internalID: -683675254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_49
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716f71a93a516584294dec08036ed9e3
+      internalID: -1620577918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_50
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0176c93d222c24dbc2bb171f9f0133
+      internalID: -810447266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_51
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ca50072e137a54691539886662cd45
+      internalID: 1183834318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_52
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fee8d672aa7e8e42a70985bd0b4e811
+      internalID: 958862632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_53
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99336f9cb448c224aa739751ad33c95d
+      internalID: 2130466486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_54
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 5532
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf399ea736a246b4dbd78c2b6ce9b73d
+      internalID: -2123879040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_55
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d0fd63ab067c24e8911513c7c91470
+      internalID: -1175226746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_56
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6077ff0266624e045b2785a30dc3f5ae
+      internalID: -998167607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_57
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686caf00e23e023478fde5debc97bedf
+      internalID: -1393273360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_58
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a456c6a016e9e104588f191ab3d58170
+      internalID: -1642872223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_59
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ac566ab63609e4db38db221ff59798
+      internalID: -1506473519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_60
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93083b009d68074cb50fe28bef613d7
+      internalID: -416203951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_61
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199fb362365cca749bed63836ad22fd6
+      internalID: 652682677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_62
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b4f73439af0084da7e8973bf9fe8f7
+      internalID: 2142551349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_63
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea191f4b4aa9a074aba82ccdbbb4b36e
+      internalID: -1163869173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_64
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7154c9e1df761c4794c94285dc4ee8c
+      internalID: 164735142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_65
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bb704801030114ca176dc69f237465
+      internalID: -643696814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_66
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4416a6fdc8585ce46a9602bad3c0e6bb
+      internalID: -998299109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_67
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba744b536066174439bd41eb2fe798c2
+      internalID: -1035788868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_68
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6d915c985fcab47a819ef7c39b6c78
+      internalID: 1257439711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_69
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688505dbe52088b4e8dbfa79774c7b9f
+      internalID: 1392203057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_70
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316c300056ce57446a620ccb350f9685
+      internalID: -1398590065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_71
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e5d7fa57b7e0146a9beec84f5d7405
+      internalID: 565916268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_72
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e1bfdc46d6a4249bfaa27e6dd9569e
+      internalID: 1184067873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_73
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568aee1628331b94ea7baa7264876eda
+      internalID: -347095277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_74
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150c03cabbd54f04c86c1fae6b689460
+      internalID: -1993456308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_75
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1367744ca93064a9c182a62dc047f3
+      internalID: -1307800354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_76
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c7181276ebd8644893763d1899dbca
+      internalID: -1928159566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_77
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca64bf12ada354141bddb84bee5ec40d
+      internalID: -1796517251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_78
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f308d11b8cf2a45bf126197c1f0d97
+      internalID: -227361274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_79
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7faa96266d5e4a241b02dbddf951d3f5
+      internalID: 1809284087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_80
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e423eb51d2c4da1479a5d56cee858e40
+      internalID: -1371546746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_81
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5e53be1ec49574a9df7efc2110e6ab
+      internalID: 699028603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_82
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7b83a2d49a54d4aad6e2fdd8472454
+      internalID: -824924267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_83
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7ea347eb52efa499678efb9eac9001
+      internalID: 946036106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_84
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fbb82151b76d04bae261adb6c2aa49
+      internalID: 2133093399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_85
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c55ef427586f7146a4f4f1662a4b400
+      internalID: 1200158014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_86
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5957ca17bf77c49aeaeade5068f0ae
+      internalID: -1523657981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_87
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b22829ddb941b049935cd7f81824c57
+      internalID: 1262891765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_88
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdca1758c144594bb517c1917c62d68
+      internalID: -2026407881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_89
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2ddaaffc3f5284f964e54916481192
+      internalID: 970398955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_90
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717fdb8225e496142971e132f3b41c32
+      internalID: -908146700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_91
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d568e5ce0afff4c41b5ab98e57b0b9b2
+      internalID: -479451631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_92
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425c6a40731d0284eb7a18c652a7c214
+      internalID: 1097724608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_93
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1b08932714fd74281e0fda9464029c
+      internalID: -1116787289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_94
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f489fb7977325c47855a9811b85555c
+      internalID: -145859885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_95
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a4d7788ed45744bb6cf40648fb7ac6
+      internalID: -683973832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_96
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8622fcbf8f88e554bb9bf77423d32846
+      internalID: -1359124611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_97
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924962c39fc1cb443917bf9d478a52e9
+      internalID: -423286313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_98
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d8ee6ae4b80a946b218c541697b015
+      internalID: 611054350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_99
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7811ac40b5504764dbd568dac759ca0f
+      internalID: -1766196635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_100
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382f0555bcd57aa4f93f8b1372f194d8
+      internalID: -970434400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_101
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb1aa59475159048980c8cbae88c644
+      internalID: 1882818208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_102
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890e9f4cf175b8d4596f01b22519b7b7
+      internalID: 854193092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_103
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f581d9d618eb2984ebc0f5756ccc1185
+      internalID: -1386717758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_104
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b36d62df9ed7a4fa008944b52b6c55
+      internalID: -1131121892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_105
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9c1133528c2a646930dbf7c6d617e4
+      internalID: 160246716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_106
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d8b918621277841b84c5fd25cad767
+      internalID: -749443941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_107
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c450704828b00e74288d69972ef28707
+      internalID: -406872938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_108
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174f968d880217c48bf5172b224989a9
+      internalID: -892261929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_109
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6a746c2173c2f4db27e01884afd4c9
+      internalID: -1047146805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_110
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d27187916536249b37237979c23da9
+      internalID: -723242631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_111
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc2fe5425996484abd96f1fd3ae1b8a
+      internalID: 108002351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_112
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6998876a459ccea43861e18bf867121b
+      internalID: -1355666238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_113
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023a8468e30285540875ba28f5475dbc
+      internalID: 1489253777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_114
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1687ff82f135774aadbe5d1a5f385ad
+      internalID: 1040095916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_115
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882c60f535be03f49b33e3dbd774e636
+      internalID: -1359353613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_116
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e16f706a2841f4995eb0c9b9c6150b
+      internalID: -602541391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_117
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316ccd299af1b974fb917a92c6fd79c9
+      internalID: 88702025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_118
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706208ee569a26a4d8340bcd074a80c0
+      internalID: 1021077215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_119
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c777d0e9b9afdfb48a5761387ab25f01
+      internalID: -1536406848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_120
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8be29678a146d94982f2568e914f19e
+      internalID: 1830794199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_121
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7f56d8082dea846a4015d4044e3842
+      internalID: 1925146653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_122
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a7625427a36534a97254ce74c97840
+      internalID: 461419624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_123
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5060a32459c734b8165ca01eb921b0
+      internalID: -1343920920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_124
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3ad8964a33eb941bf6707a19294820
+      internalID: 196733183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_125
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692233a7ce03a134fb9b1e8921041013
+      internalID: -1608762269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_126
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167a66244e2452a43a195f5280cb47a6
+      internalID: -475946538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_127
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f074cbaf9b4a05b43992af9128416b96
+      internalID: 196906927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_128
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856e52832e873a546b3c4ab26f417a1f
+      internalID: 474219234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_129
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d12df60cd5efc44d8ac4030a08a8642
+      internalID: 168044676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_130
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af65647f3a034d948baf3e623a512832
+      internalID: 1056463234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_131
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bcf6429053c634e9724370e31bc627
+      internalID: -360435474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_132
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb1a9048cad59747a11a62ec6ce13eb
+      internalID: -378591055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_133
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888d99536845ac64b8f5fd10d5dceb3d
+      internalID: -382205276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_134
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2afb3851ef759d40b9fd0f580d12970
+      internalID: -455979130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_135
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7b5e6687398c84e818c551c6a97fcf
+      internalID: 1245989322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_136
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957f3e03499232344b4387de3340d25e
+      internalID: 1968119526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_137
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a25e3ca0ff8e074cad8ac68f387aa73
+      internalID: -1665564389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_138
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae9cffab01bb1349b3ab46007df2ec1
+      internalID: 91482736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_139
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14880fe192a0af342a19653d95ad14df
+      internalID: -654941209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_140
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f0bedb1a4019d4d91536d90fda0848
+      internalID: -1481663138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_141
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cba9256d58a6e4cbd890080c0adf7e
+      internalID: -1205959479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_142
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac4d5dc6987b6c4a9c79d532e36a5ae
+      internalID: 1741926677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_143
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5855c69f3b61644fbd712c93de24ac3
+      internalID: 1939160237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_144
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f558768b906cf499575511ee69e804
+      internalID: 1505338068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_145
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06697abf93de6e348b827d6263ab9fde
+      internalID: 733140911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_146
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee02280160201f941b45da05b4b25083
+      internalID: -552788442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: town sketh 3_147
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53eefbc00654fa45874c5efeab8d6b7
+      internalID: 10001867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 018a4637d7e338048a16f46dbaf28251
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      town sketh 3_31: 1030672115
+      town sketh 3_130: 1056463234
+      town sketh 3_118: 1021077215
+      town sketh 3_1: -390413735
+      town sketh 3_99: -1766196635
+      town sketh 3_82: -824924267
+      town sketh 3_51: 1183834318
+      town sketh 3_11: 408139569
+      town sketh 3_109: -1047146805
+      town sketh 3_23: 1538537951
+      town sketh 3_14: -1093441501
+      town sketh 3_54: -2123879040
+      town sketh 3_132: -378591055
+      town sketh 3_35: 762227924
+      town sketh 3_55: -1175226746
+      town sketh 3_53: 2130466486
+      town sketh 3_7: 634479896
+      town sketh 3_25: 345412832
+      town sketh 3_80: -1371546746
+      town sketh 3_30: -1471951694
+      town sketh 3_125: -1608762269
+      town sketh 3_66: -998299109
+      town sketh 3_75: -1307800354
+      town sketh 3_100: -970434400
+      town sketh 3_71: 565916268
+      town sketh 3_34: 1246747278
+      town sketh 3_96: -1359124611
+      town sketh 3_56: -998167607
+      town sketh 3_123: -1343920920
+      town sketh 3_121: 1925146653
+      town sketh 3_45: -281368451
+      town sketh 3_18: 33815200
+      town sketh 3_10: 1861684852
+      town sketh 3_32: 337146759
+      town sketh 3_38: 756918200
+      town sketh 3_6: -812737762
+      town sketh 3_69: 1392203057
+      town sketh 3_94: -145859885
+      town sketh 3_36: 958907396
+      town sketh 3_137: -1665564389
+      town sketh 3_15: -1479780057
+      town sketh 3_131: -360435474
+      town sketh 3_140: -1481663138
+      town sketh 3_29: 1621421182
+      town sketh 3_73: -347095277
+      town sketh 3_144: 1505338068
+      town sketh 3_146: -552788442
+      town sketh 3_107: -406872938
+      town sketh 3_90: -908146700
+      town sketh 3_119: -1536406848
+      town sketh 3_26: 673844212
+      town sketh 3_97: -423286313
+      town sketh 3_57: -1393273360
+      town sketh 3_104: -1131121892
+      town sketh 3_126: -475946538
+      town sketh 3_44: -147671114
+      town sketh 3_16: -1014355335
+      town sketh 3_21: -222842256
+      town sketh 3_3: -323061876
+      town sketh 3_74: -1993456308
+      town sketh 3_58: -1642872223
+      town sketh 3_127: 196906927
+      town sketh 3_133: -382205276
+      town sketh 3_116: -602541391
+      town sketh 3_124: 196733183
+      town sketh 3_106: -749443941
+      town sketh 3_108: -892261929
+      town sketh 3_65: -643696814
+      town sketh 3_113: 1489253777
+      town sketh 3_17: 97117913
+      town sketh 3_39: 348525581
+      town sketh 3_52: 958862632
+      town sketh 3_111: 108002351
+      town sketh 3_42: -1324842110
+      town sketh 3_20: 6470804
+      town sketh 3_143: 1939160237
+      town sketh 3_79: 1809284087
+      town sketh 3_76: -1928159566
+      town sketh 3_77: -1796517251
+      town sketh 3_98: 611054350
+      town sketh 3_135: 1245989322
+      town sketh 3_103: -1386717758
+      town sketh 3_19: -640529351
+      town sketh 3_50: -810447266
+      town sketh 3_59: -1506473519
+      town sketh 3_61: 652682677
+      town sketh 3_83: 946036106
+      town sketh 3_141: -1205959479
+      town sketh 3_13: -575123520
+      town sketh 3_142: 1741926677
+      town sketh 3_70: -1398590065
+      town sketh 3_33: 1587246903
+      town sketh 3_64: 164735142
+      town sketh 3_43: 1182898623
+      town sketh 3_37: -1223639629
+      town sketh 3_102: 854193092
+      town sketh 3_85: 1200158014
+      town sketh 3_117: 88702025
+      town sketh 3_89: 970398955
+      town sketh 3_145: 733140911
+      town sketh 3_139: -654941209
+      town sketh 3_9: 463093623
+      town sketh 3_78: -227361274
+      town sketh 3_28: -1039729095
+      town sketh 3_41: 1766898844
+      town sketh 3_24: -77362080
+      town sketh 3_68: 1257439711
+      town sketh 3_101: 1882818208
+      town sketh 3_122: 461419624
+      town sketh 3_138: 91482736
+      town sketh 3_92: 1097724608
+      town sketh 3_86: -1523657981
+      town sketh 3_95: -683973832
+      town sketh 3_8: 1664222135
+      town sketh 3_115: -1359353613
+      town sketh 3_84: 2133093399
+      town sketh 3_129: 168044676
+      town sketh 3_114: 1040095916
+      town sketh 3_67: -1035788868
+      town sketh 3_93: -1116787289
+      town sketh 3_5: 1572238693
+      town sketh 3_0: -169235539
+      town sketh 3_110: -723242631
+      town sketh 3_47: -551292866
+      town sketh 3_81: 699028603
+      town sketh 3_12: 1481003148
+      town sketh 3_87: 1262891765
+      town sketh 3_63: -1163869173
+      town sketh 3_4: 761141508
+      town sketh 3_27: -1060671451
+      town sketh 3_112: -1355666238
+      town sketh 3_120: 1830794199
+      town sketh 3_105: 160246716
+      town sketh 3_60: -416203951
+      town sketh 3_147: 10001867
+      town sketh 3_46: -851565817
+      town sketh 3_48: -683675254
+      town sketh 3_128: 474219234
+      town sketh 3_2: 966516694
+      town sketh 3_49: -1620577918
+      town sketh 3_134: -455979130
+      town sketh 3_62: 2142551349
+      town sketh 3_72: 1184067873
+      town sketh 3_88: -2026407881
+      town sketh 3_91: -479451631
+      town sketh 3_22: -1429026987
+      town sketh 3_40: -1731020850
+      town sketh 3_136: 1968119526
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
