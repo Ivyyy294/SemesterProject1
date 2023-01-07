@@ -353,6 +353,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 560425686559694463}
+    - target: {fileID: 2350424615625158007, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2350424615625158007, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1009346745
+      objectReference: {fileID: 0}
     - target: {fileID: 5643373173598137316, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
       propertyPath: player
       value: 
