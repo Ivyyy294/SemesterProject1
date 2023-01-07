@@ -19,12 +19,14 @@ public class PlayerConfigurationDisplay : MonoBehaviour
 {
 	[SerializeField] SpawnPlayerSetupMenu menuScript;
 	[SerializeField] GameObject player;
+	[SerializeField] GameObject playerUi;
 
 	public PlayerConfiguration playerConfiguration;
 
 	public void SpawnPlayer (Vector3 pos)
 	{
 		player.SetActive (true);
+		playerUi.SetActive (true);
 		player.GetComponent<PlayerMotor>().InitPlayer (playerConfiguration);
 		player.transform.position = pos;
 	}
