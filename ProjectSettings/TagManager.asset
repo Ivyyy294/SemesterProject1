@@ -50,6 +50,9 @@ TagManager:
   - name: Objects
     uniqueID: 1777074599
     locked: 0
+  - name: AlwaysTop
+    uniqueID: 1034216909
+    locked: 0
   - name: UI
     uniqueID: 3285620551
     locked: 0
