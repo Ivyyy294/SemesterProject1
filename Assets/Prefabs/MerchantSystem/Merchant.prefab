@@ -170,8 +170,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7688834356740991474}
   - component: {fileID: 7688834356740991475}
-  - component: {fileID: 7688834356740991473}
   - component: {fileID: 7688834356740991472}
+  - component: {fileID: 1272768970361382799}
   m_Layer: 12
   m_Name: Merchant
   m_TagString: Merchant
@@ -209,33 +209,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   merchant: {fileID: 11400000, guid: a1697bd5435560147a197d1244cdeb98, type: 2}
+  audioSmallSale:
+  - {fileID: 8300000, guid: 4c1f444d090de3e43910e7020d5d17c9, type: 3}
+  - {fileID: 8300000, guid: 1783ebd471eda6f48ba26a5ae72f5782, type: 3}
+  - {fileID: 8300000, guid: 5b076f7c012144b4196c11c82b7921ac, type: 3}
+  - {fileID: 8300000, guid: 51375e5e15aca6d4394cbf8c7d424b61, type: 3}
+  audioMediumSale:
+  - {fileID: 8300000, guid: 8ad9205a35fd6664881964317f01d785, type: 3}
+  - {fileID: 8300000, guid: 7bfc97ef53924f34cb87a5765921ebfe, type: 3}
+  - {fileID: 8300000, guid: c25f64f98de4e04479b7577fcdbe14a5, type: 3}
+  audioLargeSale:
+  - {fileID: 8300000, guid: 6c41c82efa2482d469270d0e616c454d, type: 3}
+  - {fileID: 8300000, guid: c1d3f782a9fca6249a01afd1a758ea36, type: 3}
+  - {fileID: 8300000, guid: 446a01d519b307040820c9263b7dffa1, type: 3}
   requestIndicator: {fileID: 7688834356356821563}
---- !u!61 &7688834356740991473
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7688834356740991476}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.25}
-    oldSize: {x: 0.71875, y: 1.4609375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &7688834356740991472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -277,14 +264,30 @@ SpriteRenderer:
   m_SortingLayerID: 1777074599
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -598439132, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.71875, y: 1.7226562}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
+--- !u!58 &1272768970361382799
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688834356740991476}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

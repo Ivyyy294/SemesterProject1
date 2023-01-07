@@ -77,7 +77,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	void CastRay ()
 	{
-		int layerMask = 1 << LayerMask.NameToLayer ("Interactables");;
+		int layerMask = 1 << LayerMask.NameToLayer ("Interactables");
 		Debug.DrawRay (center.transform.position, dir * rayDistance, Color.green, 1f);
 		
 		RaycastHit2D hitInfo = Physics2D.Raycast (center.transform.position, dir, rayDistance, layerMask);
@@ -199,18 +199,24 @@ public class PlayerInteraktions: MonoBehaviour
 			if (tmp != null && grabbedObject != null)
 			{
 				if (tmp.Interact (grabbedObject.gameObject, playerId))
-				{
-					grabbedObject.gameObject.SetActive (false);
-					grabbedObject = null;
-				}
+					ReturnGrabbedObject ();
 			}
 		}
 	}
 
+	//Places the ware back on the ground
 	private void ResetGrabbedObject (Vector3 pos)
 	{ 
 		grabbedObject.transform.localScale = oScale;
 		grabbedObject.PlaceOnGround(pos);
+		grabbedObject = null;
+	}
+
+	//Returns the ware to the pool
+	private void ReturnGrabbedObject ()
+	{ 
+		grabbedObject.transform.localScale = oScale;
+		grabbedObject.ReturnToPoolDeactivated();
 		grabbedObject = null;
 	}
 

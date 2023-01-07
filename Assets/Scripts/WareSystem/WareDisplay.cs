@@ -26,6 +26,7 @@ public class WareDisplay : MonoBehaviour
 	public void ReturnToPool ()
 	{
 		Debug.Log ("Ware released back to pool");
+		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		transform.SetParent (WarePool.Me.transform);
 	}
 

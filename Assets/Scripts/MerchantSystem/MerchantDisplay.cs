@@ -7,6 +7,11 @@ public class MerchantDisplay : MonoBehaviour
 {
 	//Editor Values
 	[SerializeField] Merchant merchant;
+	[SerializeField] List <AudioClip> audioSmallSale = new List<AudioClip>();
+	[SerializeField] List <AudioClip> audioMediumSale = new List<AudioClip>();
+	[SerializeField] List <AudioClip> audioLargeSale = new List<AudioClip>();
+
+	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
 	
 	//Private Values
@@ -30,7 +35,16 @@ public class MerchantDisplay : MonoBehaviour
 				}
 				else
 				{
-					GameStatus.Me.AddSilverCoins (playerId, wareDisplay.ware.value);
+					uint wareValue = wareDisplay.ware.value;
+
+					if (wareValue <= 2)
+						Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioSmallSale);
+					else if (wareValue <= 4)
+						Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioMediumSale);
+					else
+						Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioLargeSale);
+					
+					GameStatus.Me.AddSilverCoins (playerId, wareValue);
 					ChangeRequest (null);
 					return true;
 				}
