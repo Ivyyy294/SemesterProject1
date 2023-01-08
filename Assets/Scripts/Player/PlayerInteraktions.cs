@@ -165,13 +165,25 @@ public class PlayerInteraktions: MonoBehaviour
 			if (!i.transform.IsChildOf (transform))
 			{
 				if (i.collider.CompareTag ("Ware"))
+				{
 					InteractWare(i.collider.gameObject);
+					break;
+				}
 				else if (i.collider.CompareTag ("Merchant"))
+				{
 					InteractMerchant (i.collider.gameObject);
+					break;
+				}
 				else if (i.collider.CompareTag ("Store"))
+				{
 					InteractStore (i.collider.gameObject);
+					break;
+				}
 				else if (i.collider.CompareTag ("Player"))
+				{
 					InteractPlayer ();
+					break;
+				}
 			}
 		}
 	}
