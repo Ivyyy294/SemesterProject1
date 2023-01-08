@@ -284,12 +284,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c765609e805ec47b2c8a312717ca4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartEmote:
+    sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+    duration: 1
+    audio: {fileID: 0}
+    volume: 0
+  sadEmote:
+    sprite: {fileID: 0}
+    duration: 0
+    audio: {fileID: 0}
+    volume: 0
+  happyEmote:
+    sprite: {fileID: 0}
+    duration: 0
+    audio: {fileID: 0}
+    volume: 0
+  angryEmote:
+    sprite: {fileID: 0}
+    duration: 0
+    audio: {fileID: 0}
+    volume: 0
   rayDistance: 1.5
   dropIndicator: {fileID: 3714752570590167877}
   rotationOffset: {x: 0, y: 0, z: -90}
   warePos: {fileID: 7219480236882327213}
   center: {fileID: 6835894972312994454}
-  heartIcon: {fileID: 6608265828297820744}
+  emoteHandler: {fileID: 3086608939606607134}
 --- !u!114 &6703997733596930556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,14 +634,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2273629162615841958}
   - component: {fileID: 6530783384168596299}
-  - component: {fileID: 6000642857484070661}
+  - component: {fileID: 3086608939606607134}
   m_Layer: 0
-  m_Name: HeartPos
+  m_Name: EmotePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2273629162615841958
 Transform:
   m_ObjectHideFlags: 0
@@ -678,7 +698,7 @@ SpriteRenderer:
   m_SortingLayerID: -1009346745
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
@@ -686,10 +706,10 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6000642857484070661
+--- !u!114 &3086608939606607134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -698,7 +718,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6608265828297820744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 625fb797d11ab06488ced0bd7acb388f, type: 3}
+  m_Script: {fileID: 11500000, guid: b6de6dd822c38e445b8378c4f6a86d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1

@@ -8,12 +8,19 @@ public class PlayerInteraktions: MonoBehaviour
 {
 
 	//Editor Values
+	[Header ("Emotes")]
+	[SerializeField] Emote heartEmote;
+	[SerializeField] Emote sadEmote;
+	[SerializeField] Emote happyEmote;
+	[SerializeField] Emote angryEmote;
+
+	[Header ("Lara Values")]
 	[SerializeField] float rayDistance;
 	[SerializeField] GameObject dropIndicator;
 	[SerializeField] Vector3 rotationOffset;
 	[SerializeField] Transform warePos;
 	[SerializeField] Transform center;
-	[SerializeField] GameObject heartIcon;
+	[SerializeField] PlayerEmotes emoteHandler;
 
 	//Private Values
 	private Grid snapGrid;
@@ -247,8 +254,8 @@ public class PlayerInteraktions: MonoBehaviour
 
 	private void InteractPlayer()
 	{
-		if (heartIcon != null)
-			heartIcon.SetActive (true);
+		if (emoteHandler != null)
+			emoteHandler.PlayEmote (heartEmote);
 	}
 
 	void ResetDropIndicator()
