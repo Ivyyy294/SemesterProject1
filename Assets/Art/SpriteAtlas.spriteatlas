@@ -1488,6 +1488,12 @@ SpriteAtlas:
   - {fileID: 407959075, guid: 1d2da52714d6ea74cbda6dab09600388, type: 3}
   - {fileID: 1348894482, guid: 1d2da52714d6ea74cbda6dab09600388, type: 3}
   - {fileID: -1487640368, guid: 1d2da52714d6ea74cbda6dab09600388, type: 3}
+  - {fileID: -1979593301, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
+  - {fileID: 1060824846, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
+  - {fileID: -1855113360, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
+  - {fileID: -332569580, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
+  - {fileID: 885742975, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
+  - {fileID: -125318296, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
   - {fileID: 21300000, guid: 3fceb1a808ca34b4ea229b0f44825594, type: 3}
   - {fileID: 21300000, guid: 1405b0d819142f64297e6f5af5985ada, type: 3}
   - {fileID: 21300000, guid: 525091f898c25f342b95dcb69fb15c86, type: 3}
@@ -2541,6 +2547,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
   - {fileID: 21300000, guid: a6f7f84fbe6087041991ffa5a65c597c, type: 3}
   - {fileID: 21300000, guid: c9f1105f37fdb3c41a8864716df5cd6f, type: 3}
+  - {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
   - {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   - {fileID: -1830135205, guid: 1dbd89afafa8a8f448030cb29de537d6, type: 3}
   - {fileID: 741320434, guid: 1dbd89afafa8a8f448030cb29de537d6, type: 3}
@@ -4055,6 +4062,12 @@ SpriteAtlas:
   - contour2_71
   - contour2_9
   - contour2_70
+  - pl 1 red_1
+  - pl 1 red_6
+  - pl 1 red_7
+  - pl 1 red_4
+  - pl 1 red_9
+  - pl 1 red_11
   - Cover art
   - FishOilS
   - HoneyS 1
@@ -5108,6 +5121,7 @@ SpriteAtlas:
   - crates_study_x2
   - FishOil
   - IronOre1
+  - Heart
   - storeplaceholder
   - TX Plant_32
   - TX Plant_33

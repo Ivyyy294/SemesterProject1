@@ -48,8 +48,12 @@ public class WareDisplay : MonoBehaviour
 
 		if (isStoresCorrectly)
 		{
-			extendetTimer += timeOffset;
-			baseTimer = ware.durability * (extendetTimer / ware.durabilityExtended);
+			//Ware durabilityExtended is unlimited when 0
+			if (ware.durabilityExtended > 0f)
+			{
+				extendetTimer += timeOffset;
+				baseTimer = ware.durability * (extendetTimer / ware.durabilityExtended);
+			}
 		}
 		else
 		{
