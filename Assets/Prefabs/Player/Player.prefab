@@ -290,17 +290,17 @@ MonoBehaviour:
     audio: {fileID: 0}
     volume: 0
   sadEmote:
-    sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+    sprite: {fileID: 21300000, guid: e28ced7531e047144a5830a1248d6361, type: 3}
     duration: 1
     audio: {fileID: 0}
     volume: 0
   happyEmote:
-    sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+    sprite: {fileID: 21300000, guid: 3434c0795f4197649ae5efba8d8a8c84, type: 3}
     duration: 1
     audio: {fileID: 0}
     volume: 0
   angryEmote:
-    sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+    sprite: {fileID: 21300000, guid: c2c616c26cba1664ba7c0694e5b57dc3, type: 3}
     duration: 1
     audio: {fileID: 0}
     volume: 0
@@ -699,7 +699,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

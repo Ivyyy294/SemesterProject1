@@ -452,6 +452,7 @@ SpriteAtlas:
   - {fileID: 534614463, guid: 567fe952e1e5b5d40b832ff6e7b6befb, type: 3}
   - {fileID: 21300000, guid: 0172837208b81c54b8db50114e31f676, type: 3}
   - {fileID: 21300000, guid: cc7966820b0256848b6ce0051457f45b, type: 3}
+  - {fileID: 21300000, guid: c2c616c26cba1664ba7c0694e5b57dc3, type: 3}
   - {fileID: 21300000, guid: 30962ec29612c7e44b61b51b8c6d484a, type: 3}
   - {fileID: 21300000, guid: 79274ce2f3d17c64b849b014b168cfab, type: 3}
   - {fileID: 21300000, guid: c255fb0361ea2274394ca83fa6471eef, type: 3}
@@ -1267,6 +1268,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7f1a3eb4ba6574949a2a99cc10ac20ac, type: 3}
   - {fileID: 21300000, guid: 84085eb4fc1b6f3448b5a6f25fa5468f, type: 3}
   - {fileID: 21300000, guid: 547adee4d23bb9142809ee0aef719f3f, type: 3}
+  - {fileID: 21300000, guid: e28ced7531e047144a5830a1248d6361, type: 3}
   - {fileID: -283804058, guid: c78ea2f59073d7a4281fd511f7571680, type: 3}
   - {fileID: -2064662462, guid: c78ea2f59073d7a4281fd511f7571680, type: 3}
   - {fileID: -372967939, guid: c78ea2f59073d7a4281fd511f7571680, type: 3}
@@ -1632,6 +1634,7 @@ SpriteAtlas:
   - {fileID: 723583726, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: 367209125, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: -818003589, guid: e666a439675695f418f5e539659ed28a, type: 3}
+  - {fileID: 21300000, guid: 3434c0795f4197649ae5efba8d8a8c84, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   - {fileID: -1215382313, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: 264713608, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
@@ -3106,6 +3109,7 @@ SpriteAtlas:
   - oil lamp 2_7
   - HoneyS
   - HoneyS2
+  - playerAngry
   - thor-hammer
   - Honey 1
   - MyFirstMerchant
@@ -3921,6 +3925,7 @@ SpriteAtlas:
   - Bread2S
   - Timber1
   - Bread1S
+  - playerSad
   - TX Tileset Wall_38
   - TX Tileset Wall_4
   - TX Tileset Wall_5
@@ -4286,6 +4291,7 @@ SpriteAtlas:
   - Ship details 1_80
   - Ship details 1_83
   - Ship details 1_82
+  - playerHappy
   - Armour
   - fontain_9
   - fontain_8
