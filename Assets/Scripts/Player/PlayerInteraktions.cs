@@ -18,8 +18,6 @@ public class PlayerInteraktions: MonoBehaviour
 	//Private Values
 	private Grid snapGrid;
 	private WareDisplay grabbedObject;
-	private Vector3 oScale;
-	private int layerMask;
 	private Vector3 dir;
 	private uint playerId;
 	private InputAction moveAction;
@@ -44,7 +42,6 @@ public class PlayerInteraktions: MonoBehaviour
 	void Start()
 	{
 		dir = Vector3.right;
-		layerMask = LayerMask.NameToLayer ("Objects");
 		dropIndicator.SetActive (false);
 
 		snapGrid = GameStatus.Me.gameObject.GetComponentInChildren <Grid>();
@@ -142,17 +139,20 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (obj != null)
 		{
+			obj.layer = LayerMask.NameToLayer ("NoCollision");
+			obj.transform.SetParent (warePos);
+			obj.transform.position = warePos.position;
+			obj.transform.localScale = new Vector3 (0.5f, 0.5f);
+
 			grabbedObject = obj.GetComponent <WareDisplay>();
 
 			if (grabbedObject != null && dropIndicator != null)
 			{
-				dropIndicator.SetActive (true);
-				oScale = grabbedObject.transform.localScale;
-				grabbedObject.PickUp (warePos.transform);
+				Ivyyy.AudioHandler.Me.PlayOneShotFromList (grabbedObject.ware.audiosPickUp);
 
 				//Setting Size of Drop indicator to Ware Size
-				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
 				dropIndicator.SetActive (true);
+				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
 			}
 		}
 	}
@@ -222,7 +222,10 @@ public class PlayerInteraktions: MonoBehaviour
 			StoreSlot storeSlot = obj.GetComponent<StoreSlot>();
 
 			if (storeSlot != null)
-				GrabObject (storeSlot.BuyWare(playerId));
+			{
+				GameObject tmp = storeSlot.BuyWare(playerId);
+				GrabObject (tmp);
+			}
 		}
 	}
 
@@ -244,7 +247,8 @@ public class PlayerInteraktions: MonoBehaviour
 
 	private void InteractPlayer()
 	{
-		heartIcon.SetActive (true);
+		if (heartIcon != null)
+			heartIcon.SetActive (true);
 	}
 
 	void ResetDropIndicator()
@@ -256,7 +260,7 @@ public class PlayerInteraktions: MonoBehaviour
 	//Places the ware back on the ground
 	private void ResetGrabbedObject (Vector3 pos)
 	{ 
-		grabbedObject.transform.localScale = oScale;
+		grabbedObject.transform.localScale = new Vector3 (1f, 1f, 1f);
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
 		ResetDropIndicator();
@@ -265,7 +269,7 @@ public class PlayerInteraktions: MonoBehaviour
 	//Returns the ware to the pool
 	private void ReturnGrabbedObject ()
 	{ 
-		grabbedObject.transform.localScale = oScale;
+		grabbedObject.transform.localScale = new Vector3 (1f, 1f, 1f);
 		grabbedObject.ReturnToPoolDeactivated();
 		grabbedObject = null;
 		ResetDropIndicator();

@@ -61,7 +61,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39515be5f7d05774d80941841a22c493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  callBack:
+  callBackTriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  callBackTriggerStay:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7688834356740991475}

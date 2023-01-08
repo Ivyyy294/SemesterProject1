@@ -24,6 +24,26 @@ public class WareDisplay : MonoBehaviour
 	Ivyyy.AudioHandler audioHandler;
 
 	//Public Functions
+	public static WareDisplay CreateInstance (Ware ware)
+	{
+		GameObject obj = WarePool.Me.GetPooledObject();
+		WareDisplay wareDisplay = null;
+
+		if (obj != null)
+		{
+			obj.SetActive (true);
+			wareDisplay = obj.GetComponent<WareDisplay>();
+
+			if (wareDisplay != null)
+			{
+				wareDisplay.ware = ware;
+				wareDisplay.Init ();
+			}
+		}
+
+		return wareDisplay;
+	}
+
 	public void ReturnToPool ()
 	{
 		Debug.Log ("Ware released back to pool");
@@ -35,12 +55,6 @@ public class WareDisplay : MonoBehaviour
 	{
 		ReturnToPool();
 		gameObject.SetActive (false);
-	}
-
-	public void Init (Ware w)
-	{
-		ware = w;
-		Init();
 	}
 
 	public void CheckDurability ()
@@ -67,23 +81,13 @@ public class WareDisplay : MonoBehaviour
 			|| (ware.fragility != Ware.Fragility.None && fragilityDmg >= ware.fragilityHp); //Fragility limit exceeded
 	}
 
-	public void PickUp (Transform parent)
-	{
-		transform.position = parent.position;
-		transform.SetParent (parent);
-		transform.localScale = new Vector3 (0.5f, 0.5f);
-		gameObject.layer = LayerMask.NameToLayer ("NoCollision");
-		audioHandler.PlayOneShotFromList (ware.audiosPickUp);
-	}
-
 	public void PlaceOnGround (Vector3 pos)
-
 	{
 		transform.position = pos;
 		transform.SetParent (WarePool.Me.transform);
 		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		collisionBufferTimer = 0f;
-
+		EnableRenderer (true);
 		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
 	}
 
@@ -93,6 +97,21 @@ public class WareDisplay : MonoBehaviour
 		audioHandler.PlayOneShotFromList (ware.audiosBump);
 	}
 
+	public void EnableRenderer (bool val)
+	{
+		if (spriteRenderer != null)
+		{
+			spriteRenderer.enabled = val;
+		}
+	}
+
+	public Sprite GetActiveSprite()
+	{
+		if (spriteRenderer != null)
+			return spriteRenderer.sprite;
+
+		return null;
+	}
 	//Private Functions
 	void Init ()
 	{
@@ -116,18 +135,21 @@ public class WareDisplay : MonoBehaviour
 
 		foreach (StoringAreaId i in ware.storingAreaIds)
 			storingAreas.Add (i, false);
+
+		transform.localScale = new Vector3 (1f, 1f, 1f);
 	}
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		audioHandler = Ivyyy.AudioHandler.Me;
-		Init();
+		Init ();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
+		//Prevents instant fragilityDmg from the player after placing the object back on the ground
 		if (collisionBufferTimer < collisionBuffer)
 			collisionBufferTimer += Time.deltaTime;
 
@@ -186,15 +208,18 @@ public class WareDisplay : MonoBehaviour
 			tmp &= i.Value;
 
 		isStoresCorrectly = tmp;
-
-		if (isStoresCorrectly)
-			Ivyyy.AudioHandler.Me.PlayOneShot (audioStoredCorrectly);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag ("StoringArea"))
+		{
 			SetStoringArea (collision.gameObject, true);
+
+			//Play audio if now stoed correctly
+			if (isStoresCorrectly)
+				Ivyyy.AudioHandler.Me.PlayOneShot (audioStoredCorrectly);
+		}
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
@@ -205,6 +230,7 @@ public class WareDisplay : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+		//Prevents instant fragilityDmg from the player after placing the object back on the ground
 		if (ware.fragility == Ware.Fragility.Very && collisionBufferTimer >= collisionBuffer)
 			AddFragilityDmg();
 	}
