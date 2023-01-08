@@ -7,6 +7,7 @@ public class WareDisplay : MonoBehaviour
 {
 	//Public Values
 	public Ware ware;
+	[SerializeField] AudioClip audioStoredCorrectly;
 
 	[Header ("Lara Values")]
 	public bool damaged = false;
@@ -185,6 +186,9 @@ public class WareDisplay : MonoBehaviour
 			tmp &= i.Value;
 
 		isStoresCorrectly = tmp;
+
+		if (isStoresCorrectly)
+			Ivyyy.AudioHandler.Me.PlayOneShot (audioStoredCorrectly);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

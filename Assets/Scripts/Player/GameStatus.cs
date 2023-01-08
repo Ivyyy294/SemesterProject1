@@ -93,6 +93,7 @@ public class Team
 
 		SilverCoins -= tax;
 
+		Ivyyy.AudioHandler.Me.PlayOneShot (GameStatus.Me.audioTax);
 	}
 }
 
@@ -106,9 +107,14 @@ public class GameStatus : MonoBehaviour
 
 	[Header ("Game Settings")]
 	[SerializeField] float dayLenght = 60f;
+
+	[Header ("Reputation Settings")]
 	public float passiveReputationLossThreshold;
 	public float passiveReputationLossInterval;
+
+	[Header ("Tax Settings")]
 	public int cityTaxInterval;
+	public AudioClip audioTax;
 
 	//Private Values
 	List <Team> teams;
