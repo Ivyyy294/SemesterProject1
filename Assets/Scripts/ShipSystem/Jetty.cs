@@ -12,6 +12,7 @@ public class Jetty : MonoBehaviour
 	[SerializeField] GameObject ship;
 	[SerializeField] Ivyyy.Pathfinding2D shipPathfinding;
 	[SerializeField] float shipDockTime;
+	[SerializeField] AudioClip audioShipArrived;
 
 	//Private Values
 	ShipDisplay shipDisplay;
@@ -87,6 +88,8 @@ public class Jetty : MonoBehaviour
 			{
 				if (timerShipDocked > shipDockTime && !currentPath.Equals ("CastOff"))
 					CastOffShip();
+				else if (timerShipDocked == 0f)
+					Ivyyy.AudioHandler.Me.PlayOneShot (audioShipArrived);
 
 				timerShipDocked += Time.deltaTime;
 			}

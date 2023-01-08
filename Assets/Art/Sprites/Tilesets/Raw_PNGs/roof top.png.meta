@@ -1,0 +1,5063 @@
+fileFormatVersion: 2
+guid: 141a1de339815e245af42d099d07a617
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: roof top_0
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6778b488a23621543bdbb6688950a217
+      internalID: -127918573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_1
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926c1e5b087c9d544966da23b57eb9e0
+      internalID: -1923310438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_2
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27eab5e151d99841aee79500a5261ad
+      internalID: 715899944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_3
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d517119e390a74e971f639ba8f9dba
+      internalID: 700857760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_4
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5906d8347b05d0440bae48b67aa99cdc
+      internalID: -1882456863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_5
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadb6fd8e6b0dd64f9abec8c9edf46a1
+      internalID: -2087445134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_6
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f1ef901af69674a9bf9a7c834f6378
+      internalID: -1601895589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_7
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701ff399bbffc4b479e8c6d8ae2250b7
+      internalID: -1807806367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_8
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7ea200ff541a047a1e648cbb81b274
+      internalID: -1462786983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_9
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bca80c5f1fb1944b338416f2273d6d
+      internalID: -1267988624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_10
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749893dd3fd4f604f999a39e9a0830b9
+      internalID: 401234498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_11
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e6fb48fd104a24a8512317ed85a602
+      internalID: 11055766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_12
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a08581ac20d41046861804354eef9d3
+      internalID: 807495663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_13
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e4872cf40fd0b46a11d8b3c5825197
+      internalID: -417621031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_14
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 5276
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ced2c9f2f389f749a277e861e706476
+      internalID: -1113364148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_15
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c73788999892c4e8eef49d8d11b514
+      internalID: -612194225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_16
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0318fd6263b46e4429e8d99007a75fd1
+      internalID: -985664740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_17
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25c58e847f496c45b410d873cbb119b
+      internalID: -1590921670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_18
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45580edb9680cc246b531a489f403e61
+      internalID: 1674900746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_19
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398afecefe6599a48a6af97eb629b2a9
+      internalID: 1748075835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_20
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f8d95371954c04795fa420244fac86
+      internalID: 1169203182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_21
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3832afdfd5be9f4eb43041b5f7a77ec
+      internalID: 910953600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_22
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a69458b4d79a984aa236b8988172e62
+      internalID: -1568160508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_23
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb83db8bd789b25418bccbdbf98ca071
+      internalID: 503335488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_24
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0924a5c50f0ab2749918589e4171dde4
+      internalID: 264289777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_25
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0f574eb90937f418aa0863da02d277
+      internalID: 2066622786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_26
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f6a97870ebaee44a00e11772524e05
+      internalID: -632542399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_27
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f0048f5f0e2d041ba2cfee378de0b7
+      internalID: -1644403143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_28
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ae0976e3eb4d840ba8effd853b8174
+      internalID: -1872956065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_29
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1caca072b674349ab95729058c87c4
+      internalID: 224805238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_30
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5ed214ad570534181d00bf98049f82
+      internalID: 885775249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_31
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 5020
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d0389bd1554c540952b4443fa95251
+      internalID: -125609848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_32
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df433938caac2a4d91a4bf342f95d10
+      internalID: 1637388447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_33
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8bc955a3073284995f08f0384161da
+      internalID: 941306613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_34
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06d4cc0f5d0fa143b01a2221f83d1e0
+      internalID: -1310766283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_35
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c16638dc4f0ee4990bfec127c02b8b
+      internalID: -1509136005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_36
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c10259a66935245ae33ab9ea456bbf
+      internalID: 828114612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_37
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e4ab4a6d6acd84784652adbe36be12
+      internalID: 1408287867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_38
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff24a7798606d9408ae37ac0c358747
+      internalID: 1743831815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_39
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecfad11260be654ebcb251b6538e0e1
+      internalID: -1584769211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_40
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9dd2dbf96c1484e9fc813e3b971e8b
+      internalID: 1132010354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_41
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84385234c46d2d84084102776dc16d16
+      internalID: -861090606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_42
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1251549a5417c91439f1c5a757c98b4e
+      internalID: 1152786666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_43
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22833c7f40fc71b4caaaacb1bb3da5ae
+      internalID: -198682311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_44
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfbc34d7b056af4fabc4df9c7c55081
+      internalID: -1970916934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_45
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25e2a81d5911ed4c8b59947c6a54a10
+      internalID: -154816434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_46
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77119a1545eb2344b9b044cc4db2e019
+      internalID: -39469700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_47
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c071cfee9c371f41aeeaabe83372b0c
+      internalID: 1341957035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_48
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696e17b1db5b2d840a2f2eb61fe7c07b
+      internalID: -115386422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_49
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89b86fcab923924f843229b8812fcc3
+      internalID: -759537136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_50
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 4764
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454c09d47ea9140468346189a0cf769f
+      internalID: 185376711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_51
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae909ee07941a74b8f334e6b5699b92
+      internalID: 1601800570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_52
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bac5ecd95a9fd408bd872cb5dff5ca
+      internalID: -1719853934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_53
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8e7bc4b1ea39744940a7912935f709
+      internalID: -1332026501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_54
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fff9a309340a6b4abd39f97162740a1
+      internalID: 446214470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_55
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeabeae4c03f8ea49a1d85e1574975db
+      internalID: 936349258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_56
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ddf615d669c424682f6021cfe6a0f9
+      internalID: 370248266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_57
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86950724e6ce0704b9a039e7d3a6dbe8
+      internalID: 734288204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_58
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c754f15cabc54f4eb2f292f8b4c1f7e
+      internalID: -964643316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_59
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf9430f8c9141c4796aeb6c57bf513d
+      internalID: -980219859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_60
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a71dcfffd7c4f41aa223676aa73287
+      internalID: -539383173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_61
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6cd8efad7efe64d871b82fa3d13d19
+      internalID: -232230648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_62
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375fe76445d59d841bc18c65194c741f
+      internalID: -1585814385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_63
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73dd275f3aa084d44b754c0bda6a5ac2
+      internalID: -1563378975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_64
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892441f4b832119449ab80b3cd60f047
+      internalID: -1893572357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_65
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eb9e3bfdc1558438a5593d77157a14
+      internalID: 1911781538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_66
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade10d7f9227b104b814078939f5deed
+      internalID: -315008521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_67
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b542f59d488feb478b829f2824f9835
+      internalID: -1199334972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_68
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a21a189435cbc47871a130394449c0
+      internalID: 1038680077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_69
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 4508
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cfd4b7f24dfea44841c44a4295fa66
+      internalID: 297412849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_70
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6a36bfb1431994e83817c7d9333d91
+      internalID: -1230759153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_71
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333d893ea7974ee49b25f6d0ce1969d1
+      internalID: 641242908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_72
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af89659b43da50a4fb52e638034d4710
+      internalID: 1922663181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_73
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa8b3d9c717e1648a6f7460294744ea
+      internalID: 485716442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_74
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388f431271bb8264a90ff7acfdffb76e
+      internalID: 495684413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_75
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da2f456ab639814a87ee254cbe4f63a
+      internalID: -1541146836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_76
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8206aa4311ffe83469b18f3f4417229a
+      internalID: 962370035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_77
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d516a0731e3e1340a86ce79da9cc367
+      internalID: 1010708213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_78
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a50c6b84518d174d96ac20d978673a6
+      internalID: 334881951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_79
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c552a912e9f9449bb3c49b4dbf0eac
+      internalID: 881635042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_80
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a357f9f61ad3db54280c798032bc1ee3
+      internalID: 1615751698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_81
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a8a59c5b4e6534c8ef593941b0750c
+      internalID: 2129347526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_82
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba0c3a9b02c53e429d27e8d00981baa
+      internalID: 487943605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_83
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfab69310d63674595b1503996bd337
+      internalID: -1071706995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_84
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca5b8ccfccbb274a89ba216e0eafd52
+      internalID: -1737533488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_85
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4785df57e5b1d294e9f4400927e2f53a
+      internalID: -2109575538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_86
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40906ccfaa8f172488c4d28b9f59e7d6
+      internalID: 1484519887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_87
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f999281019e424da7cf4f8dfaa4d0a
+      internalID: -1078717376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_88
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 4252
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9088f96a7456ff4d91be73479cb2189
+      internalID: -1439665307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_89
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95cc6a7f06ee914d9ed5c94451fb8f7
+      internalID: -1827238295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_90
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf9f5bf89a4df34eb64489d8d12ea3a
+      internalID: 1082247217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_91
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b854142deb3774084209a29f2c8bb9
+      internalID: 1204918797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_92
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794a553152732604cbbb0ccfdd701e54
+      internalID: -1226077345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_93
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728998a84149e734c85abaebb009f445
+      internalID: 1853830248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_94
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4320bb7e598a1e4fa8aa9f9c4a55189
+      internalID: 1651394822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_95
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f2e5d08e1cdd74a8811197204c4e94
+      internalID: -1318964902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_96
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052f93d075f46b24485637860f01aed9
+      internalID: 154915939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_97
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1998ba3a380017442b33524bb48ac578
+      internalID: -1974273873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_98
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67086ac33d8f6e642acb7bdd1d41ad90
+      internalID: -41774018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_99
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ce875429ee42945991874140992830
+      internalID: -114763340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_100
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711b11434cbe0134e8cc20d88b233f01
+      internalID: 402941425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_101
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd07b72d8f74c0f47a3be74a309604ca
+      internalID: 1102534497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_102
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0deb8e13b1e9aa4eabfe7b39c4d889c
+      internalID: -208882737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_103
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c669f7e8f9e60f94484adf9ca9d749c2
+      internalID: 829851581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_104
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff762db73f830f4597473c1495b9ee7
+      internalID: 1769766009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_105
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd684239fa1fc164ea53905624e8b26a
+      internalID: 762319026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_106
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7848dac673f964188a012c53f714cd
+      internalID: 481310328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_107
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 3996
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1014a6c4a9893054aac133e689616e40
+      internalID: 146959381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_108
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b812cb5f9217c843be87f3e700409a4
+      internalID: 425341080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_109
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204a7ea2e04539b418336da2f4207815
+      internalID: 799784206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_110
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42452f2a8af8eb41bf6511b96db9437
+      internalID: -505332176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_111
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326037eb73ea07942a423d54faa328b2
+      internalID: 1858383941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_112
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303c8bb0c823f0d4e8d54278034f60f0
+      internalID: 1707176221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_113
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a83a2c9aa569e4cb9d7c621e837458
+      internalID: -1611736862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_114
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bb783c204d5434786dcc3dae7470fe
+      internalID: -200333503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_115
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4779df3681e3583498794d2094f7b62c
+      internalID: -1103177912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_116
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb36cd2b9a23f9540864fd55f271acf5
+      internalID: -523620158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_117
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f9d273e91e2404c8375f0241fa7eab
+      internalID: -1577327851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_118
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586effe60f1556f468940f05c706f4ee
+      internalID: -1744203965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_119
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb3daf92bf38b0459b36f78ea256d1d
+      internalID: -1471170538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_120
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e563e3353c7274cb663b1abccd5455
+      internalID: -248272724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_121
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ec3713b64794749aacb820384531bf
+      internalID: -845948543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_122
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c937b281e92fa3243bcc694b5ebce958
+      internalID: 791288384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_123
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5603f58dd422c1c438405264a1c378fd
+      internalID: 811033577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_124
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca0a702b545a774a9361a3a91a97e0e
+      internalID: 977695062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_125
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305b025f4d2fab74982aa52a44a56374
+      internalID: -1335811838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_126
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 3740
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acd572379899664ca2e5ca16353cc90
+      internalID: -949430500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_127
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95433d30f0c8c247bbdc0f6b0c48af3
+      internalID: 150644116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_128
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb532babafe22814c83685957a8bd00f
+      internalID: 51218285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_129
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba27d87e69f07f148920600f532d746d
+      internalID: -2081244180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_130
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b0eb982d485ce48932605d1cdfc580
+      internalID: -253009644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_131
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f14c6f132f4aff44923f0340252f593
+      internalID: 536409138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_132
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2757dd5a7844531419e3630574d0e956
+      internalID: -241212449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_133
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728990a69abc8eb49b115dbf15a39841
+      internalID: -168474586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_134
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebf0599de0e9094082b281627118e81
+      internalID: -1700528398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_135
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bf30d3dd95c2b49b77d18259522393
+      internalID: 1888215822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_136
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638351306d14bd242a2b39acb20d4bb2
+      internalID: -264095799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_137
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdee9a73776cb84b8543624f68851ff
+      internalID: 1103854096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_138
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a29c980173405944b61c8c6c03d5ea6
+      internalID: 1920328541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_139
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ff459e814296f4285530ecad86b77a
+      internalID: -1504012528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_140
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1a021350b334c4dacdae2c9f5c84df
+      internalID: 1778075308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_141
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62a32deea0f4944cabdedfff66c5bb3
+      internalID: -809537697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_142
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e9d0add66ed9f479742d8c3ff76232
+      internalID: -1367588099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_143
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06fbc13527f5c543a99e21fda69165d
+      internalID: 1048787491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_144
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c894fddce3c16a647afa532c405a2336
+      internalID: 1224871165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_145
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 3484
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce2be0b5bdc433409bf0dedd47b5846
+      internalID: 258658115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_146
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc38391f6d8a3e044be52dd2ea965fe5
+      internalID: -946982768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_147
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dec0dc34bc981408d66852c18dd661
+      internalID: -1631845432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_148
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d3b35ad51586f41a7f2784ceedacf4
+      internalID: -524845884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_149
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175f04d11634aba4696e9b8e2ee5b2c2
+      internalID: 1903619600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_150
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66249b19fc9a194a83285590e66a10b
+      internalID: 422112689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_151
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea83d56fbc0470341810b0fb669c9043
+      internalID: -1799708802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_152
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e37789f8d801d34bab9e8225fd4beb2
+      internalID: 1317203496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_153
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc33650f5fec0e2408ef3d0aa4f52312
+      internalID: 352175488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_154
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de92059396f7aed46a9a1289f7ee0794
+      internalID: -848550799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_155
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc180a2e3ccae6d488b017885593dc96
+      internalID: 23899274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_156
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0056bc8df679e794ca9719e5c5108388
+      internalID: -667265633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_157
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a3b8c796846544384ed634eee4d44b
+      internalID: -796835377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_158
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7786c25d7ca5c3488d2cc6c3c363d2a
+      internalID: -687415313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_159
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71027cad562727645be6492e2d5111b7
+      internalID: -1289826891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_160
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96936fe414d6c9b4284fb564f334a6a1
+      internalID: -2012028047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_161
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35c1ae0a62df624dbceef97f2d66794
+      internalID: -429319358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_162
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591d3458a61631d4da2a2534ec0bfe69
+      internalID: -598883292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_163
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5bce5748bf8d44d8d835941843831c
+      internalID: 1979167086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_164
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10f22f68061c664a88221ab35640785
+      internalID: -886866837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_165
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 3228
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbe916b7f2643d4abc0c634b2f1532e
+      internalID: -683537242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_166
+      rect:
+        serializedVersion: 2
+        x: 3936
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27b47e84d98ca642a9fe00b2288116a
+      internalID: 836762941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_167
+      rect:
+        serializedVersion: 2
+        x: 4192
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3314e4d66dfe3e2408a5069362a8581d
+      internalID: -1642709041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_168
+      rect:
+        serializedVersion: 2
+        x: 4448
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb9eb26c5786e243a6e4a13e8bb0be1
+      internalID: 1027891988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_169
+      rect:
+        serializedVersion: 2
+        x: 4704
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f948284c158fe0043866acd5c9b47781
+      internalID: -1565871719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_170
+      rect:
+        serializedVersion: 2
+        x: 4960
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f03a287ff1dc54592b8daf94cbb1e9
+      internalID: -620609908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_171
+      rect:
+        serializedVersion: 2
+        x: 5216
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ed74cf2b69c3e4eb3624bf1b4295aa
+      internalID: 455890634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_172
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c7bd20997874b4d85779c3a0b0d760
+      internalID: 1706087295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_173
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec452ba7bd4e07a40bafdde955f5cb7b
+      internalID: 495469680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_174
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2a382d2a5491a458cca44ea7cba17c
+      internalID: -443426245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_175
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d586c49d238e0f74eb8ebe47812487b1
+      internalID: 346269029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_176
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc771a819ad87d4f8b8df835ea3095a
+      internalID: 1609941190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_177
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b48979d4351466408add84c51bb0726
+      internalID: 453991439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_178
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfc8fc985ce5604a8ecb62136ffe9f9
+      internalID: -42877858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_179
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a3f83137ccad043a9e7f7bbbdc13cb
+      internalID: 1878451311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_180
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700f10ef4a11a9d4b85efb23407905f5
+      internalID: 1957875484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_181
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa4d0f2227161049a008c3ecd0443f2
+      internalID: -692700415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_182
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c598d80247402e040b3832a332a82700
+      internalID: 383097739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_183
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21703cbf5fc048546a07f188f51dd5b2
+      internalID: -460368914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_184
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 2972
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e434ec18764d57f449e6d02fbe131fd7
+      internalID: -1955409954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_185
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24219d704ffe3e4e94c1445de2d9e01
+      internalID: 1150605172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_186
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243e5edf3860cf345be70faa59ce6fee
+      internalID: 652475365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_187
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe6c7646f92436429d98d4ac4e676ed
+      internalID: 665351857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_188
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907a584c689908344a2e450e518bc3b2
+      internalID: -208979518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_189
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda610121968c604d86d0a65e5550552
+      internalID: 73750561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_190
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cc4577729d6ec468d4d6c9ba3a0f1e
+      internalID: -1427334250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_191
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb363370fcda0d40a36d94f33de71ef
+      internalID: -1813573396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_192
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b6e9ebe8fa04044bc5a4fbbcb7c643
+      internalID: 994858892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_193
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbaf5a8f10ff6c44bcba455719ebe78
+      internalID: -210061774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_194
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ffa9a1b1ffd91b4ca6d38aaffe1c904
+      internalID: -180326791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_195
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a990fc81579bd2459543df538f7bd87
+      internalID: -1243140013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_196
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b584294c4b1574cbfb313e41f069b9
+      internalID: -134196290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_197
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 2716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bb2897e0490ec45ad6d3c02e30b822
+      internalID: -945819193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_198
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f29053e5fa58ba40bf676944ce7127b
+      internalID: 776890438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_199
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea2abd041f71914692910c737df9435
+      internalID: -409977229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_200
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269a04a1a7cf21b4bbbd3a2f62a1edc1
+      internalID: 843423321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_201
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd57d9400425e794cb41d3afe50e99e3
+      internalID: -1164886882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_202
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea65858e6756b548a7ae9511a6feb83
+      internalID: -1126642078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_203
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59c0ee50fe3aff44ab255bb631b572f
+      internalID: 1185744817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_204
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eeb457b27bf62f4d8e4b1d4e54b34ab
+      internalID: -1413170772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_205
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c7c5af3f334a64a94c132295686011
+      internalID: -963870159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_206
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b223677bd387a4942a992e258ca2b0c4
+      internalID: -635837472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_207
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7113401296e296b42989dcb4e8402ba0
+      internalID: 1318692134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_208
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1188d2a5f369a40bfa944e0dfe323a
+      internalID: -1503548338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_209
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b500cbaf18929b1489ee32e1de50441c
+      internalID: 306116075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_210
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 2460
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372f27343e642064b9dc64d82f424f85
+      internalID: -1365985087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_211
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a053b7e3d12ed8d419ba593d84b8fe1f
+      internalID: 640084306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_212
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c135cb1b49ce49a4face37f5dfbdd2cf
+      internalID: 435403958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_213
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0f34769478eb34fb4696d7f42086d3
+      internalID: 130024998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_214
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0269d847389b22f4db5276c3539cc4f4
+      internalID: 1056713095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_215
+      rect:
+        serializedVersion: 2
+        x: 6496
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab714153140d5d43a5488195f1ebc17
+      internalID: 891102286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_216
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3583a442ae7ee8d4fadf168407b44cd9
+      internalID: 858736110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_217
+      rect:
+        serializedVersion: 2
+        x: 7008
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07dfb63b54b7204d882cc1d3dc7a823
+      internalID: -453615941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_218
+      rect:
+        serializedVersion: 2
+        x: 7264
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917ed38f99266ec499462e34c6888bc1
+      internalID: 1883072349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_219
+      rect:
+        serializedVersion: 2
+        x: 7520
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2c12358c2599049afc2fc3479a44fc
+      internalID: -1213116958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_220
+      rect:
+        serializedVersion: 2
+        x: 7776
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296338c217ab8f24dbb86deb74fbeece
+      internalID: 1415018685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_221
+      rect:
+        serializedVersion: 2
+        x: 8032
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5b33c75e9672d4981f15f36f2c6845
+      internalID: -1991428577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_222
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebb062c461ddeb46bc1283b626d93a7
+      internalID: 204891753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: roof top_223
+      rect:
+        serializedVersion: 2
+        x: 8544
+        y: 2204
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b39476addc49bb428faad1f33a059b7
+      internalID: 1929991112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 67ec50aa939ce584ea2fe8bf7531a723
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      roof top_154: -848550799
+      roof top_194: -180326791
+      roof top_145: 258658115
+      roof top_161: -429319358
+      roof top_158: -687415313
+      roof top_210: -1365985087
+      roof top_74: 495684413
+      roof top_117: -1577327851
+      roof top_179: 1878451311
+      roof top_215: 891102286
+      roof top_152: 1317203496
+      roof top_170: -620609908
+      roof top_84: -1737533488
+      roof top_42: 1152786666
+      roof top_173: 495469680
+      roof top_176: 1609941190
+      roof top_81: 2129347526
+      roof top_203: 1185744817
+      roof top_8: -1462786983
+      roof top_60: -539383173
+      roof top_129: -2081244180
+      roof top_127: 150644116
+      roof top_80: 1615751698
+      roof top_47: 1341957035
+      roof top_11: 11055766
+      roof top_53: -1332026501
+      roof top_68: 1038680077
+      roof top_76: 962370035
+      roof top_124: 977695062
+      roof top_31: -125609848
+      roof top_59: -980219859
+      roof top_191: -1813573396
+      roof top_156: -667265633
+      roof top_52: -1719853934
+      roof top_205: -963870159
+      roof top_107: 146959381
+      roof top_177: 453991439
+      roof top_16: -985664740
+      roof top_12: 807495663
+      roof top_43: -198682311
+      roof top_160: -2012028047
+      roof top_167: -1642709041
+      roof top_175: 346269029
+      roof top_197: -945819193
+      roof top_4: -1882456863
+      roof top_63: -1563378975
+      roof top_138: 1920328541
+      roof top_90: 1082247217
+      roof top_128: 51218285
+      roof top_204: -1413170772
+      roof top_79: 881635042
+      roof top_102: -208882737
+      roof top_217: -453615941
+      roof top_93: 1853830248
+      roof top_202: -1126642078
+      roof top_37: 1408287867
+      roof top_41: -861090606
+      roof top_67: -1199334972
+      roof top_135: 1888215822
+      roof top_195: -1243140013
+      roof top_163: 1979167086
+      roof top_39: -1584769211
+      roof top_211: 640084306
+      roof top_97: -1974273873
+      roof top_181: -692700415
+      roof top_178: -42877858
+      roof top_183: -460368914
+      roof top_18: 1674900746
+      roof top_122: 791288384
+      roof top_100: 402941425
+      roof top_208: -1503548338
+      roof top_157: -796835377
+      roof top_133: -168474586
+      roof top_201: -1164886882
+      roof top_165: -683537242
+      roof top_50: 185376711
+      roof top_207: 1318692134
+      roof top_200: 843423321
+      roof top_95: -1318964902
+      roof top_141: -809537697
+      roof top_54: 446214470
+      roof top_71: 641242908
+      roof top_182: 383097739
+      roof top_196: -134196290
+      roof top_98: -41774018
+      roof top_56: 370248266
+      roof top_104: 1769766009
+      roof top_77: 1010708213
+      roof top_40: 1132010354
+      roof top_120: -248272724
+      roof top_188: -208979518
+      roof top_147: -1631845432
+      roof top_148: -524845884
+      roof top_123: 811033577
+      roof top_218: 1883072349
+      roof top_30: 885775249
+      roof top_216: 858736110
+      roof top_36: 828114612
+      roof top_72: 1922663181
+      roof top_69: 297412849
+      roof top_109: 799784206
+      roof top_136: -264095799
+      roof top_150: 422112689
+      roof top_186: 652475365
+      roof top_0: -127918573
+      roof top_26: -632542399
+      roof top_17: -1590921670
+      roof top_21: 910953600
+      roof top_171: 455890634
+      roof top_115: -1103177912
+      roof top_78: 334881951
+      roof top_126: -949430500
+      roof top_92: -1226077345
+      roof top_61: -232230648
+      roof top_2: 715899944
+      roof top_168: 1027891988
+      roof top_212: 435403958
+      roof top_10: 401234498
+      roof top_184: -1955409954
+      roof top_192: 994858892
+      roof top_7: -1807806367
+      roof top_62: -1585814385
+      roof top_132: -241212449
+      roof top_151: -1799708802
+      roof top_143: 1048787491
+      roof top_85: -2109575538
+      roof top_103: 829851581
+      roof top_118: -1744203965
+      roof top_38: 1743831815
+      roof top_35: -1509136005
+      roof top_169: -1565871719
+      roof top_55: 936349258
+      roof top_46: -39469700
+      roof top_14: -1113364148
+      roof top_83: -1071706995
+      roof top_111: 1858383941
+      roof top_99: -114763340
+      roof top_27: -1644403143
+      roof top_146: -946982768
+      roof top_32: 1637388447
+      roof top_44: -1970916934
+      roof top_220: 1415018685
+      roof top_142: -1367588099
+      roof top_187: 665351857
+      roof top_116: -523620158
+      roof top_57: 734288204
+      roof top_49: -759537136
+      roof top_131: 536409138
+      roof top_199: -409977229
+      roof top_33: 941306613
+      roof top_51: 1601800570
+      roof top_172: 1706087295
+      roof top_153: 352175488
+      roof top_24: 264289777
+      roof top_86: 1484519887
+      roof top_164: -886866837
+      roof top_58: -964643316
+      roof top_149: 1903619600
+      roof top_134: -1700528398
+      roof top_94: 1651394822
+      roof top_88: -1439665307
+      roof top_22: -1568160508
+      roof top_130: -253009644
+      roof top_213: 130024998
+      roof top_219: -1213116958
+      roof top_82: 487943605
+      roof top_121: -845948543
+      roof top_70: -1230759153
+      roof top_221: -1991428577
+      roof top_159: -1289826891
+      roof top_113: -1611736862
+      roof top_23: 503335488
+      roof top_174: -443426245
+      roof top_5: -2087445134
+      roof top_65: 1911781538
+      roof top_87: -1078717376
+      roof top_29: 224805238
+      roof top_193: -210061774
+      roof top_209: 306116075
+      roof top_189: 73750561
+      roof top_13: -417621031
+      roof top_185: 1150605172
+      roof top_137: 1103854096
+      roof top_180: 1957875484
+      roof top_3: 700857760
+      roof top_139: -1504012528
+      roof top_105: 762319026
+      roof top_25: 2066622786
+      roof top_206: -635837472
+      roof top_64: -1893572357
+      roof top_223: 1929991112
+      roof top_66: -315008521
+      roof top_20: 1169203182
+      roof top_45: -154816434
+      roof top_89: -1827238295
+      roof top_19: 1748075835
+      roof top_1: -1923310438
+      roof top_112: 1707176221
+      roof top_6: -1601895589
+      roof top_101: 1102534497
+      roof top_34: -1310766283
+      roof top_190: -1427334250
+      roof top_166: 836762941
+      roof top_96: 154915939
+      roof top_15: -612194225
+      roof top_162: -598883292
+      roof top_28: -1872956065
+      roof top_106: 481310328
+      roof top_214: 1056713095
+      roof top_114: -200333503
+      roof top_108: 425341080
+      roof top_75: -1541146836
+      roof top_119: -1471170538
+      roof top_140: 1778075308
+      roof top_155: 23899274
+      roof top_125: -1335811838
+      roof top_91: 1204918797
+      roof top_73: 485716442
+      roof top_222: 204891753
+      roof top_9: -1267988624
+      roof top_198: 776890438
+      roof top_48: -115386422
+      roof top_144: 1224871165
+      roof top_110: -505332176
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

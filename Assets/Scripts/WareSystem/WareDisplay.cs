@@ -7,6 +7,7 @@ public class WareDisplay : MonoBehaviour
 {
 	//Public Values
 	public Ware ware;
+	[SerializeField] AudioClip audioStoredCorrectly;
 
 	[Header ("Lara Values")]
 	public bool damaged = false;
@@ -26,6 +27,7 @@ public class WareDisplay : MonoBehaviour
 	public void ReturnToPool ()
 	{
 		Debug.Log ("Ware released back to pool");
+		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		transform.SetParent (WarePool.Me.transform);
 	}
 
@@ -47,8 +49,12 @@ public class WareDisplay : MonoBehaviour
 
 		if (isStoresCorrectly)
 		{
-			extendetTimer += timeOffset;
-			baseTimer = ware.durability * (extendetTimer / ware.durabilityExtended);
+			//Ware durabilityExtended is unlimited when 0
+			if (ware.durabilityExtended > 0f)
+			{
+				extendetTimer += timeOffset;
+				baseTimer = ware.durability * (extendetTimer / ware.durabilityExtended);
+			}
 		}
 		else
 		{
@@ -66,7 +72,7 @@ public class WareDisplay : MonoBehaviour
 		transform.position = parent.position;
 		transform.SetParent (parent);
 		transform.localScale = new Vector3 (0.5f, 0.5f);
-		gameObject.layer = 8;
+		gameObject.layer = LayerMask.NameToLayer ("NoCollision");
 		audioHandler.PlayOneShotFromList (ware.audiosPickUp);
 	}
 
@@ -75,7 +81,7 @@ public class WareDisplay : MonoBehaviour
 	{
 		transform.position = pos;
 		transform.SetParent (WarePool.Me.transform);
-		gameObject.layer = 0;
+		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		collisionBufferTimer = 0f;
 
 		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
@@ -180,6 +186,9 @@ public class WareDisplay : MonoBehaviour
 			tmp &= i.Value;
 
 		isStoresCorrectly = tmp;
+
+		if (isStoresCorrectly)
+			Ivyyy.AudioHandler.Me.PlayOneShot (audioStoredCorrectly);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

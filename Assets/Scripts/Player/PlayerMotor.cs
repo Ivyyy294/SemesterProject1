@@ -68,9 +68,13 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 			Move (movementVec);
 
 			//Update Animator Values
-			animator.SetFloat ("Horizontal", movementVec.x);
-			animator.SetFloat ("Vertical", movementVec.y);
-			animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+			
+			if (movementVec.sqrMagnitude > 0.01f)
+			{
+				animator.SetFloat ("Horizontal", movementVec.x);
+				animator.SetFloat ("Vertical", movementVec.y);
+				animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+			}
 		}
 	}
 

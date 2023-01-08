@@ -11,15 +11,95 @@ public class GameDateTime
 
 public class Team
 {
+	//Public Values
 	public int Id;
-	public float Reputation {set;get;}
-	public float SilverCoins {set;get;}
+	public float Reputation {private set;get;}
+	public float SilverCoins {private set;get;}
+	public float SilverCoinsEarned {private set; get;}
 	public List <uint> playerIds = new List<uint>();
+	
+	//Private Values
+	private float timeSinceRequest = 0f;
+	private float timeSincePassiveReputationLoss;
+	private uint numberOfTaxes;
+	private bool taxCollected = false;
+	GameStatus gameStatus;
 
+	//Public Functions
 	public Team()
 	{
 		Reputation = 50f;
 		SilverCoins = 0f;
+
+		gameStatus = GameStatus.Me;
+		timeSincePassiveReputationLoss = gameStatus.passiveReputationLossInterval;
+	}
+
+	public void ReputationGain (float requestTime)
+	{
+		Reputation += (1 + (2 - Reputation/50)) * ((requestTime - timeSinceRequest) / 100);
+		timeSinceRequest = 0f;
+		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepGain);
+	}
+
+	public void ReputationLoss()
+	{
+		Reputation -= 1;
+		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepLoss);
+		//Reputation -= 1 + Reputation / 50;
+	}
+
+	public void AddSilverCoins (float val)
+	{
+		if (val > 0f)
+			SilverCoinsEarned += val;
+
+		SilverCoins += val;
+	}
+
+	public void Update()
+	{
+		if (timeSinceRequest >= gameStatus.passiveReputationLossThreshold)
+			PassiveReputationLoss();
+
+		timeSinceRequest += Time.deltaTime;
+
+		if (gameStatus.GetCurrentDateTime().day % gameStatus.cityTaxInterval == 0)
+		{
+			if (!taxCollected)
+			{
+				CityTax();
+				taxCollected = true;
+			}
+		}
+		else
+			taxCollected = false;
+	}
+
+	//Private Values
+
+	private void PassiveReputationLoss ()
+	{
+		if (timeSincePassiveReputationLoss >= gameStatus.passiveReputationLossInterval)
+		{
+			ReputationLoss();
+			timeSincePassiveReputationLoss = 0;
+		}
+		else
+			timeSincePassiveReputationLoss += Time.deltaTime;
+	}
+
+	private void CityTax ()
+	{
+		++numberOfTaxes;
+		float tax = 5 + (2f * numberOfTaxes) + (SilverCoins * 0.1f);
+
+		if (SilverCoinsEarned > 0f)
+			tax += ((Mathf.Pow (SilverCoinsEarned, 1.4f) / numberOfTaxes) * 0.1f);
+
+		SilverCoins -= tax;
+
+		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioTax);
 	}
 }
 
@@ -33,6 +113,16 @@ public class GameStatus : MonoBehaviour
 
 	[Header ("Game Settings")]
 	[SerializeField] float dayLenght = 60f;
+
+	[Header ("Reputation Settings")]
+	public float passiveReputationLossThreshold;
+	public float passiveReputationLossInterval;
+	public AudioClip audioRepGain;
+	public AudioClip audioRepLoss;
+
+	[Header ("Tax Settings")]
+	public int cityTaxInterval;
+	public AudioClip audioTax;
 
 	//Private Values
 	List <Team> teams;
@@ -53,12 +143,20 @@ public class GameStatus : MonoBehaviour
 		}
 	}
 
-	public void AddReputation (uint playerId, float val)
+	public void AddReputation (uint playerId, float requestTime)
 	{
 		Team t = GetTeamForPlayer (playerId);
 
 		if (t != null)
-			t.Reputation += val;
+			t.ReputationGain (requestTime);
+	}
+
+	public void LossReputation (uint playerId)
+	{
+		Team t = GetTeamForPlayer (playerId);
+
+		if (t != null)
+			t.ReputationLoss ();
 	}
 
 	public void AddSilverCoins (uint playerId, float val)
@@ -66,7 +164,7 @@ public class GameStatus : MonoBehaviour
 		Team t = GetTeamForPlayer (playerId);
 
 		if (t != null)
-			t.SilverCoins += val;
+			t.AddSilverCoins (val);
 	}
 
 	public float GetPlayerMoney (uint playerId)
@@ -145,6 +243,9 @@ public class GameStatus : MonoBehaviour
     {
 		lifeTime += Time.deltaTime;
 		CalculateDayTime();
+
+		foreach (Team i in teams)
+			i.Update();
     }
 
 	/* void OnGUI()

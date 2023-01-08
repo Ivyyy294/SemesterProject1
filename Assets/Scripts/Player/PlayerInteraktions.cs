@@ -11,6 +11,9 @@ public class PlayerInteraktions: MonoBehaviour
 	[SerializeField] float rayDistance;
 	[SerializeField] GameObject dropIndicator;
 	[SerializeField] Vector3 rotationOffset;
+	[SerializeField] Transform warePos;
+	[SerializeField] Transform center;
+	[SerializeField] GameObject heartIcon;
 
 	//Private Values
 	private Grid snapGrid;
@@ -68,40 +71,28 @@ public class PlayerInteraktions: MonoBehaviour
 
 		if (indicatorActive && rotateAction != null && rotateAction.WasPerformedThisFrame ())
 			RotateIndicator();
-
-		if (indicatorActive != dropIndicator.activeInHierarchy)
-			dropIndicator.SetActive (indicatorActive);
 	}
 
 	void CastRay ()
 	{
-		int layerMask = 1 << 0;
-		RaycastHit2D hitInfo = Physics2D.Raycast (transform.position, dir, rayDistance, layerMask);
-		Debug.DrawRay (transform.position, dir * rayDistance, Color.green, 1f);
+		int layerMask = 1 << LayerMask.NameToLayer ("Interactables")
+			| 1 << LayerMask.NameToLayer ("Team1")
+			| 1 << LayerMask.NameToLayer ("Team2");
 
-		if (grabbedObject != null)
-		{
-			if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
-				InteractMerchant (hitInfo.collider.gameObject);
-			else
-				DropObject();
-		}
-		else if (hitInfo.collider != null)
-		{
-			if (hitInfo.collider.CompareTag ("Ware"))
-				InteractWare(hitInfo.collider.gameObject);
-			else if (hitInfo.collider.CompareTag ("Merchant"))
-				InteractMerchant (hitInfo.collider.gameObject);
-			else if (hitInfo.collider.CompareTag ("Store"))
-				InteractStore (hitInfo.collider.gameObject);
-			else if (grabbedObject != null)
-				DropObject();
-		}
+		Debug.DrawRay (center.transform.position, dir * rayDistance, Color.green, 1f);
+		
+		RaycastHit2D[] hitInfo = Physics2D.RaycastAll (center.transform.position, dir, rayDistance, layerMask);
+
+		if (grabbedObject == null)
+			InteractionsFreeHands (hitInfo);
+		else
+			InteractionsWareGrabbed (hitInfo);
 	}
 
 	private void LateUpdate()
 	{
-		MoveIndicatorPos();
+		if (dropIndicator != null && dropIndicator.activeInHierarchy)
+			MoveIndicatorPos();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -112,14 +103,26 @@ public class PlayerInteraktions: MonoBehaviour
 
 	void MoveIndicatorPos ()
 	{
-		if (dropIndicator != null && snapGrid != null)
+		if (snapGrid != null && dropIndicator.activeInHierarchy)
 		{
-			float offset = 1 + snapGrid.cellSize.x; //indicatorRotated ? dropIndicator.transform.lossyScale.x : dropIndicator.transform.lossyScale.y;
+			//Getting center of player cell
+			Vector3 newPos = center.transform.position;
+			
+			//Getting Ware size
+			Vector3 offset = grabbedObject.ware.GetSizeInWorld() * 0.5f;
+			offset += snapGrid.cellSize;
 
-			Vector3Int cp = snapGrid.WorldToCell (transform.position + dir * offset);
-			Vector3 newPos = snapGrid.GetCellCenterWorld (cp);
+			if (indicatorRotated)
+				offset = new Vector3 (offset.y, offset.x);
 
-			dropIndicator.transform.position = newPos; //snapGrid.GetCellCenterWorld (cp) + snapGrid.cellSize;
+			//Scaling with direction Vector
+			offset.Scale (dir);
+
+			newPos = GetCellCenterPos (newPos + offset);
+
+			dropIndicator.transform.position = newPos;
+
+			dropIndicator.GetComponent<DropIndicator>().RaycastCheck(center.position);
 		}
 	}
 
@@ -145,12 +148,63 @@ public class PlayerInteraktions: MonoBehaviour
 			{
 				dropIndicator.SetActive (true);
 				oScale = grabbedObject.transform.localScale;
-				grabbedObject.PickUp (transform);
+				grabbedObject.PickUp (warePos.transform);
 
 				//Setting Size of Drop indicator to Ware Size
 				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
+				dropIndicator.SetActive (true);
 			}
 		}
+	}
+
+	private void InteractionsFreeHands (RaycastHit2D[] hitinfos)
+	{
+		foreach (RaycastHit2D i in hitinfos)
+		{
+			//Skip child objects
+			if (!i.transform.IsChildOf (transform))
+			{
+				if (i.collider.CompareTag ("Ware"))
+				{
+					InteractWare(i.collider.gameObject);
+					break;
+				}
+				else if (i.collider.CompareTag ("Merchant"))
+				{
+					InteractMerchant (i.collider.gameObject);
+					break;
+				}
+				else if (i.collider.CompareTag ("Store"))
+				{
+					InteractStore (i.collider.gameObject);
+					break;
+				}
+				else if (i.collider.CompareTag ("Player"))
+				{
+					InteractPlayer ();
+					break;
+				}
+			}
+		}
+	}
+
+	private void InteractionsWareGrabbed (RaycastHit2D[] hitinfos)
+	{
+		bool dropWare = true;
+
+		foreach (RaycastHit2D i in hitinfos)
+		{
+			if (i.collider != null && i.collider.CompareTag ("Merchant"))
+			{
+				InteractMerchant (i.collider.gameObject);
+				dropWare = false;
+				break;
+			}
+
+		}
+
+		if (dropWare)
+			DropObject();
 	}
 
 	private void InteractWare (GameObject obj)
@@ -183,19 +237,38 @@ public class PlayerInteraktions: MonoBehaviour
 			if (tmp != null && grabbedObject != null)
 			{
 				if (tmp.Interact (grabbedObject.gameObject, playerId))
-				{
-					grabbedObject.gameObject.SetActive (false);
-					grabbedObject = null;
-				}
+					ReturnGrabbedObject ();
 			}
 		}
 	}
 
+	private void InteractPlayer()
+	{
+		heartIcon.SetActive (true);
+	}
+
+	void ResetDropIndicator()
+	{
+		dropIndicator.transform.localScale = new Vector3 (1f, 1f);
+		dropIndicator.SetActive (false);
+	}
+
+	//Places the ware back on the ground
 	private void ResetGrabbedObject (Vector3 pos)
 	{ 
 		grabbedObject.transform.localScale = oScale;
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
+		ResetDropIndicator();
+	}
+
+	//Returns the ware to the pool
+	private void ReturnGrabbedObject ()
+	{ 
+		grabbedObject.transform.localScale = oScale;
+		grabbedObject.ReturnToPoolDeactivated();
+		grabbedObject = null;
+		ResetDropIndicator();
 	}
 
 	private void RotateIndicator ()
@@ -215,5 +288,11 @@ public class PlayerInteraktions: MonoBehaviour
 			indicatorRotated = !indicatorRotated;
 		}
 
+	}
+
+	Vector3 GetCellCenterPos (Vector3 pos)
+	{
+		Vector3Int cp = snapGrid.WorldToCell (pos);
+		return snapGrid.GetCellCenterWorld (cp);
 	}
 }

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StoreSlot : MonoBehaviour
 {
 	//Editor Values
 	[SerializeField] SpriteRenderer iconRenderer;
+	[SerializeField] TextMeshProUGUI price;
 
 	//private Values
 	private Ware ware;
@@ -20,6 +22,11 @@ public class StoreSlot : MonoBehaviour
 			iconRenderer.sprite = ware.SpriteOk;
 		else
 			Debug.Log ("iconRenderer missing!");
+
+		if (price != null)
+			price.text = w.value.ToString();
+		else
+			Debug.Log ("Price text missing!");
 	}
 
 	public GameObject BuyWare (uint playerId)

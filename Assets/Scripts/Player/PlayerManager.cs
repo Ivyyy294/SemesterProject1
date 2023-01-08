@@ -59,7 +59,7 @@ public class PlayerManager : MonoBehaviour
 		else
 		{
 			Me = this;
-			//DontDestroyOnLoad (Me);
+			//DontDestroyOnLoad (this);
 			playerConfigs = new List<PlayerConfigurationDisplay>();
 			MaxPlayers = GetComponent <PlayerInputManager>().maxPlayerCount;
 		}
