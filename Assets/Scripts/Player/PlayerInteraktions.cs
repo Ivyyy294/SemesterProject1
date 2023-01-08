@@ -84,28 +84,12 @@ public class PlayerInteraktions: MonoBehaviour
 
 		Debug.DrawRay (center.transform.position, dir * rayDistance, Color.green, 1f);
 		
-		RaycastHit2D hitInfo = Physics2D.Raycast (center.transform.position, dir, rayDistance, layerMask);
-		
-		if (grabbedObject != null)
-		{
-			if (hitInfo.collider != null && hitInfo.collider.CompareTag ("Merchant"))
-				InteractMerchant (hitInfo.collider.gameObject);
-			else
-				DropObject();
-		}
-		else if (hitInfo.collider != null)
-		{
-			if (hitInfo.collider.CompareTag ("Ware"))
-				InteractWare(hitInfo.collider.gameObject);
-			else if (hitInfo.collider.CompareTag ("Merchant"))
-				InteractMerchant (hitInfo.collider.gameObject);
-			else if (hitInfo.collider.CompareTag ("Store"))
-				InteractStore (hitInfo.collider.gameObject);
-			else if (hitInfo.collider.CompareTag ("Player"))
-				InteractPlayer ();
-			//else if (grabbedObject != null)
-			//	DropObject();
-		}
+		RaycastHit2D[] hitInfo = Physics2D.RaycastAll (center.transform.position, dir, rayDistance, layerMask);
+
+		if (grabbedObject == null)
+			InteractionsFreeHands (hitInfo);
+		else
+			InteractionsWareGrabbed (hitInfo);
 	}
 
 	private void LateUpdate()
@@ -173,6 +157,44 @@ public class PlayerInteraktions: MonoBehaviour
 				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
 			}
 		}
+	}
+
+	private void InteractionsFreeHands (RaycastHit2D[] hitinfos)
+	{
+		foreach (RaycastHit2D i in hitinfos)
+		{
+			//Skip child objects
+			if (!i.transform.IsChildOf (transform))
+			{
+				if (i.collider.CompareTag ("Ware"))
+					InteractWare(i.collider.gameObject);
+				else if (i.collider.CompareTag ("Merchant"))
+					InteractMerchant (i.collider.gameObject);
+				else if (i.collider.CompareTag ("Store"))
+					InteractStore (i.collider.gameObject);
+				else if (i.collider.CompareTag ("Player"))
+					InteractPlayer ();
+			}
+		}
+	}
+
+	private void InteractionsWareGrabbed (RaycastHit2D[] hitinfos)
+	{
+		bool dropWare = true;
+
+		foreach (RaycastHit2D i in hitinfos)
+		{
+			if (i.collider != null && i.collider.CompareTag ("Merchant"))
+			{
+				InteractMerchant (i.collider.gameObject);
+				dropWare = false;
+				break;
+			}
+
+		}
+
+		if (dropWare)
+			DropObject();
 	}
 
 	private void InteractWare (GameObject obj)
