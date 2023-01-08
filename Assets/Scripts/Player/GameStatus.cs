@@ -85,6 +85,7 @@ public class Team
 
 	private void CityTax ()
 	{
+		++numberOfTaxes;
 		float tax = 5 + (2f * numberOfTaxes) + (SilverCoins * 0.1f);
 
 		if (SilverCoinsEarned > 0f)
@@ -92,7 +93,6 @@ public class Team
 
 		SilverCoins -= tax;
 
-		++numberOfTaxes;
 	}
 }
 
