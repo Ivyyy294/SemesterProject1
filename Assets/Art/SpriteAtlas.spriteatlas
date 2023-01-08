@@ -1633,6 +1633,36 @@ SpriteAtlas:
   - {fileID: 367209125, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: -818003589, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
+  - {fileID: -1215382313, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 264713608, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -59795995, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -190465845, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 303258182, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 481889996, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1855712377, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1637812867, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -190940204, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -652323838, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -853226383, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 426349424, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1481512692, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1038448397, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 396395270, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1415103066, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1118279209, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 111653500, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1913798475, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1464211719, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1269706659, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -153839987, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 776302550, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 907502719, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 2018802080, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1330577210, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -829241207, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1833854146, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -669262540, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 777849160, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: -1429788626, guid: a53f616a76e438146be5503e16502f40, type: 3}
   - {fileID: 1885515764, guid: a53f616a76e438146be5503e16502f40, type: 3}
   - {fileID: -32909777, guid: a53f616a76e438146be5503e16502f40, type: 3}
@@ -4257,6 +4287,36 @@ SpriteAtlas:
   - Ship details 1_83
   - Ship details 1_82
   - Armour
+  - fontain_9
+  - fontain_8
+  - fontain_5
+  - fontain_4
+  - fontain_7
+  - fontain_6
+  - fontain_1
+  - fontain_0
+  - fontain_3
+  - fontain_2
+  - fontain_14
+  - fontain_15
+  - fontain_16
+  - fontain_17
+  - fontain_10
+  - fontain_11
+  - fontain_12
+  - fontain_13
+  - fontain_18
+  - fontain_19
+  - fontain_29
+  - fontain_28
+  - fontain_25
+  - fontain_24
+  - fontain_27
+  - fontain_26
+  - fontain_21
+  - fontain_20
+  - fontain_23
+  - fontain_22
   - wooden tips (2, 2s)_4
   - wooden tips (2, 2s)_0
   - wooden tips (2, 2s)_1
