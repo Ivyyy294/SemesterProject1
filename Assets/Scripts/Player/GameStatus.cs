@@ -11,31 +11,41 @@ public class GameDateTime
 
 public class Team
 {
-	//Public
+	//Public Values
 	public int Id;
 	public float Reputation {private set;get;}
 	public float SilverCoins {private set;get;}
 	public float SilverCoinsEarned {private set; get;}
-
 	public List <uint> playerIds = new List<uint>();
 	
+	//Private Values
+	private float timeSinceRequest = 0f;
+	private float timeSincePassiveReputationLoss;
+	private uint numberOfTaxes;
+	private bool taxCollected = false;
+	GameStatus gameStatus;
+
+	//Public Functions
 	public Team()
 	{
 		Reputation = 50f;
 		SilverCoins = 0f;
 
-		timeSincePassiveReputationLoss = GameStatus.Me.passiveReputationLossInterval;
+		gameStatus = GameStatus.Me;
+		timeSincePassiveReputationLoss = gameStatus.passiveReputationLossInterval;
 	}
 
 	public void ReputationGain (float requestTime)
 	{
 		Reputation += (1 + (2 - Reputation/50)) * ((requestTime - timeSinceRequest) / 100);
 		timeSinceRequest = 0f;
+		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepGain);
 	}
 
 	public void ReputationLoss()
 	{
 		Reputation -= 1;
+		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepLoss);
 		//Reputation -= 1 + Reputation / 50;
 	}
 
@@ -49,12 +59,12 @@ public class Team
 
 	public void Update()
 	{
-		if (timeSinceRequest >= GameStatus.Me.passiveReputationLossThreshold)
+		if (timeSinceRequest >= gameStatus.passiveReputationLossThreshold)
 			PassiveReputationLoss();
 
 		timeSinceRequest += Time.deltaTime;
 
-		if (GameStatus.Me.GetCurrentDateTime().day % GameStatus.Me.cityTaxInterval == 0)
+		if (gameStatus.GetCurrentDateTime().day % gameStatus.cityTaxInterval == 0)
 		{
 			if (!taxCollected)
 			{
@@ -66,15 +76,11 @@ public class Team
 			taxCollected = false;
 	}
 
-	//Private
-	private float timeSinceRequest = 0f;
-	private float timeSincePassiveReputationLoss;
-	private uint numberOfTaxes;
-	private bool taxCollected = false;
+	//Private Values
 
 	private void PassiveReputationLoss ()
 	{
-		if (timeSincePassiveReputationLoss >= GameStatus.Me.passiveReputationLossInterval)
+		if (timeSincePassiveReputationLoss >= gameStatus.passiveReputationLossInterval)
 		{
 			ReputationLoss();
 			timeSincePassiveReputationLoss = 0;
@@ -93,7 +99,7 @@ public class Team
 
 		SilverCoins -= tax;
 
-		Ivyyy.AudioHandler.Me.PlayOneShot (GameStatus.Me.audioTax);
+		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioTax);
 	}
 }
 
@@ -111,6 +117,8 @@ public class GameStatus : MonoBehaviour
 	[Header ("Reputation Settings")]
 	public float passiveReputationLossThreshold;
 	public float passiveReputationLossInterval;
+	public AudioClip audioRepGain;
+	public AudioClip audioRepLoss;
 
 	[Header ("Tax Settings")]
 	public int cityTaxInterval;
