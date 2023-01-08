@@ -448,6 +448,8 @@ SpriteAtlas:
   - {fileID: -1278347860, guid: 67658222fb614514aa399705013d5b52, type: 3}
   - {fileID: -1709544799, guid: 67658222fb614514aa399705013d5b52, type: 3}
   - {fileID: 21300000, guid: ef73fc42770099c46a7b80d472e70ee6, type: 3}
+  - {fileID: 1138551846, guid: 567fe952e1e5b5d40b832ff6e7b6befb, type: 3}
+  - {fileID: 534614463, guid: 567fe952e1e5b5d40b832ff6e7b6befb, type: 3}
   - {fileID: 21300000, guid: 0172837208b81c54b8db50114e31f676, type: 3}
   - {fileID: 21300000, guid: cc7966820b0256848b6ce0051457f45b, type: 3}
   - {fileID: 21300000, guid: 30962ec29612c7e44b61b51b8c6d484a, type: 3}
@@ -3070,6 +3072,8 @@ SpriteAtlas:
   - Water2_5
   - Water2_4
   - Armour 1
+  - oil lamp 2_6
+  - oil lamp 2_7
   - HoneyS
   - HoneyS2
   - thor-hammer
