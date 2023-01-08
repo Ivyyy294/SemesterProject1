@@ -141,6 +141,7 @@ MonoBehaviour:
   ship: {fileID: 1754998832691582993}
   shipPathfinding: {fileID: 1280082775145688257}
   shipDockTime: 30
+  audioShipArrived: {fileID: 8300000, guid: b8958329c40dade45ac66b7949982043, type: 3}
 --- !u!1 &7584734361149755524
 GameObject:
   m_ObjectHideFlags: 0

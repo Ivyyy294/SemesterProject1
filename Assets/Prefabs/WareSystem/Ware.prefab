@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ware: {fileID: 0}
+  audioStoredCorrectly: {fileID: 8300000, guid: 778ea6666b794894c8e8723f57b2fd5a, type: 3}
   damaged: 0
   isStoresCorrectly: 0
   fragilityDmg: 0
