@@ -27,10 +27,16 @@ public class PlayerInteraktions: MonoBehaviour
 	private WareDisplay grabbedObject;
 	private Vector3 dir;
 	private uint playerId;
+	private bool indicatorRotated = false;
+
+	//Input Actions
 	private InputAction moveAction;
 	private InputAction grabAction;
 	private InputAction rotateAction;
-	private bool indicatorRotated = false;
+	private InputAction emote1;
+	private InputAction emote2;
+	private InputAction emote3;
+	private InputAction emote4;
 	
 	//Public Functions
 	public void InitInput(PlayerConfiguration pc)
@@ -38,6 +44,12 @@ public class PlayerInteraktions: MonoBehaviour
 		moveAction = pc.Input.actions["Movement"];
 		grabAction = pc.Input.actions["Grab"];
 		rotateAction = pc.Input.actions ["Rotate"];
+
+		emote1 = pc.Input.actions["Emote 1"];
+		emote2 = pc.Input.actions["Emote 2"];
+		emote3 = pc.Input.actions["Emote 3"];
+		emote4 = pc.Input.actions["Emote 4"];
+
 		playerId = (uint) pc.PlayerIndex;
 	}
 
@@ -75,6 +87,22 @@ public class PlayerInteraktions: MonoBehaviour
 
 		if (indicatorActive && rotateAction != null && rotateAction.WasPerformedThisFrame ())
 			RotateIndicator();
+
+		//Emotes
+		if (emoteHandler != null)
+		{
+			if (emote1 != null && emote1.WasPressedThisFrame())
+				emoteHandler.PlayEmote (heartEmote);
+
+			if (emote2 != null && emote2.WasPressedThisFrame())
+				emoteHandler.PlayEmote (happyEmote);
+
+			if (emote3 != null && emote3.WasPressedThisFrame())
+				emoteHandler.PlayEmote (sadEmote);
+
+			if (emote4 != null && emote4.WasPressedThisFrame())
+				emoteHandler.PlayEmote (angryEmote);
+		}
 	}
 
 	void CastRay ()

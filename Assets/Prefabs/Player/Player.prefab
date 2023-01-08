@@ -290,18 +290,18 @@ MonoBehaviour:
     audio: {fileID: 0}
     volume: 0
   sadEmote:
-    sprite: {fileID: 0}
-    duration: 0
+    sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+    duration: 1
     audio: {fileID: 0}
     volume: 0
   happyEmote:
-    sprite: {fileID: 0}
-    duration: 0
+    sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+    duration: 1
     audio: {fileID: 0}
     volume: 0
   angryEmote:
-    sprite: {fileID: 0}
-    duration: 0
+    sprite: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
+    duration: 1
     audio: {fileID: 0}
     volume: 0
   rayDistance: 1.5

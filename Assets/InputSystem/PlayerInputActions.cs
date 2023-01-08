@@ -53,6 +53,42 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 1"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a6fe7cb-6e4f-4bac-98e8-4fdc56cf988b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 2"",
+                    ""type"": ""Button"",
+                    ""id"": ""3dd8fc08-be33-4048-a5dc-10440a00093f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 3"",
+                    ""type"": ""Button"",
+                    ""id"": ""9501b32a-5b20-4839-b44a-c6bb08f4ea00"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 4"",
+                    ""type"": ""Button"",
+                    ""id"": ""a9678320-288f-4e96-a72d-fd3ac59bb503"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -253,6 +289,94 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b0bddf04-ba40-4390-ba16-b884c1dc54ff"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Gamepad2"",
+                    ""action"": ""Emote 1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""faa0c069-3e6a-42f2-b8db-72fc5c3f458a"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ffc97fec-83a9-47cb-80bd-25b9f231d383"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Gamepad2"",
+                    ""action"": ""Emote 2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9bf58d64-a131-4906-a30c-6bfd78dbbd98"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d20ee65d-faf3-4278-a1ae-8af55aa2b169"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Gamepad2"",
+                    ""action"": ""Emote 3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ee247588-46c4-4e05-941b-430cf0a5538e"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afc1a776-88c4-4078-ab62-8b19298aeba1"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Gamepad2"",
+                    ""action"": ""Emote 4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b62b371b-8428-40cf-b343-fe41c374b303"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -298,6 +422,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_Emote1 = m_Player.FindAction("Emote 1", throwIfNotFound: true);
+        m_Player_Emote2 = m_Player.FindAction("Emote 2", throwIfNotFound: true);
+        m_Player_Emote3 = m_Player.FindAction("Emote 3", throwIfNotFound: true);
+        m_Player_Emote4 = m_Player.FindAction("Emote 4", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -360,6 +488,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_Emote1;
+    private readonly InputAction m_Player_Emote2;
+    private readonly InputAction m_Player_Emote3;
+    private readonly InputAction m_Player_Emote4;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -367,6 +499,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @Emote1 => m_Wrapper.m_Player_Emote1;
+        public InputAction @Emote2 => m_Wrapper.m_Player_Emote2;
+        public InputAction @Emote3 => m_Wrapper.m_Player_Emote3;
+        public InputAction @Emote4 => m_Wrapper.m_Player_Emote4;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -385,6 +521,18 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @Emote1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote1;
+                @Emote1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote1;
+                @Emote1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote1;
+                @Emote2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote2;
+                @Emote2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote2;
+                @Emote2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote2;
+                @Emote3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote3;
+                @Emote3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote3;
+                @Emote3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote3;
+                @Emote4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote4;
+                @Emote4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote4;
+                @Emote4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote4;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -398,6 +546,18 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
+                @Emote1.started += instance.OnEmote1;
+                @Emote1.performed += instance.OnEmote1;
+                @Emote1.canceled += instance.OnEmote1;
+                @Emote2.started += instance.OnEmote2;
+                @Emote2.performed += instance.OnEmote2;
+                @Emote2.canceled += instance.OnEmote2;
+                @Emote3.started += instance.OnEmote3;
+                @Emote3.performed += instance.OnEmote3;
+                @Emote3.canceled += instance.OnEmote3;
+                @Emote4.started += instance.OnEmote4;
+                @Emote4.performed += instance.OnEmote4;
+                @Emote4.canceled += instance.OnEmote4;
             }
         }
     }
@@ -434,5 +594,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnGrab(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnEmote1(InputAction.CallbackContext context);
+        void OnEmote2(InputAction.CallbackContext context);
+        void OnEmote3(InputAction.CallbackContext context);
+        void OnEmote4(InputAction.CallbackContext context);
     }
 }
