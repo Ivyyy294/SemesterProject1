@@ -13,6 +13,7 @@ public class PlayerInteraktions: MonoBehaviour
 	[SerializeField] Vector3 rotationOffset;
 	[SerializeField] Transform warePos;
 	[SerializeField] Transform center;
+	[SerializeField] GameObject heartIcon;
 
 	//Private Values
 	private Grid snapGrid;
@@ -77,7 +78,10 @@ public class PlayerInteraktions: MonoBehaviour
 
 	void CastRay ()
 	{
-		int layerMask = 1 << LayerMask.NameToLayer ("Interactables");
+		int layerMask = 1 << LayerMask.NameToLayer ("Interactables")
+			| 1 << LayerMask.NameToLayer ("Team1")
+			| 1 << LayerMask.NameToLayer ("Team2");
+
 		Debug.DrawRay (center.transform.position, dir * rayDistance, Color.green, 1f);
 		
 		RaycastHit2D hitInfo = Physics2D.Raycast (center.transform.position, dir, rayDistance, layerMask);
@@ -97,8 +101,10 @@ public class PlayerInteraktions: MonoBehaviour
 				InteractMerchant (hitInfo.collider.gameObject);
 			else if (hitInfo.collider.CompareTag ("Store"))
 				InteractStore (hitInfo.collider.gameObject);
-			else if (grabbedObject != null)
-				DropObject();
+			else if (hitInfo.collider.CompareTag ("Player"))
+				InteractPlayer ();
+			//else if (grabbedObject != null)
+			//	DropObject();
 		}
 	}
 
@@ -202,6 +208,11 @@ public class PlayerInteraktions: MonoBehaviour
 					ReturnGrabbedObject ();
 			}
 		}
+	}
+
+	private void InteractPlayer()
+	{
+		heartIcon.SetActive (true);
 	}
 
 	//Places the ware back on the ground

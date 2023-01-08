@@ -2547,6 +2547,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
   - {fileID: 21300000, guid: a6f7f84fbe6087041991ffa5a65c597c, type: 3}
   - {fileID: 21300000, guid: c9f1105f37fdb3c41a8864716df5cd6f, type: 3}
+  - {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
   - {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   - {fileID: -1830135205, guid: 1dbd89afafa8a8f448030cb29de537d6, type: 3}
   - {fileID: 741320434, guid: 1dbd89afafa8a8f448030cb29de537d6, type: 3}
@@ -5120,6 +5121,7 @@ SpriteAtlas:
   - crates_study_x2
   - FishOil
   - IronOre1
+  - Heart
   - storeplaceholder
   - TX Plant_32
   - TX Plant_33
