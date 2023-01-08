@@ -71,9 +71,6 @@ public class PlayerInteraktions: MonoBehaviour
 
 		if (indicatorActive && rotateAction != null && rotateAction.WasPerformedThisFrame ())
 			RotateIndicator();
-
-		if (indicatorActive != dropIndicator.activeInHierarchy)
-			dropIndicator.SetActive (indicatorActive);
 	}
 
 	void CastRay ()
@@ -155,6 +152,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 				//Setting Size of Drop indicator to Ware Size
 				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
+				dropIndicator.SetActive (true);
 			}
 		}
 	}
@@ -237,12 +235,19 @@ public class PlayerInteraktions: MonoBehaviour
 		heartIcon.SetActive (true);
 	}
 
+	void ResetDropIndicator()
+	{
+		dropIndicator.transform.localScale = new Vector3 (1f, 1f);
+		dropIndicator.SetActive (false);
+	}
+
 	//Places the ware back on the ground
 	private void ResetGrabbedObject (Vector3 pos)
 	{ 
 		grabbedObject.transform.localScale = oScale;
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
+		ResetDropIndicator();
 	}
 
 	//Returns the ware to the pool
@@ -251,6 +256,7 @@ public class PlayerInteraktions: MonoBehaviour
 		grabbedObject.transform.localScale = oScale;
 		grabbedObject.ReturnToPoolDeactivated();
 		grabbedObject = null;
+		ResetDropIndicator();
 	}
 
 	private void RotateIndicator ()
