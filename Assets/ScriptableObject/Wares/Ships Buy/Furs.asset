@@ -17,11 +17,11 @@ MonoBehaviour:
   value: 2
   weight: 0
   size: {x: 2, y: 2}
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  SpriteOk: {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
-  durability: 120
+  durability: 180
   durabilityExtended: 0
   storingAreaIds: 03000000
   fragility: 0
