@@ -16,5 +16,5 @@ MonoBehaviour:
   sprite: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
   requestList:
   - ware: {fileID: 11400000, guid: 578d4676b3b07094eabb2c371995ff6d, type: 2}
-    requestChance: 0
+    requestChance: 1
   requestFrequency: 60
