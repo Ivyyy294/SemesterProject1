@@ -1831,6 +1831,7 @@ SpriteAtlas:
   - {fileID: -1067008229, guid: 78a6c01b9063fc946bc5d8fe371addec, type: 3}
   - {fileID: 21300000, guid: c2fd6a1b5de719c4993bd42421129270, type: 3}
   - {fileID: 21300000, guid: 4e65696b54706294897c2c7672d4c4cb, type: 3}
+  - {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
   - {fileID: -1277097648, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
   - {fileID: -1754683586, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
   - {fileID: 1882970363, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
@@ -4488,6 +4489,7 @@ SpriteAtlas:
   - Water1_10
   - PlayerIdl
   - Honey
+  - Furs
   - harbor wood tileset (2, 2s)_9
   - harbor wood tileset (2, 2s)_8
   - harbor wood tileset (2, 2s)_18
