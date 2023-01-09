@@ -22,6 +22,7 @@ public class WareDisplay : MonoBehaviour
 	private float collisionBufferTimer = 0f;
 	private Dictionary <StoringAreaId, bool> storingAreas;
 	Ivyyy.AudioHandler audioHandler;
+	bool initFrame = true;
 
 	//Public Functions
 	public static WareDisplay CreateInstance (Ware ware)
@@ -137,6 +138,8 @@ public class WareDisplay : MonoBehaviour
 			storingAreas.Add (i, false);
 
 		transform.localScale = new Vector3 (1f, 1f, 1f);
+
+		initFrame = true;
 	}
 
 	// Start is called before the first frame update
@@ -162,6 +165,9 @@ public class WareDisplay : MonoBehaviour
 		}
 		else
 			Debug.Log ("Ware not set!");
+
+		if (initFrame)
+			initFrame = false;
 	}
 
 	void ChangeSprite()
@@ -217,7 +223,7 @@ public class WareDisplay : MonoBehaviour
 			SetStoringArea (collision.gameObject, true);
 
 			//Play audio if now stoed correctly
-			if (isStoresCorrectly)
+			if (isStoresCorrectly && !initFrame)
 				Ivyyy.AudioHandler.Me.PlayOneShot (audioStoredCorrectly);
 		}
 	}

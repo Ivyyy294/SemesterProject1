@@ -29,7 +29,7 @@ public class Team
 	public Team()
 	{
 		Reputation = 50f;
-		SilverCoins = 0f;
+		SilverCoins = 10f;
 
 		gameStatus = GameStatus.Me;
 		timeSincePassiveReputationLoss = gameStatus.passiveReputationLossInterval;

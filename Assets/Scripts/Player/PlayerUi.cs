@@ -9,6 +9,7 @@ public class PlayerUi : MonoBehaviour
 	[SerializeField] TextMeshProUGUI dayTime;
 	[SerializeField] TextMeshProUGUI reputation;
 	[SerializeField] TextMeshProUGUI silver;
+	[SerializeField] TextMeshProUGUI tax;
 
     //Private Values
 	uint playerId;
@@ -25,6 +26,9 @@ public class PlayerUi : MonoBehaviour
 
 		if (silver != null)
 			silver.text = GetSilver(team);
+
+		if (tax != null)
+			tax.text = GetTax();
 	}
 
 	private string GetDayTime()
@@ -41,5 +45,13 @@ public class PlayerUi : MonoBehaviour
 	private string GetSilver (Team t)
 	{
 		return new string ("Silver: " + ((int)t.SilverCoins).ToString());
+	}
+
+	private string GetTax ()
+	{
+		int currentDay = GameStatus.Me.GetCurrentDateTime ().day;
+		int taxInterval = GameStatus.Me.cityTaxInterval;
+		int taxDue = taxInterval - (currentDay % taxInterval);
+		return new string ("City tax due in:" + taxDue.ToString());
 	}
 }
