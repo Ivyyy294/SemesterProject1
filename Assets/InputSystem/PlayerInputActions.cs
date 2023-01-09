@@ -292,6 +292,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""42dbc283-b9d8-4886-be48-2d760709c3ce"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Gamepad2"",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""b0bddf04-ba40-4390-ba16-b884c1dc54ff"",
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",

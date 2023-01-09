@@ -174,6 +174,10 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (obj != null)
 		{
+			dropIndicator.transform.rotation = obj.transform.rotation;
+
+			indicatorRotated = obj.transform.rotation.z != 0f;
+
 			obj.layer = LayerMask.NameToLayer ("NoCollision");
 			obj.transform.SetParent (warePos);
 			obj.transform.position = warePos.position;
@@ -289,6 +293,10 @@ public class PlayerInteraktions: MonoBehaviour
 	void ResetDropIndicator()
 	{
 		dropIndicator.transform.localScale = new Vector3 (1f, 1f);
+
+		dropIndicator.transform.rotation = Quaternion.Euler (Vector3.zero);
+		indicatorRotated = false;
+
 		dropIndicator.SetActive (false);
 	}
 

@@ -19,4 +19,4 @@ MonoBehaviour:
     requestChance: 0
   - ware: {fileID: 11400000, guid: d604cd38dc423434fb75f5136e030688, type: 2}
     requestChance: 0
-  requestFrequency: 7
+  requestFrequency: 45
