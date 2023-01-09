@@ -165,8 +165,12 @@ public class WareDisplay : MonoBehaviour
 		}
 		else
 			Debug.Log ("Ware not set!");
+	}
 
-		if (initFrame)
+	private void LateUpdate()
+	{
+		//Prevents storedCorrectly sound from being played, when ware spawns in storage area
+		if (initFrame && baseTimer > Time.fixedDeltaTime)
 			initFrame = false;
 	}
 
