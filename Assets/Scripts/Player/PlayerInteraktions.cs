@@ -8,24 +8,35 @@ public class PlayerInteraktions: MonoBehaviour
 {
 
 	//Editor Values
+	[Header ("Emotes")]
+	[SerializeField] Emote heartEmote;
+	[SerializeField] Emote sadEmote;
+	[SerializeField] Emote happyEmote;
+	[SerializeField] Emote angryEmote;
+
+	[Header ("Lara Values")]
 	[SerializeField] float rayDistance;
 	[SerializeField] GameObject dropIndicator;
 	[SerializeField] Vector3 rotationOffset;
 	[SerializeField] Transform warePos;
 	[SerializeField] Transform center;
-	[SerializeField] GameObject heartIcon;
+	[SerializeField] PlayerEmotes emoteHandler;
 
 	//Private Values
 	private Grid snapGrid;
 	private WareDisplay grabbedObject;
-	private Vector3 oScale;
-	private int layerMask;
 	private Vector3 dir;
 	private uint playerId;
+	private bool indicatorRotated = false;
+
+	//Input Actions
 	private InputAction moveAction;
 	private InputAction grabAction;
 	private InputAction rotateAction;
-	private bool indicatorRotated = false;
+	private InputAction emote1;
+	private InputAction emote2;
+	private InputAction emote3;
+	private InputAction emote4;
 	
 	//Public Functions
 	public void InitInput(PlayerConfiguration pc)
@@ -33,6 +44,12 @@ public class PlayerInteraktions: MonoBehaviour
 		moveAction = pc.Input.actions["Movement"];
 		grabAction = pc.Input.actions["Grab"];
 		rotateAction = pc.Input.actions ["Rotate"];
+
+		emote1 = pc.Input.actions["Emote 1"];
+		emote2 = pc.Input.actions["Emote 2"];
+		emote3 = pc.Input.actions["Emote 3"];
+		emote4 = pc.Input.actions["Emote 4"];
+
 		playerId = (uint) pc.PlayerIndex;
 	}
 
@@ -44,7 +61,6 @@ public class PlayerInteraktions: MonoBehaviour
 	void Start()
 	{
 		dir = Vector3.right;
-		layerMask = LayerMask.NameToLayer ("Objects");
 		dropIndicator.SetActive (false);
 
 		snapGrid = GameStatus.Me.gameObject.GetComponentInChildren <Grid>();
@@ -71,6 +87,22 @@ public class PlayerInteraktions: MonoBehaviour
 
 		if (indicatorActive && rotateAction != null && rotateAction.WasPerformedThisFrame ())
 			RotateIndicator();
+
+		//Emotes
+		if (emoteHandler != null)
+		{
+			if (emote1 != null && emote1.WasPressedThisFrame())
+				emoteHandler.PlayEmote (heartEmote);
+
+			if (emote2 != null && emote2.WasPressedThisFrame())
+				emoteHandler.PlayEmote (happyEmote);
+
+			if (emote3 != null && emote3.WasPressedThisFrame())
+				emoteHandler.PlayEmote (sadEmote);
+
+			if (emote4 != null && emote4.WasPressedThisFrame())
+				emoteHandler.PlayEmote (angryEmote);
+		}
 	}
 
 	void CastRay ()
@@ -142,17 +174,24 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (obj != null)
 		{
+			dropIndicator.transform.rotation = obj.transform.rotation;
+
+			indicatorRotated = obj.transform.rotation.z != 0f;
+
+			obj.layer = LayerMask.NameToLayer ("NoCollision");
+			obj.transform.SetParent (warePos);
+			obj.transform.position = warePos.position;
+			obj.transform.localScale = new Vector3 (0.5f, 0.5f);
+
 			grabbedObject = obj.GetComponent <WareDisplay>();
 
 			if (grabbedObject != null && dropIndicator != null)
 			{
-				dropIndicator.SetActive (true);
-				oScale = grabbedObject.transform.localScale;
-				grabbedObject.PickUp (warePos.transform);
+				Ivyyy.AudioHandler.Me.PlayOneShotFromList (grabbedObject.ware.audiosPickUp);
 
 				//Setting Size of Drop indicator to Ware Size
-				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
 				dropIndicator.SetActive (true);
+				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
 			}
 		}
 	}
@@ -222,7 +261,10 @@ public class PlayerInteraktions: MonoBehaviour
 			StoreSlot storeSlot = obj.GetComponent<StoreSlot>();
 
 			if (storeSlot != null)
-				GrabObject (storeSlot.BuyWare(playerId));
+			{
+				GameObject tmp = storeSlot.BuyWare(playerId);
+				GrabObject (tmp);
+			}
 		}
 	}
 
@@ -244,19 +286,24 @@ public class PlayerInteraktions: MonoBehaviour
 
 	private void InteractPlayer()
 	{
-		heartIcon.SetActive (true);
+		if (emoteHandler != null)
+			emoteHandler.PlayEmote (heartEmote);
 	}
 
 	void ResetDropIndicator()
 	{
 		dropIndicator.transform.localScale = new Vector3 (1f, 1f);
+
+		dropIndicator.transform.rotation = Quaternion.Euler (Vector3.zero);
+		indicatorRotated = false;
+
 		dropIndicator.SetActive (false);
 	}
 
 	//Places the ware back on the ground
 	private void ResetGrabbedObject (Vector3 pos)
 	{ 
-		grabbedObject.transform.localScale = oScale;
+		grabbedObject.transform.localScale = new Vector3 (1f, 1f, 1f);
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
 		ResetDropIndicator();
@@ -265,7 +312,7 @@ public class PlayerInteraktions: MonoBehaviour
 	//Returns the ware to the pool
 	private void ReturnGrabbedObject ()
 	{ 
-		grabbedObject.transform.localScale = oScale;
+		grabbedObject.transform.localScale = new Vector3 (1f, 1f, 1f);
 		grabbedObject.ReturnToPoolDeactivated();
 		grabbedObject = null;
 		ResetDropIndicator();

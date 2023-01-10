@@ -40,16 +40,12 @@ public class ShipDisplay : MonoBehaviour
 	{
 		for (int i = 0; i < ship.wares.Count && i < warePos.Count; ++i)
 		{
-			GameObject obj = WarePool.Me.GetPooledObject();
+			WareDisplay wareDisplay = WareDisplay.CreateInstance (ship.wares[i]);
 
-			if (obj != null)
+			if (wareDisplay != null)
 			{
-				obj.SetActive (true);
-				obj.transform.position = warePos[i].position;
-				obj.transform.SetParent (transform);
-
-				WareDisplay wareDisplay = obj.GetComponent<WareDisplay>();
-				wareDisplay.Init (ship.wares[i]);
+				wareDisplay.gameObject.transform.position = warePos[i].position;
+				wareDisplay.gameObject.transform.SetParent (transform);
 			}
 		}
 	}

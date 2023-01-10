@@ -26,3 +26,13 @@ MonoBehaviour:
   storingAreaIds: 
   fragility: 1
   fragilityHp: 4
+  audiosWalk: []
+  audiosPlaceDown:
+  - {fileID: 8300000, guid: 5aa88b4705a461c45b273a5d5c588412, type: 3}
+  - {fileID: 8300000, guid: d976b0536262b8044bc9fd57c7c9bc99, type: 3}
+  - {fileID: 8300000, guid: c87e54623f4293f4e80027eb0b0d3596, type: 3}
+  audiosPickUp:
+  - {fileID: 8300000, guid: eb2930890a8d4a949bcd973398ee02c5, type: 3}
+  - {fileID: 8300000, guid: 375fdf9835082b94c9ac37a6bf4b0155, type: 3}
+  audiosBump:
+  - {fileID: 8300000, guid: 15e1f16e21449ec4eb33ae1861633a53, type: 3}

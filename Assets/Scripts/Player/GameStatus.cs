@@ -29,7 +29,7 @@ public class Team
 	public Team()
 	{
 		Reputation = 50f;
-		SilverCoins = 0f;
+		SilverCoins = 10f;
 
 		gameStatus = GameStatus.Me;
 		timeSincePassiveReputationLoss = gameStatus.passiveReputationLossInterval;
@@ -45,7 +45,6 @@ public class Team
 	public void ReputationLoss()
 	{
 		Reputation -= 1;
-		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepLoss);
 		//Reputation -= 1 + Reputation / 50;
 	}
 
@@ -156,7 +155,10 @@ public class GameStatus : MonoBehaviour
 		Team t = GetTeamForPlayer (playerId);
 
 		if (t != null)
+		{
 			t.ReputationLoss ();
+			Ivyyy.AudioHandler.Me.PlayOneShot (audioRepLoss);
+		}
 	}
 
 	public void AddSilverCoins (uint playerId, float val)

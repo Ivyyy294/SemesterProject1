@@ -137,7 +137,7 @@ MonoBehaviour:
   audioRepGain: {fileID: 8300000, guid: c553284c6201c854da11b0300e543388, type: 3}
   audioRepLoss: {fileID: 8300000, guid: 3747c08136d5cf444905be67689ad49a, type: 3}
   cityTaxInterval: 14
-  audioTax: {fileID: 0}
+  audioTax: {fileID: 8300000, guid: 655a064e0bd6abf459bbf47947a2fdc8, type: 3}
 --- !u!81 &2472667551685640615
 AudioListener:
   m_ObjectHideFlags: 0

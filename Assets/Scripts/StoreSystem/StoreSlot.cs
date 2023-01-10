@@ -31,32 +31,25 @@ public class StoreSlot : MonoBehaviour
 
 	public GameObject BuyWare (uint playerId)
 	{
+		GameObject val = null;
+
 		if (ware != null)
 		{
 			if (ware.value <= gameStatus.GetPlayerMoney (playerId))
 			{
-				GameObject obj = WarePool.Me.GetPooledObject ();
+				WareDisplay wDisplay = WareDisplay.CreateInstance (ware);
 
-				if (obj != null)
+				if (wDisplay != null)
 				{
-					obj.SetActive (true);
-
-					WareDisplay wDisplay = obj.GetComponent<WareDisplay>();
-
-					if (wDisplay != null)
-					{
-						wDisplay.Init (ware);
-						gameStatus.AddSilverCoins (playerId, -ware.value);
-						return obj;
-					}
+					gameStatus.AddSilverCoins (playerId, -ware.value);
+					val = wDisplay.gameObject;
 				}
-
 			}
 			else
 				Debug.Log ("Not enough silver coins!");
 		}
 		
-		return null;
+		return val;
 	}
 
     // Start is called before the first frame update
