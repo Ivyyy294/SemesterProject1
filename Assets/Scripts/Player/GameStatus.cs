@@ -24,6 +24,7 @@ public class Team
 	private uint numberOfTaxes;
 	private bool taxCollected = false;
 	GameStatus gameStatus;
+	PlayerStatsManager statsManager;
 
 	//Public Functions
 	public Team()
@@ -32,19 +33,27 @@ public class Team
 		SilverCoins = 10f;
 
 		gameStatus = GameStatus.Me;
+		statsManager = PlayerStatsManager.Me;
 		timeSincePassiveReputationLoss = gameStatus.passiveReputationLossInterval;
 	}
 
 	public void ReputationGain (float requestTime)
 	{
-		Reputation += (1 + (2 - Reputation/50)) * ((requestTime - timeSinceRequest) / 100);
+		float gain = (1 + (2 - Reputation/50)) * ((requestTime - timeSinceRequest) / 100);
+		Reputation += gain;
 		timeSinceRequest = 0f;
 		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepGain);
+
+		foreach (uint i in playerIds)
+			statsManager.Stats (i).AddReputationEarned(gain);
 	}
 
 	public void ReputationLoss()
 	{
 		Reputation -= 1;
+
+		foreach (uint i in playerIds)
+			statsManager.Stats (i).AddReputationLost(1);
 		//Reputation -= 1 + Reputation / 50;
 	}
 
@@ -58,6 +67,9 @@ public class Team
 
 	public void Update()
 	{
+		if (statsManager == null)
+			statsManager = PlayerStatsManager.Me;
+
 		if (timeSinceRequest >= gameStatus.passiveReputationLossThreshold)
 			PassiveReputationLoss();
 
@@ -98,6 +110,9 @@ public class Team
 
 		SilverCoins -= tax;
 
+		foreach (uint i in playerIds)
+			statsManager.Stats (i).TaxPayed += tax;
+
 		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioTax);
 	}
 }
@@ -112,6 +127,7 @@ public class GameStatus : MonoBehaviour
 
 	[Header ("Game Settings")]
 	[SerializeField] float dayLenght = 60f;
+	public float reputationNeededToWin = 100f;
 
 	[Header ("Reputation Settings")]
 	public float passiveReputationLossThreshold;
@@ -133,13 +149,6 @@ public class GameStatus : MonoBehaviour
 	{
 		if (teamId < teams.Count)
 			teams[teamId].playerIds.Add (playerId);
-		else
-		{
-			Team t = new Team();
-			t.Id = teamId;
-			t.playerIds.Add (playerId);
-			teams.Add (t);
-		}
 	}
 
 	public void AddReputation (uint playerId, float requestTime)
@@ -167,6 +176,15 @@ public class GameStatus : MonoBehaviour
 
 		if (t != null)
 			t.AddSilverCoins (val);
+
+		if (PlayerStatsManager.Me != null)
+		{
+			if (val < 0f)
+				PlayerStatsManager.Me.Stats (playerId).AddSilverSpent (val * -1);
+			else
+				PlayerStatsManager.Me.Stats (playerId).AddSilverEarned (val);
+		}
+		
 	}
 
 	public float GetPlayerMoney (uint playerId)
@@ -195,6 +213,14 @@ public class GameStatus : MonoBehaviour
 	public void Init()
 	{
 		teams = new List<Team>();
+
+		for (int i = 0; i < 2; ++i)
+		{
+			Team t = new Team();
+			t.Id = i;
+			teams.Add (t);
+		}
+
 		lifeTime = 0f;
 
 		var playerConfigs = PlayerManager.Me.GetPlayerConfigs().ToArray();
@@ -206,6 +232,8 @@ public class GameStatus : MonoBehaviour
 			AddPlayerToTeam ( (uint) pc.PlayerIndex, pc.TeamIndex);
 			i.SpawnPlayer (pos.position);
 		}
+
+		PlayerStatsManager.Me.Init();
 	}
 
 
@@ -247,7 +275,16 @@ public class GameStatus : MonoBehaviour
 		CalculateDayTime();
 
 		foreach (Team i in teams)
+		{
 			i.Update();
+
+			if (i.Reputation >= reputationNeededToWin)
+			{
+				PlayerStatsManager.Me.IndexTeamWon = i.Id;
+				MapManager.Me.LoadMap (Map.PlayerStats);
+				break;
+			}
+		}
     }
 
 	/* void OnGUI()

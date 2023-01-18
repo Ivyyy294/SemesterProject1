@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
 	//Private Values
 	private int MaxPlayers;
 	private List <PlayerConfigurationDisplay> playerConfigs;
+	private PlayerInputManager inputManager;
 
 	//Public Functions
 	public List <PlayerConfigurationDisplay> GetPlayerConfigs()
@@ -51,6 +52,15 @@ public class PlayerManager : MonoBehaviour
 
 		return false;
 	}
+
+	public void Reset()
+	{
+		foreach (PlayerConfigurationDisplay i in playerConfigs)
+			Destroy (i.gameObject);
+
+		playerConfigs.Clear();
+	}
+
 	//Private Functions
 	private void Awake()
 	{
@@ -61,7 +71,8 @@ public class PlayerManager : MonoBehaviour
 			Me = this;
 			//DontDestroyOnLoad (this);
 			playerConfigs = new List<PlayerConfigurationDisplay>();
-			MaxPlayers = GetComponent <PlayerInputManager>().maxPlayerCount;
+			inputManager = GetComponent <PlayerInputManager>();
+			MaxPlayers = inputManager.maxPlayerCount;
 		}
 	}
 
@@ -72,6 +83,17 @@ public class PlayerManager : MonoBehaviour
 		foreach (Transform t in obj.GetComponentInChildren <Transform>())
 		{
 			t.gameObject.layer = layerId;
+		}
+	}
+
+	private void Update()
+	{
+		MapManager mapManager = MapManager.Me;
+
+		if (mapManager != null)
+		{
+			if (mapManager.CurrentMap() == Map.Lobby && AllPlayersReady())
+				MapManager.Me.LoadMap (Map.Game);
 		}
 	}
 }

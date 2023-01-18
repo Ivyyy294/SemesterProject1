@@ -23,6 +23,7 @@ public class WareDisplay : MonoBehaviour
 	private Dictionary <StoringAreaId, bool> storingAreas;
 	Ivyyy.AudioHandler audioHandler;
 	bool initFrame = true;
+	PlayerStatsManager statsManager;
 
 	//Public Functions
 	public static WareDisplay CreateInstance (Ware ware)
@@ -92,10 +93,13 @@ public class WareDisplay : MonoBehaviour
 		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
 	}
 
-	public void AddFragilityDmg ()
+	public void AddFragilityDmg (uint playerId)
 	{
 		fragilityDmg++;
 		audioHandler.PlayOneShotFromList (ware.audiosBump);
+
+		if (!damaged && fragilityDmg >= ware.fragilityHp && statsManager != null)
+			statsManager.Stats(playerId).WareDamaged++;
 	}
 
 	public void EnableRenderer (bool val)
@@ -146,6 +150,7 @@ public class WareDisplay : MonoBehaviour
 	void Start()
 	{
 		audioHandler = Ivyyy.AudioHandler.Me;
+		statsManager = PlayerStatsManager.Me;
 		Init ();
 	}
 
@@ -242,6 +247,14 @@ public class WareDisplay : MonoBehaviour
 	{
 		//Prevents instant fragilityDmg from the player after placing the object back on the ground
 		if (ware.fragility == Ware.Fragility.Very && collisionBufferTimer >= collisionBuffer)
-			AddFragilityDmg();
+		{
+			if (collision.transform.CompareTag ("Player"))
+			{
+				PlayerInteraktions playerInteraktions = collision.gameObject.GetComponent <PlayerInteraktions>();
+				
+				if (playerInteraktions != null)
+					AddFragilityDmg (playerInteraktions.GetPlayerId());
+			}
+		}
 	}
 }

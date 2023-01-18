@@ -132,6 +132,7 @@ MonoBehaviour:
   - {fileID: 2472667551380574320}
   - {fileID: 2472667552009161912}
   dayLenght: 30
+  reputationNeededToWin: 100
   passiveReputationLossThreshold: 30
   passiveReputationLossInterval: 10
   audioRepGain: {fileID: 8300000, guid: c553284c6201c854da11b0300e543388, type: 3}

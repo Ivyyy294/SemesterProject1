@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 273832227}
   - component: {fileID: 273832226}
   - component: {fileID: 273832229}
+  - component: {fileID: 273832230}
   m_Layer: 0
   m_Name: PlayerConfigurationManager
   m_TagString: Untagged
@@ -242,6 +243,20 @@ MonoBehaviour:
     mapPrefab: {fileID: 7295891994126042035, guid: f69144d0ee22d3245b30fd3a90e8b4fd, type: 3}
   - state: 1
     mapPrefab: {fileID: 5299013562066240560, guid: ecf4bdebe390c6949ad4bdbcda1aa6a1, type: 3}
+  - state: 2
+    mapPrefab: {fileID: 7295891994126042035, guid: 77928bf436fc6b4499d39b89f5b45838, type: 3}
+--- !u!114 &273832230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273832225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875e2fa167c885e4c9b0ba421e647d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1552594295
 GameObject:
   m_ObjectHideFlags: 0
