@@ -323,28 +323,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedProfile:
-    maxSpeed: 12
+    maxSpeed: 10
     accelerationCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0.012675526
-        outSlope: 0.012675526
+        inSlope: 9.731141
+        outSlope: 9.731141
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.7527881
+        outWeight: 0.050754063
       - serializedVersion: 3
         time: 0.2
         value: 0.8
-        inSlope: 0.8617093
-        outSlope: 0.8617093
+        inSlope: 0.7977251
+        outSlope: 0.7977251
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.3122677
-        outWeight: 0.33333334
+        outWeight: 0.10781614
       - serializedVersion: 3
         time: 1
         value: 1
@@ -391,19 +391,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   speedProfileMediumWare:
-    maxSpeed: 10
+    maxSpeed: 8.5
     accelerationCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0.012675526
-        outSlope: 0.012675526
+        inSlope: 4.325646
+        outSlope: 4.325646
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.7527881
+        outWeight: 0.069605574
       - serializedVersion: 3
         time: 0.35
         value: 0.8
@@ -459,19 +459,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   speedProfileHeavyWare:
-    maxSpeed: 8
+    maxSpeed: 7
     accelerationCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0.012675526
-        outSlope: 0.012675526
+        inSlope: 2.9637384
+        outSlope: 2.9637384
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.7527881
+        outWeight: 0.08932715
       - serializedVersion: 3
         time: 0.5
         value: 0.8
@@ -566,6 +566,7 @@ MonoBehaviour:
   dayTime: {fileID: 0}
   reputation: {fileID: 0}
   silver: {fileID: 0}
+  tax: {fileID: 0}
 --- !u!58 &557145810795951752
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -17,4 +17,4 @@ MonoBehaviour:
   requestList:
   - ware: {fileID: 11400000, guid: 578d4676b3b07094eabb2c371995ff6d, type: 2}
     requestChance: 1
-  requestFrequency: 45
+  requestFrequency: 30

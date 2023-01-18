@@ -25,7 +25,7 @@ MonoBehaviour:
   durabilityExtended: 2400
   storingAreaIds: 01000000
   fragility: 2
-  fragilityHp: 4
+  fragilityHp: 6
   audiosWalk: []
   audiosPlaceDown:
   - {fileID: 8300000, guid: 08b6b057ac4d6d243b1cf6cc690a6de7, type: 3}
