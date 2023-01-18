@@ -40,11 +40,12 @@ namespace Ivyyy
 			{
 				Directory.CreateDirectory (Path.GetDirectoryName (fullPath));
 
-				using (FileStream stream = new FileStream (fullPath, FileMode.OpenOrCreate))
-				{
-					using (StreamWriter writer = new StreamWriter (stream))
-						writer.Write (data);
-				}
+				File.WriteAllText (fullPath, data);
+				//using (FileStream stream = new FileStream (fullPath, FileMode.OpenOrCreate))
+				//{
+				//	using (StreamWriter writer = new StreamWriter (stream))
+				//		writer.Write (data);
+				//}
 			}
 			catch (Exception e)
 			{

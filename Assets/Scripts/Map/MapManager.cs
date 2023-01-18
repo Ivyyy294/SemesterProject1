@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum GameState
+public enum Map
 {
 	Lobby,
-	Game
+	Game,
+	PlayerStats
 }
 
 [System.Serializable]
 public class MapContainer
 {
-	public GameState state;
+	public Map state;
 	public GameObject mapPrefab;
 }
 
@@ -22,28 +23,38 @@ public class MapManager : MonoBehaviour
 	[SerializeField] List <MapContainer> maps;
 
 	//Private Values
-	int lastState = -1;
-	GameState currentState = GameState.Lobby;
+	Map currentMap = Map.Lobby;
 	GameObject currentActiveMap = null;
 
-	private void Update()
+	//Public Values
+	public static MapManager Me { get; private set;}
+
+	//Public Functions
+	public Map CurrentMap () { return currentMap;}
+
+	public void LoadMap (Map state)
 	{
-		if (PlayerManager.Me.AllPlayersReady())
-			currentState = GameState.Game;
-
-		if (lastState != (int) currentState)
+		foreach (MapContainer i in maps)
 		{
-			foreach (MapContainer i in maps)
+			if (i.state == state)
 			{
-				if (i.state == currentState)
-				{
-					ActivateMap (i.mapPrefab);
-					break;
-				}
+				currentMap = state;
+				ActivateMap (i.mapPrefab);
+				break;
 			}
-		} 
+		}
+	}
 
-		lastState = (int) currentState;
+	//Private Functions
+	private void Awake()
+	{
+		if (Me != null)
+			Debug.Log ("Tyring o create another Instance of Singelton!");
+		else
+		{
+			Me = this;
+			LoadMap (Map.Lobby);
+		}
 	}
 
 	private void ActivateMap (GameObject map)
@@ -52,5 +63,7 @@ public class MapManager : MonoBehaviour
 			Destroy (currentActiveMap);
 
 		currentActiveMap = Instantiate (map, transform);
+
+		Cursor.visible = currentMap != Map.Game;
 	}
 }

@@ -39,6 +39,8 @@ public class PlayerInteraktions: MonoBehaviour
 	private InputAction emote4;
 	
 	//Public Functions
+	public uint GetPlayerId() { return playerId; }
+
 	public void InitInput(PlayerConfiguration pc)
 	{
 		moveAction = pc.Input.actions["Movement"];
@@ -130,7 +132,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (grabbedObject != null)
-			grabbedObject.AddFragilityDmg();
+			grabbedObject.AddFragilityDmg(playerId);
 	}
 
 	void MoveIndicatorPos ()
@@ -192,6 +194,8 @@ public class PlayerInteraktions: MonoBehaviour
 				//Setting Size of Drop indicator to Ware Size
 				dropIndicator.SetActive (true);
 				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
+
+				PlayerStatsManager.Me.Stats (playerId).WarePickedUp++;
 			}
 		}
 	}

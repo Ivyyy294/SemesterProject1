@@ -42,6 +42,7 @@ public class StoreSlot : MonoBehaviour
 				if (wDisplay != null)
 				{
 					gameStatus.AddSilverCoins (playerId, -ware.value);
+					PlayerStatsManager.Me.Stats (playerId).WareBought++;
 					val = wDisplay.gameObject;
 				}
 			}
