@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShipBaker
   m_EditorClassIdentifier: 
   name: Ship Bakermerchant
-  sprite: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  sprite: {fileID: -1541955134, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 9f57fe8833cbaee44beb8f3b7ab5a8c4, type: 2}

@@ -277,6 +277,48 @@ SpriteAtlas:
   - {fileID: 1415336651, guid: 8a3cb8701a89dc7468a64be92264fb6b, type: 3}
   - {fileID: -1115963911, guid: 8a3cb8701a89dc7468a64be92264fb6b, type: 3}
   - {fileID: 21300000, guid: f40f2380ced9fc841a52e9d98ff14a95, type: 3}
+  - {fileID: 295284208, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 256029165, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -645762164, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1491653088, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 987478378, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1662691369, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -1061072289, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -2066544791, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1816869013, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 393466636, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1065659392, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -2016578022, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -936245209, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 259900323, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -1787661573, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1397680323, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -1504970978, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1823264230, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 837907853, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1369405230, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -898298352, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 48698653, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1879005306, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 529620981, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -3780856, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -1394984491, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -509107208, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -586118576, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 667834109, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -614048931, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -2043697034, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1039372898, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 430343891, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 1612810406, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -293473233, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -1031853972, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 756022261, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -476725433, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 951769626, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -2047155884, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: -1679223573, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
+  - {fileID: 200030487, guid: 6ced12c090a237941bbc694e355d674b, type: 3}
   - {fileID: -1894571678, guid: 4538b0d0d6572484c82d8b214089fdbc, type: 3}
   - {fileID: -170011203, guid: 4538b0d0d6572484c82d8b214089fdbc, type: 3}
   - {fileID: 337970584, guid: 4538b0d0d6572484c82d8b214089fdbc, type: 3}
@@ -2950,6 +2992,48 @@ SpriteAtlas:
   - 1 coblestone tileset_23
   - 1 coblestone tileset_22
   - JamS
+  - Kontor inside borders_40
+  - Kontor inside borders_41
+  - Kontor inside borders_0
+  - Kontor inside borders_13
+  - Kontor inside borders_1
+  - Kontor inside borders_12
+  - Kontor inside borders_2
+  - Kontor inside borders_11
+  - Kontor inside borders_3
+  - Kontor inside borders_10
+  - Kontor inside borders_26
+  - Kontor inside borders_4
+  - Kontor inside borders_17
+  - Kontor inside borders_27
+  - Kontor inside borders_5
+  - Kontor inside borders_16
+  - Kontor inside borders_24
+  - Kontor inside borders_6
+  - Kontor inside borders_15
+  - Kontor inside borders_25
+  - Kontor inside borders_39
+  - Kontor inside borders_7
+  - Kontor inside borders_14
+  - Kontor inside borders_22
+  - Kontor inside borders_38
+  - Kontor inside borders_8
+  - Kontor inside borders_23
+  - Kontor inside borders_9
+  - Kontor inside borders_20
+  - Kontor inside borders_19
+  - Kontor inside borders_21
+  - Kontor inside borders_18
+  - Kontor inside borders_31
+  - Kontor inside borders_30
+  - Kontor inside borders_33
+  - Kontor inside borders_28
+  - Kontor inside borders_32
+  - Kontor inside borders_29
+  - Kontor inside borders_35
+  - Kontor inside borders_34
+  - Kontor inside borders_37
+  - Kontor inside borders_36
   - contour1_61
   - contour1_60
   - contour1_63

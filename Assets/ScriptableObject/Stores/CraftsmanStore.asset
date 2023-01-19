@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CraftsmanStore
   m_EditorClassIdentifier: 
   name: CraftsmanStore
-  sprite: {fileID: -1205802516, guid: 2cd36570017bce74fad28f0ca8b3b309, type: 3}
+  sprite: {fileID: 1688232364, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
   waresToSell:
   - {fileID: 11400000, guid: 5e2182f8a742edc4e885d85f0c1ba66e, type: 2}
   - {fileID: 11400000, guid: dcc6220612c26694c85d48f0b1c3ec8a, type: 2}

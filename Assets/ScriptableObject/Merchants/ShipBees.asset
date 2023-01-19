@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShipBees
   m_EditorClassIdentifier: 
   name: Ship Beemerchant
-  sprite: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  sprite: {fileID: 68395998, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 3df6c93ee20f79e49a3a8534b917ea0a, type: 2}
