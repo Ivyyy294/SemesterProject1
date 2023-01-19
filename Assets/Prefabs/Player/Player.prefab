@@ -395,7 +395,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    animationDuration: 0.325
+    animationDuration: 0.25
+    loop: 0
   rayDistance: 1.5
   dropIndicator: {fileID: 3714752570590167877}
   rotationOffset: {x: 0, y: 0, z: -90}

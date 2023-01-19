@@ -9,6 +9,7 @@ namespace Ivyyy
 		public AnimationCurve animationCurveY = null;
 		public AnimationCurve animationCurveScale = null;
 		public float animationDuration;
+		public bool loop = false;
 	}
 	public class Animation2D
 	{
@@ -21,6 +22,11 @@ namespace Ivyyy
 		public bool Done { get; private set;}
 
 		//Public Functions
+		public void Init (Transform obj, AnimationData2D data)
+		{
+			Init (obj, null, data);
+		}
+
 		public void Init (Transform obj, Transform dest, AnimationData2D data)
 		{
 			startTime = Time.time;
@@ -37,13 +43,18 @@ namespace Ivyyy
 			float currentTime = Time.time;
 			timeFactor = (currentTime - startTime) / animationData.animationDuration;
 
-			if (animationData.animationCurveScale != null)
+			if (animationData.animationCurveScale.length > 0)
 				ScaleAnimation ();
 
 			MoveAnimation ();
 
 			if (timeFactor >= 1f)
-				Done = true;
+			{
+				if (animationData.loop)
+					startTime = Time.time;
+				else
+					Done = true;
+			}
 		}
 
 		//PrivateFunctions
@@ -55,7 +66,12 @@ namespace Ivyyy
 
 		void MoveAnimation ()
 		{
-			Vector3 pos = Vector3.Lerp (startPos, destination.position, timeFactor);
+			if (destination != null)
+			{
+				Vector3 pos = Vector3.Lerp (startPos, destination.position, timeFactor);
+				objToMove.position = pos;
+			}
+
 			float xOffset = 0f;
 			float yOffset = 0f;
 			
@@ -65,7 +81,7 @@ namespace Ivyyy
 			if (animationData.animationCurveY.length > 0)
 				yOffset = animationData.animationCurveY.Evaluate (timeFactor);
 
-			objToMove.position = pos + new Vector3(xOffset, yOffset);
+			objToMove.localPosition += new Vector3(xOffset, yOffset);
 		}
 	}
 }
