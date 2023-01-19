@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [RequireComponent (typeof (BoxCollider2D))]
 public class WareDisplay : MonoBehaviour
@@ -273,5 +274,17 @@ public class WareDisplay : MonoBehaviour
 	{
 		if (collision.transform.CompareTag ("Player"))
 			OnCollisionPlayer (collision.gameObject, false);
+	}
+}
+
+[CustomEditor (typeof (WareDisplay))]
+public class WareDisplayEditor : Editor
+{
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
+
+		WareDisplay storeDisplay = (WareDisplay) target;
+		storeDisplay.ChangeSprite();
 	}
 }
