@@ -1264,6 +1264,16 @@ SpriteAtlas:
   - {fileID: -1545861496, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 1627177051, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: -337318029, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
+  - {fileID: 1238215281, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: -169415551, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: 1659929148, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: 175901710, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: 68395998, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: 1934437375, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: -250583491, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: -1541955134, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: -274542957, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  - {fileID: -2024293650, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
   - {fileID: 21300000, guid: 8cb64da49a3babd4da0668035b7dd43a, type: 3}
   - {fileID: 21300000, guid: 7f1a3eb4ba6574949a2a99cc10ac20ac, type: 3}
   - {fileID: 21300000, guid: 84085eb4fc1b6f3448b5a6f25fa5468f, type: 3}
@@ -1396,6 +1406,10 @@ SpriteAtlas:
   - {fileID: -461674712, guid: bfc5e6b64c89a004d88b5aafbd7e3100, type: 3}
   - {fileID: 1133910957, guid: bfc5e6b64c89a004d88b5aafbd7e3100, type: 3}
   - {fileID: 21300000, guid: 169c30c6772b6c943bca12d37d9ea8e5, type: 3}
+  - {fileID: -2147438608, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
+  - {fileID: 1688232364, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
+  - {fileID: 1781382912, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
+  - {fileID: -934983706, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
   - {fileID: -2141276421, guid: 475e6017abfae3c4b9046c4db0782dfd, type: 3}
   - {fileID: -1986790002, guid: 475e6017abfae3c4b9046c4db0782dfd, type: 3}
   - {fileID: 464083084, guid: 475e6017abfae3c4b9046c4db0782dfd, type: 3}
@@ -1636,6 +1650,7 @@ SpriteAtlas:
   - {fileID: -818003589, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: 21300000, guid: 3434c0795f4197649ae5efba8d8a8c84, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
+  - {fileID: 21300000, guid: ff08430a793e82a4fb26ef251a1dd517, type: 3}
   - {fileID: -1215382313, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: 264713608, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: -59795995, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
@@ -3922,6 +3937,16 @@ SpriteAtlas:
   - ground_tiles (1)_163
   - ground_tiles (1)_183
   - ground_tiles (1)_226
+  - NPC merch_0
+  - NPC merch_1
+  - NPC merch_2
+  - NPC merch_3
+  - NPC merch_4
+  - NPC merch_5
+  - NPC merch_6
+  - NPC merch_7
+  - NPC merch_8
+  - NPC merch_9
   - Armour2
   - Bread2S
   - Timber1
@@ -4054,6 +4079,10 @@ SpriteAtlas:
   - TX Tileset Grass_11
   - TX Tileset Grass_10
   - WineS
+  - market stands_3
+  - market stands_2
+  - market stands_1
+  - market stands_0
   - oil lamp_11
   - oil lamp_10
   - oil lamp_8
@@ -4294,6 +4323,7 @@ SpriteAtlas:
   - Ship details 1_82
   - playerHappy
   - Armour
+  - oil lamp 3
   - fontain_9
   - fontain_8
   - fontain_5
