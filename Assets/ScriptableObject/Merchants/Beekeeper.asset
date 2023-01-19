@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Beekeeper
   m_EditorClassIdentifier: 
   name: Beekeeper
-  sprite: {fileID: 1659929148, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  sprite: {fileID: 1541029298, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}

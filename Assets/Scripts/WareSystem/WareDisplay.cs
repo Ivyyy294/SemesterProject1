@@ -142,6 +142,39 @@ public class WareDisplay : MonoBehaviour
 		}
 	}
 
+	public void ChangeSprite()
+	{
+		if (ware != null)
+		{
+			//SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+			if (spriteRenderer == null)
+				Debug.Log ("SpriteRenderer missing!");
+			else
+			{
+				//Use the vertival sprites if available and the ware is rotated
+				if (transform.rotation.z != 0f 
+					&& ware.SpriteVerticalDamaged != null
+					&& ware.SpriteVerticalOk != null)
+				{
+					if (damaged)
+						spriteRenderer.sprite = ware.SpriteVerticalDamaged;
+					else
+						spriteRenderer.sprite = ware.SpriteVerticalOk;
+				}
+				else
+				{
+					if (damaged)
+						spriteRenderer.sprite = ware.SpriteDamaged;
+					else
+						spriteRenderer.sprite = ware.SpriteOk;
+				}
+			}
+		}
+	}
+
+
+
 	//Private Functions
 	void Init ()
 	{
@@ -201,37 +234,6 @@ public class WareDisplay : MonoBehaviour
 		//Prevents storedCorrectly sound from being played, when ware spawns in storage area
 		if (initFrame && baseTimer > Time.fixedDeltaTime)
 			initFrame = false;
-	}
-
-	void ChangeSprite()
-	{
-		if (ware != null)
-		{
-			//SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-
-			if (spriteRenderer == null)
-				Debug.Log ("SpriteRenderer missing!");
-			else
-			{
-				//Use the vertival sprites if available and the ware is rotated
-				if (transform.rotation.z != 0f 
-					&& ware.SpriteVerticalDamaged != null
-					&& ware.SpriteVerticalOk != null)
-				{
-					if (damaged)
-						spriteRenderer.sprite = ware.SpriteVerticalDamaged;
-					else
-						spriteRenderer.sprite = ware.SpriteVerticalOk;
-				}
-				else
-				{
-					if (damaged)
-						spriteRenderer.sprite = ware.SpriteDamaged;
-					else
-						spriteRenderer.sprite = ware.SpriteOk;
-				}
-			}
-		}
 	}
 
 	private void SetStoringArea (GameObject obj, bool status)
