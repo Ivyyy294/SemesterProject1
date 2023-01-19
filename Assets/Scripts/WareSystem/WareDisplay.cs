@@ -9,17 +9,20 @@ public class WareDisplay : MonoBehaviour
 	public Ware ware;
 	[SerializeField] AudioClip audioStoredCorrectly;
 
+	[Header ("Fragility")]
+	public float speedThreshold = 0.9f;
+	public float collisionCoolDown = 0.5f;
+
 	[Header ("Lara Values")]
 	public bool damaged = false;
 	public bool isStoresCorrectly = false;
 	public uint fragilityDmg;
-	[SerializeField] float collisionBuffer = 0.1f;
 	[SerializeField] SpriteRenderer spriteRenderer;
 
 	//Private Values
+	private float collisionTimer = 0.0f;
 	private double baseTimer = 0.0;
 	private double extendetTimer = 0.0;
-	private float collisionBufferTimer = 0f;
 	private Dictionary <StoringAreaId, bool> storingAreas;
 	Ivyyy.AudioHandler audioHandler;
 	bool initFrame = true;
@@ -88,18 +91,8 @@ public class WareDisplay : MonoBehaviour
 		transform.position = pos;
 		transform.SetParent (WarePool.Me.transform);
 		gameObject.layer = LayerMask.NameToLayer ("Interactables");
-		collisionBufferTimer = 0f;
 		EnableRenderer (true);
 		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
-	}
-
-	public void AddFragilityDmg (uint playerId)
-	{
-		fragilityDmg++;
-		audioHandler.PlayOneShotFromList (ware.audiosBump);
-
-		if (!damaged && fragilityDmg >= ware.fragilityHp && statsManager != null)
-			statsManager.Stats(playerId).WareDamaged++;
 	}
 
 	public void EnableRenderer (bool val)
@@ -117,15 +110,45 @@ public class WareDisplay : MonoBehaviour
 
 		return null;
 	}
+
+	public void OnCollisionPlayer (GameObject playerObj, bool isCarried)
+	{
+		PlayerMotor playerMotor = playerObj.GetComponent <PlayerMotor>();
+		
+		if (playerMotor != null)
+		{
+			float playerSpeedFactor = playerMotor.GetCurrentSpeedFactor();
+			//Plays the collision sound with a volume equal to the playerspeed
+			audioHandler.PlayOneShotFromList (ware.audiosBump, playerSpeedFactor);
+
+			if ((isCarried || ware.fragility == Ware.Fragility.Very)
+				&& collisionTimer >= collisionCoolDown
+				&& playerSpeedFactor >= speedThreshold)
+			{
+				Debug.Log ("CollisionTimer:" + collisionTimer.ToString());
+				fragilityDmg++;
+				collisionTimer = 0f;
+
+				PlayerInteraktions playerInteraktions = playerObj.GetComponent <PlayerInteraktions>();
+				
+				if (playerInteraktions != null)
+				{
+					if (!damaged && fragilityDmg >= ware.fragilityHp && statsManager != null)
+						statsManager.Stats(playerInteraktions.GetPlayerId()).WareDamaged++;
+				}
+			}			
+		}
+	}
+
 	//Private Functions
 	void Init ()
 	{
 		ChangeSprite();
 		baseTimer = 0.0f;
 		extendetTimer = baseTimer;
+		collisionTimer = collisionCoolDown;
 		damaged = false;
 		fragilityDmg = 0;
-		collisionBufferTimer = 0f;
 		isStoresCorrectly = false;
 		transform.rotation = new Quaternion();
 
@@ -157,9 +180,8 @@ public class WareDisplay : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//Prevents instant fragilityDmg from the player after placing the object back on the ground
-		if (collisionBufferTimer < collisionBuffer)
-			collisionBufferTimer += Time.deltaTime;
+		if (collisionTimer <= collisionCoolDown)
+			collisionTimer += Time.deltaTime;
 
 		if (ware != null)
 		{
@@ -245,16 +267,7 @@ public class WareDisplay : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		//Prevents instant fragilityDmg from the player after placing the object back on the ground
-		if (ware.fragility == Ware.Fragility.Very && collisionBufferTimer >= collisionBuffer)
-		{
-			if (collision.transform.CompareTag ("Player"))
-			{
-				PlayerInteraktions playerInteraktions = collision.gameObject.GetComponent <PlayerInteraktions>();
-				
-				if (playerInteraktions != null)
-					AddFragilityDmg (playerInteraktions.GetPlayerId());
-			}
-		}
+		if (collision.transform.CompareTag ("Player"))
+			OnCollisionPlayer (collision.gameObject, false);
 	}
 }

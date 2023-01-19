@@ -31,36 +31,7 @@ namespace Ivyyy
 		[Header ("Base Speed Profile")]
 		public SpeedProfile speedProfile;
 
-		//Start is called before the first frame update
-		virtual protected void Start()
-		{
-			m_Rigidbody = gameObject.GetComponent <Rigidbody2D>();
-			Assert.IsTrue (m_Rigidbody != null, "Missing Rigidbody!");
-			currentSpeedProfile = speedProfile;
-		}
-
-		protected virtual void FixedUpdate()
-		{
-			float fixedDeltaTime = Time.fixedDeltaTime;
-			float tmpSpeed = currentSpeedProfile.maxSpeed * fixedDeltaTime;
-
-			if (timeAcceleration > 0f)
-			{
-				tmpSpeed *= currentSpeedProfile.accelerationCurve.Evaluate (timeAcceleration);
-				currentSpeed = tmpSpeed;
-			}
-			else if (timeDeacceleration > 0f)
-				tmpSpeed = currentSpeed * currentSpeedProfile.deaccelerationCurve.Evaluate (timeDeacceleration);
-
-			Velocity = inputVector * tmpSpeed;
-
-			//Apply movement
-			if (Velocity != Vector3.zero && m_Rigidbody != null)
-				m_Rigidbody.MovePosition (transform.position + Velocity);
-
-			m_Rigidbody.velocity = Vector3.zero;
-		}
-
+		//Public Functions
 		public void Move(Vector2 input)
 		{
 			if (input != Vector2.zero)
@@ -77,6 +48,41 @@ namespace Ivyyy
 					timeDeacceleration += Time.deltaTime;
 			}
 
+		}
+
+		public float GetCurrentSpeedFactor ()
+		{
+			return currentSpeedProfile.accelerationCurve.Evaluate (timeAcceleration);
+		}
+
+		//Protected Functions
+		virtual protected void Start()
+		{
+			m_Rigidbody = gameObject.GetComponent <Rigidbody2D>();
+			Assert.IsTrue (m_Rigidbody != null, "Missing Rigidbody!");
+			currentSpeedProfile = speedProfile;
+		}
+
+		protected virtual void FixedUpdate()
+		{
+			float fixedDeltaTime = Time.fixedDeltaTime;
+			float tmpSpeed = currentSpeedProfile.maxSpeed * fixedDeltaTime;
+
+			if (timeAcceleration > 0f)
+			{
+				tmpSpeed *= GetCurrentSpeedFactor();
+				currentSpeed = tmpSpeed;
+			}
+			else if (timeDeacceleration > 0f)
+				tmpSpeed = currentSpeed * currentSpeedProfile.deaccelerationCurve.Evaluate (timeDeacceleration);
+
+			Velocity = inputVector * tmpSpeed;
+
+			//Apply movement
+			if (Velocity != Vector3.zero && m_Rigidbody != null)
+				m_Rigidbody.MovePosition (transform.position + Velocity);
+
+			m_Rigidbody.velocity = Vector3.zero;
 		}
 	}
 }
