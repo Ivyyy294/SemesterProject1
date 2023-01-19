@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BeekeeperStore
   m_EditorClassIdentifier: 
   name: BeekeeperStore
-  sprite: {fileID: -1205802516, guid: 2cd36570017bce74fad28f0ca8b3b309, type: 3}
+  sprite: {fileID: -2147438608, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
   waresToSell:
   - {fileID: 11400000, guid: 3df6c93ee20f79e49a3a8534b917ea0a, type: 2}
   - {fileID: 11400000, guid: 34a1d2721bfa5dc43a55aaf97b3961a3, type: 2}

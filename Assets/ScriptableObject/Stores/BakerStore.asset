@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BakerStore
   m_EditorClassIdentifier: 
   name: BakerStore
-  sprite: {fileID: -1205802516, guid: 2cd36570017bce74fad28f0ca8b3b309, type: 3}
+  sprite: {fileID: -934983706, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
   waresToSell:
   - {fileID: 11400000, guid: 9f57fe8833cbaee44beb8f3b7ab5a8c4, type: 2}
   - {fileID: 11400000, guid: 578d4676b3b07094eabb2c371995ff6d, type: 2}

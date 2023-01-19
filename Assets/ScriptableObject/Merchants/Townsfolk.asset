@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Townsfolk
   m_EditorClassIdentifier: 
   name: Hunter
-  sprite: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  sprite: {fileID: -2024293650, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: bef9fe47e1c7a5743af6f8114e0cb0f0, type: 2}

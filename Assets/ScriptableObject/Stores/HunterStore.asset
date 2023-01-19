@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HunterStore
   m_EditorClassIdentifier: 
   name: HunterStore
-  sprite: {fileID: -1205802516, guid: 2cd36570017bce74fad28f0ca8b3b309, type: 3}
+  sprite: {fileID: 1781382912, guid: 9987a2c66b2db1f488e08d73bd08526d, type: 3}
   waresToSell:
   - {fileID: 11400000, guid: 2323c985774e36447b7d261c8989603b, type: 2}
   - {fileID: 11400000, guid: a76c6f12b6eeeb442bdf6819fb756b53, type: 2}
