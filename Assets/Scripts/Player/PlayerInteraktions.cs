@@ -131,9 +131,6 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (dropIndicator != null && dropIndicator.activeInHierarchy)
 			MoveIndicatorPos();
-
-		if (grabbedObject != null)
-			pickUpAnimation.Next();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -192,6 +189,7 @@ public class PlayerInteraktions: MonoBehaviour
 			obj.transform.localScale = Vector3.one;
 
 			pickUpAnimation.Init (obj.transform, warePos, pickUp);
+			StartCoroutine (pickUpAnimation.Play());
 
 			grabbedObject = obj.GetComponent <WareDisplay>();
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 namespace Ivyyy
 {
@@ -11,6 +12,7 @@ namespace Ivyyy
 		public float animationDuration;
 		public bool loop = false;
 	}
+
 	public class Animation2D
 	{
 		AnimationData2D animationData;
@@ -38,7 +40,17 @@ namespace Ivyyy
 			Done = false;
 		}
 
-		public void Next()
+		public IEnumerator Play()
+		{
+			while (!Done)
+			{
+				Next();
+				yield return null;
+			}
+		}
+
+		//PrivateFunctions
+		private void Next()
 		{
 			float currentTime = Time.time;
 			timeFactor = (currentTime - startTime) / animationData.animationDuration;
@@ -57,7 +69,6 @@ namespace Ivyyy
 			}
 		}
 
-		//PrivateFunctions
 		void ScaleAnimation ()
 		{
 			float scaleFactor = animationData.animationCurveScale.Evaluate (timeFactor);
