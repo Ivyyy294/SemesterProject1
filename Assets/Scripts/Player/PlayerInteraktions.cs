@@ -14,6 +14,9 @@ public class PlayerInteraktions: MonoBehaviour
 	[SerializeField] Emote happyEmote;
 	[SerializeField] Emote angryEmote;
 
+	[Header ("Animations")]
+	[SerializeField] Ivyyy.AnimationData2D pickUp;
+
 	[Header ("Lara Values")]
 	[SerializeField] float rayDistance;
 	[SerializeField] GameObject dropIndicator;
@@ -28,6 +31,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private Vector3 dir;
 	private uint playerId;
 	private bool indicatorRotated = false;
+	private Ivyyy.Animation2D pickUpAnimation = new Ivyyy.Animation2D();
 
 	//Input Actions
 	private InputAction moveAction;
@@ -127,6 +131,9 @@ public class PlayerInteraktions: MonoBehaviour
 	{
 		if (dropIndicator != null && dropIndicator.activeInHierarchy)
 			MoveIndicatorPos();
+
+		if (grabbedObject != null)
+			pickUpAnimation.Next();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -182,8 +189,9 @@ public class PlayerInteraktions: MonoBehaviour
 
 			obj.layer = LayerMask.NameToLayer ("NoCollision");
 			obj.transform.SetParent (warePos);
-			obj.transform.position = warePos.position;
-			obj.transform.localScale = new Vector3 (0.5f, 0.5f);
+			obj.transform.localScale = Vector3.one;
+
+			pickUpAnimation.Init (obj.transform, warePos, pickUp);
 
 			grabbedObject = obj.GetComponent <WareDisplay>();
 
@@ -296,7 +304,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	void ResetDropIndicator()
 	{
-		dropIndicator.transform.localScale = new Vector3 (1f, 1f);
+		dropIndicator.transform.localScale = Vector3.one;
 
 		dropIndicator.transform.rotation = Quaternion.Euler (Vector3.zero);
 		indicatorRotated = false;
@@ -307,7 +315,6 @@ public class PlayerInteraktions: MonoBehaviour
 	//Places the ware back on the ground
 	private void ResetGrabbedObject (Vector3 pos)
 	{ 
-		grabbedObject.transform.localScale = new Vector3 (1f, 1f, 1f);
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
 		ResetDropIndicator();
@@ -316,7 +323,6 @@ public class PlayerInteraktions: MonoBehaviour
 	//Returns the ware to the pool
 	private void ReturnGrabbedObject ()
 	{ 
-		grabbedObject.transform.localScale = new Vector3 (1f, 1f, 1f);
 		grabbedObject.ReturnToPoolDeactivated();
 		grabbedObject = null;
 		ResetDropIndicator();

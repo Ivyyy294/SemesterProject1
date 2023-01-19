@@ -8,6 +8,7 @@ public class StoreSlot : MonoBehaviour
 	//Editor Values
 	[SerializeField] SpriteRenderer iconRenderer;
 	[SerializeField] TextMeshProUGUI price;
+	[SerializeField] Transform wareSpawnPos;
 
 	//private Values
 	private Ware ware;
@@ -44,6 +45,10 @@ public class StoreSlot : MonoBehaviour
 					gameStatus.AddSilverCoins (playerId, -ware.value);
 					PlayerStatsManager.Me.Stats (playerId).WareBought++;
 					val = wDisplay.gameObject;
+
+					//Spawns the ware at the slots position
+					if (wareSpawnPos != null)
+						val.transform.position = wareSpawnPos.position;
 				}
 			}
 			else

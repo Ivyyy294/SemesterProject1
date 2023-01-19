@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconRenderer: {fileID: 5714918681023123849}
   price: {fileID: 9134267367995335685}
+  wareSpawnPos: {fileID: 7095100076870376658}
 --- !u!1 &3859831473476891081
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1777074599
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

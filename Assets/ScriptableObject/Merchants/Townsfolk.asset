@@ -14,21 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Hunter
   sprite: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
-  requestList:
-  - ware: {fileID: 11400000, guid: bef9fe47e1c7a5743af6f8114e0cb0f0, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: c43d39cb39f46484fa1eda3ccf230f6e, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 843cb1d946dab2d4f8a6881cdb450dc2, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 757158f9109de7040bf683ee43e5b69e, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: ea28f68a04a4f3e4bafa06a02bf8cdba, type: 2}
-    requestChance: 0.5
+  requestManager:
+    spawnObjects:
+    - objectToSpawn: {fileID: 11400000, guid: bef9fe47e1c7a5743af6f8114e0cb0f0, type: 2}
+      weight: 0.5
+    - objectToSpawn: {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
+      weight: 0.5
+    - objectToSpawn: {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
+      weight: 0.5
+    - objectToSpawn: {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}
+      weight: 0.5
+    - objectToSpawn: {fileID: 11400000, guid: c43d39cb39f46484fa1eda3ccf230f6e, type: 2}
+      weight: 0.5
+    - objectToSpawn: {fileID: 11400000, guid: 843cb1d946dab2d4f8a6881cdb450dc2, type: 2}
+      weight: 0.5
+    - objectToSpawn: {fileID: 11400000, guid: 757158f9109de7040bf683ee43e5b69e, type: 2}
+      weight: 0.5
+    - objectToSpawn: {fileID: 11400000, guid: ea28f68a04a4f3e4bafa06a02bf8cdba, type: 2}
+      weight: 0.5
   requestFrequency: 15

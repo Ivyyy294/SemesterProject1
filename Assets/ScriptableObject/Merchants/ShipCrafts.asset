@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ship Craftsmerchant
   sprite: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
-  requestList:
-  - ware: {fileID: 11400000, guid: dcc6220612c26694c85d48f0b1c3ec8a, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 5e2182f8a742edc4e885d85f0c1ba66e, type: 2}
-    requestChance: 0.5
+  requestManager:
+    spawnObjects:
+    - objectToSpawn: {fileID: 11400000, guid: dcc6220612c26694c85d48f0b1c3ec8a, type: 2}
+      weight: 0.5
   requestFrequency: 15
