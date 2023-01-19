@@ -18,14 +18,6 @@ public class Merchant : ScriptableObject
 	public Sprite sprite;
 
 	[Header ("Goods")]
-	public List <RequestItem> requestList;
+	public Ivyyy.WeightedSpawnManager <Ware> requestManager = new Ivyyy.WeightedSpawnManager <Ware>();
 	public uint requestFrequency;
-
-	public Ware GetNewRequest ()
-	{
-		if (requestList.Count > 0)
-			return requestList[0].ware;
-
-		return null;
-	}
 }

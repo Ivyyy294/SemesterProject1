@@ -19,6 +19,7 @@ public class MerchantDisplay : MonoBehaviour
 	SpriteRenderer spriteRenderer;
 	double lifeTime = 0.0;
 	Ware currentRequest = null;
+	PlayerStatsManager statsManager;
 
 	//Public Functions
 	public bool Interact (GameObject obj, uint playerId)
@@ -29,6 +30,9 @@ public class MerchantDisplay : MonoBehaviour
 
 			if (wareDisplay != null)
 			{
+				PlayerStats playerStats = statsManager.Stats (playerId);
+				playerStats.WareSold++;
+
 				if (wareDisplay.damaged)
 				{
 					GameStatus.Me.LossReputation (playerId);
@@ -46,6 +50,7 @@ public class MerchantDisplay : MonoBehaviour
 					if (wareDisplay.ware.ID == currentRequest.ID)
 					{
 						GameStatus.Me.AddReputation (playerId, maxRequestTime);
+						playerStats.RequestCompleted++;
 						ChangeRequest (null);
 					}
 					else
@@ -67,15 +72,17 @@ public class MerchantDisplay : MonoBehaviour
 		if (currentRequest == null
 			&& lifeTime >= merchant.requestFrequency)
 		{
-			ChangeRequest (merchant.GetNewRequest());
+			ChangeRequest (merchant.requestManager.GetObjectToSpawn());
 		}
 	}
 
 	//Private Functions
 	private void Start()
 	{
+		statsManager = PlayerStatsManager.Me;
 		spriteRenderer = GetComponent <SpriteRenderer>();
 		spriteRenderer.sprite = merchant.sprite;
+		merchant.requestManager.Init();
 	}
 
 	private void Update()
