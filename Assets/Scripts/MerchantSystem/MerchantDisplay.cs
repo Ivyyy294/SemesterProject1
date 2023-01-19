@@ -72,7 +72,7 @@ public class MerchantDisplay : MonoBehaviour
 		if (currentRequest == null
 			&& lifeTime >= merchant.requestFrequency)
 		{
-			ChangeRequest (merchant.GetNewRequest());
+			ChangeRequest (merchant.requestManager.GetObjectToSpawn());
 		}
 	}
 
@@ -82,6 +82,7 @@ public class MerchantDisplay : MonoBehaviour
 		statsManager = PlayerStatsManager.Me;
 		spriteRenderer = GetComponent <SpriteRenderer>();
 		spriteRenderer.sprite = merchant.sprite;
+		merchant.requestManager.Init();
 	}
 
 	private void Update()
