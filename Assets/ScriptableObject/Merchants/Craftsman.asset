@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Craftsman
   sprite: {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
-  requestList:
-  - ware: {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
-    requestChance: 0.5
-  - ware: {fileID: 11400000, guid: 843cb1d946dab2d4f8a6881cdb450dc2, type: 2}
-    requestChance: 0.5
+  requestManager:
+    spawnObjects:
+    - objectToSpawn: {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
+      weight: 0.5
   requestFrequency: 15

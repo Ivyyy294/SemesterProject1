@@ -51,6 +51,7 @@ public class WareDisplay : MonoBehaviour
 
 	public void ReturnToPool ()
 	{
+		transform.localScale = Vector3.one;
 		Debug.Log ("Ware released back to pool");
 		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		transform.SetParent (WarePool.Me.transform);
@@ -90,6 +91,7 @@ public class WareDisplay : MonoBehaviour
 	{
 		transform.position = pos;
 		transform.SetParent (WarePool.Me.transform);
+		transform.localScale = Vector3.one;
 		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		EnableRenderer (true);
 		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
@@ -164,7 +166,7 @@ public class WareDisplay : MonoBehaviour
 		foreach (StoringAreaId i in ware.storingAreaIds)
 			storingAreas.Add (i, false);
 
-		transform.localScale = new Vector3 (1f, 1f, 1f);
+		transform.localScale = Vector3.one;
 
 		initFrame = true;
 	}
