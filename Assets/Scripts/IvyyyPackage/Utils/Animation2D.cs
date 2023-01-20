@@ -23,6 +23,9 @@ namespace Ivyyy
 		float timeFactor;
 		public bool Done { get; private set;}
 
+		Vector3 lastOffset;
+		Vector3 lastPos;
+		
 		//Public Functions
 		public void Init (Transform obj, AnimationData2D data)
 		{
@@ -77,22 +80,41 @@ namespace Ivyyy
 
 		void MoveAnimation ()
 		{
+			Vector3 newPos;
+
 			if (destination != null)
+				newPos = Vector3.Lerp (startPos, destination.position, timeFactor);
+			else
 			{
-				Vector3 pos = Vector3.Lerp (startPos, destination.position, timeFactor);
-				objToMove.position = pos;
+				newPos = objToMove.position;
+
+				//If the object didnt got moved, nullify offset
+				if (lastPos == objToMove.position)
+					newPos -= lastOffset;
 			}
 
 			float xOffset = 0f;
 			float yOffset = 0f;
 			
-			if (animationData.animationCurveX.length > 0)
+			if (animationData.animationCurveX != null
+				&& animationData.animationCurveX.length > 0)
 				xOffset = animationData.animationCurveX.Evaluate (timeFactor);
 
-			if (animationData.animationCurveY.length > 0)
+			if (animationData.animationCurveY != null
+				&& animationData.animationCurveY.length > 0)
 				yOffset = animationData.animationCurveY.Evaluate (timeFactor);
 
-			objToMove.localPosition += new Vector3(xOffset, yOffset);
+			lastOffset = new Vector3(xOffset, yOffset);
+			newPos += lastOffset;
+
+			Rigidbody2D rigidbody2D = objToMove.GetComponent<Rigidbody2D>();
+
+			if (rigidbody2D != null && !rigidbody2D.isKinematic)
+				rigidbody2D.MovePosition (newPos);
+			else
+				objToMove.position = newPos;
+			
+			lastPos = newPos;
 		}
 	}
 }
