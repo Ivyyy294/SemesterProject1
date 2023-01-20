@@ -261,6 +261,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7736609123228510582}
     m_Modifications:
+    - target: {fileID: 3321021023288065694, guid: 4a572e08827afcb4b9a1e10d3cf966c4, type: 3}
+      propertyPath: m_RenderAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3676967499263135541, guid: 4a572e08827afcb4b9a1e10d3cf966c4, type: 3}
       propertyPath: m_Name
       value: Bees
