@@ -68,8 +68,6 @@ public class MerchantDisplay : MonoBehaviour
 
 	public void ActivateRequestIfReady()
 	{
-		//Debug.Log ("ActivateRequestIfReady");
-
 		if (currentRequest == null
 			&& lifeTime >= merchant.requestFrequency)
 		{

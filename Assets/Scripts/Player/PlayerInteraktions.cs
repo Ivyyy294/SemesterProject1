@@ -162,7 +162,6 @@ public class PlayerInteraktions: MonoBehaviour
 
 	void DropObject ()
 	{
-		Debug.Log ("DropObject");
 		if (grabbedObject != null)
 		{
 			DropIndicator tmp = dropIndicator.GetComponent <DropIndicator>();
@@ -268,8 +267,6 @@ public class PlayerInteraktions: MonoBehaviour
 
 	private void InteractMerchant(GameObject gameObject)
 	{
-		Debug.Log ("InteractMerchant");
-
 		if (gameObject != null)
 		{
 			MerchantDisplay tmp = gameObject.GetComponent<MerchantDisplay>();
