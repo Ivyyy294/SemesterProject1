@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11fe6db42050574b84ace2e5ed80650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  store: {fileID: 11400000, guid: 5eef61de69641b34e943c2ec8ba8684a, type: 2}
+  store: {fileID: 11400000, guid: 245b5dd7006f95843bb7e0eb746fc747, type: 2}
   slotLeft: {fileID: 7629219626181374885}
   slotRight: {fileID: 4717839004739924781}
 --- !u!1001 &5541040796772323653
@@ -291,6 +291,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5714918681023123849, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714918681023123849, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: adf66a0eb92c70b4289496bba5b6aea7, type: 3}
+    - target: {fileID: 5714918681023123849, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095100076870376658, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7714399272299184425, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_SortingOrder
       value: 0
@@ -298,6 +314,10 @@ PrefabInstance:
     - target: {fileID: 7714399272299184425, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_SortingLayerID
       value: 1777074599
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134267367995335685, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_text
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9134267367995335685, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_fontSize
@@ -460,6 +480,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5714918681023123849, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
+    - target: {fileID: 5714918681023123849, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095100076870376658, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7714399272299184425, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_RenderMode
       value: 2
@@ -471,6 +503,10 @@ PrefabInstance:
     - target: {fileID: 7714399272299184425, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_SortingLayerID
       value: 1777074599
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134267367995335685, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
+      propertyPath: m_text
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9134267367995335685, guid: 546e37daeeb8f8546a8b78cc8fa98c5f, type: 3}
       propertyPath: m_fontSize

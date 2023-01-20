@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [RequireComponent (typeof (SpriteRenderer))]
 public class StoreDisplay : MonoBehaviour
@@ -12,8 +13,8 @@ public class StoreDisplay : MonoBehaviour
 	[SerializeField] StoreSlot slotLeft;
 	[SerializeField] StoreSlot slotRight;
 
-	// Start is called before the first frame update
-	void Start()
+	//Public
+	public void Init()
 	{
 		if (store != null)
 		{
@@ -21,7 +22,26 @@ public class StoreDisplay : MonoBehaviour
 			slotLeft.SetWare (store.waresToSell[0]);
 			slotRight.SetWare (store.waresToSell[1]);
 		}
-		else
+	}
+
+	// Start is called before the first frame update
+	void Start()
+	{
+		if (store == null)
 			Debug.Log ("Store not set!");
+
+		Init();
+	}
+}
+
+[CustomEditor (typeof (StoreDisplay))]
+public class StoreDisplayEditor : Editor
+{
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
+
+		StoreDisplay storeDisplay = (StoreDisplay) target;
+		storeDisplay.Init();
 	}
 }

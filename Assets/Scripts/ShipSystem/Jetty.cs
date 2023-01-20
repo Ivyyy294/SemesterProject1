@@ -38,8 +38,6 @@ public class Jetty : MonoBehaviour
 
 	public void SpawnShip(Ship obj)
 	{
-		Debug.Log ("Ship spawned!");
-
 		string name = "Arriving";
 
 		if (shipPathfinding != null && shipPathfinding.CurrentPath () != name)

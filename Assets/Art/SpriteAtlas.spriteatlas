@@ -1734,6 +1734,17 @@ SpriteAtlas:
   - {fileID: -1804000323, guid: 0cfb488a636769c40bf7f1e22f43238f, type: 3}
   - {fileID: -2094166920, guid: 0cfb488a636769c40bf7f1e22f43238f, type: 3}
   - {fileID: 579430036, guid: 0cfb488a636769c40bf7f1e22f43238f, type: 3}
+  - {fileID: 177868753, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: 1541029298, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: -846764262, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: -1183011576, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: 1116094768, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: -1996920451, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: -112537510, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: -2073892480, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: 206517797, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: -1030202117, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  - {fileID: 1613748920, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
   - {fileID: -1846860355, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: 746696381, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
   - {fileID: -1457007098, guid: 58d00a0b200b1b44eaf97bfd41174e53, type: 3}
@@ -4439,6 +4450,17 @@ SpriteAtlas:
   - Water3_5
   - Water3_8
   - Water3_9
+  - NPC merch_0
+  - NPC merch_1
+  - NPC merch_2
+  - NPC merch_3
+  - NPC merch_4
+  - NPC merch_5
+  - NPC merch_6
+  - NPC merch_7
+  - NPC merch_8
+  - NPC merch_9
+  - NPC merch_10
   - Cliff_tileset_4
   - Cliff_tileset_124
   - Cliff_tileset_125

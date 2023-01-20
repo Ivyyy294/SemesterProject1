@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [RequireComponent (typeof (BoxCollider2D))]
 public class WareDisplay : MonoBehaviour
@@ -13,11 +14,16 @@ public class WareDisplay : MonoBehaviour
 	public float speedThreshold = 0.9f;
 	public float collisionCoolDown = 0.5f;
 
+	[Header ("Animations")]
+	[SerializeField] Ivyyy.AnimationData2D pickUpAnimationData;
+	[SerializeField] Ivyyy.AnimationData2D dropAnimationData;
+
 	[Header ("Lara Values")]
 	public bool damaged = false;
 	public bool isStoresCorrectly = false;
 	public uint fragilityDmg;
 	[SerializeField] SpriteRenderer spriteRenderer;
+	[SerializeField] GameObject placeHolderPrefab;
 
 	//Private Values
 	private float collisionTimer = 0.0f;
@@ -27,6 +33,9 @@ public class WareDisplay : MonoBehaviour
 	Ivyyy.AudioHandler audioHandler;
 	bool initFrame = true;
 	PlayerStatsManager statsManager;
+	private Ivyyy.Animation2D animationHandler = new Ivyyy.Animation2D();
+	GameObject placeHolder;
+	BoxCollider2D wareCollider;
 
 	//Public Functions
 	public static WareDisplay CreateInstance (Ware ware)
@@ -52,7 +61,6 @@ public class WareDisplay : MonoBehaviour
 	public void ReturnToPool ()
 	{
 		transform.localScale = Vector3.one;
-		Debug.Log ("Ware released back to pool");
 		gameObject.layer = LayerMask.NameToLayer ("Interactables");
 		transform.SetParent (WarePool.Me.transform);
 	}
@@ -87,23 +95,39 @@ public class WareDisplay : MonoBehaviour
 			|| (ware.fragility != Ware.Fragility.None && fragilityDmg >= ware.fragilityHp); //Fragility limit exceeded
 	}
 
-	public void PlaceOnGround (Vector3 pos)
+	public void PickUp (Transform destination)
 	{
-		transform.position = pos;
+		gameObject.layer = LayerMask.NameToLayer ("NoCollision");
+		transform.SetParent (destination);
+
+		if (ware != null)
+			Ivyyy.AudioHandler.Me.PlayOneShotFromList (ware.audiosPickUp);
+		
+		animationHandler.Init (transform, destination, pickUpAnimationData);
+		StartCoroutine (animationHandler.Play());
+	}
+
+	public void PlaceOnGround (Transform pos)
+	{
+		//Prevents players from placing object on the same spot
+		SpawnPlaceholder (pos.position);
+
 		transform.SetParent (WarePool.Me.transform);
-		transform.localScale = Vector3.one;
-		gameObject.layer = LayerMask.NameToLayer ("Interactables");
-		EnableRenderer (true);
+
+		animationHandler.Init (transform, pos, dropAnimationData);
+		StartCoroutine (animationHandler.Play());
+
+		//EnableRenderer (true);
 		audioHandler.PlayOneShotFromList (ware.audiosPlaceDown);
 	}
 
-	public void EnableRenderer (bool val)
-	{
-		if (spriteRenderer != null)
-		{
-			spriteRenderer.enabled = val;
-		}
-	}
+	//public void EnableRenderer (bool val)
+	//{
+	//	if (spriteRenderer != null)
+	//	{
+	//		spriteRenderer.enabled = val;
+	//	}
+	//}
 
 	public Sprite GetActiveSprite()
 	{
@@ -142,6 +166,39 @@ public class WareDisplay : MonoBehaviour
 		}
 	}
 
+	public void ChangeSprite()
+	{
+		if (ware != null)
+		{
+			//SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+			if (spriteRenderer == null)
+				Debug.Log ("SpriteRenderer missing!");
+			else
+			{
+				//Use the vertival sprites if available and the ware is rotated
+				if (transform.rotation.z != 0f 
+					&& ware.SpriteVerticalDamaged != null
+					&& ware.SpriteVerticalOk != null)
+				{
+					if (damaged)
+						spriteRenderer.sprite = ware.SpriteVerticalDamaged;
+					else
+						spriteRenderer.sprite = ware.SpriteVerticalOk;
+				}
+				else
+				{
+					if (damaged)
+						spriteRenderer.sprite = ware.SpriteDamaged;
+					else
+						spriteRenderer.sprite = ware.SpriteOk;
+				}
+			}
+		}
+	}
+
+
+
 	//Private Functions
 	void Init ()
 	{
@@ -154,12 +211,12 @@ public class WareDisplay : MonoBehaviour
 		isStoresCorrectly = false;
 		transform.rotation = new Quaternion();
 
-		BoxCollider2D collider = GetComponent<BoxCollider2D>();
-		collider.size = ware.GetSizeInWorld();
+		wareCollider = GetComponent<BoxCollider2D>();
+		wareCollider.size = ware.GetSizeInWorld();
 
 		//Adjusting renderer position to ware size
 		if (spriteRenderer != null)
-			spriteRenderer.gameObject.transform.localPosition = new Vector2 (0f, -collider.size.y / 2);
+			spriteRenderer.gameObject.transform.localPosition = new Vector2 (0f, -wareCollider.size.y / 2);
 
 		storingAreas = new Dictionary<StoringAreaId, bool>();
 
@@ -194,6 +251,14 @@ public class WareDisplay : MonoBehaviour
 		}
 		else
 			Debug.Log ("Ware not set!");
+
+		//Removes the active placeholder, once the drop animation is done
+		//And set Layer back to Interactables
+		if (placeHolder != null && animationHandler.Done)
+		{
+			gameObject.layer = LayerMask.NameToLayer ("Interactables");
+			Destroy (placeHolder);
+		}
 	}
 
 	private void LateUpdate()
@@ -201,37 +266,6 @@ public class WareDisplay : MonoBehaviour
 		//Prevents storedCorrectly sound from being played, when ware spawns in storage area
 		if (initFrame && baseTimer > Time.fixedDeltaTime)
 			initFrame = false;
-	}
-
-	void ChangeSprite()
-	{
-		if (ware != null)
-		{
-			//SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-
-			if (spriteRenderer == null)
-				Debug.Log ("SpriteRenderer missing!");
-			else
-			{
-				//Use the vertival sprites if available and the ware is rotated
-				if (transform.rotation.z != 0f 
-					&& ware.SpriteVerticalDamaged != null
-					&& ware.SpriteVerticalOk != null)
-				{
-					if (damaged)
-						spriteRenderer.sprite = ware.SpriteVerticalDamaged;
-					else
-						spriteRenderer.sprite = ware.SpriteVerticalOk;
-				}
-				else
-				{
-					if (damaged)
-						spriteRenderer.sprite = ware.SpriteDamaged;
-					else
-						spriteRenderer.sprite = ware.SpriteOk;
-				}
-			}
-		}
 	}
 
 	private void SetStoringArea (GameObject obj, bool status)
@@ -271,5 +305,32 @@ public class WareDisplay : MonoBehaviour
 	{
 		if (collision.transform.CompareTag ("Player"))
 			OnCollisionPlayer (collision.gameObject, false);
+	}
+
+	private void SpawnPlaceholder (Vector3 pos)
+	{
+		if (placeHolderPrefab !=  null)
+		{
+			placeHolder = Instantiate (placeHolderPrefab, pos, new Quaternion());
+
+			BoxCollider2D placeHolderCollider = placeHolder.GetComponent<BoxCollider2D>();
+
+			if (wareCollider != null && placeHolder != null)
+				placeHolderCollider.size = wareCollider.size;
+		}
+		else
+			Debug.Log ("Missing Prefab placeHolderPrefab");
+	}
+}
+
+[CustomEditor (typeof (WareDisplay))]
+public class WareDisplayEditor : Editor
+{
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
+
+		WareDisplay storeDisplay = (WareDisplay) target;
+		storeDisplay.ChangeSprite();
 	}
 }

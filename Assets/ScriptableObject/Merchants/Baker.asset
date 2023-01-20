@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Baker
   m_EditorClassIdentifier: 
   name: Baker
-  sprite: {fileID: 175901710, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  sprite: {fileID: -1183011576, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}

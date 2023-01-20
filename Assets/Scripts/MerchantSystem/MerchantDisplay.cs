@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [RequireComponent (typeof (SpriteRenderer))]
 public class MerchantDisplay : MonoBehaviour
@@ -76,12 +77,21 @@ public class MerchantDisplay : MonoBehaviour
 		}
 	}
 
+	public void SetSprite ()
+	{
+		if (merchant != null)
+		{
+			spriteRenderer = GetComponent <SpriteRenderer>();
+
+			if (spriteRenderer != null)
+				spriteRenderer.sprite = merchant.sprite;
+		}
+	}
 	//Private Functions
 	private void Start()
 	{
 		statsManager = PlayerStatsManager.Me;
-		spriteRenderer = GetComponent <SpriteRenderer>();
-		spriteRenderer.sprite = merchant.sprite;
+		SetSprite();
 		merchant.requestManager.Init();
 	}
 
@@ -135,5 +145,17 @@ public class MerchantDisplay : MonoBehaviour
 		else
 			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioLargeSale);
 		
+	}
+}
+
+[CustomEditor (typeof (MerchantDisplay))]
+public class MerchantDisplayEditor : Editor
+{
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
+
+		MerchantDisplay merchantDisplay = (MerchantDisplay) target;
+		merchantDisplay.SetSprite();
 	}
 }

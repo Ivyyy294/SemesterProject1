@@ -87,7 +87,6 @@ public class Harbour : MonoBehaviour
 	{
 		float offset = sProfile.tMax - sProfile.tMin;
 		float val = sProfile.tMin + offset * random.Value(); 
-		Debug.Log ("New Spawn TIme: " + val);
 		return val;
 	}
 }

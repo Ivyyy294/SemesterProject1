@@ -6,12 +6,14 @@ public class ShipDisplay : MonoBehaviour
 {
 	//Editor values
 	[SerializeField] List <Transform> warePos;
+	[SerializeField] Ivyyy.AnimationData2D swimAnimation;
 
 	//LaraValues
 	public GameObject boardingRamp;
 
 	//Private Values
 	uint counterPlayersOnShip;
+	Ivyyy.Animation2D animationPlayer = new Ivyyy.Animation2D();
 
 	//Public Functions
 	public bool IsPlayerOnShip()
@@ -35,6 +37,12 @@ public class ShipDisplay : MonoBehaviour
 	}
 
 	//Private Functions
+
+	private void Start()
+	{
+		animationPlayer.Init (transform, swimAnimation);
+		StartCoroutine (animationPlayer.Play());
+	}
 
 	void InitWares (Ship ship)
 	{

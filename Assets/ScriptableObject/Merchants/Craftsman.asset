@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Craftsman
   m_EditorClassIdentifier: 
   name: Craftsman
-  sprite: {fileID: 1238215281, guid: aa386ba46a5a40e4f942551991b7373e, type: 3}
+  sprite: {fileID: 177868753, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
