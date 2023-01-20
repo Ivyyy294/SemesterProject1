@@ -26,11 +26,6 @@ public class Harbour : MonoBehaviour
 	bool initDone = false;
 
 	//Private Functions
-	// Start is called before the first frame update
-	void Start()
-	{
-	}
-
 	// Update is called once per frame
 	void FixedUpdate()
 	{

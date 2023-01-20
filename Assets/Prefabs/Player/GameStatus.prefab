@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2472667551685640615}
   - component: {fileID: 2426638205460519323}
   - component: {fileID: 5710461296151232015}
+  - component: {fileID: 1342788637651946561}
   m_Layer: 5
   m_Name: GameStatus
   m_TagString: Untagged
@@ -132,6 +133,7 @@ MonoBehaviour:
   - {fileID: 2472667551380574320}
   - {fileID: 2472667552009161912}
   dayLenght: 30
+  reputationNeededToWin: 100
   passiveReputationLossThreshold: 20
   passiveReputationLossInterval: 10
   audioRepGain: {fileID: 8300000, guid: c553284c6201c854da11b0300e543388, type: 3}
@@ -255,6 +257,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 2426638205460519323}
+--- !u!114 &1342788637651946561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2472667551685640614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533d8b9a0da349c42b5fcc71444a7eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnProfile:
+    day: 0
+    tMin: 100
+    tMax: 300
+    spawnChanceCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  marketEvent:
+    duration: 30
+    reputationMod: 1
+    buyMod: 1
+    sellMod: 1
+  eventIndicator: {fileID: 0}
 --- !u!1 &2472667552009161915
 GameObject:
   m_ObjectHideFlags: 0

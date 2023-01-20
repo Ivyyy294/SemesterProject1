@@ -15,6 +15,7 @@ MonoBehaviour:
   name: WineLarge
   ID: 116
   value: 3
+  sellValue: 5
   weight: 2
   size: {x: 2, y: 2}
   SpriteOk: {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}

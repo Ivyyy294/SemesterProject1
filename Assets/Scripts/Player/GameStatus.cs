@@ -65,6 +65,9 @@ public class Team
 		timeSinceRequest = 0f;
 		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepGain);
 
+		if (gameStatus.CurrentMarketEvet != null)
+			gain *= gameStatus.CurrentMarketEvet.reputationMod;
+
 		foreach (uint i in playerIds)
 			statsManager.Stats (i).AddReputationEarned(gain);
 	}
@@ -164,6 +167,8 @@ public class GameStatus : MonoBehaviour
 	GameDateTime currentDateTime = new GameDateTime();
 
 	//Public Functions
+	public MarketEvent CurrentMarketEvet { get;set;}
+
 	public void AddPlayerToTeam (uint playerId, int teamId)
 	{
 		if (teamId < teams.Count)
