@@ -6,9 +6,9 @@ namespace Ivyyy
 	[System.Serializable]
 	public class AnimationData2D
 	{
-		public AnimationCurve animationCurveX = null;
-		public AnimationCurve animationCurveY = null;
-		public AnimationCurve animationCurveScale = null;
+		public AnimationCurve animationCurveX = AnimationCurve.Constant (0f,1f,1f);
+		public AnimationCurve animationCurveY = AnimationCurve.Constant (0f,1f,1f);
+		public AnimationCurve animationCurveScale = AnimationCurve.Constant (0f,1f,1f);
 		public float animationDuration;
 		public bool loop = false;
 	}

@@ -14,9 +14,6 @@ public class PlayerInteraktions: MonoBehaviour
 	[SerializeField] Emote happyEmote;
 	[SerializeField] Emote angryEmote;
 
-	[Header ("Animations")]
-	[SerializeField] Ivyyy.AnimationData2D pickUp;
-
 	[Header ("Lara Values")]
 	[SerializeField] float rayDistance;
 	[SerializeField] GameObject dropIndicator;
@@ -31,7 +28,6 @@ public class PlayerInteraktions: MonoBehaviour
 	private Vector3 dir;
 	private uint playerId;
 	private bool indicatorRotated = false;
-	private Ivyyy.Animation2D pickUpAnimation = new Ivyyy.Animation2D();
 
 	//Input Actions
 	private InputAction moveAction;
@@ -172,7 +168,7 @@ public class PlayerInteraktions: MonoBehaviour
 			DropIndicator tmp = dropIndicator.GetComponent <DropIndicator>();
 
 			if (tmp != null && tmp.IsDropAreaClear())
-				ResetGrabbedObject (dropIndicator.transform.position);
+				ResetGrabbedObject (dropIndicator.transform);
 		}
 	}
 
@@ -184,19 +180,11 @@ public class PlayerInteraktions: MonoBehaviour
 
 			indicatorRotated = obj.transform.rotation.z != 0f;
 
-			obj.layer = LayerMask.NameToLayer ("NoCollision");
-			obj.transform.SetParent (warePos);
-			obj.transform.localScale = Vector3.one;
-
-			pickUpAnimation.Init (obj.transform, warePos, pickUp);
-			StartCoroutine (pickUpAnimation.Play());
-
 			grabbedObject = obj.GetComponent <WareDisplay>();
 
 			if (grabbedObject != null && dropIndicator != null)
 			{
-				Ivyyy.AudioHandler.Me.PlayOneShotFromList (grabbedObject.ware.audiosPickUp);
-
+				grabbedObject.PickUp (warePos);
 				//Setting Size of Drop indicator to Ware Size
 				dropIndicator.SetActive (true);
 				dropIndicator.transform.localScale = grabbedObject.ware.GetSizeInWorld();
@@ -311,7 +299,7 @@ public class PlayerInteraktions: MonoBehaviour
 	}
 
 	//Places the ware back on the ground
-	private void ResetGrabbedObject (Vector3 pos)
+	private void ResetGrabbedObject (Transform pos)
 	{ 
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
