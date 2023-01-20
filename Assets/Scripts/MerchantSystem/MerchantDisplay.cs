@@ -41,7 +41,7 @@ public class MerchantDisplay : MonoBehaviour
 				}
 				else
 				{
-					uint wareValue = wareDisplay.ware.value;
+					uint wareValue = wareDisplay.ware.sellValue;
 
 					PlaySaleAudio (wareValue);
 
