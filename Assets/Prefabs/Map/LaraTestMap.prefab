@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2472667551685640602, guid: 6958ec2081d5643488fc917fe131a94d, type: 3}
       propertyPath: reputationNeededToWin
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2472667551685640603, guid: 6958ec2081d5643488fc917fe131a94d, type: 3}
       propertyPath: m_RootOrder
