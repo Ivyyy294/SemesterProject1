@@ -414,6 +414,7 @@ SpriteAtlas:
   - {fileID: -467423075, guid: 4538b0d0d6572484c82d8b214089fdbc, type: 3}
   - {fileID: 693076793, guid: 4538b0d0d6572484c82d8b214089fdbc, type: 3}
   - {fileID: 21300000, guid: ae3372e081467714494939ff66c95aa8, type: 3}
+  - {fileID: 21300000, guid: d424a701c4759444fb3a3b21251324dc, type: 3}
   - {fileID: -10848242, guid: 8caf3531515bf154188e4654a9ed2725, type: 3}
   - {fileID: -639866514, guid: 8caf3531515bf154188e4654a9ed2725, type: 3}
   - {fileID: -621451360, guid: 8caf3531515bf154188e4654a9ed2725, type: 3}
@@ -3147,6 +3148,7 @@ SpriteAtlas:
   - contour1_23
   - contour1_22
   - resinS
+  - Ui elements2
   - TX Struct_34
   - TX Struct_35
   - TX Struct_36
