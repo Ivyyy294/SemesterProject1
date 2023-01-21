@@ -1744,36 +1744,36 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fa8b2e894397e7642a9b5abeec966c44, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   - {fileID: 21300000, guid: ff08430a793e82a4fb26ef251a1dd517, type: 3}
-  - {fileID: -1215382313, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 264713608, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -59795995, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -190465845, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 303258182, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 481889996, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -836966272, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1246537179, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -2831999, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1021956533, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -696118650, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 2145896858, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: -1855712377, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: -1637812867, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: -190940204, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: -652323838, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -853226383, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 426349424, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -1481512692, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 1038448397, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 396395270, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -1415103066, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 1118279209, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 111653500, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -1913798475, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 1464211719, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 1269706659, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -153839987, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 776302550, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 907502719, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 2018802080, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -1330577210, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -829241207, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -1833854146, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: -669262540, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
-  - {fileID: 777849160, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 425632254, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1237804520, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -356287910, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1845929646, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -713585646, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1542893635, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -884821912, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1501383765, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1043799823, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1483276022, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1264912447, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -2042216733, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -930538032, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1389322816, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1093824113, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1978650318, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1405347523, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1372704433, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: -1775314290, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
+  - {fileID: 1112548957, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
   - {fileID: -1429788626, guid: a53f616a76e438146be5503e16502f40, type: 3}
   - {fileID: 1885515764, guid: a53f616a76e438146be5503e16502f40, type: 3}
   - {fileID: -32909777, guid: a53f616a76e438146be5503e16502f40, type: 3}
@@ -1950,6 +1950,76 @@ SpriteAtlas:
   - {fileID: 1674586504, guid: 78a6c01b9063fc946bc5d8fe371addec, type: 3}
   - {fileID: -1067008229, guid: 78a6c01b9063fc946bc5d8fe371addec, type: 3}
   - {fileID: 21300000, guid: c2fd6a1b5de719c4993bd42421129270, type: 3}
+  - {fileID: -1434273731, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1891848005, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 649075449, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 797096257, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -13548217, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 2091606753, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 195757152, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -2139421927, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1438334901, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -2059877328, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 344899662, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1923505081, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1873981983, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1630949319, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 30969142, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1899242283, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 883566011, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 668925312, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 112809272, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -676379552, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1148919714, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1969592677, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1725437313, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -2128714519, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1732722529, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -2020747863, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -472547436, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 2137359815, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1598006571, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1672345173, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -529068359, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 812143291, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1140863112, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1812675029, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1830413120, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1311438341, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -142070959, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 190657073, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1538440080, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -77391295, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -783288386, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1682068474, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -50346200, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 97270518, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1919012876, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -524639224, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1071893579, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 798280155, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1194223523, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -751144271, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -403354592, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1665654798, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 675327299, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -831372474, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1415574236, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1227319838, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 1670780407, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 986263816, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1256725156, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -85702959, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 642662640, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -768819159, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1813837366, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 507957647, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -832374387, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 670118431, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -403524490, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 289258596, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: -1113297314, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 342731829, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
   - {fileID: 21300000, guid: 4e65696b54706294897c2c7672d4c4cb, type: 3}
   - {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
   - {fileID: -1277097648, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
@@ -4732,6 +4802,76 @@ SpriteAtlas:
   - Water1_11
   - Water1_10
   - PlayerIdl
+  - harbor stones +whater_31
+  - harbor stones +whater_30
+  - harbor stones +whater_33
+  - harbor stones +whater_32
+  - harbor stones +whater_44
+  - harbor stones +whater_35
+  - harbor stones +whater_45
+  - harbor stones +whater_34
+  - harbor stones +whater_46
+  - harbor stones +whater_37
+  - harbor stones +whater_47
+  - harbor stones +whater_36
+  - harbor stones +whater_40
+  - harbor stones +whater_39
+  - harbor stones +whater_41
+  - harbor stones +whater_38
+  - harbor stones +whater_42
+  - harbor stones +whater_43
+  - harbor stones +whater_48
+  - harbor stones +whater_49
+  - harbor stones +whater_28
+  - harbor stones +whater_29
+  - harbor stones +whater_26
+  - harbor stones +whater_27
+  - harbor stones +whater_24
+  - harbor stones +whater_25
+  - harbor stones +whater_22
+  - harbor stones +whater_23
+  - harbor stones +whater_20
+  - harbor stones +whater_21
+  - harbor stones +whater_8
+  - harbor stones +whater_9
+  - harbor stones +whater_0
+  - harbor stones +whater_1
+  - harbor stones +whater_2
+  - harbor stones +whater_3
+  - harbor stones +whater_4
+  - harbor stones +whater_5
+  - harbor stones +whater_6
+  - harbor stones +whater_7
+  - harbor stones +whater_57
+  - harbor stones +whater_56
+  - harbor stones +whater_55
+  - harbor stones +whater_54
+  - harbor stones +whater_53
+  - harbor stones +whater_52
+  - harbor stones +whater_68
+  - harbor stones +whater_19
+  - harbor stones +whater_51
+  - harbor stones +whater_69
+  - harbor stones +whater_18
+  - harbor stones +whater_50
+  - harbor stones +whater_62
+  - harbor stones +whater_13
+  - harbor stones +whater_63
+  - harbor stones +whater_12
+  - harbor stones +whater_60
+  - harbor stones +whater_11
+  - harbor stones +whater_59
+  - harbor stones +whater_61
+  - harbor stones +whater_10
+  - harbor stones +whater_58
+  - harbor stones +whater_66
+  - harbor stones +whater_17
+  - harbor stones +whater_67
+  - harbor stones +whater_16
+  - harbor stones +whater_64
+  - harbor stones +whater_15
+  - harbor stones +whater_65
+  - harbor stones +whater_14
   - Honey
   - Furs
   - harbor wood tileset (2, 2s)_9
