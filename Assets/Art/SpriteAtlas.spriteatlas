@@ -1683,6 +1683,7 @@ SpriteAtlas:
   - {fileID: 367209125, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: -818003589, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: 21300000, guid: 3434c0795f4197649ae5efba8d8a8c84, type: 3}
+  - {fileID: 21300000, guid: fa8b2e894397e7642a9b5abeec966c44, type: 3}
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   - {fileID: 21300000, guid: ff08430a793e82a4fb26ef251a1dd517, type: 3}
   - {fileID: -1215382313, guid: 1fa0454a76374be499d043dd2a163213, type: 3}
@@ -2020,6 +2021,7 @@ SpriteAtlas:
   - {fileID: 862589261, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
   - {fileID: -1284184352, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
   - {fileID: 204503152, guid: b7d5845cd5bfee641b14dab5a2a571e9, type: 3}
+  - {fileID: 21300000, guid: 1b24026c740bdf345aec2f8dee17ca86, type: 3}
   - {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}
   - {fileID: -1744617577, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
   - {fileID: 1047395784, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
@@ -4401,6 +4403,7 @@ SpriteAtlas:
   - Ship details 1_83
   - Ship details 1_82
   - playerHappy
+  - date pin small
   - Armour
   - oil lamp 3
   - fontain_9
@@ -4738,6 +4741,7 @@ SpriteAtlas:
   - pl 1 green_left
   - pl 1 green_right
   - pl 1 green_idl
+  - scroll
   - Wine
   - Ship details_2
   - Ship details_3

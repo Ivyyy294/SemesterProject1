@@ -37,9 +37,9 @@ public class Team
 	public float SilverCoins {private set;get;}
 	public float SilverCoinsEarned {private set; get;}
 	public List <uint> playerIds = new List<uint>();
+	public CityTax tax = new CityTax();
 	
 	//Private Values
-	CityTax tax = new CityTax();
 	private float timeSinceRequest = 0f;
 	private float timeSincePassiveReputationLoss;
 	private bool taxCollected = false;
