@@ -41,7 +41,10 @@ public class MerchantDisplay : MonoBehaviour
 				}
 				else
 				{
-					uint wareValue = wareDisplay.ware.value;
+					float wareValue = wareDisplay.ware.sellValue;
+
+					if (GameStatus.Me.CurrentMarketEvet != null)
+						wareValue *= GameStatus.Me.CurrentMarketEvet.sellMod;
 
 					PlaySaleAudio (wareValue);
 
@@ -134,11 +137,11 @@ public class MerchantDisplay : MonoBehaviour
 		return null;
 	}
 
-	private void PlaySaleAudio (uint wareValue)
+	private void PlaySaleAudio (float wareValue)
 	{
-		if (wareValue <= 2)
+		if (wareValue <= 2f)
 			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioSmallSale);
-		else if (wareValue <= 4)
+		else if (wareValue <= 4f)
 			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioMediumSale);
 		else
 			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioLargeSale);

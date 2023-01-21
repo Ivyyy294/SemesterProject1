@@ -23,6 +23,7 @@ public class Ware : ScriptableObject
 	public new string name;
 	public uint ID = 0;
 	public uint value = 1;
+	public uint sellValue = 1;
 	public WeightCategory weight;
 	public Vector2Int size = new Vector2Int (2, 2);
 

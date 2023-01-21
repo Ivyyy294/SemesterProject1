@@ -52,7 +52,7 @@ public class PlayerStatsPanel : MonoBehaviour
 		//Silver
 		AppendText (silverEarned, stats.SilverEarnedTotal.ToString());
 		AppendText (silverLost, stats.SilverSpentTotal.ToString());
-		AppendText (tax, stats.TaxPayed.ToString());
+		AppendText (tax, Ivyyy.Utils.RoundF (stats.TaxPayed, 2).ToString());
 
 		//Reputation
 		AppendText (reputationEarned, ((int)stats.reputationEarnedTotal).ToString());

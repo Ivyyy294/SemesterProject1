@@ -9,6 +9,26 @@ public class GameDateTime
 	public string minute;
 }
 
+public class CityTax
+{
+	//Public Values
+	public float TaxToPay {get; private set;}
+
+	//Private Values
+	private uint numberOfTaxes;
+
+	public void CalculateTaxToPay (float earnedSilverCoins, float currentSilverCoins)
+	{
+		++numberOfTaxes;
+		float tax = 5 + (2f * numberOfTaxes) + (currentSilverCoins * 0.1f);
+
+		if (earnedSilverCoins > 0f)
+			tax += ((Mathf.Pow (earnedSilverCoins, 1.4f) / numberOfTaxes) * 0.1f);
+
+		TaxToPay = tax;
+	}
+}
+
 public class Team
 {
 	//Public Values
@@ -19,9 +39,9 @@ public class Team
 	public List <uint> playerIds = new List<uint>();
 	
 	//Private Values
+	CityTax tax = new CityTax();
 	private float timeSinceRequest = 0f;
 	private float timeSincePassiveReputationLoss;
-	private uint numberOfTaxes;
 	private bool taxCollected = false;
 	GameStatus gameStatus;
 	PlayerStatsManager statsManager;
@@ -31,6 +51,7 @@ public class Team
 	{
 		Reputation = 50f;
 		SilverCoins = 10f;
+		tax.CalculateTaxToPay(SilverCoinsEarned, SilverCoins);
 
 		gameStatus = GameStatus.Me;
 		statsManager = PlayerStatsManager.Me;
@@ -43,6 +64,9 @@ public class Team
 		Reputation += gain;
 		timeSinceRequest = 0f;
 		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepGain);
+
+		if (gameStatus.CurrentMarketEvet != null)
+			gain *= gameStatus.CurrentMarketEvet.reputationMod;
 
 		foreach (uint i in playerIds)
 			statsManager.Stats (i).AddReputationEarned(gain);
@@ -79,7 +103,7 @@ public class Team
 		{
 			if (!taxCollected)
 			{
-				CityTax();
+				CollectCityTax();
 				taxCollected = true;
 			}
 		}
@@ -100,18 +124,16 @@ public class Team
 			timeSincePassiveReputationLoss += Time.deltaTime;
 	}
 
-	private void CityTax ()
+	private void CollectCityTax ()
 	{
-		++numberOfTaxes;
-		float tax = 5 + (2f * numberOfTaxes) + (SilverCoins * 0.1f);
+		float taxToPay = tax.TaxToPay;
 
-		if (SilverCoinsEarned > 0f)
-			tax += ((Mathf.Pow (SilverCoinsEarned, 1.4f) / numberOfTaxes) * 0.1f);
-
-		SilverCoins -= tax;
+		//Calculate new tax before removing silvercoins
+		tax.CalculateTaxToPay (SilverCoinsEarned, SilverCoins);
+		SilverCoins -= taxToPay;
 
 		foreach (uint i in playerIds)
-			statsManager.Stats (i).TaxPayed += tax;
+			statsManager.Stats (i).TaxPayed += taxToPay;
 
 		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioTax);
 	}
@@ -145,6 +167,8 @@ public class GameStatus : MonoBehaviour
 	GameDateTime currentDateTime = new GameDateTime();
 
 	//Public Functions
+	public MarketEvent CurrentMarketEvet { get;set;}
+
 	public void AddPlayerToTeam (uint playerId, int teamId)
 	{
 		if (teamId < teams.Count)
@@ -275,37 +299,40 @@ public class GameStatus : MonoBehaviour
 		CalculateDayTime();
 
 		foreach (Team i in teams)
-		{
 			i.Update();
 
+		CheckWinLoseCondition();
+    }
+
+	void CheckWinLoseCondition()
+	{
+		int winner = -1;
+
+		foreach (Team i in teams)
+		{
+			//Team win when reaching 100 reputation
 			if (i.Reputation >= reputationNeededToWin)
 			{
-				PlayerStatsManager.Me.IndexTeamWon = i.Id;
-				MapManager.Me.LoadMap (Map.PlayerStats);
+				winner = i.Id;
+				break;
+			}
+			//Team loses when negative silver
+			else if (i.SilverCoins < 0f)
+			{
+				//Just two teams
+				if (i.Id == 0)
+					winner = 1;
+				else
+					winner = 0;
+
 				break;
 			}
 		}
-    }
-
-	/* void OnGUI()
-	{
-		if (teams.Count > 0)
+		
+		if (winner != -1)
 		{
-			GUI.skin.label.fontStyle = FontStyle.Bold;
-			GUI.skin.label.fontSize = 24;
-			GUI.skin.label.normal.textColor = Color.black;
-
-			GUILayout.BeginArea(new Rect (10, 0, 500, 500));
-			GUILayout.Label ("Day: " + currentDay.ToString() + " Time: " + currentHour + ":" + currentMinute);
-
-			foreach (Team i in teams)
-			{
-				GUILayout.Label ("Team " + i.Id.ToString());
-				GUILayout.Label ("Reputation: " + i.Reputation.ToString());
-				GUILayout.Label ("Silver: " + i.SilverCoins.ToString());
-			}
-
-			GUILayout.EndArea();
+			PlayerStatsManager.Me.IndexTeamWon = winner;
+			MapManager.Me.LoadMap (Map.PlayerStats);
 		}
-	} */
+	}
 }

@@ -36,13 +36,18 @@ public class StoreSlot : MonoBehaviour
 
 		if (ware != null)
 		{
-			if (ware.value <= gameStatus.GetPlayerMoney (playerId))
+			float wareValue = ware.value;
+
+			if (GameStatus.Me.CurrentMarketEvet != null)
+				wareValue *= GameStatus.Me.CurrentMarketEvet.buyMod;
+
+			if (wareValue <= gameStatus.GetPlayerMoney (playerId))
 			{
 				WareDisplay wDisplay = WareDisplay.CreateInstance (ware);
 
 				if (wDisplay != null)
 				{
-					gameStatus.AddSilverCoins (playerId, -ware.value);
+					gameStatus.AddSilverCoins (playerId, -wareValue);
 					PlayerStatsManager.Me.Stats (playerId).WareBought++;
 					val = wDisplay.gameObject;
 
