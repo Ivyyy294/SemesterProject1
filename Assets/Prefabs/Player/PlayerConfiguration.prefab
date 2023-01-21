@@ -86,6 +86,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4b560c16-b282-45df-8fa4-28956441b123
     m_ActionName: Player/Rotate[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a6fe7cb-6e4f-4bac-98e8-4fdc56cf988b
+    m_ActionName: Player/Emote 1[/XInputControllerWindows/dpad/up,/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3dd8fc08-be33-4048-a5dc-10440a00093f
+    m_ActionName: Player/Emote 2[/XInputControllerWindows/dpad/right,/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9501b32a-5b20-4839-b44a-c6bb08f4ea00
+    m_ActionName: Player/Emote 3[/XInputControllerWindows/dpad/down,/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a9678320-288f-4e96-a72d-fd3ac59bb503
+    m_ActionName: Player/Emote 4[/XInputControllerWindows/dpad/left,/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -272,6 +288,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: sadEmote
+      value: 
+      objectReference: {fileID: 11400000, guid: fed9d90fa7782454c999cbedf3a4c819, type: 2}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: angryEmote
+      value: 
+      objectReference: {fileID: 11400000, guid: f97ad0f1a41a6234eb832759e17e03f3, type: 2}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: happyEmote
+      value: 
+      objectReference: {fileID: 11400000, guid: 2109fade243a5944e8434507b462d663, type: 2}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: heartEmote
+      value: 
+      objectReference: {fileID: 11400000, guid: fed9d90fa7782454c999cbedf3a4c819, type: 2}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
       propertyPath: heartEmote.sprite
       value: 
       objectReference: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
@@ -309,23 +341,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3714752570770300281, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
   m_PrefabInstance: {fileID: 2423149091697510674}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8797086433337377626 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6608265828297820744, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
-  m_PrefabInstance: {fileID: 2423149091697510674}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2753296471705757540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8797086433337377626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6de6dd822c38e445b8378c4f6a86d93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2751858570553821277
 PrefabInstance:
   m_ObjectHideFlags: 0

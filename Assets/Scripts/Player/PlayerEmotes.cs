@@ -2,23 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Emote
-{
-	public Sprite sprite;
-	public float duration = 1f;
-	public AudioClip audio;
-	[Range (0f, 1f)]
-	public float volume = 1f;
-}
-
 [RequireComponent (typeof (SpriteRenderer))]
 public class PlayerEmotes : MonoBehaviour
 {
 	//Private Values
 	private SpriteRenderer spriteRenderer;
 	private float timer = 0f;
-	private float duration = 0f;
+	private float frameTime = 0f;
+	int currentFrame;
+	Emote emote;
 
 	//Public Functions
 
@@ -29,9 +21,14 @@ public class PlayerEmotes : MonoBehaviour
 
 		if (spriteRenderer != null && e != null)
 		{
-			spriteRenderer.sprite = e.sprite;
+			if (e.frames.Length > 0)
+				spriteRenderer.sprite = e.frames[0];
+
 			timer = 0f;
-			duration = e.duration;
+			currentFrame = 0;
+			frameTime = 1 / e.fps;
+			emote = e;
+
 			spriteRenderer.enabled = true;
 			Ivyyy.AudioHandler.Me.PlayOneShot (e.audio, e.volume);
 		}
@@ -40,14 +37,19 @@ public class PlayerEmotes : MonoBehaviour
 	}
 
 	//Private FUnctions
-
-    // Update is called once per frame
-    void Update()
+	void Update()
     {
-		if (timer >= duration)
+		if (timer >= frameTime)
 		{
-			if (spriteRenderer != null)
+			++currentFrame;
+			timer = 0f;
+
+			if (currentFrame >= emote.frames.Length)
 				spriteRenderer.enabled = false;
+			else if (spriteRenderer != null)
+				spriteRenderer.sprite = emote.frames[currentFrame];
+			
+		
 		}
 		else
 			timer += Time.deltaTime;
