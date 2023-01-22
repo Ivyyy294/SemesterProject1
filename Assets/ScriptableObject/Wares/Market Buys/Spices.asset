@@ -15,10 +15,11 @@ MonoBehaviour:
   name: Spices
   ID: 12
   value: 4
+  sellValue: 1
   weight: 1
   size: {x: 2, y: 2}
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  SpriteOk: {fileID: 21300000, guid: 2a3e866f33f7abf498b3010867c77e6d, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 6e375a3beb02a004595cf0f25e94dfc9, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
   durability: 300

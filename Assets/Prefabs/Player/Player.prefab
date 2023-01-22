@@ -562,15 +562,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cea38a366ba534a9d668cc32251937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  day: {fileID: 0}
-  time: {fileID: 0}
-  tax: {fileID: 0}
-  startPos: {fileID: 0}
-  endPos: {fileID: 0}
-  pin: {fileID: 0}
   player: {fileID: 0}
-  reputation: {fileID: 0}
-  silver: {fileID: 0}
+  scroll: {fileID: 0}
+  jar: {fileID: 0}
 --- !u!58 &557145810795951752
 CircleCollider2D:
   m_ObjectHideFlags: 0

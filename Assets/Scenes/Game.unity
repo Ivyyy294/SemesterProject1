@@ -242,7 +242,7 @@ MonoBehaviour:
   - state: 0
     mapPrefab: {fileID: 7295891994126042035, guid: f69144d0ee22d3245b30fd3a90e8b4fd, type: 3}
   - state: 1
-    mapPrefab: {fileID: 5299013562066240560, guid: adc1f96449c463e4c9afd4f2b12e1a76, type: 3}
+    mapPrefab: {fileID: 5299013562066240560, guid: ecf4bdebe390c6949ad4bdbcda1aa6a1, type: 3}
   - state: 2
     mapPrefab: {fileID: 7295891994126042035, guid: 77928bf436fc6b4499d39b89f5b45838, type: 3}
 --- !u!114 &273832230
