@@ -15,10 +15,11 @@ MonoBehaviour:
   name: Furs
   ID: 4
   value: 2
+  sellValue: 1
   weight: 0
   size: {x: 2, y: 2}
   SpriteOk: {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 64943204f9a402c4fb2baeb7ad17a0dd, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
   durability: 180
