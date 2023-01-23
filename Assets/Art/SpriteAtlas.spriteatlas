@@ -1365,8 +1365,10 @@ SpriteAtlas:
   - {fileID: 1627177051, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: -337318029, guid: 97896aa404242264ebf9742bfd37eb4c, type: 3}
   - {fileID: 21300000, guid: 8cb64da49a3babd4da0668035b7dd43a, type: 3}
+  - {fileID: 21300000, guid: d3d677b4f9e500a4fbfc21a5e10aad1d, type: 3}
   - {fileID: 21300000, guid: 7f1a3eb4ba6574949a2a99cc10ac20ac, type: 3}
   - {fileID: 21300000, guid: 84085eb4fc1b6f3448b5a6f25fa5468f, type: 3}
+  - {fileID: 21300000, guid: db8965c4c97ccb54583b1aa0e05911d8, type: 3}
   - {fileID: 21300000, guid: 547adee4d23bb9142809ee0aef719f3f, type: 3}
   - {fileID: 21300000, guid: e28ced7531e047144a5830a1248d6361, type: 3}
   - {fileID: 21300000, guid: 3161dda504adc9d46a2f07eab82265f5, type: 3}
@@ -1630,6 +1632,7 @@ SpriteAtlas:
   - {fileID: -630198669, guid: 4ba69ab884320534bbfc7c3a2874e507, type: 3}
   - {fileID: 977884703, guid: 4ba69ab884320534bbfc7c3a2874e507, type: 3}
   - {fileID: 21300000, guid: 1405b0d819142f64297e6f5af5985ada, type: 3}
+  - {fileID: 21300000, guid: b676a3e890d2d7642b006840eb4069a1, type: 3}
   - {fileID: 21300000, guid: 525091f898c25f342b95dcb69fb15c86, type: 3}
   - {fileID: 21300000, guid: c1712a299cfb8164a97bc46b73f0b0c4, type: 3}
   - {fileID: -516989105, guid: e666a439675695f418f5e539659ed28a, type: 3}
@@ -1805,6 +1808,7 @@ SpriteAtlas:
   - {fileID: -1804000323, guid: 0cfb488a636769c40bf7f1e22f43238f, type: 3}
   - {fileID: -2094166920, guid: 0cfb488a636769c40bf7f1e22f43238f, type: 3}
   - {fileID: 579430036, guid: 0cfb488a636769c40bf7f1e22f43238f, type: 3}
+  - {fileID: 21300000, guid: b584699a89ebcec44a317105431d026b, type: 3}
   - {fileID: 21300000, guid: 570784fa5a6c0684e8bde9b15958cafc, type: 3}
   - {fileID: 21300000, guid: a78809fa8397f5f4b8c7573bfc946607, type: 3}
   - {fileID: 21300000, guid: f314c9fad9431964e968d554bc0af181, type: 3}
@@ -2033,6 +2037,7 @@ SpriteAtlas:
   - {fileID: 289258596, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
   - {fileID: -1113297314, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
   - {fileID: 342731829, guid: 7483494b0cb9a834aa9f8eeecf86ac9b, type: 3}
+  - {fileID: 21300000, guid: 1d44e85bbc728df439a670c2652c9f88, type: 3}
   - {fileID: 21300000, guid: 4e65696b54706294897c2c7672d4c4cb, type: 3}
   - {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
   - {fileID: -1277097648, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
@@ -2267,6 +2272,7 @@ SpriteAtlas:
   - {fileID: 1473349063, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: 1286112676, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: -107530684, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
+  - {fileID: 21300000, guid: 71577aac25d71284bafc60f3bdb366e7, type: 3}
   - {fileID: 1570811048, guid: 185e90cc03d73644188bf71c13610655, type: 3}
   - {fileID: -626045755, guid: 185e90cc03d73644188bf71c13610655, type: 3}
   - {fileID: 1610675110, guid: 185e90cc03d73644188bf71c13610655, type: 3}
@@ -4234,8 +4240,10 @@ SpriteAtlas:
   - ground_tiles (1)_183
   - ground_tiles (1)_226
   - Armour2
+  - Cloth
   - Bread2S
   - Timber1
+  - Timber2S
   - Bread1S
   - playerSad
   - cry0001
@@ -4499,6 +4507,7 @@ SpriteAtlas:
   - Kontor inside borders (add fix)_5
   - Kontor inside borders (add fix)_4
   - FishOilS
+  - Timber2
   - HoneyS 1
   - PlayerSide
   - Ship details 1_111
@@ -4674,6 +4683,7 @@ SpriteAtlas:
   - Water3_5
   - Water3_8
   - Water3_9
+  - clothS
   - Jar explanation
   - cry0005
   - WaxS1
@@ -4902,6 +4912,7 @@ SpriteAtlas:
   - harbor stones +whater_15
   - harbor stones +whater_65
   - harbor stones +whater_14
+  - Timber1 1
   - Honey
   - Furs
   - harbor wood tileset (2, 2s)_9
@@ -5136,6 +5147,7 @@ SpriteAtlas:
   - flat market stone tileset + grass_52
   - flat market stone tileset + grass_84
   - flat market stone tileset + grass_53
+  - Timber1S
   - coblestone line tileset copy_30
   - coblestone line tileset copy_31
   - coblestone line tileset copy_32
