@@ -20,4 +20,10 @@ public class Merchant : ScriptableObject
 	[Header ("Goods")]
 	public Ivyyy.WeightedSpawnManager <Ware> requestManager = new Ivyyy.WeightedSpawnManager <Ware>();
 	public uint requestFrequency;
+
+	[Header ("Voice Lines")]
+	public List <AudioClip> audioRequest = new List<AudioClip>();
+	public List <AudioClip> audioHappy = new List<AudioClip>();
+	public List <AudioClip> audioUpset = new List<AudioClip>();
+	public List <AudioClip> audioChatter = new List<AudioClip>();
 }

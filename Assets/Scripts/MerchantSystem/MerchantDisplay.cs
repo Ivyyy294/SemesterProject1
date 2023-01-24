@@ -12,13 +12,6 @@ public class MerchantDisplay : MonoBehaviour
 	[SerializeField] List <AudioClip> audioLargeSale = new List<AudioClip>();
 	[SerializeField] float maxRequestTime;
 
-	[Header ("Voice Lines")]
-	[SerializeField] List <AudioClip> audioRequest = new List<AudioClip>();
-	[SerializeField] List <AudioClip> audioHappy = new List<AudioClip>();
-	[SerializeField] List <AudioClip> audioUpset = new List<AudioClip>();
-	[SerializeField] List <AudioClip> audioChatter = new List<AudioClip>();
-
-
 	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
 	[SerializeField] SpriteRenderer spriteRenderer;
@@ -62,7 +55,7 @@ public class MerchantDisplay : MonoBehaviour
 					if (wareDisplay.ware.ID == currentRequest.ID)
 					{
 						Debug.Log ("Play Happy");
-						audioHandler.PlayOneShotFromList (audioHappy);
+						audioHandler.PlayOneShotFromList (merchant.audioHappy);
 						GameStatus.Me.AddReputation (playerId, maxRequestTime);
 						playerStats.RequestCompleted++;
 						ChangeRequest (null);
@@ -71,7 +64,7 @@ public class MerchantDisplay : MonoBehaviour
 					{
 						GameStatus.Me.LossReputation (playerId);
 						Debug.Log ("Play Upset");
-						audioHandler.PlayOneShotFromList (audioUpset);
+						audioHandler.PlayOneShotFromList (merchant.audioUpset);
 					}
 
 					return true;
@@ -107,7 +100,7 @@ public class MerchantDisplay : MonoBehaviour
 
 	public void PlayChatter()
 	{
-		audioHandler.PlayOneShotFromList (audioChatter);
+		audioHandler.PlayOneShotFromList (merchant.audioChatter);
 	}
 
 	//Private Functions
@@ -130,7 +123,7 @@ public class MerchantDisplay : MonoBehaviour
 	private void ChangeRequest (Ware obj)
 	{
 		Debug.Log ("Play Request");
-		audioHandler.PlayOneShotFromList (audioRequest);
+		audioHandler.PlayOneShotFromList (merchant.audioRequest);
 		currentRequest = obj;
 		DisplayRequest (obj);
 		lifeTime = 0f;
