@@ -82,6 +82,10 @@ public class PlayerInteraktions: MonoBehaviour
 				dir = movementVec.normalized;
 		}
 		
+		//Moving Indicator position before CastRay, prevents wares from being misplaced
+		if (dropIndicator != null && dropIndicator.activeInHierarchy)
+			MoveIndicatorPos();
+
 		if (grabAction != null && grabAction.WasPressedThisFrame())
 			CastRay ();
 
@@ -121,12 +125,6 @@ public class PlayerInteraktions: MonoBehaviour
 			InteractionsFreeHands (hitInfo);
 		else
 			InteractionsWareGrabbed (hitInfo);
-	}
-
-	private void LateUpdate()
-	{
-		if (dropIndicator != null && dropIndicator.activeInHierarchy)
-			MoveIndicatorPos();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
