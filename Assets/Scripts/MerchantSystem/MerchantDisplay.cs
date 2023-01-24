@@ -12,6 +12,13 @@ public class MerchantDisplay : MonoBehaviour
 	[SerializeField] List <AudioClip> audioLargeSale = new List<AudioClip>();
 	[SerializeField] float maxRequestTime;
 
+	[Header ("Voice Lines")]
+	[SerializeField] List <AudioClip> audioRequest = new List<AudioClip>();
+	[SerializeField] List <AudioClip> audioHappy = new List<AudioClip>();
+	[SerializeField] List <AudioClip> audioUpset = new List<AudioClip>();
+	[SerializeField] List <AudioClip> audioChatter = new List<AudioClip>();
+
+
 	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
 	[SerializeField] SpriteRenderer spriteRenderer;
@@ -20,6 +27,7 @@ public class MerchantDisplay : MonoBehaviour
 	double lifeTime = 0.0;
 	Ware currentRequest = null;
 	PlayerStatsManager statsManager;
+	Ivyyy.AudioHandler audioHandler;
 
 	//Public Functions
 	public bool Interact (GameObject obj, uint playerId)
@@ -35,6 +43,7 @@ public class MerchantDisplay : MonoBehaviour
 
 				if (wareDisplay.damaged)
 				{
+					Debug.Log ("Play Upset");
 					GameStatus.Me.LossReputation (playerId);
 					return true;
 				}
@@ -52,12 +61,18 @@ public class MerchantDisplay : MonoBehaviour
 					//Reputation Gain / Loss
 					if (wareDisplay.ware.ID == currentRequest.ID)
 					{
+						Debug.Log ("Play Happy");
+						audioHandler.PlayOneShotFromList (audioHappy);
 						GameStatus.Me.AddReputation (playerId, maxRequestTime);
 						playerStats.RequestCompleted++;
 						ChangeRequest (null);
 					}
 					else
+					{
 						GameStatus.Me.LossReputation (playerId);
+						Debug.Log ("Play Upset");
+						audioHandler.PlayOneShotFromList (audioUpset);
+					}
 
 					return true;
 				}
@@ -89,10 +104,17 @@ public class MerchantDisplay : MonoBehaviour
 				spriteRenderer.sprite = merchant.sprite;
 		}
 	}
+
+	public void PlayChatter()
+	{
+		audioHandler.PlayOneShotFromList (audioChatter);
+	}
+
 	//Private Functions
 	private void Start()
 	{
 		statsManager = PlayerStatsManager.Me;
+		audioHandler = Ivyyy.AudioHandler.Me;
 		SetSprite();
 		merchant.requestManager.Init();
 	}
@@ -107,6 +129,8 @@ public class MerchantDisplay : MonoBehaviour
 
 	private void ChangeRequest (Ware obj)
 	{
+		Debug.Log ("Play Request");
+		audioHandler.PlayOneShotFromList (audioRequest);
 		currentRequest = obj;
 		DisplayRequest (obj);
 		lifeTime = 0f;
@@ -141,11 +165,11 @@ public class MerchantDisplay : MonoBehaviour
 	private void PlaySaleAudio (float wareValue)
 	{
 		if (wareValue <= 2f)
-			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioSmallSale);
+			audioHandler.PlayOneShotFromList (audioSmallSale);
 		else if (wareValue <= 4f)
-			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioMediumSale);
+			audioHandler.PlayOneShotFromList (audioMediumSale);
 		else
-			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioLargeSale);
+			audioHandler.PlayOneShotFromList (audioLargeSale);
 		
 	}
 }
