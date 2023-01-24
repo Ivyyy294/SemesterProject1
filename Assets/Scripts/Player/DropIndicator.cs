@@ -52,13 +52,28 @@ public class DropIndicator : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (!collision.isTrigger)
+		if (IsColliderValid (collision))
 			++collisionCounter;
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		if (!collision.isTrigger)
+		if (IsColliderValid (collision))
 			--collisionCounter;
+	}
+
+	bool IsColliderValid (Collider2D collider)
+	{
+		bool valid = !collider.isTrigger;
+
+		if (collider.CompareTag ("Player"))
+		{
+			Transform playerTrans = collider.transform.parent;
+
+			if (playerTrans != null)
+				valid &= !transform.IsChildOf (playerTrans);
+		}
+
+		return valid;
 	}
 }

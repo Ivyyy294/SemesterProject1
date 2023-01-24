@@ -107,10 +107,10 @@ public class WareDisplay : MonoBehaviour
 		StartCoroutine (animationHandler.Play());
 	}
 
-	public void PlaceOnGround (Transform pos)
+	public void PlaceOnGround (Vector3 pos)
 	{
 		//Prevents players from placing object on the same spot
-		SpawnPlaceholder (pos.position);
+		SpawnPlaceholder (pos);
 
 		transform.SetParent (WarePool.Me.transform);
 

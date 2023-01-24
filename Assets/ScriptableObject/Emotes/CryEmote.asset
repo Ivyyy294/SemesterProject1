@@ -20,6 +20,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a78809fa8397f5f4b8c7573bfc946607, type: 3}
   - {fileID: 21300000, guid: 25f1d674a3f765646bfacb17ab6baa87, type: 3}
   - {fileID: 21300000, guid: 36d04d9e4462ab74786ee43d4aad6246, type: 3}
-  fps: 1
+  fps: 8
   audio: {fileID: 0}
   volume: 1

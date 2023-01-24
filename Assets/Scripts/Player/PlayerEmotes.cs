@@ -39,19 +39,22 @@ public class PlayerEmotes : MonoBehaviour
 	//Private FUnctions
 	void Update()
     {
-		if (timer >= frameTime)
+		if (emote != null)
 		{
-			++currentFrame;
-			timer = 0f;
+			if (timer >= frameTime)
+			{
+				++currentFrame;
+				timer = 0f;
 
-			if (currentFrame >= emote.frames.Length)
-				spriteRenderer.enabled = false;
-			else if (spriteRenderer != null)
-				spriteRenderer.sprite = emote.frames[currentFrame];
+				if (currentFrame >= emote.frames.Length)
+					spriteRenderer.enabled = false;
+				else if (spriteRenderer != null)
+					spriteRenderer.sprite = emote.frames[currentFrame];
 			
 		
+			}
+			else
+				timer += Time.deltaTime;
 		}
-		else
-			timer += Time.deltaTime;
     }
 }

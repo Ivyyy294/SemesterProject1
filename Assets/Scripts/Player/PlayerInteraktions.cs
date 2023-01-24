@@ -9,10 +9,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	//Editor Values
 	[Header ("Emotes")]
-	[SerializeField] Emote heartEmote;
-	[SerializeField] Emote sadEmote;
-	[SerializeField] Emote happyEmote;
-	[SerializeField] Emote angryEmote;
+	[SerializeField] Emote[] emotes;
 
 	[Header ("Lara Values")]
 	[SerializeField] float rayDistance;
@@ -33,11 +30,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private InputAction moveAction;
 	private InputAction grabAction;
 	private InputAction rotateAction;
-	private InputAction emote1;
-	private InputAction emote2;
-	private InputAction emote3;
-	private InputAction emote4;
-	
+	private InputAction[] emoteActions;
 	//Public Functions
 	public uint GetPlayerId() { return playerId; }
 
@@ -47,10 +40,14 @@ public class PlayerInteraktions: MonoBehaviour
 		grabAction = pc.Input.actions["Grab"];
 		rotateAction = pc.Input.actions ["Rotate"];
 
-		emote1 = pc.Input.actions["Emote 1"];
-		emote2 = pc.Input.actions["Emote 2"];
-		emote3 = pc.Input.actions["Emote 3"];
-		emote4 = pc.Input.actions["Emote 4"];
+		int anzEmotes = emotes.Length;
+		emoteActions = new InputAction[anzEmotes];
+
+		for (int i = 0; i < anzEmotes; ++i)
+		{
+			string actionName = "Emote " + (i +1).ToString();
+			emoteActions[i] = pc.Input.actions[actionName];
+		}
 
 		playerId = (uint) pc.PlayerIndex;
 	}
@@ -82,6 +79,10 @@ public class PlayerInteraktions: MonoBehaviour
 				dir = movementVec.normalized;
 		}
 		
+		//Moving Indicator position before CastRay, prevents wares from being misplaced
+		if (dropIndicator != null && dropIndicator.activeInHierarchy)
+			MoveIndicatorPos();
+
 		if (grabAction != null && grabAction.WasPressedThisFrame())
 			CastRay ();
 
@@ -93,17 +94,13 @@ public class PlayerInteraktions: MonoBehaviour
 		//Emotes
 		if (emoteHandler != null)
 		{
-			if (emote1 != null && emote1.WasPressedThisFrame())
-				emoteHandler.PlayEmote (heartEmote);
+			for (int i = 0; i < emoteActions.Length; ++i)
+			{
+				InputAction action = emoteActions[i];
 
-			if (emote2 != null && emote2.WasPressedThisFrame())
-				emoteHandler.PlayEmote (happyEmote);
-
-			if (emote3 != null && emote3.WasPressedThisFrame())
-				emoteHandler.PlayEmote (sadEmote);
-
-			if (emote4 != null && emote4.WasPressedThisFrame())
-				emoteHandler.PlayEmote (angryEmote);
+				if (action != null && action.WasPressedThisFrame())
+					emoteHandler.PlayEmote (emotes[i]);
+			}
 		}
 	}
 
@@ -121,12 +118,6 @@ public class PlayerInteraktions: MonoBehaviour
 			InteractionsFreeHands (hitInfo);
 		else
 			InteractionsWareGrabbed (hitInfo);
-	}
-
-	private void LateUpdate()
-	{
-		if (dropIndicator != null && dropIndicator.activeInHierarchy)
-			MoveIndicatorPos();
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -165,9 +156,10 @@ public class PlayerInteraktions: MonoBehaviour
 		if (grabbedObject != null)
 		{
 			DropIndicator tmp = dropIndicator.GetComponent <DropIndicator>();
+			Vector3 dropPos = dropIndicator.transform.position;
 
 			if (tmp != null && tmp.IsDropAreaClear())
-				ResetGrabbedObject (dropIndicator.transform);
+				ResetGrabbedObject (dropPos);
 		}
 	}
 
@@ -213,11 +205,6 @@ public class PlayerInteraktions: MonoBehaviour
 				else if (i.collider.CompareTag ("Store"))
 				{
 					InteractStore (i.collider.gameObject);
-					break;
-				}
-				else if (i.collider.CompareTag ("Player"))
-				{
-					InteractPlayer ();
 					break;
 				}
 			}
@@ -279,12 +266,6 @@ public class PlayerInteraktions: MonoBehaviour
 		}
 	}
 
-	private void InteractPlayer()
-	{
-		if (emoteHandler != null)
-			emoteHandler.PlayEmote (heartEmote);
-	}
-
 	void ResetDropIndicator()
 	{
 		dropIndicator.transform.localScale = Vector3.one;
@@ -296,7 +277,7 @@ public class PlayerInteraktions: MonoBehaviour
 	}
 
 	//Places the ware back on the ground
-	private void ResetGrabbedObject (Transform pos)
+	private void ResetGrabbedObject (Vector3 pos)
 	{ 
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;

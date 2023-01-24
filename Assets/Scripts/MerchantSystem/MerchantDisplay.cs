@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[RequireComponent (typeof (SpriteRenderer))]
 public class MerchantDisplay : MonoBehaviour
 {
 	//Editor Values
@@ -15,12 +14,13 @@ public class MerchantDisplay : MonoBehaviour
 
 	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
+	[SerializeField] SpriteRenderer spriteRenderer;
 	
 	//Private Values
-	SpriteRenderer spriteRenderer;
 	double lifeTime = 0.0;
 	Ware currentRequest = null;
 	PlayerStatsManager statsManager;
+	Ivyyy.AudioHandler audioHandler;
 
 	//Public Functions
 	public bool Interact (GameObject obj, uint playerId)
@@ -36,6 +36,7 @@ public class MerchantDisplay : MonoBehaviour
 
 				if (wareDisplay.damaged)
 				{
+					Debug.Log ("Play Upset");
 					GameStatus.Me.LossReputation (playerId);
 					return true;
 				}
@@ -53,12 +54,18 @@ public class MerchantDisplay : MonoBehaviour
 					//Reputation Gain / Loss
 					if (wareDisplay.ware.ID == currentRequest.ID)
 					{
+						Debug.Log ("Play Happy");
+						audioHandler.PlayOneShotFromList (merchant.audioHappy);
 						GameStatus.Me.AddReputation (playerId, maxRequestTime);
 						playerStats.RequestCompleted++;
 						ChangeRequest (null);
 					}
 					else
+					{
 						GameStatus.Me.LossReputation (playerId);
+						Debug.Log ("Play Upset");
+						audioHandler.PlayOneShotFromList (merchant.audioUpset);
+					}
 
 					return true;
 				}
@@ -69,10 +76,14 @@ public class MerchantDisplay : MonoBehaviour
 		return false;
 	}
 
+	public bool IsRequestReady ()
+	{
+		return currentRequest == null && lifeTime >= merchant.requestFrequency;
+	}
+
 	public void ActivateRequestIfReady()
 	{
-		if (currentRequest == null
-			&& lifeTime >= merchant.requestFrequency)
+		if (IsRequestReady())
 		{
 			ChangeRequest (merchant.requestManager.GetObjectToSpawn());
 		}
@@ -82,16 +93,21 @@ public class MerchantDisplay : MonoBehaviour
 	{
 		if (merchant != null)
 		{
-			spriteRenderer = GetComponent <SpriteRenderer>();
-
 			if (spriteRenderer != null)
 				spriteRenderer.sprite = merchant.sprite;
 		}
 	}
+
+	public void PlayChatter()
+	{
+		audioHandler.PlayOneShotFromList (merchant.audioChatter);
+	}
+
 	//Private Functions
 	private void Start()
 	{
 		statsManager = PlayerStatsManager.Me;
+		audioHandler = Ivyyy.AudioHandler.Me;
 		SetSprite();
 		merchant.requestManager.Init();
 	}
@@ -106,6 +122,8 @@ public class MerchantDisplay : MonoBehaviour
 
 	private void ChangeRequest (Ware obj)
 	{
+		Debug.Log ("Play Request");
+		audioHandler.PlayOneShotFromList (merchant.audioRequest);
 		currentRequest = obj;
 		DisplayRequest (obj);
 		lifeTime = 0f;
@@ -140,11 +158,11 @@ public class MerchantDisplay : MonoBehaviour
 	private void PlaySaleAudio (float wareValue)
 	{
 		if (wareValue <= 2f)
-			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioSmallSale);
+			audioHandler.PlayOneShotFromList (audioSmallSale);
 		else if (wareValue <= 4f)
-			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioMediumSale);
+			audioHandler.PlayOneShotFromList (audioMediumSale);
 		else
-			Ivyyy.AudioHandler.Me.PlayOneShotFromList (audioLargeSale);
+			audioHandler.PlayOneShotFromList (audioLargeSale);
 		
 	}
 }
