@@ -12,14 +12,7 @@ public class MerchantHandler : MonoBehaviour
 	//Private Values
 	private float timerRequest;
 	private float timerChatter;
-	private float internRequestCooldown;
 	private int playerInReach = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        internRequestCooldown = requestCooldown * (4f / PlayerManager.Me.GetPlayerConfigs().Count);
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,7 +25,7 @@ public class MerchantHandler : MonoBehaviour
 			Chatter();
 		}
 
-		if (timerRequest < internRequestCooldown)
+		if (timerRequest < requestCooldown)
 			timerRequest += Time.deltaTime;
 		
 		//Chatter timer only runs when a player in at the market
@@ -63,7 +56,7 @@ public class MerchantHandler : MonoBehaviour
 
 	private void Request()
 	{
-		if (timerRequest >= internRequestCooldown)
+		if (timerRequest >= requestCooldown)
 		{
 			MerchantDisplay m = PickRandomMerchant();
 
