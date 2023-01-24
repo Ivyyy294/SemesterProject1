@@ -18,6 +18,7 @@ public class MerchantDisplay : MonoBehaviour
 	
 	//Private Values
 	double lifeTime = 0.0;
+	float effectiveRequestFrequency;
 	Ware currentRequest = null;
 	PlayerStatsManager statsManager;
 	Ivyyy.AudioHandler audioHandler;
@@ -78,7 +79,7 @@ public class MerchantDisplay : MonoBehaviour
 
 	public bool IsRequestReady ()
 	{
-		return currentRequest == null && lifeTime >= merchant.requestFrequency;
+		return currentRequest == null && lifeTime >= effectiveRequestFrequency;
 	}
 
 	public void ActivateRequestIfReady()
@@ -110,12 +111,13 @@ public class MerchantDisplay : MonoBehaviour
 		statsManager = PlayerStatsManager.Me;
 		audioHandler = Ivyyy.AudioHandler.Me;
 		SetSprite();
+		effectiveRequestFrequency = GetEffectiveRequestFrequency();
 		merchant.requestManager.Init();
 	}
 
 	private void Update()
 	{
-		if (currentRequest == null && lifeTime < merchant.requestFrequency)
+		if (currentRequest == null && lifeTime < effectiveRequestFrequency)
 			lifeTime += Time.deltaTime;
 		else if (currentRequest != null && lifeTime >= maxRequestTime)
 			ChangeRequest (null);
@@ -164,6 +166,12 @@ public class MerchantDisplay : MonoBehaviour
 		else
 			audioHandler.PlayOneShotFromList (audioLargeSale);
 		
+	}
+
+	private float GetEffectiveRequestFrequency ()
+	{
+		float effectiveRequestFrequency = merchant.requestFrequency * (4f / PlayerManager.Me.GetPlayerConfigs().Count);
+		return effectiveRequestFrequency;
 	}
 }
 
