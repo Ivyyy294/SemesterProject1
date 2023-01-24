@@ -18,7 +18,8 @@ namespace Ivyyy
 		AnimationData2D animationData;
 		Transform objToMove;
 		Vector3 startPos;
-		Vector3 destination;
+		Vector3 destinationPos;
+		Transform destination = null;
 		float startTime;
 		float timeFactor;
 		public bool Done { get; private set;}
@@ -38,7 +39,19 @@ namespace Ivyyy
 			animationData = data;
 			objToMove = obj;
 			startPos = obj.position;
+			destinationPos = dest;
+			destination = null;
+			timeFactor = 0f;
+			Done = false;
+		}
+
+		public void Init (Transform obj, Transform dest, AnimationData2D data)
+		{
+			startTime = Time.time;
+			animationData = data;
+			objToMove = obj;
 			destination = dest;
+			startPos = obj.position;
 			timeFactor = 0f;
 			Done = false;
 		}
@@ -82,8 +95,10 @@ namespace Ivyyy
 		{
 			Vector3 newPos;
 
-			if (destination != startPos)
-				newPos = Vector3.Lerp (startPos, destination, timeFactor);
+			if (destination != null)
+				newPos = Vector3.Lerp (startPos, destination.position, timeFactor);
+			else if (destinationPos != startPos)
+				newPos = Vector3.Lerp (startPos, destinationPos, timeFactor);
 			else
 			{
 				newPos = objToMove.position;

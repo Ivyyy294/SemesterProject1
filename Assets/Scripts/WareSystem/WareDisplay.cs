@@ -103,7 +103,7 @@ public class WareDisplay : MonoBehaviour
 		if (ware != null)
 			Ivyyy.AudioHandler.Me.PlayOneShotFromList (ware.audiosPickUp);
 		
-		animationHandler.Init (transform, destination.position, pickUpAnimationData);
+		animationHandler.Init (transform, destination, pickUpAnimationData);
 		StartCoroutine (animationHandler.Play());
 	}
 

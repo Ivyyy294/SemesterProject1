@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[RequireComponent (typeof (SpriteRenderer))]
 public class MerchantDisplay : MonoBehaviour
 {
 	//Editor Values
@@ -15,9 +14,9 @@ public class MerchantDisplay : MonoBehaviour
 
 	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
+	[SerializeField] SpriteRenderer spriteRenderer;
 	
 	//Private Values
-	SpriteRenderer spriteRenderer;
 	double lifeTime = 0.0;
 	Ware currentRequest = null;
 	PlayerStatsManager statsManager;
@@ -69,10 +68,14 @@ public class MerchantDisplay : MonoBehaviour
 		return false;
 	}
 
+	public bool IsRequestReady ()
+	{
+		return currentRequest == null && lifeTime >= merchant.requestFrequency;
+	}
+
 	public void ActivateRequestIfReady()
 	{
-		if (currentRequest == null
-			&& lifeTime >= merchant.requestFrequency)
+		if (IsRequestReady())
 		{
 			ChangeRequest (merchant.requestManager.GetObjectToSpawn());
 		}
@@ -82,8 +85,6 @@ public class MerchantDisplay : MonoBehaviour
 	{
 		if (merchant != null)
 		{
-			spriteRenderer = GetComponent <SpriteRenderer>();
-
 			if (spriteRenderer != null)
 				spriteRenderer.sprite = merchant.sprite;
 		}
