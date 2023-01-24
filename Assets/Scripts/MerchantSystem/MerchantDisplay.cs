@@ -85,6 +85,7 @@ public class MerchantDisplay : MonoBehaviour
 	{
 		if (IsRequestReady())
 		{
+			audioHandler.PlayOneShotFromList (merchant.audioRequest);
 			ChangeRequest (merchant.requestManager.GetObjectToSpawn());
 		}
 	}
@@ -123,7 +124,6 @@ public class MerchantDisplay : MonoBehaviour
 	private void ChangeRequest (Ware obj)
 	{
 		Debug.Log ("Play Request");
-		audioHandler.PlayOneShotFromList (merchant.audioRequest);
 		currentRequest = obj;
 		DisplayRequest (obj);
 		lifeTime = 0f;
