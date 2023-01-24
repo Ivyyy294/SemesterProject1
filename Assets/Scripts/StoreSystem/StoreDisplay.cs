@@ -34,6 +34,7 @@ public class StoreDisplay : MonoBehaviour
 	}
 }
 
+#if UNITY_EDITOR
 [CustomEditor (typeof (StoreDisplay))]
 public class StoreDisplayEditor : Editor
 {
@@ -45,3 +46,4 @@ public class StoreDisplayEditor : Editor
 		storeDisplay.Init();
 	}
 }
+#endif

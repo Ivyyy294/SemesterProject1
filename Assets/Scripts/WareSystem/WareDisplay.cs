@@ -323,6 +323,7 @@ public class WareDisplay : MonoBehaviour
 	}
 }
 
+#if UNITY_EDITOR
 [CustomEditor (typeof (WareDisplay))]
 public class WareDisplayEditor : Editor
 {
@@ -334,3 +335,4 @@ public class WareDisplayEditor : Editor
 		storeDisplay.ChangeSprite();
 	}
 }
+#endif
