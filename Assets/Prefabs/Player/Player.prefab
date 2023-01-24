@@ -230,10 +230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c765609e805ec47b2c8a312717ca4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartEmote: {fileID: 0}
-  sadEmote: {fileID: 0}
-  happyEmote: {fileID: 0}
-  angryEmote: {fileID: 0}
+  heartEmote: {fileID: 11400000, guid: d5a8ab3f23ac4c84b978dbaa2fff70d0, type: 2}
+  sadEmote: {fileID: 11400000, guid: fed9d90fa7782454c999cbedf3a4c819, type: 2}
+  happyEmote: {fileID: 11400000, guid: 2109fade243a5944e8434507b462d663, type: 2}
+  angryEmote: {fileID: 11400000, guid: f97ad0f1a41a6234eb832759e17e03f3, type: 2}
   rayDistance: 1.5
   dropIndicator: {fileID: 3714752570590167877}
   rotationOffset: {x: 0, y: 0, z: -90}

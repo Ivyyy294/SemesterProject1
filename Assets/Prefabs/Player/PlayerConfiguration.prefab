@@ -279,30 +279,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
-      propertyPath: sadEmote
-      value: 
-      objectReference: {fileID: 11400000, guid: fed9d90fa7782454c999cbedf3a4c819, type: 2}
-    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
-      propertyPath: angryEmote
-      value: 
-      objectReference: {fileID: 11400000, guid: f97ad0f1a41a6234eb832759e17e03f3, type: 2}
-    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
-      propertyPath: happyEmote
-      value: 
-      objectReference: {fileID: 11400000, guid: 2109fade243a5944e8434507b462d663, type: 2}
-    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
-      propertyPath: heartEmote
-      value: 
-      objectReference: {fileID: 11400000, guid: fed9d90fa7782454c999cbedf3a4c819, type: 2}
-    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
-      propertyPath: heartEmote.sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
-    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
-      propertyPath: heartEmote.duration
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3714752570770300281, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
       propertyPath: m_Name
       value: Player
