@@ -15,12 +15,19 @@ MonoBehaviour:
   name: WheatLarge
   ID: 114
   value: 1
-  SpriteOk: {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
+  sellValue: 1
   weight: 0
   size: {x: 2, y: 2}
+  SpriteOk: {fileID: 21300000, guid: 3d8965e85a992d74bb327b04cce965d2, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: b280f54aa395b9f4aa2de8d61b48fe2f, type: 3}
+  SpriteVerticalOk: {fileID: 0}
+  SpriteVerticalDamaged: {fileID: 0}
   durability: 180
   durabilityExtended: 1200
   storingAreaIds: 03000000
   fragility: 0
   fragilityHp: 4
+  audiosWalk: []
+  audiosPlaceDown: []
+  audiosPickUp: []
+  audiosBump: []
