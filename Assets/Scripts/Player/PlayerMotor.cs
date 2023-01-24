@@ -68,12 +68,13 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 			Move (movementVec);
 
 			//Update Animator Values
-			
+			animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+
+			//This saves the last direction for the animatior, to play the correct idl animation
 			if (movementVec.sqrMagnitude > 0.01f)
 			{
 				animator.SetFloat ("Horizontal", movementVec.x);
 				animator.SetFloat ("Vertical", movementVec.y);
-				animator.SetFloat ("Speed", movementVec.sqrMagnitude);
 			}
 		}
 	}

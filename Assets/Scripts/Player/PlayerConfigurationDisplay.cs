@@ -34,7 +34,7 @@ public class PlayerConfigurationDisplay : MonoBehaviour
 		player.GetComponent<PlayerMotor>().InitPlayer (playerConfiguration);
 		player.transform.position = pos;
 		
-		Animator animator = player.GetComponent<Animator>();
+		Animator animator = player.GetComponentInChildren<Animator>();
 
 		if (playerConfiguration.TeamIndex == 0)
 			animator.runtimeAnimatorController = animatorControllerT1;
