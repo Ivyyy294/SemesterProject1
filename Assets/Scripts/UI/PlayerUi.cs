@@ -8,6 +8,7 @@ public class PlayerUi : MonoBehaviour
 	[SerializeField] PlayerConfigurationDisplay player;
 	[SerializeField] PlayerUiScroll scroll;
 	[SerializeField] PlayerUiJar jar;
+	[SerializeField] PlayerUiNotebook notebook;
 
     //Private Values
 	uint playerId;
@@ -21,24 +22,8 @@ public class PlayerUi : MonoBehaviour
 
 		if (jar != null)
 			jar.SetTeam (team);
-	}
 
-	private string GetReputation (Team t)
-	{
-		return new string ("Reputation: " + ((int)t.Reputation).ToString());
-	}
-
-	private string GetSilver (Team t)
-	{
-		return new string ("Silver: " + ((int)t.SilverCoins).ToString());
-	}
-
-
-	private string GetTax ()
-	{
-		int currentDay = GameStatus.Me.GetCurrentDateTime ().day;
-		int taxInterval = GameStatus.Me.cityTaxInterval;
-		int taxDue = taxInterval - (currentDay % taxInterval);
-		return new string ("City tax due in:" + taxDue.ToString());
+		if (notebook != null)
+			notebook.SetTeam (team);
 	}
 }
