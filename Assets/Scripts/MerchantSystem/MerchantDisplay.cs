@@ -175,6 +175,7 @@ public class MerchantDisplay : MonoBehaviour
 	}
 }
 
+#if UNITY_EDITOR
 [CustomEditor (typeof (MerchantDisplay))]
 public class MerchantDisplayEditor : Editor
 {
@@ -186,3 +187,4 @@ public class MerchantDisplayEditor : Editor
 		merchantDisplay.SetSprite();
 	}
 }
+#endif
