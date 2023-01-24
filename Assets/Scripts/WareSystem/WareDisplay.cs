@@ -103,14 +103,14 @@ public class WareDisplay : MonoBehaviour
 		if (ware != null)
 			Ivyyy.AudioHandler.Me.PlayOneShotFromList (ware.audiosPickUp);
 		
-		animationHandler.Init (transform, destination, pickUpAnimationData);
+		animationHandler.Init (transform, destination.position, pickUpAnimationData);
 		StartCoroutine (animationHandler.Play());
 	}
 
-	public void PlaceOnGround (Transform pos)
+	public void PlaceOnGround (Vector3 pos)
 	{
 		//Prevents players from placing object on the same spot
-		SpawnPlaceholder (pos.position);
+		SpawnPlaceholder (pos);
 
 		transform.SetParent (WarePool.Me.transform);
 

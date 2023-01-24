@@ -163,9 +163,10 @@ public class PlayerInteraktions: MonoBehaviour
 		if (grabbedObject != null)
 		{
 			DropIndicator tmp = dropIndicator.GetComponent <DropIndicator>();
+			Vector3 dropPos = dropIndicator.transform.position;
 
 			if (tmp != null && tmp.IsDropAreaClear())
-				ResetGrabbedObject (dropIndicator.transform);
+				ResetGrabbedObject (dropPos);
 		}
 	}
 
@@ -294,7 +295,7 @@ public class PlayerInteraktions: MonoBehaviour
 	}
 
 	//Places the ware back on the ground
-	private void ResetGrabbedObject (Transform pos)
+	private void ResetGrabbedObject (Vector3 pos)
 	{ 
 		grabbedObject.PlaceOnGround(pos);
 		grabbedObject = null;
