@@ -561,6 +561,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2197dbc274d84e64c842265344b6900c, type: 3}
   - {fileID: 21300000, guid: 30962ec29612c7e44b61b51b8c6d484a, type: 3}
   - {fileID: 21300000, guid: 79274ce2f3d17c64b849b014b168cfab, type: 3}
+  - {fileID: 21300000, guid: 59ba40f2a4cdf2645aa22282f6605f1f, type: 3}
   - {fileID: 21300000, guid: cf7198f297759a746ab5ab9ae05efdcc, type: 3}
   - {fileID: 21300000, guid: 3fedebf28595a4f458b5defc5c57bd0e, type: 3}
   - {fileID: 21300000, guid: efdb9b036ad407e47b63e8465fcaa0e3, type: 3}
@@ -3516,6 +3517,7 @@ SpriteAtlas:
   - Jar full
   - thor-hammer
   - Honey 1
+  - notepad for reputation
   - ship0008
   - cry0003
   - run left p10012
