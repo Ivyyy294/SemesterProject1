@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d557807d1afad7e49b481ce24eaa01ba, type: 3}
+  m_Name: CoinEmote
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300000, guid: 92f21bd9ea2155540a67e34a369acdff, type: 3}
+  - {fileID: 21300000, guid: 21924a13ff1f1f148822966fc75cc7c1, type: 3}
+  - {fileID: 21300000, guid: 68616395440dae14799bd75614314982, type: 3}
+  - {fileID: 21300000, guid: 069b4ca4ac97c624e8be0807a73c80c5, type: 3}
+  - {fileID: 21300000, guid: 376b4a05b61e6ec48a7b31252cc96037, type: 3}
+  - {fileID: 21300000, guid: 346cc8edcfa81c746904da0fc3cc1d39, type: 3}
+  - {fileID: 21300000, guid: 998b812fef7d7af4c8e3df24d00a9812, type: 3}
+  - {fileID: 21300000, guid: 742a566e38eff1f438fdb06fe178298e, type: 3}
+  fps: 8
+  audio: {fileID: 0}
+  volume: 1

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d557807d1afad7e49b481ce24eaa01ba, type: 3}
+  m_Name: ShipEmote
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300000, guid: b63343d16ea3f9149a4b8f864957397c, type: 3}
+  - {fileID: 21300000, guid: ddf92fe878323ae4da2061896c9719c2, type: 3}
+  - {fileID: 21300000, guid: 5759aa4c394e89c4db8657768368d1c3, type: 3}
+  - {fileID: 21300000, guid: e0d65d036d373794496f92bdc776c8a6, type: 3}
+  - {fileID: 21300000, guid: 0f41905993311c94db1ff5e7d2ecf8c9, type: 3}
+  - {fileID: 21300000, guid: 5cb0fd6f1db6ecb4594ccec54b401042, type: 3}
+  - {fileID: 21300000, guid: d9e9ca9c902feb044b9d890f9a561f7d, type: 3}
+  - {fileID: 21300000, guid: cf7198f297759a746ab5ab9ae05efdcc, type: 3}
+  fps: 8
+  audio: {fileID: 0}
+  volume: 1

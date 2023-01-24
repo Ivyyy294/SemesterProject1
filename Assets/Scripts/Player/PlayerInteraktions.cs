@@ -9,10 +9,7 @@ public class PlayerInteraktions: MonoBehaviour
 
 	//Editor Values
 	[Header ("Emotes")]
-	[SerializeField] Emote heartEmote;
-	[SerializeField] Emote sadEmote;
-	[SerializeField] Emote happyEmote;
-	[SerializeField] Emote angryEmote;
+	[SerializeField] Emote[] emotes;
 
 	[Header ("Lara Values")]
 	[SerializeField] float rayDistance;
@@ -33,11 +30,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private InputAction moveAction;
 	private InputAction grabAction;
 	private InputAction rotateAction;
-	private InputAction emote1;
-	private InputAction emote2;
-	private InputAction emote3;
-	private InputAction emote4;
-	
+	private InputAction[] emoteActions;
 	//Public Functions
 	public uint GetPlayerId() { return playerId; }
 
@@ -47,10 +40,14 @@ public class PlayerInteraktions: MonoBehaviour
 		grabAction = pc.Input.actions["Grab"];
 		rotateAction = pc.Input.actions ["Rotate"];
 
-		emote1 = pc.Input.actions["Emote 1"];
-		emote2 = pc.Input.actions["Emote 2"];
-		emote3 = pc.Input.actions["Emote 3"];
-		emote4 = pc.Input.actions["Emote 4"];
+		int anzEmotes = emotes.Length;
+		emoteActions = new InputAction[anzEmotes];
+
+		for (int i = 0; i < anzEmotes; ++i)
+		{
+			string actionName = "Emote " + (i +1).ToString();
+			emoteActions[i] = pc.Input.actions[actionName];
+		}
 
 		playerId = (uint) pc.PlayerIndex;
 	}
@@ -97,17 +94,13 @@ public class PlayerInteraktions: MonoBehaviour
 		//Emotes
 		if (emoteHandler != null)
 		{
-			if (emote1 != null && emote1.WasPressedThisFrame())
-				emoteHandler.PlayEmote (heartEmote);
+			for (int i = 0; i < emoteActions.Length; ++i)
+			{
+				InputAction action = emoteActions[i];
 
-			if (emote2 != null && emote2.WasPressedThisFrame())
-				emoteHandler.PlayEmote (happyEmote);
-
-			if (emote3 != null && emote3.WasPressedThisFrame())
-				emoteHandler.PlayEmote (sadEmote);
-
-			if (emote4 != null && emote4.WasPressedThisFrame())
-				emoteHandler.PlayEmote (angryEmote);
+				if (action != null && action.WasPressedThisFrame())
+					emoteHandler.PlayEmote (emotes[i]);
+			}
 		}
 	}
 
@@ -214,11 +207,6 @@ public class PlayerInteraktions: MonoBehaviour
 					InteractStore (i.collider.gameObject);
 					break;
 				}
-				else if (i.collider.CompareTag ("Player"))
-				{
-					InteractPlayer ();
-					break;
-				}
 			}
 		}
 	}
@@ -276,12 +264,6 @@ public class PlayerInteraktions: MonoBehaviour
 					ReturnGrabbedObject ();
 			}
 		}
-	}
-
-	private void InteractPlayer()
-	{
-		if (emoteHandler != null)
-			emoteHandler.PlayEmote (heartEmote);
 	}
 
 	void ResetDropIndicator()

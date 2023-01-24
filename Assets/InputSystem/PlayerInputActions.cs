@@ -89,6 +89,42 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 5"",
+                    ""type"": ""Button"",
+                    ""id"": ""6c26e5a1-9b6a-4bf0-a024-8a920b0649b9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 6"",
+                    ""type"": ""Button"",
+                    ""id"": ""df433678-c517-4ca9-8aad-14ccecab57e4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 7"",
+                    ""type"": ""Button"",
+                    ""id"": ""cb216699-b310-4217-9c07-ac2065ae9f4b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote 8"",
+                    ""type"": ""Button"",
+                    ""id"": ""ebd0731c-b22b-4b01-8bfd-3fea18974522"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -388,6 +424,50 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Emote 4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92b695e8-3fec-40c1-b26c-7369799c3525"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db54758b-bd8b-45dc-95ed-d8eeea3b3761"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fe09b62e-91d7-41dd-95af-9947dcfa749e"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eb5d2e33-6d80-4f36-830c-1d544ffba68d"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Emote 8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -437,6 +517,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Emote2 = m_Player.FindAction("Emote 2", throwIfNotFound: true);
         m_Player_Emote3 = m_Player.FindAction("Emote 3", throwIfNotFound: true);
         m_Player_Emote4 = m_Player.FindAction("Emote 4", throwIfNotFound: true);
+        m_Player_Emote5 = m_Player.FindAction("Emote 5", throwIfNotFound: true);
+        m_Player_Emote6 = m_Player.FindAction("Emote 6", throwIfNotFound: true);
+        m_Player_Emote7 = m_Player.FindAction("Emote 7", throwIfNotFound: true);
+        m_Player_Emote8 = m_Player.FindAction("Emote 8", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -503,6 +587,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Emote2;
     private readonly InputAction m_Player_Emote3;
     private readonly InputAction m_Player_Emote4;
+    private readonly InputAction m_Player_Emote5;
+    private readonly InputAction m_Player_Emote6;
+    private readonly InputAction m_Player_Emote7;
+    private readonly InputAction m_Player_Emote8;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -514,6 +602,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Emote2 => m_Wrapper.m_Player_Emote2;
         public InputAction @Emote3 => m_Wrapper.m_Player_Emote3;
         public InputAction @Emote4 => m_Wrapper.m_Player_Emote4;
+        public InputAction @Emote5 => m_Wrapper.m_Player_Emote5;
+        public InputAction @Emote6 => m_Wrapper.m_Player_Emote6;
+        public InputAction @Emote7 => m_Wrapper.m_Player_Emote7;
+        public InputAction @Emote8 => m_Wrapper.m_Player_Emote8;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -544,6 +636,18 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Emote4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote4;
                 @Emote4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote4;
                 @Emote4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote4;
+                @Emote5.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote5;
+                @Emote5.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote5;
+                @Emote5.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote5;
+                @Emote6.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote6;
+                @Emote6.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote6;
+                @Emote6.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote6;
+                @Emote7.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote7;
+                @Emote7.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote7;
+                @Emote7.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote7;
+                @Emote8.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote8;
+                @Emote8.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote8;
+                @Emote8.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote8;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -569,6 +673,18 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Emote4.started += instance.OnEmote4;
                 @Emote4.performed += instance.OnEmote4;
                 @Emote4.canceled += instance.OnEmote4;
+                @Emote5.started += instance.OnEmote5;
+                @Emote5.performed += instance.OnEmote5;
+                @Emote5.canceled += instance.OnEmote5;
+                @Emote6.started += instance.OnEmote6;
+                @Emote6.performed += instance.OnEmote6;
+                @Emote6.canceled += instance.OnEmote6;
+                @Emote7.started += instance.OnEmote7;
+                @Emote7.performed += instance.OnEmote7;
+                @Emote7.canceled += instance.OnEmote7;
+                @Emote8.started += instance.OnEmote8;
+                @Emote8.performed += instance.OnEmote8;
+                @Emote8.canceled += instance.OnEmote8;
             }
         }
     }
@@ -609,5 +725,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnEmote2(InputAction.CallbackContext context);
         void OnEmote3(InputAction.CallbackContext context);
         void OnEmote4(InputAction.CallbackContext context);
+        void OnEmote5(InputAction.CallbackContext context);
+        void OnEmote6(InputAction.CallbackContext context);
+        void OnEmote7(InputAction.CallbackContext context);
+        void OnEmote8(InputAction.CallbackContext context);
     }
 }

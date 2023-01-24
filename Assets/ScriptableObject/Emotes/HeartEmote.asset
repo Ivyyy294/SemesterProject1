@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: HeartEmote
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 21300000, guid: 56b9316f14476764abac26201b805920, type: 3}
-  fps: 1
+  - {fileID: 21300000, guid: 8ac73778e4f08a645aece696f7ac8ecf, type: 3}
+  - {fileID: 21300000, guid: 239d41a03cb3750419b3318edd7587dd, type: 3}
+  - {fileID: 21300000, guid: 8b83270c8dea0744aa9c166a5065f8a6, type: 3}
+  - {fileID: 21300000, guid: fd53907f2a4f8f746938577ce6e6adc2, type: 3}
+  - {fileID: 21300000, guid: 27b34f8660a4bdd429d8d51195bd55cc, type: 3}
+  - {fileID: 21300000, guid: 3251dda6a28c3f3429ca1e54926fd649, type: 3}
+  - {fileID: 21300000, guid: b54bf7d03ac34ba42a3930281302484d, type: 3}
+  - {fileID: 21300000, guid: bde46523b81e37941bb2b2e5699b14da, type: 3}
+  fps: 8
   audio: {fileID: 0}
   volume: 1

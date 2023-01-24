@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: HappyEmote
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 21300000, guid: 3434c0795f4197649ae5efba8d8a8c84, type: 3}
-  fps: 1
+  - {fileID: 21300000, guid: ad4604a6d0ad2604182c6e6b13e9c8a2, type: 3}
+  - {fileID: 21300000, guid: 9a7c78d6eb460764fae3c59aa15b8eb5, type: 3}
+  - {fileID: 21300000, guid: 6bbcb2d8449f23e4ca0fee57846e81ce, type: 3}
+  - {fileID: 21300000, guid: 78373ae788550314fae41e8aa48658f3, type: 3}
+  - {fileID: 21300000, guid: 932c3789b66e97b43923eac03cd19aba, type: 3}
+  - {fileID: 21300000, guid: af86bdfbea27bd04999a8575845c03f1, type: 3}
+  - {fileID: 21300000, guid: 4519a2294e7fb6d42aeae14c3edf0b6d, type: 3}
+  - {fileID: 21300000, guid: 8c278811ee5949b4194f044e9577639c, type: 3}
+  fps: 8
   audio: {fileID: 0}
   volume: 1

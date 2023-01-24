@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: AngryEmote
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 21300000, guid: c2c616c26cba1664ba7c0694e5b57dc3, type: 3}
-  fps: 1
+  - {fileID: 21300000, guid: 12849ddf7a7280d49a1f9b6e29e42ba3, type: 3}
+  - {fileID: 21300000, guid: b0e6d9e6fe816084d9e8caecec266863, type: 3}
+  - {fileID: 21300000, guid: 507a5e27e0bf64344b59d5f1efe64215, type: 3}
+  - {fileID: 21300000, guid: 08a0c32980afc974f9c7bdf3e8c4824f, type: 3}
+  - {fileID: 21300000, guid: d902dee7fe1a9ec4ab02eec15786d695, type: 3}
+  - {fileID: 21300000, guid: 799f933d62165e1468a3a626b34ef98c, type: 3}
+  - {fileID: 21300000, guid: dc3269d96f0d7bc4ab48d5735e178305, type: 3}
+  - {fileID: 21300000, guid: 140dd79668dd84947b35ca01a30d2024, type: 3}
+  fps: 8
   audio: {fileID: 0}
   volume: 1
