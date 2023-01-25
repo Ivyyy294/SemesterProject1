@@ -15,10 +15,11 @@ MonoBehaviour:
   name: Resins
   ID: 5
   value: 3
+  sellValue: 1
   weight: 0
   size: {x: 1, y: 1}
-  SpriteOk: {fileID: 21300000, guid: adf66a0eb92c70b4289496bba5b6aea7, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: ae3372e081467714494939ff66c95aa8, type: 3}
+  SpriteOk: {fileID: 21300000, guid: a5dc47ca56bf1ba4099c5eb9930bd880, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 4d6633eee4c7f04479371d033c2d2331, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
   durability: 180

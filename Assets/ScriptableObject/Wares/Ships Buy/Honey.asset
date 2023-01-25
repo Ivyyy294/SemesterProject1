@@ -15,10 +15,11 @@ MonoBehaviour:
   name: Honey
   ID: 3
   value: 1
+  sellValue: 1
   weight: 0
   size: {x: 1, y: 1}
-  SpriteOk: {fileID: 21300000, guid: 4e65696b54706294897c2c7672d4c4cb, type: 3}
-  SpriteDamaged: {fileID: 21300000, guid: cc7966820b0256848b6ce0051457f45b, type: 3}
+  SpriteOk: {fileID: 21300000, guid: ac143b6419bd902478e5b11d8cbd1809, type: 3}
+  SpriteDamaged: {fileID: 21300000, guid: 0610e9caa3271b84480f4b34fd1f07d6, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
   durability: 240
