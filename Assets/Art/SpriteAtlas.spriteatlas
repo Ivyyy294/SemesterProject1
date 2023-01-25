@@ -2688,6 +2688,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 27bfaa4e83047ad42aa8cc077b576bfd, type: 3}
   - {fileID: 21300000, guid: b0ef625ef6c2fee48a79d4dcfb678032, type: 3}
   - {fileID: 21300000, guid: 742a566e38eff1f438fdb06fe178298e, type: 3}
+  - {fileID: 21300000, guid: 97c0b96ea5a819645ae7ea8e8c89348a, type: 3}
   - {fileID: 1921775565, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: -2064033290, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: 395195651, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
@@ -5878,6 +5879,7 @@ SpriteAtlas:
   - run right p10013
   - CraftsmanStore
   - Coin0008
+  - logo 2
   - town sketh 2_92
   - town sketh 2_111
   - town sketh 2_93
