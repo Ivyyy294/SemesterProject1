@@ -1807,6 +1807,7 @@ SpriteAtlas:
   - {fileID: 367209125, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: -818003589, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: 21300000, guid: 0f41905993311c94db1ff5e7d2ecf8c9, type: 3}
+  - {fileID: 21300000, guid: 2a7b195982c8e2343b39646cae7cbbd8, type: 3}
   - {fileID: 21300000, guid: 43257b590d5b10d4fab05b2aad19c60f, type: 3}
   - {fileID: 21300000, guid: 49b5836922f0186449f915f75aff40c2, type: 3}
   - {fileID: 21300000, guid: 3434c0795f4197649ae5efba8d8a8c84, type: 3}
@@ -4984,6 +4985,7 @@ SpriteAtlas:
   - Ship details 1_83
   - Ship details 1_82
   - ship0005
+  - UI scroll
   - HerringS1
   - evil0002
   - playerHappy

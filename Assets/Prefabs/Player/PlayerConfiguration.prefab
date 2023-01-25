@@ -102,7 +102,27 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a9678320-288f-4e96-a72d-fd3ac59bb503
     m_ActionName: Player/Emote 4[/XInputControllerWindows/dpad/left,/Keyboard/4]
-  m_NeverAutoSwitchControlSchemes: 0
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6c26e5a1-9b6a-4bf0-a024-8a920b0649b9
+    m_ActionName: Player/Emote 5[/Keyboard/5]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: df433678-c517-4ca9-8aad-14ccecab57e4
+    m_ActionName: Player/Emote 6[/Keyboard/6]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cb216699-b310-4217-9c07-ac2065ae9f4b
+    m_ActionName: Player/Emote 7[/Keyboard/7]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ebd0731c-b22b-4b01-8bfd-3fea18974522
+    m_ActionName: Player/Emote 8[/Keyboard/8]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4fc0f2a6-dd1a-4c74-8d5e-335c5d8ade6e
+    m_ActionName: Player/Pause[/Keyboard/escape]
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
@@ -279,6 +299,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 6503444818172614542}
     - target: {fileID: 3714752570770300281, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
       propertyPath: m_Name
       value: Player
@@ -323,6 +347,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5721835696677888764}
     m_Modifications:
+    - target: {fileID: 837466814484040084, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+      propertyPath: m_PlayerRoot
+      value: 
+      objectReference: {fileID: 277375356509509458}
     - target: {fileID: 1458302820553687447, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
       propertyPath: m_Name
       value: PlayerUi
@@ -403,3 +431,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2292723334958770178, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
   m_PrefabInstance: {fileID: 2751858570553821277}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6503444818172614542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8966790350256545747, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+  m_PrefabInstance: {fileID: 2751858570553821277}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb73bf6fab2537242974874e88efa0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

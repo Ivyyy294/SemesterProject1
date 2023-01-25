@@ -18,6 +18,7 @@ public class PlayerInteraktions: MonoBehaviour
 	[SerializeField] Transform warePos;
 	[SerializeField] Transform center;
 	[SerializeField] PlayerEmotes emoteHandler;
+	[SerializeField] PlayerPauseMenu pauseMenu;
 
 	//Private Values
 	private Grid snapGrid;
@@ -31,6 +32,7 @@ public class PlayerInteraktions: MonoBehaviour
 	private InputAction grabAction;
 	private InputAction rotateAction;
 	private InputAction[] emoteActions;
+	private InputAction pauseAction;
 	//Public Functions
 	public uint GetPlayerId() { return playerId; }
 
@@ -39,6 +41,7 @@ public class PlayerInteraktions: MonoBehaviour
 		moveAction = pc.Input.actions["Movement"];
 		grabAction = pc.Input.actions["Grab"];
 		rotateAction = pc.Input.actions ["Rotate"];
+		pauseAction = pc.Input.actions ["Pause"];
 
 		int anzEmotes = emotes.Length;
 		emoteActions = new InputAction[anzEmotes];
@@ -71,35 +74,41 @@ public class PlayerInteraktions: MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (moveAction != null)
+		if (GameStatus.Me != null && !GameStatus.Me.GamePaused)
 		{
-			Vector2 movementVec = moveAction.ReadValue <Vector2>();
+			if (pauseAction != null && pauseAction.WasPressedThisFrame() && pauseMenu != null)
+				pauseMenu.Show();
 
-			if (movementVec != Vector2.zero)
-				dir = movementVec.normalized;
-		}
-		
-		//Moving Indicator position before CastRay, prevents wares from being misplaced
-		if (dropIndicator != null && dropIndicator.activeInHierarchy)
-			MoveIndicatorPos();
-
-		if (grabAction != null && grabAction.WasPressedThisFrame())
-			CastRay ();
-
-		bool indicatorActive = grabbedObject != null;
-
-		if (indicatorActive && rotateAction != null && rotateAction.WasPerformedThisFrame ())
-			RotateIndicator();
-
-		//Emotes
-		if (emoteHandler != null)
-		{
-			for (int i = 0; i < emoteActions.Length; ++i)
+			if (moveAction != null)
 			{
-				InputAction action = emoteActions[i];
+				Vector2 movementVec = moveAction.ReadValue <Vector2>();
 
-				if (action != null && action.WasPressedThisFrame())
-					emoteHandler.PlayEmote (emotes[i]);
+				if (movementVec != Vector2.zero)
+					dir = movementVec.normalized;
+			}
+		
+			//Moving Indicator position before CastRay, prevents wares from being misplaced
+			if (dropIndicator != null && dropIndicator.activeInHierarchy)
+				MoveIndicatorPos();
+
+			if (grabAction != null && grabAction.WasPressedThisFrame())
+				CastRay ();
+
+			bool indicatorActive = grabbedObject != null;
+
+			if (indicatorActive && rotateAction != null && rotateAction.WasPerformedThisFrame ())
+				RotateIndicator();
+
+			//Emotes
+			if (emoteHandler != null)
+			{
+				for (int i = 0; i < emoteActions.Length; ++i)
+				{
+					InputAction action = emoteActions[i];
+
+					if (action != null && action.WasPressedThisFrame())
+						emoteHandler.PlayEmote (emotes[i]);
+				}
 			}
 		}
 	}

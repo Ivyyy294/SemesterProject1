@@ -168,6 +168,17 @@ public class GameStatus : MonoBehaviour
 
 	//Public Functions
 	public MarketEvent CurrentMarketEvet { get;set;}
+	public bool GamePaused {get; private set;}
+
+	public void SetPause (bool val)
+	{
+		GamePaused = val;
+
+		if (GamePaused)
+			Time.timeScale = 0f;
+		else
+			Time.timeScale = 1f;
+	}
 
 	public void AddPlayerToTeam (uint playerId, int teamId)
 	{

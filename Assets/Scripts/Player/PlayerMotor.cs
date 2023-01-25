@@ -44,37 +44,40 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 
 	private void Update()
 	{
-		if (collisionTimerRunning && collisionAccelerationPenalty > 0f)
+		if (GameStatus.Me != null && !GameStatus.Me.GamePaused)
 		{
-			if (collisionTimer >= collisionPenaltyThreshold)
+			if (collisionTimerRunning && collisionAccelerationPenalty > 0f)
 			{
-				timeAcceleration *= 1 - collisionAccelerationPenalty;
-				collisionTimerRunning = false;
+				if (collisionTimer >= collisionPenaltyThreshold)
+				{
+					timeAcceleration *= 1 - collisionAccelerationPenalty;
+					collisionTimerRunning = false;
+				}
+				else
+					collisionTimer += Time.deltaTime;
 			}
 			else
-				collisionTimer += Time.deltaTime;
-		}
-		else
-		{
-			collisionTimer = 0f;
-		}
-
-		if (moveAction != null)
-		{
-			SetCurrentPlayerSpeed();
-
-			//Call Move from PlayerMovement2D
-			Vector2 movementVec = moveAction.ReadValue <Vector2>();
-			Move (movementVec);
-
-			//Update Animator Values
-			animator.SetFloat ("Speed", movementVec.sqrMagnitude);
-
-			//This saves the last direction for the animatior, to play the correct idl animation
-			if (movementVec.sqrMagnitude > 0.01f)
 			{
-				animator.SetFloat ("Horizontal", movementVec.x);
-				animator.SetFloat ("Vertical", movementVec.y);
+				collisionTimer = 0f;
+			}
+
+			if (moveAction != null)
+			{
+				SetCurrentPlayerSpeed();
+
+				//Call Move from PlayerMovement2D
+				Vector2 movementVec = moveAction.ReadValue <Vector2>();
+				Move (movementVec);
+
+				//Update Animator Values
+				animator.SetFloat ("Speed", movementVec.sqrMagnitude);
+
+				//This saves the last direction for the animatior, to play the correct idl animation
+				if (movementVec.sqrMagnitude > 0.01f)
+				{
+					animator.SetFloat ("Horizontal", movementVec.x);
+					animator.SetFloat ("Vertical", movementVec.y);
+				}
 			}
 		}
 	}

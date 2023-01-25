@@ -9,6 +9,7 @@ public class PlayerSetupMenuController : MonoBehaviour
 	//Private values
 	private int playerIndex;
 	private float ingnoreInputTime = 0.5f;
+	private float timer = 0f;
 	private bool inputEnabled;
 
 	//Editor values
@@ -21,14 +22,16 @@ public class PlayerSetupMenuController : MonoBehaviour
 	{
 		playerIndex = index;
 		titleText.SetText ("Player " + (index + 1).ToString());
-		ingnoreInputTime = Time.time + ingnoreInputTime;
+		timer = 0f;
 	}
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > ingnoreInputTime)
+        if (timer > ingnoreInputTime)
 			inputEnabled = true;
+		else
+			timer += Time.deltaTime;
     }
 
 	public void SetTeam (int team)

@@ -125,6 +125,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""4fc0f2a6-dd1a-4c74-8d5e-335c5d8ade6e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -468,6 +477,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Emote 8"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df2ca398-5db6-49d1-be82-2561a6d712b2"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fe3afbbe-44bc-4960-acab-da41ad4a354d"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Gamepad2"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -521,6 +552,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Emote6 = m_Player.FindAction("Emote 6", throwIfNotFound: true);
         m_Player_Emote7 = m_Player.FindAction("Emote 7", throwIfNotFound: true);
         m_Player_Emote8 = m_Player.FindAction("Emote 8", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -591,6 +623,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Emote6;
     private readonly InputAction m_Player_Emote7;
     private readonly InputAction m_Player_Emote8;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -606,6 +639,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Emote6 => m_Wrapper.m_Player_Emote6;
         public InputAction @Emote7 => m_Wrapper.m_Player_Emote7;
         public InputAction @Emote8 => m_Wrapper.m_Player_Emote8;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -648,6 +682,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Emote8.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote8;
                 @Emote8.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote8;
                 @Emote8.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEmote8;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -685,6 +722,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Emote8.started += instance.OnEmote8;
                 @Emote8.performed += instance.OnEmote8;
                 @Emote8.canceled += instance.OnEmote8;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -729,5 +769,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnEmote6(InputAction.CallbackContext context);
         void OnEmote7(InputAction.CallbackContext context);
         void OnEmote8(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

@@ -36,7 +36,8 @@ public class PlayerUiJar : MonoBehaviour
 
 		if (coinRain != null)
 		{ 
-			if (lastSilverCoins != team.SilverCoins)
+			//Plays coin rain when the team got silver
+			if (lastSilverCoins < team.SilverCoins)
 			{
 				lastSilverCoins = team.SilverCoins;
 				coinRain.SetActive (true);
