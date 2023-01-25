@@ -27,13 +27,13 @@ public class PlayerPauseMenu : MonoBehaviour
 
 	public void ButtonMenu()
 	{
-		if (MapManager.Me != null)
+		if (GameStatus.Me != null)
 		{
 			Time.timeScale = 1f;
-			MapManager.Me.LoadMap (Map.PlayerStats);
+			GameStatus.Me.GoToStatsScreen (-1);
 		}
 		else
-			Debug.Log ("Missing Map Manger!");
+			Debug.Log ("Missing GameStatus!");
 	}
 
 	public void ButtonExit()

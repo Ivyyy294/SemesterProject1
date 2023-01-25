@@ -37,6 +37,11 @@ public class PlayerStatsScreen : MonoBehaviour
 		//SceneManager.LoadScene (0);
 	}
 
+	public void ButtonExit()
+	{
+		Application.Quit();
+	}
+
 	//Private Functions
 	private void Start()
 	{

@@ -112,7 +112,6 @@ public class Team
 	}
 
 	//Private Values
-
 	private void PassiveReputationLoss ()
 	{
 		if (timeSincePassiveReputationLoss >= gameStatus.passiveReputationLossInterval)
@@ -271,6 +270,14 @@ public class GameStatus : MonoBehaviour
 		PlayerStatsManager.Me.Init();
 	}
 
+	public void GoToStatsScreen (int winner)
+	{
+		foreach (PlayerConfigurationDisplay i in PlayerManager.Me.GetPlayerConfigs().ToArray())
+			i.EnableUi (false);
+
+		PlayerStatsManager.Me.IndexTeamWon = winner;
+		MapManager.Me.LoadMap (Map.PlayerStats);
+	}
 
 	//Private Functions
 
@@ -341,9 +348,6 @@ public class GameStatus : MonoBehaviour
 		}
 		
 		if (winner != -1)
-		{
-			PlayerStatsManager.Me.IndexTeamWon = winner;
-			MapManager.Me.LoadMap (Map.PlayerStats);
-		}
+			GoToStatsScreen (winner);
 	}
 }

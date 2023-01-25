@@ -347,10 +347,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5721835696677888764}
     m_Modifications:
-    - target: {fileID: 837466814484040084, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
-      propertyPath: m_PlayerRoot
-      value: 
-      objectReference: {fileID: 277375356509509458}
     - target: {fileID: 1458302820553687447, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
       propertyPath: m_Name
       value: PlayerUi

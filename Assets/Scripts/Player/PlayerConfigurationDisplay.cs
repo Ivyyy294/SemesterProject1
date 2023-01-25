@@ -30,7 +30,7 @@ public class PlayerConfigurationDisplay : MonoBehaviour
 	public void SpawnPlayer (Vector3 pos)
 	{
 		player.SetActive (true);
-		playerUi.SetActive (true);
+		EnableUi (true);
 		player.GetComponent<PlayerMotor>().InitPlayer (playerConfiguration);
 		player.transform.position = pos;
 		
@@ -40,6 +40,11 @@ public class PlayerConfigurationDisplay : MonoBehaviour
 			animator.runtimeAnimatorController = animatorControllerT1;
 		else
 			animator.runtimeAnimatorController = animatorControllerT2;
+	}
+
+	public void EnableUi (bool val)
+	{
+		playerUi.SetActive (val);
 	}
 
     // Start is called before the first frame update
