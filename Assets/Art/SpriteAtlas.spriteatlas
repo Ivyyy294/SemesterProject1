@@ -1474,6 +1474,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fa860686e6565834ea0ba7c1d08eae77, type: 3}
   - {fileID: 21300000, guid: 27b34f8660a4bdd429d8d51195bd55cc, type: 3}
   - {fileID: 21300000, guid: 140dd79668dd84947b35ca01a30d2024, type: 3}
+  - {fileID: 21300000, guid: d688ec96cf3bb1a469295772e39d0358, type: 3}
   - {fileID: 21300000, guid: ad4604a6d0ad2604182c6e6b13e9c8a2, type: 3}
   - {fileID: 21300000, guid: 3251dda6a28c3f3429ca1e54926fd649, type: 3}
   - {fileID: 869943086, guid: bfc5e6b64c89a004d88b5aafbd7e3100, type: 3}
@@ -1671,6 +1672,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 8f5cefc772f49854097b3d8ecc047908, type: 3}
   - {fileID: 21300000, guid: 78373ae788550314fae41e8aa48658f3, type: 3}
   - {fileID: 21300000, guid: d902dee7fe1a9ec4ab02eec15786d695, type: 3}
+  - {fileID: 21300000, guid: b1ddeb188a832874b8bed6cbcf9ace72, type: 3}
   - {fileID: 21300000, guid: 8ac73778e4f08a645aece696f7ac8ecf, type: 3}
   - {fileID: 21300000, guid: 63397b78face1ec40b3d6abe2ae5999b, type: 3}
   - {fileID: 21300000, guid: 3fceb1a808ca34b4ea229b0f44825594, type: 3}
@@ -1996,6 +1998,7 @@ SpriteAtlas:
   - {fileID: 579430036, guid: 0cfb488a636769c40bf7f1e22f43238f, type: 3}
   - {fileID: 21300000, guid: b584699a89ebcec44a317105431d026b, type: 3}
   - {fileID: 21300000, guid: 90e0e7ba109cf2447a570f71b4e890c9, type: 3}
+  - {fileID: 21300000, guid: a5dc47ca56bf1ba4099c5eb9930bd880, type: 3}
   - {fileID: 21300000, guid: 570784fa5a6c0684e8bde9b15958cafc, type: 3}
   - {fileID: 21300000, guid: a78809fa8397f5f4b8c7573bfc946607, type: 3}
   - {fileID: 21300000, guid: f314c9fad9431964e968d554bc0af181, type: 3}
@@ -3053,6 +3056,7 @@ SpriteAtlas:
   - {fileID: 1231525955, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
   - {fileID: 21300000, guid: 36d04d9e4462ab74786ee43d4aad6246, type: 3}
+  - {fileID: 21300000, guid: 4d6633eee4c7f04479371d033c2d2331, type: 3}
   - {fileID: 21300000, guid: 998b812fef7d7af4c8e3df24d00a9812, type: 3}
   - {fileID: 21300000, guid: a6f7f84fbe6087041991ffa5a65c597c, type: 3}
   - {fileID: 21300000, guid: a3345b4f927eca947986e54f8ea0babd, type: 3}
@@ -4652,6 +4656,7 @@ SpriteAtlas:
   - CrateOk
   - heart0005
   - angry0008
+  - FishOil1.1S
   - laugh0001
   - heart0006
   - TX Tileset Grass_4
@@ -4849,6 +4854,7 @@ SpriteAtlas:
   - ToolBox2S
   - laugh0004
   - angry0005
+  - FishOil1.1
   - heart0001
   - ToolBox2
   - Cover art
@@ -5174,6 +5180,7 @@ SpriteAtlas:
   - Water3_9
   - clothS
   - run right p10004
+  - Resin1.1
   - Jar explanation
   - cry0005
   - WaxS1
@@ -6231,6 +6238,7 @@ SpriteAtlas:
   - town sketh 2_0
   - crates_study_x2
   - cry0007
+  - Resin1.1S
   - Coin0007
   - FishOil
   - run right p10002
