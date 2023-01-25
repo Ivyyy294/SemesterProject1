@@ -19,6 +19,7 @@ public class PlayerInteraktions: MonoBehaviour
 	[SerializeField] Transform center;
 	[SerializeField] PlayerEmotes emoteHandler;
 	[SerializeField] PlayerPauseMenu pauseMenu;
+	[SerializeField] Vector2 boxraySize;
 
 	//Private Values
 	private Grid snapGrid;
@@ -113,15 +114,33 @@ public class PlayerInteraktions: MonoBehaviour
 		}
 	}
 
-	void CastRay ()
+	RaycastHit2D GetHitInfo ()
 	{
 		int layerMask = 1 << LayerMask.NameToLayer ("Interactables")
 			| 1 << LayerMask.NameToLayer ("Team1")
 			| 1 << LayerMask.NameToLayer ("Team2");
 
 		Debug.DrawRay (center.transform.position, dir * rayDistance, Color.green, 1f);
-		
-		RaycastHit2D[] hitInfo = Physics2D.RaycastAll (center.transform.position, dir, rayDistance, layerMask);
+
+		RaycastHit2D hitInfo = new RaycastHit2D();
+		hitInfo.distance = rayDistance;
+
+		RaycastHit2D[] tmpInfos = Physics2D.BoxCastAll (center.transform.position, boxraySize, 0f, dir, rayDistance, layerMask);
+
+		//Picking the closest object
+		foreach (RaycastHit2D i in tmpInfos)
+		{
+			if (!i.transform.IsChildOf (transform)
+				&& i.distance < hitInfo.distance)
+				hitInfo = i;
+		}
+
+		return hitInfo;
+	}
+
+	void CastRay ()
+	{
+		RaycastHit2D hitInfo = GetHitInfo ();
 
 		if (grabbedObject == null)
 			InteractionsFreeHands (hitInfo);
@@ -194,45 +213,28 @@ public class PlayerInteraktions: MonoBehaviour
 		}
 	}
 
-	private void InteractionsFreeHands (RaycastHit2D[] hitinfos)
+	private void InteractionsFreeHands (RaycastHit2D hitinfos)
 	{
-		foreach (RaycastHit2D i in hitinfos)
+		//Skip child objects
+		if (hitinfos.collider != null)
 		{
-			//Skip child objects
-			if (!i.transform.IsChildOf (transform))
-			{
-				if (i.collider.CompareTag ("Ware"))
-				{
-					InteractWare(i.collider.gameObject);
-					break;
-				}
-				else if (i.collider.CompareTag ("Merchant"))
-				{
-					InteractMerchant (i.collider.gameObject);
-					break;
-				}
-				else if (i.collider.CompareTag ("Store"))
-				{
-					InteractStore (i.collider.gameObject);
-					break;
-				}
-			}
+			if (hitinfos.collider.CompareTag ("Ware"))
+				InteractWare(hitinfos.collider.gameObject);
+			else if (hitinfos.collider.CompareTag ("Merchant"))
+				InteractMerchant (hitinfos.collider.gameObject);
+			else if (hitinfos.collider.CompareTag ("Store"))
+				InteractStore (hitinfos.collider.gameObject);
 		}
 	}
 
-	private void InteractionsWareGrabbed (RaycastHit2D[] hitinfos)
+	private void InteractionsWareGrabbed (RaycastHit2D hitinfos)
 	{
 		bool dropWare = true;
 
-		foreach (RaycastHit2D i in hitinfos)
+		if (hitinfos.collider != null && hitinfos.collider.CompareTag ("Merchant"))
 		{
-			if (i.collider != null && i.collider.CompareTag ("Merchant"))
-			{
-				InteractMerchant (i.collider.gameObject);
-				dropWare = false;
-				break;
-			}
-
+			InteractMerchant (hitinfos.collider.gameObject);
+			dropWare = false;
 		}
 
 		if (dropWare)

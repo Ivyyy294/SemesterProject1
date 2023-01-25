@@ -243,6 +243,8 @@ MonoBehaviour:
   warePos: {fileID: 7219480236882327213}
   center: {fileID: 6835894972312994454}
   emoteHandler: {fileID: 3086608939606607134}
+  pauseMenu: {fileID: 0}
+  boxraySize: {x: 0.2, y: 0.2}
 --- !u!114 &6703997733596930556
 MonoBehaviour:
   m_ObjectHideFlags: 0
