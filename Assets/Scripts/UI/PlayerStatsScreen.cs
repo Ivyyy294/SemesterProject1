@@ -34,7 +34,6 @@ public class PlayerStatsScreen : MonoBehaviour
 	{
 		PlayerManager.Me.Reset();
 		MapManager.Me.LoadMap (Map.Lobby);
-		//SceneManager.LoadScene (0);
 	}
 
 	public void ButtonExit()
