@@ -14,7 +14,8 @@ public class MerchantDisplay : MonoBehaviour
 
 	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
-	[SerializeField] SpriteRenderer spriteRenderer;
+	[SerializeField] GameObject requestIcon;
+	[SerializeField] SpriteRenderer merchantSpriteRenderer;
 	
 	//Private Values
 	double lifeTime = 0.0;
@@ -95,8 +96,8 @@ public class MerchantDisplay : MonoBehaviour
 	{
 		if (merchant != null)
 		{
-			if (spriteRenderer != null)
-				spriteRenderer.sprite = merchant.sprite;
+			if (merchantSpriteRenderer != null)
+				merchantSpriteRenderer.sprite = merchant.sprite;
 		}
 	}
 
@@ -133,28 +134,39 @@ public class MerchantDisplay : MonoBehaviour
 
 	private void DisplayRequest (Ware obj)
 	{
-		SpriteRenderer r = requestIndicator.GetComponent<SpriteRenderer>();
-		
-		if (r != null)
-		{
-			if (obj != null)
-				r.sprite = obj.SpriteOk;
-			else
-				r.sprite = null;
-		}
-	}
-
-	private Ware GetCrateFromGameObject (GameObject obj)
-	{
 		if (obj != null)
 		{
-			WareDisplay tmp = obj.GetComponent<WareDisplay>();
-
-			if (tmp != null)
-				return tmp.ware;
+			requestIndicator.SetActive (true);
+			SetRequestIcon (obj);
 		}
+		else
+			requestIndicator.SetActive (false);
+	}
 
-		return null;
+	private void SetRequestIcon (Ware obj)
+	{
+		if (requestIcon != null)
+		{
+			SpriteRenderer r = requestIcon.GetComponent<SpriteRenderer>();
+		
+			if (r != null && obj != null)
+			{
+				r.sprite = obj.SpriteOk;
+
+				//Andjust size to fit in bubble
+				Vector2Int wareSize = obj.size;
+
+				if (wareSize.x >= 4 || wareSize.y >= 4)
+					requestIcon.transform.localScale = new Vector3 (0.5f, 0.5f);
+				else if (wareSize.x >= 2 || wareSize.y >= 2)
+					requestIcon.transform.localScale = new Vector3 (0.75f, 0.75f);
+				else
+					requestIcon.transform.localScale = new Vector3 (1f, 1f);
+
+				Bounds bounds = r.bounds;
+				requestIcon.transform.localPosition = new Vector3 (0f, -bounds.size.y / 2);
+			}
+		}
 	}
 
 	private void PlaySaleAudio (float wareValue)

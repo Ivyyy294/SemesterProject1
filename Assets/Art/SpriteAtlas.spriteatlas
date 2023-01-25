@@ -2297,6 +2297,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: af86bdfbea27bd04999a8575845c03f1, type: 3}
   - {fileID: 21300000, guid: 8b83270c8dea0744aa9c166a5065f8a6, type: 3}
   - {fileID: 21300000, guid: 4046231c32bbf4a4199bfdeb64c495ca, type: 3}
+  - {fileID: 21300000, guid: d768202cf79be3c45a728f6669e48435, type: 3}
   - {fileID: -495197386, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
   - {fileID: -1721061459, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
   - {fileID: 2131365961, guid: 304cc83c4372e374780feee9289f2b1f, type: 3}
@@ -5473,6 +5474,7 @@ SpriteAtlas:
   - laugh0006
   - heart0003
   - evil0008
+  - SpeechBubble
   - object- layer_49
   - object- layer_48
   - object- layer_50
