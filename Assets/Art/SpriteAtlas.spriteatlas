@@ -51,6 +51,7 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: ab093c00238393c44842a50b728e3752, type: 3}
   - {fileID: 21300000, guid: b383b0208638ec6438fff39630348ae5, type: 3}
   - {fileID: -5249001, guid: c75d9320c73aff94296f0ee798bf2676, type: 3}
   - {fileID: 981209168, guid: c75d9320c73aff94296f0ee798bf2676, type: 3}
@@ -552,6 +553,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 925705e12f5da2f43b3ed4e5182d4835, type: 3}
   - {fileID: 21300000, guid: 70fb96025f21acb43a0690002bb7b71f, type: 3}
   - {fileID: 21300000, guid: e5876f02faa127148bcae28a84fa0f73, type: 3}
+  - {fileID: 21300000, guid: 17078122a96d1f7489057eb14271ec65, type: 3}
   - {fileID: -1645891605, guid: 67658222fb614514aa399705013d5b52, type: 3}
   - {fileID: -559033660, guid: 67658222fb614514aa399705013d5b52, type: 3}
   - {fileID: 1814839964, guid: 67658222fb614514aa399705013d5b52, type: 3}
@@ -1429,6 +1431,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 069b4ca4ac97c624e8be0807a73c80c5, type: 3}
   - {fileID: 21300000, guid: 8cb64da49a3babd4da0668035b7dd43a, type: 3}
   - {fileID: 21300000, guid: f9f155b4fb92b1949a13bd206642148c, type: 3}
+  - {fileID: 21300000, guid: 5215d6b49ae486d4db9da80c245967a4, type: 3}
   - {fileID: 21300000, guid: d3d677b4f9e500a4fbfc21a5e10aad1d, type: 3}
   - {fileID: 21300000, guid: 7f1a3eb4ba6574949a2a99cc10ac20ac, type: 3}
   - {fileID: 21300000, guid: 84085eb4fc1b6f3448b5a6f25fa5468f, type: 3}
@@ -1718,6 +1721,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 507a5e27e0bf64344b59d5f1efe64215, type: 3}
   - {fileID: 21300000, guid: 30da02479f084084a91b26cbfdc53a62, type: 3}
   - {fileID: 21300000, guid: 1ee1cc67ccf38d64fb585928e64e6b76, type: 3}
+  - {fileID: 21300000, guid: a932549710cb457419e492a1d63f865b, type: 3}
   - {fileID: 21300000, guid: 6fdba7a78f89ee14ab20d02732c6a7bf, type: 3}
   - {fileID: -1979593301, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
   - {fileID: 1060824846, guid: b39716b7f7512a6408e90cbce2179f53, type: 3}
@@ -1743,6 +1747,7 @@ SpriteAtlas:
   - {fileID: -1863061942, guid: 4ba69ab884320534bbfc7c3a2874e507, type: 3}
   - {fileID: -630198669, guid: 4ba69ab884320534bbfc7c3a2874e507, type: 3}
   - {fileID: 977884703, guid: 4ba69ab884320534bbfc7c3a2874e507, type: 3}
+  - {fileID: 21300000, guid: 52b8d9c8af5cfcd4183b7aaa9d0ec3c6, type: 3}
   - {fileID: 21300000, guid: 1405b0d819142f64297e6f5af5985ada, type: 3}
   - {fileID: 21300000, guid: 6bbcb2d8449f23e4ca0fee57846e81ce, type: 3}
   - {fileID: 21300000, guid: 556557d8787f21e47878ad57d21c3142, type: 3}
@@ -3338,6 +3343,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 12849ddf7a7280d49a1f9b6e29e42ba3, type: 3}
   - {fileID: 21300000, guid: 80aa7eff9ab22e646bdee21001aa918d, type: 3}
   m_PackedSpriteNamesToIndex:
+  - title screen3
   - left p20015
   - TX Shadow_40
   - TX Shadow_41
@@ -3839,6 +3845,7 @@ SpriteAtlas:
   - right p20007
   - right p10014
   - left p20006
+  - PostitRed
   - Water2_14
   - Water2_15
   - Water2_12
@@ -4716,6 +4723,7 @@ SpriteAtlas:
   - Coin0004
   - Armour2
   - right p10010
+  - title screen2
   - Cloth
   - Bread2S
   - Timber1
@@ -5005,6 +5013,7 @@ SpriteAtlas:
   - angry0003
   - down p10007
   - right p10015
+  - PostitBlue
   - up p20006
   - pl 1 red_1
   - pl 1 red_6
@@ -5030,6 +5039,7 @@ SpriteAtlas:
   - Kontor inside borders (add fix)_2
   - Kontor inside borders (add fix)_5
   - Kontor inside borders (add fix)_4
+  - title screen
   - FishOilS
   - laugh0003
   - up p20013
