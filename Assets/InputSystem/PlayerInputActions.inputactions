@@ -425,11 +425,33 @@
                 },
                 {
                     "name": "",
+                    "id": "c503dd79-74fb-4c0f-b0c3-73e332630ba4",
+                    "path": "<XInputController>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Gamepad2",
+                    "action": "Emote 5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "db54758b-bd8b-45dc-95ed-d8eeea3b3761",
                     "path": "<Keyboard>/6",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Emote 6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0f62beb-e0d8-445b-8a7a-97ab721e0483",
+                    "path": "<Gamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Gamepad2",
                     "action": "Emote 6",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -447,11 +469,33 @@
                 },
                 {
                     "name": "",
+                    "id": "843f8343-7087-4f9b-bbdf-1dddcb7d6602",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Gamepad2",
+                    "action": "Emote 7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "eb5d2e33-6d80-4f36-830c-1d544ffba68d",
                     "path": "<Keyboard>/8",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Emote 8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e85854e2-c76f-4702-a8c1-33c42a7196d3",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad2;Gamepad",
                     "action": "Emote 8",
                     "isComposite": false,
                     "isPartOfComposite": false
