@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TimberMedium
   ID: 101
-  value: 1
-  sellValue: 1
+  value: 2
+  sellValue: 4
   weight: 2
   size: {x: 2, y: 4}
   SpriteOk: {fileID: 21300000, guid: 82383eecce246044384ada57bbc04e8a, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: 84229dc0d5b18e644ae572b025062f5c, type: 3}
   SpriteVerticalOk: {fileID: 21300000, guid: 0867bb74e440e484d800788084552c22, type: 3}
   SpriteVerticalDamaged: {fileID: 21300000, guid: b83090925919e8a4dad6c00d1c2daab9, type: 3}
-  durability: 300
+  durability: 180
   durabilityExtended: 0
-  storingAreaIds: 03000000
+  storingAreaIds: 010000000000000003000000
   fragility: 0
   fragilityHp: 4
   audiosWalk: []

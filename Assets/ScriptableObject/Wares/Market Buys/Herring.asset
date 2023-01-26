@@ -15,18 +15,18 @@ MonoBehaviour:
   name: Herring
   ID: 13
   value: 1
-  sellValue: 1
-  weight: 0
+  sellValue: 2
+  weight: 1
   size: {x: 2, y: 2}
   SpriteOk: {fileID: 21300000, guid: 6a09a0acca05a5b469a49b10acbf1d60, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: 43257b590d5b10d4fab05b2aad19c60f, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
-  durability: 90
-  durabilityExtended: 900
+  durability: 120
+  durabilityExtended: 0
   storingAreaIds: 00000000
   fragility: 0
-  fragilityHp: 4
+  fragilityHp: 1
   audiosWalk: []
   audiosPlaceDown:
   - {fileID: 8300000, guid: 5aa88b4705a461c45b273a5d5c588412, type: 3}

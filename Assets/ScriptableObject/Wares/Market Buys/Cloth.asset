@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Cloth
   ID: 15
   value: 2
-  sellValue: 1
+  sellValue: 4
   weight: 1
   size: {x: 2, y: 2}
   SpriteOk: {fileID: 21300000, guid: d3d677b4f9e500a4fbfc21a5e10aad1d, type: 3}
@@ -24,9 +24,9 @@ MonoBehaviour:
   SpriteVerticalDamaged: {fileID: 0}
   durability: 120
   durabilityExtended: 0
-  storingAreaIds: 03000000
+  storingAreaIds: 0100000003000000
   fragility: 0
-  fragilityHp: 4
+  fragilityHp: 1
   audiosWalk: []
   audiosPlaceDown: []
   audiosPickUp: []

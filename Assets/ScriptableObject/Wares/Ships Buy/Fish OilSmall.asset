@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fish OilSmall
   ID: 8
-  value: 1
-  sellValue: 1
+  value: 2
+  sellValue: 4
   weight: 0
   size: {x: 1, y: 1}
   SpriteOk: {fileID: 21300000, guid: b1ddeb188a832874b8bed6cbcf9ace72, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: d688ec96cf3bb1a469295772e39d0358, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
-  durability: 600
-  durabilityExtended: 1800
+  durability: 210
+  durabilityExtended: 0
   storingAreaIds: 00000000
   fragility: 2
-  fragilityHp: 6
+  fragilityHp: 3
   audiosWalk: []
   audiosPlaceDown:
   - {fileID: 8300000, guid: 427937644b9f30545a83bca31a89de25, type: 3}

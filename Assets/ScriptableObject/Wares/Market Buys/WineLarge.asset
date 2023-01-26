@@ -14,18 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: WineLarge
   ID: 116
-  value: 3
+  value: 4
+  sellValue: 5
   weight: 2
   size: {x: 2, y: 2}
   SpriteOk: {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: 169c30c6772b6c943bca12d37d9ea8e5, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
-  durability: 1200
-  durabilityExtended: 2400
-  storingAreaIds: 
+  durability: 360
+  durabilityExtended: 0
+  storingAreaIds: 01000000000000000200000003000000
   fragility: 1
-  fragilityHp: 6
+  fragilityHp: 4
   audiosWalk: []
   audiosPlaceDown:
   - {fileID: 8300000, guid: 5aa88b4705a461c45b273a5d5c588412, type: 3}

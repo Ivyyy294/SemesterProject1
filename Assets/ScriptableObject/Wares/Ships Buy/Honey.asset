@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Honey
   ID: 3
   value: 1
-  sellValue: 1
+  sellValue: 3
   weight: 0
   size: {x: 1, y: 1}
   SpriteOk: {fileID: 21300000, guid: ac143b6419bd902478e5b11d8cbd1809, type: 3}
@@ -24,9 +24,9 @@ MonoBehaviour:
   SpriteVerticalDamaged: {fileID: 0}
   durability: 240
   durabilityExtended: 0
-  storingAreaIds: 01000000
+  storingAreaIds: 0200000000000000
   fragility: 2
-  fragilityHp: 6
+  fragilityHp: 3
   audiosWalk: []
   audiosPlaceDown:
   - {fileID: 8300000, guid: 08b6b057ac4d6d243b1cf6cc690a6de7, type: 3}

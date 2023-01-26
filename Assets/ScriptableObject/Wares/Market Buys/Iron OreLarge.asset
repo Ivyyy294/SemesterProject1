@@ -15,21 +15,20 @@ MonoBehaviour:
   name: Iron OreLarge
   ID: 109
   value: 2
-  sellValue: 1
+  sellValue: 4
   weight: 2
   size: {x: 2, y: 2}
   SpriteOk: {fileID: 21300000, guid: 43a19e3a275a1034c8a9d9350a374351, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: f73d856cb2bbef3419e1de58da6c7ddd, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
-  durability: 300
+  durability: 240
   durabilityExtended: 0
   storingAreaIds: 03000000
   fragility: 0
   fragilityHp: 4
   audiosWalk: []
   audiosPlaceDown:
-  - {fileID: 8300000, guid: 5aa88b4705a461c45b273a5d5c588412, type: 3}
   - {fileID: 8300000, guid: d976b0536262b8044bc9fd57c7c9bc99, type: 3}
   - {fileID: 8300000, guid: 13792c7bb47d81a48938ac85c7dd6a72, type: 3}
   - {fileID: 8300000, guid: c87e54623f4293f4e80027eb0b0d3596, type: 3}
@@ -43,4 +42,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 445a2a16eff36764e917e03c65346674, type: 3}
   - {fileID: 8300000, guid: 117eef10ebd01fb429e949494b1a9064, type: 3}
   - {fileID: 8300000, guid: 7efe8cd658927d14e963827285f91ce6, type: 3}
-  audiosBump: []
+  audiosBump:
+  - {fileID: 8300000, guid: 5aa88b4705a461c45b273a5d5c588412, type: 3}

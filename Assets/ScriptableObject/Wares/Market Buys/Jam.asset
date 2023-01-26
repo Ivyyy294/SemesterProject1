@@ -15,18 +15,18 @@ MonoBehaviour:
   name: Jam
   ID: 11
   value: 1
-  sellValue: 1
+  sellValue: 2
   weight: 0
   size: {x: 1, y: 1}
   SpriteOk: {fileID: 21300000, guid: 070b5055f17f0ff4dae1137390225d6f, type: 3}
   SpriteDamaged: {fileID: 21300000, guid: 684e5760db8f4f745b206d72a8badda8, type: 3}
   SpriteVerticalOk: {fileID: 0}
   SpriteVerticalDamaged: {fileID: 0}
-  durability: 360
-  durabilityExtended: 2400
-  storingAreaIds: 01000000
+  durability: 270
+  durabilityExtended: 0
+  storingAreaIds: 010000000300000000000000
   fragility: 2
-  fragilityHp: 6
+  fragilityHp: 3
   audiosWalk: []
   audiosPlaceDown:
   - {fileID: 8300000, guid: 08b6b057ac4d6d243b1cf6cc690a6de7, type: 3}
