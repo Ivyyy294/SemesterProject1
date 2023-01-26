@@ -225,6 +225,8 @@ SpriteAtlas:
   - {fileID: 1083027350, guid: 02cd4520d2012634f92d43e347b81663, type: 3}
   - {fileID: -1662886238, guid: 02cd4520d2012634f92d43e347b81663, type: 3}
   - {fileID: 21300000, guid: 45e37740bebcfc546b72387144e25755, type: 3}
+  - {fileID: 21300000, guid: feaea4506c0064a488b1ffab740524c7, type: 3}
+  - {fileID: 21300000, guid: c97a1950988304648a135eba9df3b530, type: 3}
   - {fileID: 21300000, guid: 69231360d253d604e873bad5c97bd91d, type: 3}
   - {fileID: 21300000, guid: 1f1d46604c68aa14f9ef3441e7f2f8fb, type: 3}
   - {fileID: 21300000, guid: 684e5760db8f4f745b206d72a8badda8, type: 3}
@@ -845,6 +847,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 8a6ab76328d271046befa0c3854029af, type: 3}
   - {fileID: 21300000, guid: 882027739b5704442ae9f2c6f8cd8599, type: 3}
   - {fileID: 21300000, guid: dfce8873c5ec4f943b817efdba5ceb54, type: 3}
+  - {fileID: 21300000, guid: f13b1b7308404784fa4c5e9b1f1631ae, type: 3}
   - {fileID: 21300000, guid: c09bc383e747b214394948b6d8995d19, type: 3}
   - {fileID: 21300000, guid: 08b121c3cee09834eb5960b5c5e3cd84, type: 3}
   - {fileID: 21300000, guid: e1cb6bc3dae251e4983489478949de29, type: 3}
@@ -1737,6 +1740,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d902dee7fe1a9ec4ab02eec15786d695, type: 3}
   - {fileID: 21300000, guid: b1ddeb188a832874b8bed6cbcf9ace72, type: 3}
   - {fileID: 21300000, guid: c685805836ec10d4898bcf3a26c5753b, type: 3}
+  - {fileID: 21300000, guid: a178845850cd2494383a1c7f85f0cb0f, type: 3}
   - {fileID: 21300000, guid: 8ac73778e4f08a645aece696f7ac8ecf, type: 3}
   - {fileID: 21300000, guid: 63397b78face1ec40b3d6abe2ae5999b, type: 3}
   - {fileID: 21300000, guid: 3fceb1a808ca34b4ea229b0f44825594, type: 3}
@@ -1879,6 +1883,7 @@ SpriteAtlas:
   - {fileID: 723583726, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: 367209125, guid: e666a439675695f418f5e539659ed28a, type: 3}
   - {fileID: -818003589, guid: e666a439675695f418f5e539659ed28a, type: 3}
+  - {fileID: 21300000, guid: 516a3639a639dcf46a9aa291e204c9ab, type: 3}
   - {fileID: 21300000, guid: 25f9ef39b1596df45aa47cfb1237e40d, type: 3}
   - {fileID: 21300000, guid: 71be394932a9a0a489d8b74a69470485, type: 3}
   - {fileID: 21300000, guid: 0f41905993311c94db1ff5e7d2ecf8c9, type: 3}
@@ -1891,6 +1896,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 898550d97a792fd4d8d703782442a075, type: 3}
   - {fileID: 21300000, guid: dc3269d96f0d7bc4ab48d5735e178305, type: 3}
   - {fileID: 21300000, guid: 92f21bd9ea2155540a67e34a369acdff, type: 3}
+  - {fileID: 21300000, guid: 637cb1f9914e21a40a2d187ce4640ecb, type: 3}
   - {fileID: 21300000, guid: 2d1a020a549ea1f4ba1ab94ea20e304d, type: 3}
   - {fileID: 21300000, guid: ff08430a793e82a4fb26ef251a1dd517, type: 3}
   - {fileID: 21300000, guid: 989ab30a52eb80b44b3fe8a5d3ef507e, type: 3}
@@ -2084,6 +2090,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9ff682cab2f7fe0449082c22c98b8047, type: 3}
   - {fileID: 21300000, guid: a5dc47ca56bf1ba4099c5eb9930bd880, type: 3}
   - {fileID: 21300000, guid: 0610e9caa3271b84480f4b34fd1f07d6, type: 3}
+  - {fileID: 21300000, guid: 482b2acaf8dfe9441a31dd0e2fff26ba, type: 3}
   - {fileID: 21300000, guid: 752066eaf6bdc0b499a6d8ccf014442b, type: 3}
   - {fileID: 21300000, guid: f250d2fa93469f3478ee99dcd0db746c, type: 3}
   - {fileID: 21300000, guid: 12aed3fa158d28741a81e75fc2db9836, type: 3}
@@ -2782,6 +2789,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b0ef625ef6c2fee48a79d4dcfb678032, type: 3}
   - {fileID: 21300000, guid: 742a566e38eff1f438fdb06fe178298e, type: 3}
   - {fileID: 21300000, guid: 97c0b96ea5a819645ae7ea8e8c89348a, type: 3}
+  - {fileID: 21300000, guid: 1e7bec6e39309f647b75ffb9282b4924, type: 3}
   - {fileID: 1921775565, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: -2064033290, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: 395195651, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
@@ -3517,6 +3525,8 @@ SpriteAtlas:
   - TX Tileset Stone Ground_20
   - TX Tileset Stone Ground_21
   - PlayerUp
+  - PuddleL
+  - PuddleLD
   - CrateDmg
   - right p20005
   - JamS2
@@ -4137,6 +4147,7 @@ SpriteAtlas:
   - bee
   - ArmourS
   - evil0007
+  - PuddleSL
   - down p10012
   - left p20003
   - right p20006
@@ -5029,6 +5040,7 @@ SpriteAtlas:
   - angry0005
   - FishOil1.1
   - down p20007
+  - PuddleSD
   - heart0001
   - ToolBox2
   - Cover art
@@ -5171,6 +5183,7 @@ SpriteAtlas:
   - Ship details 1_80
   - Ship details 1_83
   - Ship details 1_82
+  - PuddleS
   - down p20012
   - down p20010
   - ship0005
@@ -5183,6 +5196,7 @@ SpriteAtlas:
   - Armour
   - angry0007
   - Coin0001
+  - PuddleLL
   - down p10005
   - oil lamp 3
   - down p10014
@@ -5376,6 +5390,7 @@ SpriteAtlas:
   - down p10004
   - Resin1.1
   - HoneyS3
+  - DropletD
   - up p10008
   - up p20010
   - down p10010
@@ -6074,6 +6089,7 @@ SpriteAtlas:
   - CraftsmanStore
   - Coin0008
   - logo 2
+  - DropletL
   - town sketh 2_92
   - town sketh 2_111
   - town sketh 2_93
