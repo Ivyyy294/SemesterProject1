@@ -116,9 +116,10 @@ public class PlayerMotor : Ivyyy.PlayerMovement2D
 
 	private void UpdateAnimator (Vector2 movementVec)
 	{
+		//Factor is the current player speed relative to maxspeed when not carrying an item
 		float factor = currentSpeedProfile.maxSpeed / speedProfileLightWare.maxSpeed;
 		factor *= GetCurrentSpeedFactor();
-		Debug.Log (factor);
+
 		//Update Animator Values
 		animator.SetFloat ("Speed", factor);
 
