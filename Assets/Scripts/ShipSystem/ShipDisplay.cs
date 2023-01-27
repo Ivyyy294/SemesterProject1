@@ -10,6 +10,7 @@ public class ShipDisplay : MonoBehaviour
 
 	//LaraValues
 	public GameObject boardingRamp;
+	[SerializeField] MerchantHandler merchantHandler;
 
 	//Private Values
 	uint counterPlayersOnShip;
@@ -25,6 +26,9 @@ public class ShipDisplay : MonoBehaviour
 	{
 		counterPlayersOnShip = 0;
 		InitWares(ship);
+
+		if (merchantHandler != null)
+			merchantHandler.Init();
 	}
 
 	public void DeactivateSafe()

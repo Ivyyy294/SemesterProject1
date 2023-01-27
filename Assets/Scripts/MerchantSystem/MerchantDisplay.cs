@@ -92,6 +92,11 @@ public class MerchantDisplay : MonoBehaviour
 		}
 	}
 
+	public void ResetRequest ()
+	{
+		ChangeRequest (null);
+	}
+
 	public void SetSprite ()
 	{
 		if (merchant != null)
@@ -126,7 +131,6 @@ public class MerchantDisplay : MonoBehaviour
 
 	private void ChangeRequest (Ware obj)
 	{
-		Debug.Log ("Play Request");
 		currentRequest = obj;
 		DisplayRequest (obj);
 		lifeTime = 0f;

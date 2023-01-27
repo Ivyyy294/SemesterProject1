@@ -14,8 +14,21 @@ public class MerchantHandler : MonoBehaviour
 	private float timerChatter;
 	private int playerInReach = 0;
 
-    // Update is called once per frame
-    void Update()
+	//Public Functions
+	public void Init()
+	{
+		timerRequest = 0f;
+		timerChatter = 0f;
+		playerInReach = 0;
+
+		foreach (MerchantDisplay i in merchantsToControll)
+			i.ResetRequest();
+	}
+
+	//Pricate Functions
+
+	// Update is called once per frame
+	void Update()
     {
 		//Requests
 
@@ -38,8 +51,14 @@ public class MerchantHandler : MonoBehaviour
 	MerchantDisplay PickRandomMerchant ()
 	{
 		int anzMerchants = merchantsToControll.Length;
-		int randomIndex = Random.Range (0, anzMerchants);
-		return merchantsToControll[randomIndex];
+
+		if (anzMerchants > 0)
+		{
+			int randomIndex = Random.Range (0, anzMerchants);
+			return merchantsToControll[randomIndex];
+		}
+
+		return default (MerchantDisplay);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
