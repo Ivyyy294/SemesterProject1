@@ -17,8 +17,14 @@ MonoBehaviour:
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
-      weight: 0.5
-  requestFrequency: 3
+      weight: 0.4
+    - objectToSpawn: {fileID: 11400000, guid: 843cb1d946dab2d4f8a6881cdb450dc2, type: 2}
+      weight: 0.4
+    - objectToSpawn: {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
+      weight: 0.1
+    - objectToSpawn: {fileID: 11400000, guid: ea28f68a04a4f3e4bafa06a02bf8cdba, type: 2}
+      weight: 0.06
+  requestFrequency: 25
   audioRequest:
   - {fileID: 8300000, guid: eca94ed0d0fa3784c9fcaa754443a400, type: 3}
   audioHappy:

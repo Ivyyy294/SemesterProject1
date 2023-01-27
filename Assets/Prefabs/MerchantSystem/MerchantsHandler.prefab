@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   merchantsToControll: []
-  requestCooldown: 5
-  chatterCooldown: 5
+  requestCooldown: 10
+  chatterCooldown: 10
 --- !u!61 &5663870474989421517
 BoxCollider2D:
   m_ObjectHideFlags: 0

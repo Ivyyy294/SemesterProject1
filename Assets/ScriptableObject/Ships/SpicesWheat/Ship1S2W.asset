@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e110af72146cc7341bc0e2bd414298c4, type: 3}
-  m_Name: ShipSpicesHerring
+  m_Name: Ship1S2W
   m_EditorClassIdentifier: 
-  name: Spices Herring Ship
+  name: Jam Wine Ship
   wares:
   - {fileID: 11400000, guid: c43d39cb39f46484fa1eda3ccf230f6e, type: 2}
-  - {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
+  - {fileID: 11400000, guid: 757158f9109de7040bf683ee43e5b69e, type: 2}
+  - {fileID: 11400000, guid: 757158f9109de7040bf683ee43e5b69e, type: 2}

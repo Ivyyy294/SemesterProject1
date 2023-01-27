@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e110af72146cc7341bc0e2bd414298c4, type: 3}
-  m_Name: ShipJamWine
+  m_Name: Ship3H
   m_EditorClassIdentifier: 
-  name: Jam Wine Ship
+  name: Cloth Herring Ship
   wares:
-  - {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}
-  - {fileID: 11400000, guid: ea28f68a04a4f3e4bafa06a02bf8cdba, type: 2}
-  - {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}
-  - {fileID: 11400000, guid: ea28f68a04a4f3e4bafa06a02bf8cdba, type: 2}
+  - {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
+  - {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
+  - {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}

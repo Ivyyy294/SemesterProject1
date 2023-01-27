@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185d100b4e6cb3e4093d6481ab59a9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ships: []
-  shipSpawn: []
+  shipSpawnManager:
+    spawnObjects: []
   jetties: []
   spawnProfiles:
   - day: 0
@@ -84,4 +84,4 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-  shipStayTime: 30
+  shipStayTime: 45

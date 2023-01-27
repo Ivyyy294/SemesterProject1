@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e110af72146cc7341bc0e2bd414298c4, type: 3}
-  m_Name: ShipToolsCloth
+  m_Name: Ship2I1J
   m_EditorClassIdentifier: 
-  name: Tools Cloth Ship
+  name: Iron Jam Ship
   wares:
-  - {fileID: 11400000, guid: 843cb1d946dab2d4f8a6881cdb450dc2, type: 2}
-  - {fileID: 11400000, guid: bef9fe47e1c7a5743af6f8114e0cb0f0, type: 2}
+  - {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}
+  - {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}
+  - {fileID: 11400000, guid: 27de965ada575b2409622eceeae845f5, type: 2}

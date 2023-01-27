@@ -18,7 +18,13 @@ MonoBehaviour:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 515fb1ca1ada2bd42ad2acdf341cbd7d, type: 2}
       weight: 0.5
-  requestFrequency: 1
+    - objectToSpawn: {fileID: 11400000, guid: 757158f9109de7040bf683ee43e5b69e, type: 2}
+      weight: 0.7
+    - objectToSpawn: {fileID: 11400000, guid: c43d39cb39f46484fa1eda3ccf230f6e, type: 2}
+      weight: 0.05
+    - objectToSpawn: {fileID: 11400000, guid: 235d928dd99c8434bb40f5137fb6dde8, type: 2}
+      weight: 0.12
+  requestFrequency: 25
   audioRequest: []
   audioHappy: []
   audioUpset: []

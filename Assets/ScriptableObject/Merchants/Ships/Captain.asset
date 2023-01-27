@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836f4b255595ad848bb9bebcf0bd6472, type: 3}
+  m_Name: Captain
+  m_EditorClassIdentifier: 
+  name: Captain
+  sprite: {fileID: -1030202117, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  requestManager:
+    spawnObjects:
+    - objectToSpawn: {fileID: 11400000, guid: 5e2182f8a742edc4e885d85f0c1ba66e, type: 2}
+      weight: 0.35
+    - objectToSpawn: {fileID: 11400000, guid: 2323c985774e36447b7d261c8989603b, type: 2}
+      weight: 0.3
+    - objectToSpawn: {fileID: 11400000, guid: 34a1d2721bfa5dc43a55aaf97b3961a3, type: 2}
+      weight: 0.35
+  requestFrequency: 5
+  audioRequest:
+  - {fileID: 8300000, guid: bb9bf6234977b294d8c1624cd6a110ec, type: 3}
+  - {fileID: 8300000, guid: db7e52e9e5d71c24485806d66dd41bf3, type: 3}
+  audioHappy:
+  - {fileID: 8300000, guid: 8cd3d58cc702c39439e0dff94387e5d7, type: 3}
+  audioUpset:
+  - {fileID: 8300000, guid: 87973240b52619047bba7c6d1e0a5753, type: 3}
+  audioChatter: []
