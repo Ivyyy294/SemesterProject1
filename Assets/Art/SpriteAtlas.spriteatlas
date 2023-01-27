@@ -2480,6 +2480,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d9e9ca9c902feb044b9d890f9a561f7d, type: 3}
   - {fileID: 21300000, guid: 66026b9c119482e4ab6a5b94d8401ee1, type: 3}
   - {fileID: 21300000, guid: 6a09a0acca05a5b469a49b10acbf1d60, type: 3}
+  - {fileID: 21300000, guid: 407305ac0ed53674a9481298669f159e, type: 3}
   - {fileID: 1780139597, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: -445905749, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
   - {fileID: -140038812, guid: c7351aac83ec42a42ae55b793cb2507b, type: 3}
@@ -5780,6 +5781,7 @@ SpriteAtlas:
   - ship0007
   - left p20002
   - Herring1
+  - scroll 2
   - flat market stone tileset + grass_1
   - flat market stone tileset + grass_10
   - flat market stone tileset + grass_0
