@@ -19,8 +19,9 @@ public class CityTax
 
 	public void CalculateTaxToPay (float earnedSilverCoins, float currentSilverCoins)
 	{
+		int playercount = PlayerManager.Me.GetPlayerConfigs ().Count;
 		++numberOfTaxes;
-		float tax = 5 + (2f * numberOfTaxes) + (currentSilverCoins * 0.1f);
+		float tax = (5 + (2f * numberOfTaxes) + (currentSilverCoins * 0.1f)) * playercount/2f;
 
 		if (earnedSilverCoins > 0f)
 			tax += ((Mathf.Pow (earnedSilverCoins, 1.4f) / numberOfTaxes) * 0.1f);
@@ -91,10 +92,11 @@ public class Team
 
 	public void Update()
 	{
-		if (statsManager == null)
+		int playercount = PlayerManager.Me.GetPlayerConfigs().Count;
+        if (statsManager == null)
 			statsManager = PlayerStatsManager.Me;
 
-		if (timeSinceRequest >= gameStatus.passiveReputationLossThreshold)
+		if (timeSinceRequest >= gameStatus.passiveReputationLossThreshold * 2f / playercount)
 			PassiveReputationLoss();
 
 		timeSinceRequest += Time.deltaTime;
