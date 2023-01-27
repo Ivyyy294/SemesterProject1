@@ -1444,6 +1444,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 17d1c80558c34b3449a33240a77b32e4, type: 3}
   - {fileID: 21300000, guid: 376b4a05b61e6ec48a7b31252cc96037, type: 3}
   - {fileID: 21300000, guid: 0bb7fd15622392b42b05d318276821c1, type: 3}
+  - {fileID: 21300000, guid: bec92b250b5dddd419e5fba91dba2302, type: 3}
   - {fileID: 21300000, guid: 50c2b3351a52b4442b8906e547d5f9d5, type: 3}
   - {fileID: 21300000, guid: 72905b35e236f8f4ea97df6602efd217, type: 3}
   - {fileID: 21300000, guid: 070b5055f17f0ff4dae1137390225d6f, type: 3}
@@ -3185,6 +3186,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fd53907f2a4f8f746938577ce6e6adc2, type: 3}
   - {fileID: 21300000, guid: c6f9747f1106a8b4f95d8020f4e3eb4a, type: 3}
   - {fileID: 21300000, guid: ea4f2f8f251763a42b711b5ddcf565f4, type: 3}
+  - {fileID: 21300000, guid: aa4f549fb14e0bc41bb8d065b54a071f, type: 3}
   - {fileID: -1830135205, guid: 1dbd89afafa8a8f448030cb29de537d6, type: 3}
   - {fileID: 741320434, guid: 1dbd89afafa8a8f448030cb29de537d6, type: 3}
   - {fileID: -752967912, guid: 1dbd89afafa8a8f448030cb29de537d6, type: 3}
@@ -4745,6 +4747,7 @@ SpriteAtlas:
   - down p10013
   - Coin0005
   - up p20009
+  - ShipDeck
   - right p10003
   - right p20016
   - Jam2
@@ -6486,6 +6489,7 @@ SpriteAtlas:
   - heart0004
   - storeplaceholder
   - left p10012
+  - ShipBowStern
   - TX Plant_32
   - TX Plant_33
   - TX Plant_30
