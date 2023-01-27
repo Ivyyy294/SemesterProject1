@@ -26,7 +26,7 @@ public class DropIndicator : MonoBehaviour
 		
 		foreach (RaycastHit2D hitInfo in Physics2D.RaycastAll (transform.position, dir, dist, layerMask))
 		{
-			if (!hitInfo.collider.CompareTag ("Player"))
+			if (!hitInfo.collider.isTrigger && !hitInfo.collider.CompareTag ("Player"))
 			{
 				raycastCheckOk = false;
 				break;
@@ -64,7 +64,8 @@ public class DropIndicator : MonoBehaviour
 
 	bool IsColliderValid (Collider2D collider)
 	{
-		bool valid = !collider.isTrigger;
+		//Prevents the player from placing a ware on the Ship ramp
+		bool valid = !collider.isTrigger || collider.CompareTag ("ShipRamp");
 
 		if (collider.CompareTag ("Player"))
 		{
