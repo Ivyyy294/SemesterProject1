@@ -1442,6 +1442,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: db8965c4c97ccb54583b1aa0e05911d8, type: 3}
   - {fileID: 21300000, guid: 547adee4d23bb9142809ee0aef719f3f, type: 3}
   - {fileID: 21300000, guid: 641cacf4d985e82498cd4bf0619dd921, type: 3}
+  - {fileID: 21300000, guid: bfe13205744c0e941841e1b0ad0255b2, type: 3}
   - {fileID: 21300000, guid: 17d1c80558c34b3449a33240a77b32e4, type: 3}
   - {fileID: 21300000, guid: 376b4a05b61e6ec48a7b31252cc96037, type: 3}
   - {fileID: 21300000, guid: 0bb7fd15622392b42b05d318276821c1, type: 3}
@@ -4748,6 +4749,7 @@ SpriteAtlas:
   - Timber2S
   - Bread1S
   - up p20012
+  - Bramblin
   - down p10013
   - Coin0005
   - up p20009
