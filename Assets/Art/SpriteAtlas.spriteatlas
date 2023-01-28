@@ -52,6 +52,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: ab093c00238393c44842a50b728e3752, type: 3}
+  - {fileID: 21300000, guid: 3188b3102ced4084a86cd0c7474302cb, type: 3}
   - {fileID: 21300000, guid: b383b0208638ec6438fff39630348ae5, type: 3}
   - {fileID: -5249001, guid: c75d9320c73aff94296f0ee798bf2676, type: 3}
   - {fileID: 981209168, guid: c75d9320c73aff94296f0ee798bf2676, type: 3}
@@ -3357,6 +3358,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 80aa7eff9ab22e646bdee21001aa918d, type: 3}
   m_PackedSpriteNamesToIndex:
   - title screen3
+  - SnowFlake
   - left p20015
   - TX Shadow_40
   - TX Shadow_41
