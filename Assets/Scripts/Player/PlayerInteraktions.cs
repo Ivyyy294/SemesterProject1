@@ -130,7 +130,8 @@ public class PlayerInteraktions: MonoBehaviour
 		//Picking the closest object
 		foreach (RaycastHit2D i in tmpInfos)
 		{
-			if (!i.transform.IsChildOf (transform)
+			if (!i.collider.isTrigger
+				&& !i.transform.IsChildOf (transform)
 				&& i.distance < hitInfo.distance)
 				hitInfo = i;
 		}

@@ -2636,6 +2636,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 33e4d68dad924154698eca71b0d0cb80, type: 3}
   - {fileID: 21300000, guid: 5aeace9de202b3c4891f4c734a0ba74b, type: 3}
   - {fileID: 21300000, guid: ccf455bd4237895478f099156d9877de, type: 3}
+  - {fileID: 21300000, guid: 02b526bdc470a5446ac2e6f748998e8a, type: 3}
   - {fileID: 21300000, guid: d808a7bd613c36f4c92cadcaccbd2497, type: 3}
   - {fileID: 21300000, guid: 346cc8edcfa81c746904da0fc3cc1d39, type: 3}
   - {fileID: -347095277, guid: 7f0ff2fd5f0dfb3479cce6f7d8f9a838, type: 3}
@@ -3167,6 +3168,7 @@ SpriteAtlas:
   - {fileID: -937148190, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: 1231525955, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
+  - {fileID: 21300000, guid: 7eafe19e164c2b04cb9211ae8eadedac, type: 3}
   - {fileID: 21300000, guid: 36d04d9e4462ab74786ee43d4aad6246, type: 3}
   - {fileID: 21300000, guid: 82620aae5374c3e4e8c38fc87bea7290, type: 3}
   - {fileID: 21300000, guid: 22ee31be7bffe4149b088f46ef713eb0, type: 3}
@@ -5939,6 +5941,7 @@ SpriteAtlas:
   - up p20004
   - Jar Lable
   - down p10008
+  - button
   - Bread1
   - Coin0006
   - town sketh 3_73
@@ -6470,6 +6473,7 @@ SpriteAtlas:
   - town sketh 2_1
   - town sketh 2_0
   - crates_study_x2
+  - Button green
   - cry0007
   - right p20001
   - left p10015
