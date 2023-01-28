@@ -46,8 +46,6 @@ public class PlayerPauseMenu : MonoBehaviour
 	{
 		if (GameStatus.Me != null)
 		{
-			//Activate the Cursor when the menu is visible
-			Cursor.visible = val;
 			GameStatus.Me.SetPause (val);
 			menu.SetActive (val);
 		}
