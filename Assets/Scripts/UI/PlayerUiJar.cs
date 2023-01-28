@@ -7,7 +7,9 @@ public class PlayerUiJar : MonoBehaviour
 {
 	//Editor Values
 	[SerializeField] TextMeshProUGUI silverCoinsTag;
-	[SerializeField] GameObject silverCoins;
+	[SerializeField] GameObject silverCoins30;
+	[SerializeField] GameObject silverCoins15;
+	[SerializeField] GameObject silverCoins1;
 	[SerializeField] GameObject coinRain;
 	[SerializeField] float coinRainDuration;
 
@@ -30,9 +32,13 @@ public class PlayerUiJar : MonoBehaviour
     {
         if (silverCoinsTag != null && team != null)
 			silverCoinsTag.text = ((int)team.SilverCoins).ToString();
-
-		if (silverCoins != null)
-			silverCoins.SetActive (team.SilverCoins > 15f);
+		
+		if (silverCoins30 != null)
+			silverCoins30.SetActive (team.SilverCoins > 30f);
+		else if (silverCoins15 != null)
+			silverCoins15.SetActive (team.SilverCoins > 15f);
+		else if (silverCoins1 != null)
+			silverCoins1.SetActive (team.SilverCoins > 0f);
 
 		if (coinRain != null)
 		{ 
