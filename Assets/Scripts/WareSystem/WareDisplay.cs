@@ -275,12 +275,16 @@ public class WareDisplay : MonoBehaviour
 		if (area != null && storingAreas.ContainsKey (area.areaId))
 			storingAreas [area.areaId] = status;
 
-		bool tmp = true;
+		isStoresCorrectly = false;
 
 		foreach (var i in storingAreas)
-			tmp &= i.Value;
-
-		isStoresCorrectly = tmp;
+		{
+			if (i.Value == true)
+			{
+				isStoresCorrectly = true;
+				break;
+			}
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
