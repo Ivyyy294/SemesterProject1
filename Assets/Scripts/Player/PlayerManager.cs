@@ -22,6 +22,22 @@ public class PlayerManager : MonoBehaviour
 		return playerConfigs;
 	}
 
+	public void SetPlayerCount (int anzPlayer)
+	{
+		MaxPlayers = anzPlayer;
+	}
+
+	public void EnablePlayerJoin (bool val)
+	{
+		if (inputManager != null)
+		{
+			if (val)
+				inputManager.EnableJoining();
+			else
+				inputManager.DisableJoining();
+		}
+	}
+
 	public void OnPlayerJoined (PlayerInput playerInput)
 	{
 		if (!playerConfigs.Any (p => p.playerConfiguration.PlayerIndex == playerInput.playerIndex))
@@ -31,6 +47,9 @@ public class PlayerManager : MonoBehaviour
 			pc.playerConfiguration = new PlayerConfiguration (playerInput);
 			playerConfigs.Add (pc);
 		}
+
+		if (playerConfigs.Count >= MaxPlayers && inputManager != null)
+			inputManager.DisableJoining();
 	}
 
 	public void SetPlayerTeam (int index, int team)

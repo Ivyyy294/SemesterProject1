@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public enum Map
 {
+	Menu,
 	Lobby,
 	Game,
 	PlayerStats
@@ -23,7 +24,7 @@ public class MapManager : MonoBehaviour
 	[SerializeField] List <MapContainer> maps;
 
 	//Private Values
-	Map currentMap = Map.Lobby;
+	Map currentMap = Map.Menu;
 	GameObject currentActiveMap = null;
 
 	//Public Values
@@ -53,7 +54,7 @@ public class MapManager : MonoBehaviour
 		else
 		{
 			Me = this;
-			LoadMap (Map.Lobby);
+			LoadMap (currentMap);
 		}
 	}
 
