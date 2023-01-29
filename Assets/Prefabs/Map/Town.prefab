@@ -81640,6 +81640,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4757660162007892908, guid: 1e1f0d7fcccda454291cff637b5f1ad4, type: 3}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757660162007892908, guid: 1e1f0d7fcccda454291cff637b5f1ad4, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757660162007892908, guid: 1e1f0d7fcccda454291cff637b5f1ad4, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 2
       objectReference: {fileID: 0}
@@ -85629,6 +85637,14 @@ PrefabInstance:
     - target: {fileID: 3676967499263135541, guid: 1e1f0d7fcccda454291cff637b5f1ad4, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757660162007892908, guid: 1e1f0d7fcccda454291cff637b5f1ad4, type: 3}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757660162007892908, guid: 1e1f0d7fcccda454291cff637b5f1ad4, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4757660162007892908, guid: 1e1f0d7fcccda454291cff637b5f1ad4, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
