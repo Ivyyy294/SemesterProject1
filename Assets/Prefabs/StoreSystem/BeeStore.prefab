@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: ShapeModule.m_Scale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4757660162007892908, guid: 4a572e08827afcb4b9a1e10d3cf966c4, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7182882949976673090, guid: 4a572e08827afcb4b9a1e10d3cf966c4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -672,6 +676,10 @@ PrefabInstance:
     - target: {fileID: 4757660162007892908, guid: 4a572e08827afcb4b9a1e10d3cf966c4, type: 3}
       propertyPath: lengthInSec
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757660162007892908, guid: 4a572e08827afcb4b9a1e10d3cf966c4, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4757660162007892908, guid: 4a572e08827afcb4b9a1e10d3cf966c4, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
