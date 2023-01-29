@@ -32,7 +32,6 @@ public class PlayerStatsScreen : MonoBehaviour
 
 	public void GoToMenu ()
 	{
-		PlayerManager.Me.Reset();
 		MapManager.Me.LoadMap (Map.Menu);
 	}
 

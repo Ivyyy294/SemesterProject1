@@ -20,6 +20,9 @@ public class MenuScreen : MonoBehaviour
 	private void Awake()
 	{
 		if (PlayerManager.Me != null)
+		{
+			PlayerManager.Me.Reset();
 			PlayerManager.Me.EnablePlayerJoin (false);
+		}
 	}
 }
