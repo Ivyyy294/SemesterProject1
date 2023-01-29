@@ -550,6 +550,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ae52a75107282f847b618b6f8e76293d, type: 3}
   - {fileID: 21300000, guid: 406871613c18b3e40847cb026b30c1b4, type: 3}
   - {fileID: 21300000, guid: 6b02f2612883a9a4abb9ac67c51eeb7d, type: 3}
+  - {fileID: -755809291, guid: c27efe61078655b4ba16f31ef90ab568, type: 3}
+  - {fileID: 1603248045, guid: c27efe61078655b4ba16f31ef90ab568, type: 3}
   - {fileID: 21300000, guid: a00f1a81d2ed06f4383c49bcfa608cab, type: 3}
   - {fileID: 21300000, guid: bdc46cb155034fc4393d48e746b4a078, type: 3}
   - {fileID: 21300000, guid: 255ff8c1ef7cfcc429fa42834a0b0a15, type: 3}
@@ -2101,6 +2103,18 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 482b2acaf8dfe9441a31dd0e2fff26ba, type: 3}
   - {fileID: 21300000, guid: 752066eaf6bdc0b499a6d8ccf014442b, type: 3}
   - {fileID: 21300000, guid: f250d2fa93469f3478ee99dcd0db746c, type: 3}
+  - {fileID: -707058378, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: 1422286812, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: -15136702, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: -976360050, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: -1252626701, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: 242167578, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: -1397260142, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: -1817392750, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: 2068769927, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: 784299383, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: -211882681, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
+  - {fileID: 1649971642, guid: 6654c3fa81413244d99307c36e2b5590, type: 3}
   - {fileID: 21300000, guid: 12aed3fa158d28741a81e75fc2db9836, type: 3}
   - {fileID: 21300000, guid: 570784fa5a6c0684e8bde9b15958cafc, type: 3}
   - {fileID: 21300000, guid: a78809fa8397f5f4b8c7573bfc946607, type: 3}
@@ -3865,6 +3879,8 @@ SpriteAtlas:
   - left p10006
   - evil0006
   - up p10010
+  - Stones 3d cover_0
+  - Stones 3d cover_1
   - Wax1
   - left p20009
   - ToolBox
@@ -5416,6 +5432,18 @@ SpriteAtlas:
   - DropletD
   - up p10008
   - up p20010
+  - shadow harbor_11
+  - shadow harbor_10
+  - shadow harbor_8
+  - shadow harbor_9
+  - shadow harbor_2
+  - shadow harbor_3
+  - shadow harbor_0
+  - shadow harbor_1
+  - shadow harbor_6
+  - shadow harbor_7
+  - shadow harbor_4
+  - shadow harbor_5
   - down p10010
   - Jar explanation
   - cry0005
