@@ -82305,6 +82305,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8609579836257872702, guid: 6958ec2081d5643488fc917fe131a94d, type: 3}
+      propertyPath: anz
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609579836257872702, guid: 6958ec2081d5643488fc917fe131a94d, type: 3}
+      propertyPath: autoResizeAmount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6958ec2081d5643488fc917fe131a94d, type: 3}
 --- !u!4 &4361931944100582354 stripped

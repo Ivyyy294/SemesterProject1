@@ -32,9 +32,11 @@ namespace Ivyyy
 
 	public class ObjectPool : MonoBehaviour
 	{
+		//Editor Values
 		protected List <GameObject> pooledObjects;
 		[SerializeField] protected GameObject objectToPool;
 		[SerializeField] protected uint anz = 1;
+		[SerializeField] uint autoResizeAmount = 0;
 
 		protected virtual void Awake()
 		{
@@ -44,14 +46,8 @@ namespace Ivyyy
 		protected void Spawn ()
 		{
 			pooledObjects = new List <GameObject>();
-			GameObject tmp;
 
-			while (pooledObjects.Count < anz)
-			{
-				tmp = Instantiate (objectToPool, gameObject.transform);
-				tmp.SetActive (false);
-				pooledObjects.Add (tmp);
-			}
+			Spawn (anz);
 		}
 
 		public void ActivateObject (Vector3 pos)
@@ -69,13 +65,39 @@ namespace Ivyyy
 
 		public GameObject GetPooledObject()
 		{
-			for (int i = 0; i < anz; ++i)
+			for (int i = 0; i < pooledObjects.Count; ++i)
 			{
 				if (!pooledObjects[i].activeInHierarchy)
 					return pooledObjects[i];
 			}
 			
+			if (autoResizeAmount > 0)
+			{
+				Debug.Log ("Resizing object pool!");
+				Spawn (autoResizeAmount);
+				
+				//starting with the new spawned objects
+				for (int i = pooledObjects.Count - 1; i >= 0; --i)
+				{
+					if (!pooledObjects[i].activeInHierarchy)
+						return pooledObjects[i];
+				}
+			}
+
 			return null;
+		}
+
+		//Private Functions
+		void Spawn (uint anz)
+		{
+			GameObject tmp;
+
+			for (int i = 0; i < anz; ++i)
+			{
+				tmp = Instantiate (objectToPool, gameObject.transform);
+				tmp.SetActive (false);
+				pooledObjects.Add (tmp);
+			}
 		}
 	}
 }

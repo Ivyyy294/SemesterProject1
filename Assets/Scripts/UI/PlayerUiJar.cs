@@ -35,9 +35,11 @@ public class PlayerUiJar : MonoBehaviour
 		
 		if (silverCoins30 != null)
 			silverCoins30.SetActive (team.SilverCoins > 30f);
-		else if (silverCoins15 != null)
+
+		if (silverCoins15 != null)
 			silverCoins15.SetActive (team.SilverCoins > 15f);
-		else if (silverCoins1 != null)
+
+		if (silverCoins1 != null)
 			silverCoins1.SetActive (team.SilverCoins > 0f);
 
 		if (coinRain != null)

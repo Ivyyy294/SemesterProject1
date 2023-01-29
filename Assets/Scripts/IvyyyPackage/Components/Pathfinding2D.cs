@@ -20,6 +20,9 @@ namespace Ivyyy
 		[SerializeField] List <int> layerMask;
 		[SerializeField] float safetyDistance = 1f;
 		
+		//Public Values
+		public float FractionOfJourney { get; private set; }
+
 		//Private Values
 		private Path2D activePath = null;
 		private int currentWayPoint;
@@ -110,10 +113,10 @@ namespace Ivyyy
 				float distCovered = timer * speed;
 
 				// Fraction of journey completed equals current distance divided by total distance.
-				float fractionOfJourney = distCovered / journeyLength;
+				FractionOfJourney = distCovered / journeyLength;
 
 				// Set our position as a fraction of the distance between the markers.
-				objectToMove.transform.position = Vector3.Lerp(p1, p2, fractionOfJourney);
+				objectToMove.transform.position = Vector3.Lerp(p1, p2, FractionOfJourney);
 
 				timer += Time.deltaTime;
 			}

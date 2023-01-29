@@ -13,9 +13,11 @@ public class Jetty : MonoBehaviour
 	[SerializeField] Ivyyy.Pathfinding2D shipPathfinding;
 	[SerializeField] float shipDockTime;
 	[SerializeField] AudioClip audioShipArrived;
+	[SerializeField] [Range (0f, 1f)] float playBellThreshold;
 
 	//Private Values
 	ShipDisplay shipDisplay;
+	bool bellPlayed = false;
 
 	//Public Values	
 	public bool ShipDocked {get; private set;}
@@ -50,6 +52,7 @@ public class Jetty : MonoBehaviour
 
 		timerInactice = 0f;
 		timerShipDocked = 0f;
+		bellPlayed = false;
 	}
 
 	public bool IsShipActive () { return ship != null && ship.activeInHierarchy;}
@@ -86,10 +89,17 @@ public class Jetty : MonoBehaviour
 			{
 				if (timerShipDocked > shipDockTime && !currentPath.Equals ("CastOff"))
 					CastOffShip();
-				else if (timerShipDocked == 0f)
-					Ivyyy.AudioHandler.Me.PlayOneShot (audioShipArrived);
 
 				timerShipDocked += Time.deltaTime;
+			}
+			else
+			{
+				Debug.Log (shipPathfinding.FractionOfJourney);
+				if (!bellPlayed && shipPathfinding.FractionOfJourney >= playBellThreshold)
+				{
+					Ivyyy.AudioHandler.Me.PlayOneShot (audioShipArrived);
+					bellPlayed = true;
+				}
 			}
 
 			harbourBarrier.SetActive (!ShipDocked);
