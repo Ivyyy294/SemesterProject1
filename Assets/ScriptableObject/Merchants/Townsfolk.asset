@@ -33,7 +33,25 @@ MonoBehaviour:
     - objectToSpawn: {fileID: 11400000, guid: ea28f68a04a4f3e4bafa06a02bf8cdba, type: 2}
       weight: 0.5
   requestFrequency: 30
-  audioRequest: []
-  audioHappy: []
-  audioUpset: []
-  audioChatter: []
+  audioRequest:
+  - {fileID: 8300000, guid: 71e6b910c8e63634d8c35329f3d3bb8b, type: 3}
+  - {fileID: 8300000, guid: 5c534575cd3678843956eefb74b6423a, type: 3}
+  - {fileID: 8300000, guid: 6cf2ba39a8d6a9a4c83a75550bd6575f, type: 3}
+  - {fileID: 8300000, guid: 6cfe6763082f7b140ba9f7987f2b11ec, type: 3}
+  audioHappy:
+  - {fileID: 8300000, guid: 682ffc4eaed77134bb17e267eabd32ba, type: 3}
+  - {fileID: 8300000, guid: 4459502283b43244399c2b03088b320f, type: 3}
+  - {fileID: 8300000, guid: e720737c10c2c4d4a973ec1bf63a4cb6, type: 3}
+  - {fileID: 8300000, guid: da1141f5ad841624986d7c040ba628d9, type: 3}
+  - {fileID: 8300000, guid: fff92b6029701954bbf4762818fba2f8, type: 3}
+  - {fileID: 8300000, guid: adc27c39c521525439c7f7f064baf09b, type: 3}
+  - {fileID: 8300000, guid: cb80e636a3cac1b4eb5499d9eed7e874, type: 3}
+  - {fileID: 8300000, guid: fe0b0b2bcea6e144e9ee9be9c140627d, type: 3}
+  audioUpset:
+  - {fileID: 8300000, guid: 8a767cd152673da449abec67196915c8, type: 3}
+  - {fileID: 8300000, guid: f37e47fcdad088443b6b43950dae046e, type: 3}
+  - {fileID: 8300000, guid: e729aac9c1b7b9f4aa5b7218f41f3f33, type: 3}
+  audioChatter:
+  - {fileID: 8300000, guid: 0d53880fec1cade4ea158aafa9b16d64, type: 3}
+  - {fileID: 8300000, guid: 39678df284f3f394383ac68bf987b562, type: 3}
+  - {fileID: 8300000, guid: 7874ad0434ff7714ba5b5f6a9e8bff09, type: 3}

@@ -25,7 +25,18 @@ MonoBehaviour:
     - objectToSpawn: {fileID: 11400000, guid: 843cb1d946dab2d4f8a6881cdb450dc2, type: 2}
       weight: 0.08
   requestFrequency: 25
-  audioRequest: []
-  audioHappy: []
-  audioUpset: []
-  audioChatter: []
+  audioRequest:
+  - {fileID: 8300000, guid: 170c651ac7b77834085e2d55579f6505, type: 3}
+  - {fileID: 8300000, guid: c1ad8e860f76d3e4180c5640a001af2d, type: 3}
+  - {fileID: 8300000, guid: f3cb292869076a849bdc36c68b0a2489, type: 3}
+  audioHappy:
+  - {fileID: 8300000, guid: c15fdfa678927e54ca0894ff37a743c4, type: 3}
+  - {fileID: 8300000, guid: 983eb77031875ee42a009c5a56b2074b, type: 3}
+  - {fileID: 8300000, guid: 61af3cbe49fc53b49a83ad8fcbe73686, type: 3}
+  - {fileID: 8300000, guid: d008606ccebec754680aad5f7ca14775, type: 3}
+  audioUpset:
+  - {fileID: 8300000, guid: 51231fd3863a1e1498b68525cc2d9de8, type: 3}
+  - {fileID: 8300000, guid: e76a1f5777cae7b46b54d6403ef9cb7c, type: 3}
+  - {fileID: 8300000, guid: fddf62b4e8c8df84ba3239df5a91f69f, type: 3}
+  audioChatter:
+  - {fileID: 8300000, guid: 71614780f1a3793459c305f6ad909ab6, type: 3}
