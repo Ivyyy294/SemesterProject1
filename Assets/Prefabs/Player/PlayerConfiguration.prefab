@@ -412,11 +412,28 @@ PrefabInstance:
       value: -1009346745
       objectReference: {fileID: 0}
     - target: {fileID: 5643373173598137316, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 481588799404664106}
+    - target: {fileID: 5643373173598137316, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 3579426174999622093}
+    - target: {fileID: 5643373173598137316, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+      propertyPath: fourPlayerUiScale
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222931122406769773, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+--- !u!223 &481588799404664106 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2350424615625158007, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}
+  m_PrefabInstance: {fileID: 2751858570553821277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3606396465744972234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1458302820553687447, guid: 9a80d1a5f93ab334cb4ca53bb2e552a8, type: 3}

@@ -735,6 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 558058530497509812}
   text: {fileID: 2381328119211959241}
+  fourPlayerUiScale: 0.5
 --- !u!1 &5999970334903438585
 GameObject:
   m_ObjectHideFlags: 0

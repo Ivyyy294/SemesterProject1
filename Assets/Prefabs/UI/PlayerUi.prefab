@@ -153,6 +153,7 @@ MonoBehaviour:
   scroll: {fileID: 4168892091644257973}
   jar: {fileID: 5081258798241379048}
   notebook: {fileID: 5102479093700285032}
+  fourPlayerUiScale: 0.5
 --- !u!1001 &1001761029886970014
 PrefabInstance:
   m_ObjectHideFlags: 0
