@@ -197,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 7688834356740991476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 356568619923085403}
@@ -231,7 +231,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6c41c82efa2482d469270d0e616c454d, type: 3}
   - {fileID: 8300000, guid: c1d3f782a9fca6249a01afd1a758ea36, type: 3}
   - {fileID: 8300000, guid: 446a01d519b307040820c9263b7dffa1, type: 3}
-  maxRequestTime: 300
+  maxRequestTime: 150
   requestIndicator: {fileID: 4120861789708010009}
   requestIcon: {fileID: 7688834356356821563}
   merchantSpriteRenderer: {fileID: 8178974009064621605}
