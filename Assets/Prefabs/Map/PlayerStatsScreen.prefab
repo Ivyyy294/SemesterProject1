@@ -970,7 +970,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 16
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -992,6 +992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatsPrefab: {fileID: 6864058237760529865, guid: 682220bde01c56f44acd3165bb653267, type: 3}
   rootLayout: {fileID: 3040642464480479464}
+  fourPlayerUiScale: 0.75
 --- !u!1 &3040642464564551763
 GameObject:
   m_ObjectHideFlags: 0
