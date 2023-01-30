@@ -922,6 +922,7 @@ SpriteAtlas:
   - {fileID: -1289023873, guid: 96fd4b8347cb9814cabafdb34585dafd, type: 3}
   - {fileID: 1184980354, guid: 96fd4b8347cb9814cabafdb34585dafd, type: 3}
   - {fileID: 21300000, guid: e7980893c487db243967d2e14d04e7bb, type: 3}
+  - {fileID: 21300000, guid: 6d319b93fc3b9b148a6cf26369f8497a, type: 3}
   - {fileID: 21300000, guid: 6b748eb3381708446bbe088f33eb1d29, type: 3}
   - {fileID: 21300000, guid: c3c5e8e3dc8a45b418da3b9f28f1accc, type: 3}
   - {fileID: -241212449, guid: 141a1de339815e245af42d099d07a617, type: 3}
@@ -4334,6 +4335,7 @@ SpriteAtlas:
   - walls condition_39
   - walls condition_38
   - p1 up0002
+  - small down new
   - tree
   - p1 down0007
   - roof top_132
