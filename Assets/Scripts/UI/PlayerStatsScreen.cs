@@ -10,6 +10,7 @@ public class PlayerStatsScreen : MonoBehaviour
 
 	[Header ("Lara Values")]
 	[SerializeField] GameObject rootLayout;
+	[SerializeField] float fourPlayerUiScale = 0.75f;
 
     //Public Functions
 	public void SpawnStatsPanel (PlayerStats stats)
@@ -17,6 +18,9 @@ public class PlayerStatsScreen : MonoBehaviour
 		if (rootLayout != null)
 		{
 			GameObject menu = Instantiate (playerStatsPrefab, rootLayout.transform);
+
+			if (PlayerManager.Me.MaxPlayers == 4)
+				menu.transform.localScale = new Vector3 (fourPlayerUiScale, fourPlayerUiScale);
 
 			PlayerStatsPanel statsPanel = menu.GetComponent <PlayerStatsPanel>();
 

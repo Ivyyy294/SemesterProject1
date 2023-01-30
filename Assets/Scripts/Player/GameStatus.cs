@@ -19,7 +19,7 @@ public class CityTax
 
 	public void CalculateTaxToPay (float earnedSilverCoins, float currentSilverCoins)
 	{
-		int playercount = PlayerManager.Me.GetPlayerConfigs ().Count;
+		int playercount = PlayerManager.Me.MaxPlayers;
 		++numberOfTaxes;
 		float tax = (5 + (2f * numberOfTaxes) + (currentSilverCoins * 0.1f)) * playercount/2f;
 
@@ -92,7 +92,8 @@ public class Team
 
 	public void Update()
 	{
-		int playercount = PlayerManager.Me.GetPlayerConfigs().Count;
+		int playercount = PlayerManager.Me.MaxPlayers;
+
         if (statsManager == null)
 			statsManager = PlayerStatsManager.Me;
 

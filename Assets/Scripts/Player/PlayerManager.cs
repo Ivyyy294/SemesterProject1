@@ -10,9 +10,9 @@ public class PlayerManager : MonoBehaviour
 {
 	//Public Values
 	public static PlayerManager Me { get; private set;}
+	public int MaxPlayers {get; private set;}
 
 	//Private Values
-	private int MaxPlayers;
 	private List <PlayerConfigurationDisplay> playerConfigs;
 	private PlayerInputManager inputManager;
 
