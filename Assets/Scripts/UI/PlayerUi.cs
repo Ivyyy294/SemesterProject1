@@ -9,11 +9,16 @@ public class PlayerUi : MonoBehaviour
 	[SerializeField] PlayerUiScroll scroll;
 	[SerializeField] PlayerUiJar jar;
 	[SerializeField] PlayerUiNotebook notebook;
+	[SerializeField] float fourPlayerUiScale = 0.5f;
+	[SerializeField] Canvas canvas;
 
     //Private Values
 
 	private void Start()
 	{
+		if (PlayerManager.Me.MaxPlayers == 4)
+			canvas.scaleFactor = fourPlayerUiScale;
+
 		Team team = GameStatus.Me.GetTeamForPlayer ((uint)player.playerConfiguration.PlayerIndex);
 
 		if (scroll != null)

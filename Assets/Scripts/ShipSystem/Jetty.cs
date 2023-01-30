@@ -94,7 +94,6 @@ public class Jetty : MonoBehaviour
 			}
 			else
 			{
-				Debug.Log (shipPathfinding.FractionOfJourney);
 				if (!bellPlayed && shipPathfinding.FractionOfJourney >= playBellThreshold)
 				{
 					Ivyyy.AudioHandler.Me.PlayOneShot (audioShipArrived);
