@@ -3409,7 +3409,7 @@ MonoBehaviour:
   merchantsToControll:
   - {fileID: 6863501031312531394}
   - {fileID: 3670864616082541825}
-  requestCooldown: 5
+  requestCooldown: 3
   chatterCooldown: 10
 --- !u!1 &8555756264579359926
 GameObject:
