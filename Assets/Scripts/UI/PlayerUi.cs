@@ -11,11 +11,10 @@ public class PlayerUi : MonoBehaviour
 	[SerializeField] PlayerUiNotebook notebook;
 
     //Private Values
-	uint playerId;
 
 	private void Start()
 	{
-		Team team = GameStatus.Me.GetTeamForPlayer (playerId);
+		Team team = GameStatus.Me.GetTeamForPlayer ((uint)player.playerConfiguration.PlayerIndex);
 
 		if (scroll != null)
 			scroll.SetTeam (team);
