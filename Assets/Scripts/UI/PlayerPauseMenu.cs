@@ -7,10 +7,14 @@ public class PlayerPauseMenu : MonoBehaviour
 {
 	[SerializeField] GameObject menu;
 	[SerializeField] GameObject text;
+	[SerializeField] float fourPlayerUiScale = 0.75f;
 
 	//Public Functions
 	public void Show ()
 	{
+		if (PlayerManager.Me.MaxPlayers == 4)
+			transform.localScale = new Vector3 (fourPlayerUiScale, fourPlayerUiScale);
+
 		//Setting the uiInputModule
 		PlayerInput input = GetComponentInParent <PlayerInput>();
 

@@ -1979,6 +1979,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 637cb1f9914e21a40a2d187ce4640ecb, type: 3}
   - {fileID: 21300000, guid: 39c16ff9f43b56e4cbd7f1f447dbb16f, type: 3}
   - {fileID: 21300000, guid: ff08430a793e82a4fb26ef251a1dd517, type: 3}
+  - {fileID: 21300000, guid: e9a2a42a96a276047aa56602a6519e56, type: 3}
   - {fileID: 1686349063, guid: 1df5e42a511cfd04a8fe89a25d1e7001, type: 3}
   - {fileID: -2146116135, guid: 1df5e42a511cfd04a8fe89a25d1e7001, type: 3}
   - {fileID: 1014838636, guid: 1df5e42a511cfd04a8fe89a25d1e7001, type: 3}
@@ -5372,6 +5373,7 @@ SpriteAtlas:
   - PuddleLL
   - p2 left0011
   - oil lamp 3
+  - UI scroll1
   - harbor stones 2_8
   - harbor stones 2_9
   - harbor stones 2_6
