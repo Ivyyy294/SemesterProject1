@@ -19,11 +19,13 @@ public class PlayerConfigurationDisplay : MonoBehaviour
 {
 	[SerializeField] RuntimeAnimatorController animatorControllerT1;
 	[SerializeField] RuntimeAnimatorController animatorControllerT2;
+	[SerializeField] float cameraDistanceFourPlayer = 4.21875f;
 
 	[Header ("Lara Values")]
 	[SerializeField] SpawnPlayerSetupMenu menuScript;
 	[SerializeField] GameObject player;
 	[SerializeField] GameObject playerUi;
+	[SerializeField] Camera pCamera;
 
 	public PlayerConfiguration playerConfiguration;
 
@@ -51,5 +53,8 @@ public class PlayerConfigurationDisplay : MonoBehaviour
     void Start()
     {
         menuScript.Show();
+
+		if (PlayerManager.Me.MaxPlayers == 4)
+			pCamera.orthographicSize = cameraDistanceFourPlayer;
     }
 }

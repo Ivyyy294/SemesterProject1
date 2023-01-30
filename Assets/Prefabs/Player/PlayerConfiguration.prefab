@@ -122,6 +122,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4fc0f2a6-dd1a-4c74-8d5e-335c5d8ade6e
     m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ae0fe676-41d3-459c-9389-d8a7660e30bd
+    m_ActionName: Player/Cancel[/Keyboard/escape,/SwitchProControllerHID/buttonEast,/SwitchProControllerHID1/buttonEast,/SwitchProControllerHID2/buttonEast,/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -155,9 +159,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorControllerT1: {fileID: 9100000, guid: de8a0b03e4a70674a8983d80fa31a73b, type: 2}
   animatorControllerT2: {fileID: 9100000, guid: 6a29f27d9f76f6540aecd1a611899d0a, type: 2}
+  cameraDistanceFourPlayer: 4.21875
   menuScript: {fileID: 4333947291928274467}
   player: {fileID: 1309899375115981931}
   playerUi: {fileID: 3606396465744972234}
+  pCamera: {fileID: 560425686559694463}
 --- !u!1 &1434423130503076183
 GameObject:
   m_ObjectHideFlags: 0
