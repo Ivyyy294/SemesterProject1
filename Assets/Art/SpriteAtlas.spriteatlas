@@ -566,8 +566,7 @@ SpriteAtlas:
   - {fileID: -1863206652, guid: 0f9f5c02526b772499e0aa63945b2bb5, type: 3}
   - {fileID: 726205204, guid: 0f9f5c02526b772499e0aa63945b2bb5, type: 3}
   - {fileID: -1902924150, guid: 0f9f5c02526b772499e0aa63945b2bb5, type: 3}
-  - {fileID: 1812533759, guid: b4941112b525db74ca21871984be7556, type: 3}
-  - {fileID: -1859825756, guid: b4941112b525db74ca21871984be7556, type: 3}
+  - {fileID: 21300000, guid: b4941112b525db74ca21871984be7556, type: 3}
   - {fileID: 21300000, guid: 17078122a96d1f7489057eb14271ec65, type: 3}
   - {fileID: -1645891605, guid: 67658222fb614514aa399705013d5b52, type: 3}
   - {fileID: -559033660, guid: 67658222fb614514aa399705013d5b52, type: 3}
@@ -4020,8 +4019,7 @@ SpriteAtlas:
   - small down_0
   - small down_3
   - small down_2
-  - bell_1
-  - bell_0
+  - bell
   - PostitRed
   - Water2_14
   - Water2_15

@@ -11,6 +11,7 @@ TagManager:
   - Crate
   - StoringArea
   - ShipRamp
+  - Bell
   layers:
   - Default
   - TransparentFX

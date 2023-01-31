@@ -225,7 +225,17 @@ public class PlayerInteraktions: MonoBehaviour
 				InteractMerchant (hitinfos.collider.gameObject);
 			else if (hitinfos.collider.CompareTag ("Store"))
 				InteractStore (hitinfos.collider.gameObject);
+			else if (hitinfos.collider.CompareTag ("Bell"))
+				InteractBell (hitinfos.collider.gameObject);
 		}
+	}
+
+	private void InteractBell(GameObject gameObject)
+	{
+		HarbourBell bell = gameObject.GetComponent<HarbourBell>();
+
+		if (bell != null)
+			bell.Interact();
 	}
 
 	private void InteractionsWareGrabbed (RaycastHit2D hitinfos)
