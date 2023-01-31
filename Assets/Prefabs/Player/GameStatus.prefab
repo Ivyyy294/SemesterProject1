@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 8966585106285815456, guid: 673993c366c60b54caffd7739bedb220, type: 3}
   anz: 20
+  autoResizeAmount: 0
 --- !u!1 &2472667551380574323
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +135,9 @@ MonoBehaviour:
   - {fileID: 2472667552009161912}
   dayLenght: 30
   reputationNeededToWin: 100
+  startReputation: 50
+  startSilver: 10
+  gameOverDelay: 1
   passiveReputationLossThreshold: 20
   passiveReputationLossInterval: 10
   audioRepGain: {fileID: 8300000, guid: c553284c6201c854da11b0300e543388, type: 3}

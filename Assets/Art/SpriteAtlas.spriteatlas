@@ -2612,6 +2612,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3c54726c1ff2b2c4496f3bd8442ce7ef, type: 3}
   - {fileID: 21300000, guid: f73d856cb2bbef3419e1de58da6c7ddd, type: 3}
   - {fileID: 21300000, guid: 1807117c0e7764a4e8c0c8dfa03a797a, type: 3}
+  - {fileID: 21300000, guid: 7e95427cae531e2458850fc1e83b64a5, type: 3}
   - {fileID: 21300000, guid: ab2df77c3e4c7e347a28a23b90467151, type: 3}
   - {fileID: 21300000, guid: f3cfbc8c441c13f46bb91530d54c90c1, type: 3}
   - {fileID: -1744617577, guid: 1342919cb32ed0c418ff585503f01904, type: 3}
@@ -6077,6 +6078,7 @@ SpriteAtlas:
   - market top
   - OreS1
   - Wine
+  - light house
   - p1 down0006
   - p1 left0004
   - Ship details_2

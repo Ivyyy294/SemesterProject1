@@ -66,6 +66,30 @@ public class Team
 		timeSincePassiveReputationLoss = gameStatus.passiveReputationLossInterval;
 	}
 
+	public bool HasWon ()
+	{
+		if (PlayerStatsManager.Me != null)
+		{
+			return PlayerStatsManager.Me.IndexTeamWon.Contains (Id)
+				|| (PlayerStatsManager.Me.IndexTeamLose.Count > 0
+				&& !PlayerStatsManager.Me.IndexTeamLose.Contains(Id));
+		}
+
+		return false;
+	}
+
+	public bool HasLost ()
+	{
+		if (PlayerStatsManager.Me != null)
+		{
+			return PlayerStatsManager.Me.IndexTeamLose.Contains (Id)
+				|| (PlayerStatsManager.Me.IndexTeamWon.Count > 0
+				&& !PlayerStatsManager.Me.IndexTeamWon.Contains(Id));
+		}
+
+		return false;
+	}
+
 	public void ReputationGain (float requestTime)
 	{
 		float gain = (2 + (2 - Reputation/50)) * (((requestTime - timeSinceRequest) * 3) / requestTime);
@@ -343,23 +367,27 @@ public class GameStatus : MonoBehaviour
 		//Win condition
 		foreach (Team i in teams)
 		{
-			//Team win when reaching 100 reputation
-			if (i.Reputation >= reputationNeededToWin)
+			//Check only if there are players in the team!
+			if (i.playerIds.Count > 0)
 			{
-				if (!PlayerStatsManager.Me.IndexTeamWon.Contains (i.Id))
+				//Team win when reaching 100 reputation
+				if (i.Reputation >= reputationNeededToWin)
 				{
-					Ivyyy.AudioHandler.Me.PlayOneShot (audioRepGain);
-					PlayerStatsManager.Me.IndexTeamWon.Add (i.Id);
+					if (!PlayerStatsManager.Me.IndexTeamWon.Contains (i.Id))
+					{
+						Ivyyy.AudioHandler.Me.PlayOneShot (audioRepGain);
+						PlayerStatsManager.Me.IndexTeamWon.Add (i.Id);
+					}
 				}
-			}
 
-			//Team loses when negative silver or 0 reputation
-			if (i.SilverCoins < 0f || i.Reputation <= 0)
-			{
-				if (!PlayerStatsManager.Me.IndexTeamLose.Contains (i.Id))
+				//Team loses when negative silver or 0 reputation
+				if (i.SilverCoins < 0f || i.Reputation <= 0)
 				{
-					PlayerStatsManager.Me.IndexTeamLose.Add (i.Id);
-					Ivyyy.AudioHandler.Me.PlayOneShot (audioRepLoss);
+					if (!PlayerStatsManager.Me.IndexTeamLose.Contains (i.Id))
+					{
+						PlayerStatsManager.Me.IndexTeamLose.Add (i.Id);
+						Ivyyy.AudioHandler.Me.PlayOneShot (audioRepLoss);
+					}
 				}
 			}
 		}

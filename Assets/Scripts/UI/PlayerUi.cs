@@ -38,11 +38,15 @@ public class PlayerUi : MonoBehaviour
 	{
 		if (MapManager.Me != null && MapManager.Me.CurrentMap() == Map.Game)
 		{
-			if (won != null && PlayerStatsManager.Me != null && PlayerStatsManager.Me.IndexTeamWon.Contains (team.Id))
-				won.SetActive (true);
+			if (PlayerStatsManager.Me.IndexTeamWon.Count > 0 
+				|| PlayerStatsManager.Me.IndexTeamLose.Count > 0)
+			{
+				if (won != null)
+					won.SetActive (team.HasWon());
 
-			if (lost != null && PlayerStatsManager.Me != null && PlayerStatsManager.Me.IndexTeamLose.Contains (team.Id))
-				lost.SetActive (true);
+				if (lost != null)
+					lost.SetActive (team.HasLost());
+			}
 		}
 		else
 		{
