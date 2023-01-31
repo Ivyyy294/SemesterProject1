@@ -2767,6 +2767,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 101f704db7f19e949b9d0eb987d56258, type: 3}
   - {fileID: 1357898341, guid: 55cb976de07354a4dbe3cf17e49ecaca, type: 3}
   - {fileID: 1628367361, guid: 55cb976de07354a4dbe3cf17e49ecaca, type: 3}
+  - {fileID: 21300000, guid: a0875c6d75bb8744888371157ba88411, type: 3}
   - {fileID: 21300000, guid: 4854407d362990641ab071db66d5766a, type: 3}
   - {fileID: 21300000, guid: 6fbdc87d523d4f4488e44af178f42bfc, type: 3}
   - {fileID: 21300000, guid: 388f1b7db7be5a646948bf13481be41a, type: 3}
@@ -6231,6 +6232,7 @@ SpriteAtlas:
   - p2 right0009
   - Barrel_1
   - Barrel_0
+  - logo big
   - Jar with tag
   - coin
   - Jam
