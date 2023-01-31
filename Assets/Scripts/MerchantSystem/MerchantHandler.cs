@@ -17,7 +17,7 @@ public class MerchantHandler : MonoBehaviour
 	//Public Functions
 	public void Init()
 	{
-		timerRequest = 0f;
+		timerRequest = requestCooldown;
 		timerChatter = 0f;
 		playerInReach = 0;
 
