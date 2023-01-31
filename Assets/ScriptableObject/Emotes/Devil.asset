@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d557807d1afad7e49b481ce24eaa01ba, type: 3}
+  m_Name: Devil
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300000, guid: 6892953d116f3ed418a1ea442861adb5, type: 3}
+  - {fileID: 21300000, guid: 49b5836922f0186449f915f75aff40c2, type: 3}
+  - {fileID: 21300000, guid: fed20f95864a82b4c846fb94f3cd1ea7, type: 3}
+  - {fileID: 21300000, guid: 57cdc83281a157447866f3605f91611c, type: 3}
+  - {fileID: 21300000, guid: 0fa9a43303dacb1438d276c4b29c168f, type: 3}
+  - {fileID: 21300000, guid: 406871613c18b3e40847cb026b30c1b4, type: 3}
+  - {fileID: 21300000, guid: dfce8873c5ec4f943b817efdba5ceb54, type: 3}
+  - {fileID: 21300000, guid: 4046231c32bbf4a4199bfdeb64c495ca, type: 3}
+  fps: 8
+  audio: {fileID: 0}
+  volume: 1

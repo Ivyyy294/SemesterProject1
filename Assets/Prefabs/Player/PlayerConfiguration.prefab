@@ -313,6 +313,26 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 6503444818172614542}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: emotes.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: emotes.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4baba5759b468cd4bbf78ab4834ff67e, type: 2}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: emotes.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 09b8a07934b91b24ea17dc6f61ccbdc5, type: 2}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: emotes.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a8efabec3135284fbf3eca9c73346e1, type: 2}
+    - target: {fileID: 3714752570770300280, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+      propertyPath: emotes.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: d9e0c9017bfcd0041974facdb6dd5b8d, type: 2}
     - target: {fileID: 3714752570770300281, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
       propertyPath: m_Name
       value: Player

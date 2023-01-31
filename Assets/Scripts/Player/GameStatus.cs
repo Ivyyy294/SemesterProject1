@@ -327,30 +327,26 @@ public class GameStatus : MonoBehaviour
 
 	void CheckWinLoseCondition()
 	{
-		int winner = -1;
-
+		//Win condition
 		foreach (Team i in teams)
 		{
 			//Team win when reaching 100 reputation
 			if (i.Reputation >= reputationNeededToWin)
-			{
-				winner = i.Id;
-				break;
-			}
-			//Team loses when negative silver
-			else if (i.SilverCoins < 0f || i.Reputation <= 0)
-			{
-				//Just two teams
-				if (i.Id == 0)
-					winner = 1;
-				else
-					winner = 0;
+				GoToStatsScreen (i.Id);
 
-				break;
+			//Team loses when negative silver or 0 reputation
+			if (i.SilverCoins < 0f || i.Reputation <= 0)
+			{
+				//Getting enemy team
+				foreach (Team j in teams)
+				{
+					if (j != i)
+						GoToStatsScreen (j.Id);
+				}
+
+				//Just one team, so no winner
+				GoToStatsScreen (-1);
 			}
 		}
-		
-		if (winner != -1)
-			GoToStatsScreen (winner);
 	}
 }
