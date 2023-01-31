@@ -61,7 +61,7 @@ public class Team
 
 	public void ReputationGain (float requestTime)
 	{
-		float gain = (1 + (2 - Reputation/50)) * ((requestTime - timeSinceRequest) / 100);
+		float gain = (2 + (2 - Reputation/50)) * ((requestTime - timeSinceRequest) / 100);
 		Reputation += gain;
 		timeSinceRequest = 0f;
 		Ivyyy.AudioHandler.Me.PlayOneShot (gameStatus.audioRepGain);
