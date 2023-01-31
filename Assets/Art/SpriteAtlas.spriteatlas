@@ -3317,6 +3317,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e2bb4e4fe1ebf334186f6e4eaea15895, type: 3}
   - {fileID: 21300000, guid: c9f1105f37fdb3c41a8864716df5cd6f, type: 3}
   - {fileID: 21300000, guid: 80cb165fd9fab4b4191a4fa0487061f6, type: 3}
+  - {fileID: 359277517, guid: 2ce2cc5ffca4f174a9c87bc8b072c392, type: 3}
+  - {fileID: -1120347242, guid: 2ce2cc5ffca4f174a9c87bc8b072c392, type: 3}
+  - {fileID: 1765563130, guid: 2ce2cc5ffca4f174a9c87bc8b072c392, type: 3}
+  - {fileID: 232627914, guid: 2ce2cc5ffca4f174a9c87bc8b072c392, type: 3}
+  - {fileID: -1872652909, guid: 2ce2cc5ffca4f174a9c87bc8b072c392, type: 3}
+  - {fileID: 1833855766, guid: 2ce2cc5ffca4f174a9c87bc8b072c392, type: 3}
   - {fileID: 21300000, guid: 2a3e866f33f7abf498b3010867c77e6d, type: 3}
   - {fileID: 21300000, guid: 5cb0fd6f1db6ecb4594ccec54b401042, type: 3}
   - {fileID: 21300000, guid: fd53907f2a4f8f746938577ce6e6adc2, type: 3}
@@ -6762,6 +6768,12 @@ SpriteAtlas:
   - p1 up0014
   - IronOre1
   - p2 down00010013
+  - i am a swarm_4
+  - i am a swarm_5
+  - i am a swarm_2
+  - i am a swarm_3
+  - i am a swarm_0
+  - i am a swarm_1
   - Spices1
   - ship0006
   - heart0004
