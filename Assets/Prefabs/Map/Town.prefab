@@ -74459,7 +74459,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 655a064e0bd6abf459bbf47947a2fdc8, type: 3}
     - target: {fileID: 2472667551685640602, guid: 6958ec2081d5643488fc917fe131a94d, type: 3}
       propertyPath: cityTaxInterval
-      value: 14
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2472667551685640603, guid: 6958ec2081d5643488fc917fe131a94d, type: 3}
       propertyPath: m_RootOrder

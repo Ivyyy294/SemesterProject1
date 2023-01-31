@@ -587,6 +587,7 @@ SpriteAtlas:
   - {fileID: 534614463, guid: 567fe952e1e5b5d40b832ff6e7b6befb, type: 3}
   - {fileID: 21300000, guid: 561c496212ddd5b4bbba0be094997852, type: 3}
   - {fileID: 21300000, guid: 0172837208b81c54b8db50114e31f676, type: 3}
+  - {fileID: -1124018589, guid: 6f1642824408390499a0b662d8a830fe, type: 3}
   - {fileID: 21300000, guid: cc7966820b0256848b6ce0051457f45b, type: 3}
   - {fileID: 21300000, guid: 18b08b82de687a74c8c4cf1e9d2a4a49, type: 3}
   - {fileID: 21300000, guid: b83090925919e8a4dad6c00d1c2daab9, type: 3}
@@ -2730,6 +2731,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4854407d362990641ab071db66d5766a, type: 3}
   - {fileID: 21300000, guid: 6fbdc87d523d4f4488e44af178f42bfc, type: 3}
   - {fileID: 21300000, guid: 388f1b7db7be5a646948bf13481be41a, type: 3}
+  - {fileID: 21300000, guid: 4326a89d50399b94f82a49d69619c9f2, type: 3}
   - {fileID: 21300000, guid: 039aae9dceabcfd46a22fe1ba410c8a5, type: 3}
   - {fileID: 21300000, guid: 5aeace9de202b3c4891f4c734a0ba74b, type: 3}
   - {fileID: 21300000, guid: 1009d1ad1281f6e4e92318d2910d8373, type: 3}
@@ -4000,6 +4002,7 @@ SpriteAtlas:
   - oil lamp 2_7
   - p2 down00010005
   - HoneyS
+  - fense_0
   - HoneyS2
   - p1 right0006
   - Timber1.1S
@@ -6143,6 +6146,7 @@ SpriteAtlas:
   - Jar with tag
   - coin
   - Jam
+  - market
   - p1 idel left0004
   - Jar Lable
   - p1 left0007
