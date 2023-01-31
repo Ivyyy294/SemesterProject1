@@ -42,23 +42,24 @@ public class PlayerUiJar : MonoBehaviour
 		if (silverCoins1 != null)
 			silverCoins1.SetActive (team.SilverCoins > 0f);
 
-		if (coinRain != null)
-		{ 
-			//Plays coin rain when the team got silver
-			if (lastSilverCoins < team.SilverCoins)
-			{
-				lastSilverCoins = team.SilverCoins;
-				coinRain.SetActive (true);
-				timer = 0f;
-			}
+		//coinRain Disabled
+		//if (coinRain != null)
+		//{ 
+		//	//Plays coin rain when the team got silver
+		//	if (lastSilverCoins < team.SilverCoins)
+		//	{
+		//		lastSilverCoins = team.SilverCoins;
+		//		coinRain.SetActive (true);
+		//		timer = 0f;
+		//	}
 
-			if (coinRain.activeInHierarchy && timer > coinRainDuration)
-			{
-				coinRain.SetActive (false);
-				timer = 0f;
-			}
-			else
-				timer += Time.deltaTime;
-		}
+		//	if (coinRain.activeInHierarchy && timer > coinRainDuration)
+		//	{
+		//		coinRain.SetActive (false);
+		//		timer = 0f;
+		//	}
+		//	else
+		//		timer += Time.deltaTime;
+		//}
     }
 }
