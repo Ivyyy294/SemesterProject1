@@ -115,7 +115,8 @@ public class PlayerStatsManager : MonoBehaviour
 	string fileDirPath;
 	//Public Values
 	public static PlayerStatsManager Me;
-	public int IndexTeamWon { get; set;}
+	public List <int> IndexTeamWon { get; set;}
+	public List <int> IndexTeamLose { get; set;}
 
 	//Public Functions
 
@@ -123,7 +124,8 @@ public class PlayerStatsManager : MonoBehaviour
     {
 		fileDirPath = Application.persistentDataPath;
 
-		IndexTeamWon = -1;
+		IndexTeamWon = new List<int>();
+		IndexTeamLose = new List<int>();
 
 		stats.Clear();
 

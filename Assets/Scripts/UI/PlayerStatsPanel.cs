@@ -38,26 +38,15 @@ public class PlayerStatsPanel : MonoBehaviour
 		//General
 		AppendText (player, (stats.playerIndex + 1).ToString());
 
-		//Hide both text when the game got cancelt
-		if (PlayerStatsManager.Me.IndexTeamWon == -1)
-		{
-			if (lost != null)
+		if (PlayerStatsManager.Me.IndexTeamWon.Contains (stats.teamIndex))
 				lost.SetActive (false);
-
-			if (won != null)
+		else if (PlayerStatsManager.Me.IndexTeamLose.Contains (stats.teamIndex))
 				won.SetActive (false);
-		}
-		//Hide lose text when won
-		if (PlayerStatsManager.Me.IndexTeamWon == stats.teamIndex)
-		{
-			if (lost != null)
-				lost.SetActive (false);
-		}
-		//Hide won text when won
+		//Game got cancelt
 		else
 		{
-			if (won != null)
-				won.SetActive (false);
+			lost.SetActive (false);
+			won.SetActive (false);
 		}
 
 		//Silver

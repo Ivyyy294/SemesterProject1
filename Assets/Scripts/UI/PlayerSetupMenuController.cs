@@ -15,6 +15,7 @@ public class PlayerSetupMenuController : MonoBehaviour
 	private bool inputEnabled;
 
 	//Editor values
+	[Header ("Lara values")]
 	[SerializeField] TextMeshProUGUI titleText;
 	[SerializeField] GameObject readyPanel;
 	[SerializeField] GameObject menuPanel;

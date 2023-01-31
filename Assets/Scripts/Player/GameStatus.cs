@@ -7,6 +7,13 @@ public class GameDateTime
 	public int day = 0;
 	public string hour;
 	public string minute;
+
+	public void Init ()
+	{
+		day = 0;
+		hour = "0";
+		minute = "00";
+	}
 }
 
 public class CityTax
@@ -48,10 +55,10 @@ public class Team
 	PlayerStatsManager statsManager;
 
 	//Public Functions
-	public Team()
+	public Team(float reputation, float silver)
 	{
-		Reputation = 50f;
-		SilverCoins = 10f;
+		Reputation = reputation;
+		SilverCoins = silver;
 		tax.CalculateTaxToPay(SilverCoinsEarned, SilverCoins);
 
 		gameStatus = GameStatus.Me;
@@ -152,6 +159,8 @@ public class GameStatus : MonoBehaviour
 	[Header ("Game Settings")]
 	[SerializeField] float dayLenght = 60f;
 	public float reputationNeededToWin = 100f;
+	public float startReputation = 50f;
+	public float startSilver = 10f;
 
 	[Header ("Reputation Settings")]
 	public float passiveReputationLossThreshold;
@@ -253,12 +262,13 @@ public class GameStatus : MonoBehaviour
 
 		for (int i = 0; i < 2; ++i)
 		{
-			Team t = new Team();
+			Team t = new Team(startReputation, startSilver);
 			t.Id = i;
 			teams.Add (t);
 		}
 
 		lifeTime = 0f;
+		currentDateTime.Init();
 
 		var playerConfigs = PlayerManager.Me.GetPlayerConfigs().ToArray();
 
@@ -273,12 +283,11 @@ public class GameStatus : MonoBehaviour
 		PlayerStatsManager.Me.Init();
 	}
 
-	public void GoToStatsScreen (int winner)
+	public void GoToStatsScreen ()
 	{
 		foreach (PlayerConfigurationDisplay i in PlayerManager.Me.GetPlayerConfigs().ToArray())
 			i.EnableUi (false);
 
-		PlayerStatsManager.Me.IndexTeamWon = winner;
 		MapManager.Me.LoadMap (Map.PlayerStats);
 	}
 
@@ -332,21 +341,15 @@ public class GameStatus : MonoBehaviour
 		{
 			//Team win when reaching 100 reputation
 			if (i.Reputation >= reputationNeededToWin)
-				GoToStatsScreen (i.Id);
+				PlayerStatsManager.Me.IndexTeamWon.Add (i.Id);
 
 			//Team loses when negative silver or 0 reputation
 			if (i.SilverCoins < 0f || i.Reputation <= 0)
-			{
-				//Getting enemy team
-				foreach (Team j in teams)
-				{
-					if (j != i)
-						GoToStatsScreen (j.Id);
-				}
-
-				//Just one team, so no winner
-				GoToStatsScreen (-1);
-			}
+				PlayerStatsManager.Me.IndexTeamLose.Add (i.Id);
 		}
+
+		if (PlayerStatsManager.Me.IndexTeamWon.Count > 0
+			|| PlayerStatsManager.Me.IndexTeamLose.Count > 0)
+			GoToStatsScreen();
 	}
 }

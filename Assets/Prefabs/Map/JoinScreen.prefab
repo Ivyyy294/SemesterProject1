@@ -597,6 +597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2227891869464386154}
   - component: {fileID: 5490777753144225238}
+  - component: {fileID: 252493795829256839}
   m_Layer: 0
   m_Name: JoinScreen
   m_TagString: Untagged
@@ -632,6 +633,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732bb3ec27fcc0643806dd28a6adcb13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!81 &252493795829256839
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7295891994126042035}
+  m_Enabled: 1
 --- !u!1 &8142157844301354213
 GameObject:
   m_ObjectHideFlags: 0

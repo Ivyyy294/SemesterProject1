@@ -8,6 +8,10 @@ using UnityEngine.SceneManagement;
 [RequireComponent (typeof (PlayerInputManager))]
 public class PlayerManager : MonoBehaviour
 {
+	//Editor Values
+	[SerializeField] float gameStartDelay;
+	[SerializeField] AudioSource audioSource;
+
 	//Public Values
 	public static PlayerManager Me { get; private set;}
 	public int MaxPlayers {get; private set;}
@@ -15,6 +19,7 @@ public class PlayerManager : MonoBehaviour
 	//Private Values
 	private List <PlayerConfigurationDisplay> playerConfigs;
 	private PlayerInputManager inputManager;
+	float timerGameStartDelay = 0f;
 
 	//Public Functions
 	public List <PlayerConfigurationDisplay> GetPlayerConfigs()
@@ -78,6 +83,7 @@ public class PlayerManager : MonoBehaviour
 			Destroy (i.gameObject);
 
 		playerConfigs.Clear();
+		timerGameStartDelay = 0f;
 	}
 
 	//Private Functions
@@ -112,7 +118,17 @@ public class PlayerManager : MonoBehaviour
 		if (mapManager != null)
 		{
 			if (mapManager.CurrentMap() == Map.Lobby && AllPlayersReady())
-				MapManager.Me.LoadMap (Map.Game);
+			{
+				if (timerGameStartDelay < gameStartDelay)
+				{
+					if (timerGameStartDelay == 0f && audioSource != null)
+						audioSource.Play();
+
+					timerGameStartDelay += Time.deltaTime;
+				}
+				else
+					MapManager.Me.LoadMap (Map.Game);
+			}
 		}
 	}
 }

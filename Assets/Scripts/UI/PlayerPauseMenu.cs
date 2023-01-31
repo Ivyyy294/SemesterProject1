@@ -34,7 +34,7 @@ public class PlayerPauseMenu : MonoBehaviour
 		if (GameStatus.Me != null)
 		{
 			Time.timeScale = 1f;
-			GameStatus.Me.GoToStatsScreen (-1);
+			GameStatus.Me.GoToStatsScreen ();
 		}
 		else
 			Debug.Log ("Missing GameStatus!");
