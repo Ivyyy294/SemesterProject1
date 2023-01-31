@@ -12,9 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: WaveAnimated
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: eea8c5bf06faf2d4cb6b06d9a3a1dcee, type: 3}
+  - {fileID: 21300000, guid: 880a1d3880c94784e94f80b5d77e743f, type: 3}
+  - {fileID: 21300000, guid: 7bb7244585722414c8d84b4d66987e2f, type: 3}
+  - {fileID: 21300000, guid: 39bbafe50da52b94eae16ab8c306b777, type: 3}
+  - {fileID: 21300000, guid: 313f7af0e9b37a340b3090b50f586809, type: 3}
+  - {fileID: 21300000, guid: 570761a67cd6ba24b9624d4d5942f60e, type: 3}
+  - {fileID: 21300000, guid: 9037548456761294f952aab800d00466, type: 3}
+  - {fileID: 21300000, guid: 7fdad23c2734efa4d908e150df45db1c, type: 3}
+  - {fileID: 21300000, guid: e0f756a412b97df49814f490fe33a414, type: 3}
+  - {fileID: 21300000, guid: 27593026fc2a6514bb54434782dcd9e0, type: 3}
+  - {fileID: 21300000, guid: 11e2f02c6ca766d48a8662fb2f17554d, type: 3}
+  - {fileID: 21300000, guid: 4709ec07cd0cca749ad226e2c6a3112a, type: 3}
+  - {fileID: 21300000, guid: 4c07e653302649040b2634375c5d30b8, type: 3}
+  - {fileID: 21300000, guid: 2d91a568604d1054a93f566439c57ab4, type: 3}
+  - {fileID: 21300000, guid: 1afb5fe91159fc34e9d9223d87db718b, type: 3}
+  - {fileID: 21300000, guid: 47096c61b49819245bdbf6273ae14b5d, type: 3}
+  m_MinSpeed: 4
+  m_MaxSpeed: 7
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0

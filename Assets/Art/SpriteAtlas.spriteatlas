@@ -566,6 +566,8 @@ SpriteAtlas:
   - {fileID: -1863206652, guid: 0f9f5c02526b772499e0aa63945b2bb5, type: 3}
   - {fileID: 726205204, guid: 0f9f5c02526b772499e0aa63945b2bb5, type: 3}
   - {fileID: -1902924150, guid: 0f9f5c02526b772499e0aa63945b2bb5, type: 3}
+  - {fileID: 1812533759, guid: b4941112b525db74ca21871984be7556, type: 3}
+  - {fileID: -1859825756, guid: b4941112b525db74ca21871984be7556, type: 3}
   - {fileID: 21300000, guid: 17078122a96d1f7489057eb14271ec65, type: 3}
   - {fileID: -1645891605, guid: 67658222fb614514aa399705013d5b52, type: 3}
   - {fileID: -559033660, guid: 67658222fb614514aa399705013d5b52, type: 3}
@@ -859,6 +861,7 @@ SpriteAtlas:
   - {fileID: 1636870130, guid: 63754e43d1a8db5428dc445f04590e7d, type: 3}
   - {fileID: -1686744798, guid: 63754e43d1a8db5428dc445f04590e7d, type: 3}
   - {fileID: 21300000, guid: 4c07e653302649040b2634375c5d30b8, type: 3}
+  - {fileID: 21300000, guid: 64562e53dbe82ec4ba9b755ddab43b42, type: 3}
   - {fileID: 21300000, guid: c9a982638ad624f45ac9083f009deabe, type: 3}
   - {fileID: 21300000, guid: 8a6ab76328d271046befa0c3854029af, type: 3}
   - {fileID: 21300000, guid: 882027739b5704442ae9f2c6f8cd8599, type: 3}
@@ -1534,6 +1537,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 880e5a9558f4ba446acec5b3991a6758, type: 3}
   - {fileID: 21300000, guid: fed20f95864a82b4c846fb94f3cd1ea7, type: 3}
   - {fileID: 21300000, guid: 3161dda504adc9d46a2f07eab82265f5, type: 3}
+  - {fileID: 21300000, guid: 9d3484c52410e6e4998de38eca490d77, type: 3}
   - {fileID: 21300000, guid: 00d538e5d4bc1f648b30d06d8c0ffa05, type: 3}
   - {fileID: 21300000, guid: 39bbafe50da52b94eae16ab8c306b777, type: 3}
   - {fileID: -283804058, guid: c78ea2f59073d7a4281fd511f7571680, type: 3}
@@ -2915,6 +2919,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: adf66a0eb92c70b4289496bba5b6aea7, type: 3}
   - {fileID: 21300000, guid: 5228d82ed6c664040afa91b0d3fcbc6a, type: 3}
   - {fileID: 21300000, guid: bdc59c2e8cc022740bbb5b44175276db, type: 3}
+  - {fileID: 21300000, guid: 4cb49a3e13129bc40a84e7978cdd7905, type: 3}
   - {fileID: 21300000, guid: b0ef625ef6c2fee48a79d4dcfb678032, type: 3}
   - {fileID: 21300000, guid: 725b2a5e2af93a744b8f3ed8eb0d3d81, type: 3}
   - {fileID: 21300000, guid: 742a566e38eff1f438fdb06fe178298e, type: 3}
@@ -4006,6 +4011,8 @@ SpriteAtlas:
   - small down_0
   - small down_3
   - small down_2
+  - bell_1
+  - bell_0
   - PostitRed
   - Water2_14
   - Water2_15
@@ -4299,6 +4306,7 @@ SpriteAtlas:
   - roof 1_151
   - roof 1_150
   - whater 0004
+  - rope up
   - p1 down0011
   - bee
   - ArmourS
@@ -4974,6 +4982,7 @@ SpriteAtlas:
   - p2 left0012
   - evil0003
   - cry0001
+  - pillar
   - p2 left0009
   - whater 0011
   - TX Tileset Wall_38
@@ -6355,6 +6364,7 @@ SpriteAtlas:
   - resin
   - p1 idel down0003
   - p2 right0002
+  - rope down
   - CraftsmanStore
   - p2 right0008
   - Coin0008
