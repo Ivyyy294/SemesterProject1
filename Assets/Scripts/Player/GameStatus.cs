@@ -345,11 +345,23 @@ public class GameStatus : MonoBehaviour
 		{
 			//Team win when reaching 100 reputation
 			if (i.Reputation >= reputationNeededToWin)
-				PlayerStatsManager.Me.IndexTeamWon.Add (i.Id);
+			{
+				if (!PlayerStatsManager.Me.IndexTeamWon.Contains (i.Id))
+				{
+					Ivyyy.AudioHandler.Me.PlayOneShot (audioRepGain);
+					PlayerStatsManager.Me.IndexTeamWon.Add (i.Id);
+				}
+			}
 
 			//Team loses when negative silver or 0 reputation
 			if (i.SilverCoins < 0f || i.Reputation <= 0)
-				PlayerStatsManager.Me.IndexTeamLose.Add (i.Id);
+			{
+				if (!PlayerStatsManager.Me.IndexTeamLose.Contains (i.Id))
+				{
+					PlayerStatsManager.Me.IndexTeamLose.Add (i.Id);
+					Ivyyy.AudioHandler.Me.PlayOneShot (audioRepLoss);
+				}
+			}
 		}
 
 		if (PlayerStatsManager.Me.IndexTeamWon.Count > 0
