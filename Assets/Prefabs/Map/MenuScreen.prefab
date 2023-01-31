@@ -69,7 +69,7 @@ MonoBehaviour:
   m_PointAction: {fileID: 0}
   m_MoveAction: {fileID: 8871288639005501493, guid: 90e1c47c7c6642640be7b6c78af5a394, type: 3}
   m_SubmitAction: {fileID: 3337719303799894051, guid: 90e1c47c7c6642640be7b6c78af5a394, type: 3}
-  m_CancelAction: {fileID: 0}
+  m_CancelAction: {fileID: 185373496205682722, guid: 90e1c47c7c6642640be7b6c78af5a394, type: 3}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
@@ -455,10 +455,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 2864632484957846386}
+    m_SelectOnDown: {fileID: 3549379565496086842}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -665,10 +665,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 3549379565496086842}
+    m_SelectOnDown: {fileID: 1187679584086038248}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -799,10 +799,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1187679584086038248}
+    m_SelectOnDown: {fileID: 2864632484957846386}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
