@@ -75163,7 +75163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1726421539711271797, guid: c24d93a10e109ca48a3af7e483307ec2, type: 3}
       propertyPath: requestCooldown
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1726421539711271797, guid: c24d93a10e109ca48a3af7e483307ec2, type: 3}
       propertyPath: merchantsToControll.Array.size
@@ -77933,6 +77933,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1030128698394184655}
     m_Modifications:
     - target: {fileID: 1726421539711271797, guid: c24d93a10e109ca48a3af7e483307ec2, type: 3}
+      propertyPath: requestCooldown
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726421539711271797, guid: c24d93a10e109ca48a3af7e483307ec2, type: 3}
       propertyPath: merchantsToControll.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -78804,7 +78808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7629219627232402965, guid: 8d83a2c4da6d3f14bb3b26cda417e7d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.32
+      value: 7.3199997
       objectReference: {fileID: 0}
     - target: {fileID: 7629219627232402965, guid: 8d83a2c4da6d3f14bb3b26cda417e7d3, type: 3}
       propertyPath: m_LocalPosition.y
