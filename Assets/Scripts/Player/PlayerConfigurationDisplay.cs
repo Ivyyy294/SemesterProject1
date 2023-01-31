@@ -21,18 +21,36 @@ public class PlayerConfigurationDisplay : MonoBehaviour
 	[SerializeField] RuntimeAnimatorController animatorControllerT2;
 	[SerializeField] float cameraDistanceFourPlayer = 4.21875f;
 
+	[Header ("Recording")]
+	[SerializeField] bool cinematicMode = false;
+	[SerializeField] float cameraDistanceCinematic = 12.656250f;
+
 	[Header ("Lara Values")]
 	[SerializeField] SpawnPlayerSetupMenu menuScript;
 	[SerializeField] GameObject player;
 	[SerializeField] GameObject playerUi;
 	[SerializeField] Camera pCamera;
+	[SerializeField] SpriteRenderer spriteRendererPlayer;
 
 	public PlayerConfiguration playerConfiguration;
 
 	public void SpawnPlayer (Vector3 pos)
 	{
 		player.SetActive (true);
-		EnableUi (true);
+
+		if (!cinematicMode)
+			EnableUi (true);
+		else
+		{
+			if (spriteRendererPlayer != null)
+				spriteRendererPlayer.enabled = false;
+
+			Rigidbody2D rigidbody2D = player.GetComponent <Rigidbody2D>();
+
+			if (rigidbody2D != null)
+				rigidbody2D.isKinematic = true;
+		}
+
 		player.GetComponent<PlayerMotor>().InitPlayer (playerConfiguration);
 		player.transform.position = pos;
 		
@@ -54,7 +72,9 @@ public class PlayerConfigurationDisplay : MonoBehaviour
     {
         menuScript.Show();
 
-		if (PlayerManager.Me.MaxPlayers == 4)
+		if (cinematicMode)
+			pCamera.orthographicSize = cameraDistanceCinematic;
+		else if (PlayerManager.Me.MaxPlayers == 4)
 			pCamera.orthographicSize = cameraDistanceFourPlayer;
     }
 }
