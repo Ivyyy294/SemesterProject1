@@ -1804,6 +1804,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 507a5e27e0bf64344b59d5f1efe64215, type: 3}
   - {fileID: 21300000, guid: 5a0b8d57d16729249bd19bb7e403a159, type: 3}
   - {fileID: 21300000, guid: bb1f0477bdc9c104d9d1101524b12faf, type: 3}
+  - {fileID: 21300000, guid: b7d07297d15bbc74c98a99f6434ade14, type: 3}
   - {fileID: 21300000, guid: a932549710cb457419e492a1d63f865b, type: 3}
   - {fileID: 21300000, guid: d7943cb7c3e1851409cd9dcc1f40573e, type: 3}
   - {fileID: 21300000, guid: b60c90c7c68a5cb40b1539b2b9de9e4e, type: 3}
@@ -3307,6 +3308,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5f5440be5c7a78843bb5ae1dce3bdcce, type: 3}
   - {fileID: 21300000, guid: 3d5362be80b9aeb4d85bcd38ee98ba1f, type: 3}
   - {fileID: 21300000, guid: 15f972be29b56914ca34f38c1d9bd341, type: 3}
+  - {fileID: 21300000, guid: 962b8dde870ae9c4583f98a0dd6e3026, type: 3}
   - {fileID: 21300000, guid: 330d30eea8345ee4b9d28a9d40fb2a4b, type: 3}
   - {fileID: 21300000, guid: 4d6633eee4c7f04479371d033c2d2331, type: 3}
   - {fileID: 21300000, guid: 4763ab0f63f507040a69dca1acb61eee, type: 3}
@@ -5249,6 +5251,7 @@ SpriteAtlas:
   - angry0003
   - p1 left0002
   - p2 down00010015
+  - background for text
   - PostitBlue
   - p2 down00010001
   - p1 right0003
@@ -6752,6 +6755,7 @@ SpriteAtlas:
   - p2 right0006
   - p2 left0001
   - p2 left0002
+  - title_screen new
   - p1 right0002
   - Resin1.1S
   - small down part 1
