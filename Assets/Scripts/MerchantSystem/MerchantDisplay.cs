@@ -11,6 +11,7 @@ public class MerchantDisplay : MonoBehaviour
 	[SerializeField] List <AudioClip> audioMediumSale = new List<AudioClip>();
 	[SerializeField] List <AudioClip> audioLargeSale = new List<AudioClip>();
 	[SerializeField] float maxRequestTime;
+	[SerializeField] uint wrongWareThreshold = 2;
 
 	[Header ("Lara Values")]
 	[SerializeField] GameObject requestIndicator;
@@ -18,6 +19,7 @@ public class MerchantDisplay : MonoBehaviour
 	[SerializeField] SpriteRenderer merchantSpriteRenderer;
 	
 	//Private Values
+	uint wrongWareCounter;
 	double lifeTime = 0.0;
 	float effectiveRequestFrequency;
 	Ware currentRequest = null;
@@ -67,6 +69,10 @@ public class MerchantDisplay : MonoBehaviour
 						GameStatus.Me.LossReputation (playerId);
 						Debug.Log ("Play Upset");
 						audioHandler.PlayOneShotFromList (merchant.audioUpset);
+						wrongWareCounter++;
+
+						if (wrongWareCounter >= wrongWareThreshold)
+							ChangeRequest (null);
 					}
 
 					return true;
@@ -135,6 +141,7 @@ public class MerchantDisplay : MonoBehaviour
 		currentRequest = obj;
 		DisplayRequest (obj);
 		lifeTime = 0f;
+		wrongWareCounter = 0;
 	}
 
 	private void DisplayRequest (Ware obj)
