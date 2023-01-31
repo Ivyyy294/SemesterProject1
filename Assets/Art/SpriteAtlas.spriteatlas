@@ -3303,6 +3303,7 @@ SpriteAtlas:
   - {fileID: 1231525955, guid: cbd72a7ecfa77274798cd8357973505d, type: 3}
   - {fileID: 21300000, guid: b64c2b8e49264e340ae1502cae02c88e, type: 3}
   - {fileID: 21300000, guid: 7eafe19e164c2b04cb9211ae8eadedac, type: 3}
+  - {fileID: 21300000, guid: f6e0e99eb3de8d1439c1659098f7afb9, type: 3}
   - {fileID: 21300000, guid: 36d04d9e4462ab74786ee43d4aad6246, type: 3}
   - {fileID: 21300000, guid: e24e57aee4c1ad445891275f4b4555e5, type: 3}
   - {fileID: 21300000, guid: 5f5440be5c7a78843bb5ae1dce3bdcce, type: 3}
@@ -6756,6 +6757,7 @@ SpriteAtlas:
   - town sketh 2_0
   - crates_study_x2
   - Button green
+  - title_screen new 2
   - cry0007
   - p1 up0001
   - p2 right0006
