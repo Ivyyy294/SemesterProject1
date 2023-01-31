@@ -8,5 +8,8 @@ public class PlayerJoinScreen : MonoBehaviour
 	{
 		if (PlayerManager.Me != null)
 			PlayerManager.Me.EnablePlayerJoin (true);
+
+		//Ensures the time scale is rest to normal
+		Time.timeScale = 1f;
 	}
 }

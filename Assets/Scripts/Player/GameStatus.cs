@@ -161,6 +161,7 @@ public class GameStatus : MonoBehaviour
 	public float reputationNeededToWin = 100f;
 	public float startReputation = 50f;
 	public float startSilver = 10f;
+	public float gameOverDelay = 1f;
 
 	[Header ("Reputation Settings")]
 	public float passiveReputationLossThreshold;
@@ -176,6 +177,7 @@ public class GameStatus : MonoBehaviour
 	List <Team> teams;
 	float lifeTime = 0.0f;
 	GameDateTime currentDateTime = new GameDateTime();
+	float timerGameOverDelay = 0f;
 
 	//Public Functions
 	public MarketEvent CurrentMarketEvet { get;set;}
@@ -270,6 +272,8 @@ public class GameStatus : MonoBehaviour
 		lifeTime = 0f;
 		currentDateTime.Init();
 
+		timerGameOverDelay = 0f;
+
 		var playerConfigs = PlayerManager.Me.GetPlayerConfigs().ToArray();
 
 		foreach (PlayerConfigurationDisplay i in playerConfigs)
@@ -350,6 +354,16 @@ public class GameStatus : MonoBehaviour
 
 		if (PlayerStatsManager.Me.IndexTeamWon.Count > 0
 			|| PlayerStatsManager.Me.IndexTeamLose.Count > 0)
-			GoToStatsScreen();
+		{
+			if (timerGameOverDelay < gameOverDelay)
+			{
+				float val = Mathf.Min (1f, (timerGameOverDelay / gameOverDelay) * 4);
+				Time.timeScale = 1f - val;
+			}
+			else
+				GoToStatsScreen();
+			
+			timerGameOverDelay += Time.unscaledDeltaTime;
+		}
 	}
 }

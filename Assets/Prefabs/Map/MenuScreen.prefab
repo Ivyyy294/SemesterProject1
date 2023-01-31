@@ -852,6 +852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2227891869464386154}
   - component: {fileID: 1434721599306720220}
+  - component: {fileID: 1880330307319193916}
   m_Layer: 0
   m_Name: MenuScreen
   m_TagString: Untagged
@@ -888,6 +889,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58307bf1ca1cbfe4f86dac11262e6cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!81 &1880330307319193916
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7295891994126042035}
+  m_Enabled: 1
 --- !u!1 &7606505243662991395
 GameObject:
   m_ObjectHideFlags: 0
