@@ -1527,6 +1527,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 54939a3592ab1f1439c39ee8df8fff91, type: 3}
   - {fileID: 21300000, guid: 7bb7244585722414c8d84b4d66987e2f, type: 3}
   - {fileID: 21300000, guid: d13d8945f84564044adbdfacb387c795, type: 3}
+  - {fileID: 21300000, guid: 2838fe45bc6d8a648a4b5a62de5f4bc4, type: 3}
   - {fileID: 21300000, guid: 070b5055f17f0ff4dae1137390225d6f, type: 3}
   - {fileID: 21300000, guid: 048fa055aa86f674f9398e1ded7dc9da, type: 3}
   - {fileID: 21300000, guid: 438646758fdee6640bf999db1d8c8499, type: 3}
@@ -4980,6 +4981,7 @@ SpriteAtlas:
   - p2 down00010016
   - whater 0010
   - p1 down0013
+  - press key
   - Jam2
   - p2 up0009
   - Town center
