@@ -338,7 +338,7 @@ public class GameStatus : MonoBehaviour
 				break;
 			}
 			//Team loses when negative silver
-			else if (i.SilverCoins < 0f)
+			else if (i.SilverCoins < 0f || i.Reputation <= 0)
 			{
 				//Just two teams
 				if (i.Id == 0)

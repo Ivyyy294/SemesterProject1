@@ -123,9 +123,10 @@ public class MerchantDisplay : MonoBehaviour
 
 	private void Update()
 	{
-		if (currentRequest == null && lifeTime < effectiveRequestFrequency)
+		if (lifeTime < effectiveRequestFrequency || lifeTime < maxRequestTime)
 			lifeTime += Time.deltaTime;
-		else if (currentRequest != null && lifeTime >= maxRequestTime)
+		
+		if (currentRequest != null && lifeTime >= maxRequestTime)
 			ChangeRequest (null);
 	}
 
