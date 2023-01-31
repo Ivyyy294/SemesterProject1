@@ -160,7 +160,7 @@ MonoBehaviour:
   animatorControllerT1: {fileID: 9100000, guid: de8a0b03e4a70674a8983d80fa31a73b, type: 2}
   animatorControllerT2: {fileID: 9100000, guid: 6a29f27d9f76f6540aecd1a611899d0a, type: 2}
   cameraDistanceFourPlayer: 4.21875
-  cinematicMode: 0
+  cinematicMode: 1
   cameraDistanceCinematic: 12.65625
   menuScript: {fileID: 4333947291928274467}
   player: {fileID: 1309899375115981931}
