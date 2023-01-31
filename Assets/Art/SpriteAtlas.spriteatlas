@@ -2457,6 +2457,16 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4e65696b54706294897c2c7672d4c4cb, type: 3}
   - {fileID: 21300000, guid: 43f4fd7b48db45a4d8edbce2c19973e4, type: 3}
   - {fileID: 21300000, guid: 54e1a8abe1fa0f049b9f6235311cc8fd, type: 3}
+  - {fileID: 1946062765, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: 1344362253, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: 1571216186, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: -1308728973, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: 1078147534, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: 1727035944, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: -1098756714, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: 2055700873, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: -919479428, guid: 29800bab15a5c054e8260299325321b9, type: 3}
+  - {fileID: -885670932, guid: 29800bab15a5c054e8260299325321b9, type: 3}
   - {fileID: -1277097648, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
   - {fileID: -1754683586, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
   - {fileID: 1882970363, guid: d9513cabdc1a6b742820576040242e6e, type: 3}
@@ -5911,6 +5921,16 @@ SpriteAtlas:
   - Honey
   - Furs
   - p2 down00010007
+  - NPC merch 2_6
+  - NPC merch 2_7
+  - NPC merch 2_4
+  - NPC merch 2_5
+  - NPC merch 2_2
+  - NPC merch 2_3
+  - NPC merch 2_0
+  - NPC merch 2_1
+  - NPC merch 2_8
+  - NPC merch 2_9
   - harbor wood tileset (2, 2s)_9
   - harbor wood tileset (2, 2s)_8
   - harbor wood tileset (2, 2s)_18
