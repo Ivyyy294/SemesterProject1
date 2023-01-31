@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SailorBack
   m_EditorClassIdentifier: 
   name: SailorBack
-  sprite: {fileID: -1996920451, guid: a68b400b144e50641b3e733ee12580d3, type: 3}
+  sprite: {fileID: 1571216186, guid: 29800bab15a5c054e8260299325321b9, type: 3}
   requestManager:
     spawnObjects:
     - objectToSpawn: {fileID: 11400000, guid: 9f57fe8833cbaee44beb8f3b7ab5a8c4, type: 2}
