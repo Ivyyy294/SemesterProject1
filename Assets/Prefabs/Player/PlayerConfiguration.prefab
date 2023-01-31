@@ -160,10 +160,13 @@ MonoBehaviour:
   animatorControllerT1: {fileID: 9100000, guid: de8a0b03e4a70674a8983d80fa31a73b, type: 2}
   animatorControllerT2: {fileID: 9100000, guid: 6a29f27d9f76f6540aecd1a611899d0a, type: 2}
   cameraDistanceFourPlayer: 4.21875
+  cinematicMode: 0
+  cameraDistanceCinematic: 12.65625
   menuScript: {fileID: 4333947291928274467}
   player: {fileID: 1309899375115981931}
   playerUi: {fileID: 3606396465744972234}
   pCamera: {fileID: 560425686559694463}
+  spriteRendererPlayer: {fileID: 3958255246253305015}
 --- !u!1 &1434423130503076183
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +370,11 @@ Transform:
 --- !u!1 &1309899375115981931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3714752570770300281, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
+  m_PrefabInstance: {fileID: 2423149091697510674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &3958255246253305015 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1679364846085334437, guid: 3b172b2842094ac43b202b640c10d525, type: 3}
   m_PrefabInstance: {fileID: 2423149091697510674}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &8604978899176608297 stripped
