@@ -315,7 +315,8 @@ public class WareDisplay : MonoBehaviour
 	{
 		if (placeHolderPrefab !=  null)
 		{
-			placeHolder = Instantiate (placeHolderPrefab, pos, new Quaternion());
+			//placeholder is a child of warepool so it gets properly destroyed when reloading
+			placeHolder = Instantiate (placeHolderPrefab, pos, new Quaternion(), WarePool.Me.transform);
 
 			BoxCollider2D placeHolderCollider = placeHolder.GetComponent<BoxCollider2D>();
 

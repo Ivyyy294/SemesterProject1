@@ -43,4 +43,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 445a2a16eff36764e917e03c65346674, type: 3}
   - {fileID: 8300000, guid: 117eef10ebd01fb429e949494b1a9064, type: 3}
   - {fileID: 8300000, guid: 7efe8cd658927d14e963827285f91ce6, type: 3}
-  audiosBump: []
+  audiosBump:
+  - {fileID: 8300000, guid: c87e54623f4293f4e80027eb0b0d3596, type: 3}
+  - {fileID: 8300000, guid: 13792c7bb47d81a48938ac85c7dd6a72, type: 3}
